@@ -16,19 +16,17 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
-  <!-- 
-    this give us a css class that will be invisible only if js is disabled 
-  -->
-  <noscript>
-    <style>
-      .pst-js-only { display: none !important; }
-
-    </style>
-  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../_static/styles/theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
-<link href="../../_static/styles/pydata-sphinx-theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=a3416100" />
@@ -38,11 +36,10 @@
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
   
-  <!-- So that users can add custom icons -->
-  <script src="../../_static/scripts/fontawesome.js?digest=26a4bc78f4c0ddb94549"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
-<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
     <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
     <script src="../../_static/doctools.js?v=9a2dae69"></script>
@@ -65,11 +62,10 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'content/teaching/2. forces_potentials';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="3. Polar interactions and Dipoles {#polar-interactions-and-dipoles .H2}" href="3.%20polar_interactions.html" />
+    <link rel="next" title="3. Polar interactions and Dipoles" href="3.%20polar_interactions.html" />
     <link rel="prev" title="1. The Nanoscale World" href="1.%20nanoscale_world.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="" />
   </head>
   
   
@@ -85,8 +81,19 @@
     <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
-  <dialog id="pst-search-dialog">
-    
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
 <form class="bd-search d-flex align-items-center"
       action="../../search.html"
       method="get">
@@ -94,6 +101,7 @@
   <input type="search"
          class="form-control"
          name="q"
+         id="search-input"
          placeholder="Search this book..."
          aria-label="Search this book..."
          autocomplete="off"
@@ -101,8 +109,8 @@
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form>
-  </dialog>
+</form></div>
+  </div>
 
   <div class="pst-async-banner-revealer d-none">
   <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
@@ -118,8 +126,7 @@
       
       
       
-      <dialog id="pst-primary-sidebar-modal"></dialog>
-      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+      <div class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -149,17 +156,21 @@
     
     
     <img src="../../_static/logo.jpg" class="logo__image only-light" alt="Force and function at the nanoscale - Home"/>
-    <img src="../../_static/logo.jpg" class="logo__image only-dark pst-js-only" alt="Force and function at the nanoscale - Home"/>
+    <script>document.write(`<img src="../../_static/logo.jpg" class="logo__image only-dark" alt="Force and function at the nanoscale - Home"/>`);</script>
   
   
 </a></div>
         <div class="sidebar-primary-item">
 
-<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
- <i class="fa-solid fa-magnifying-glass"></i>
- <span class="search-button__default-text">Search</span>
- <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-</button></div>
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
@@ -179,13 +190,13 @@
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="1.%20nanoscale_world.html">1. The Nanoscale World</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">2. Forces and Potentials</a></li>
-<li class="toctree-l1"><a class="reference internal" href="3.%20polar_interactions.html">3. Polar interactions and Dipoles {#polar-interactions-and-dipoles .H2}</a></li>
-<li class="toctree-l1"><a class="reference internal" href="4.%20dispersion_interactions.html">Dispersion Interactions {#dispersion-interactions .H2}</a></li>
-<li class="toctree-l1"><a class="reference internal" href="5.%20dispersion_bigger.html">5. Dispersion Interactions – larger objects {#dispersion-interactions-larger-objects .H2}</a></li>
-<li class="toctree-l1"><a class="reference internal" href="6.%20water_hydrogenbonds.html">6. Water, Hydrogen Bonds &amp; the Hydrophobic Interaction {#water-hydrogen-bonds-the-hydrophobic-interaction .H2}</a></li>
-<li class="toctree-l1"><a class="reference internal" href="7.%20surfacevbulk.html">7. Surface vs Bulk {#surface-vs-bulk .H2}</a></li>
-<li class="toctree-l1"><a class="reference internal" href="8.%20capillaryforces.html">8. Capillary Forces {#capillary-forces .H2}</a></li>
-<li class="toctree-l1"><a class="reference internal" href="9.%20afm.html">9. Nanoscale Force Measurement Techniques – AFM {#nanoscale-force-measurement-techniques-afm .H2}</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3.%20polar_interactions.html">3. Polar interactions and Dipoles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="4.%20dispersion_interactions.html">Dispersion Interactions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="5.%20dispersion_bigger.html">5. Dispersion Interactions – larger objects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="6.%20water_hydrogenbonds.html">6. Water, Hydrogen Bonds &amp; the Hydrophobic Interaction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="7.%20surfacevbulk.html">7. Surface vs Bulk</a></li>
+<li class="toctree-l1"><a class="reference internal" href="8.%20capillaryforces.html">8. Capillary Forces</a></li>
+<li class="toctree-l1"><a class="reference internal" href="9.%20afm.html">9. Nanoscale Force Measurement Techniques – AFM</a></li>
 <li class="toctree-l1"><a class="reference internal" href="10.%20opticaltweezers.html">10. Nanoscale Force Measurement Techniques – Optical Tweezers {#nanoscale-force-measurement-techniques-optical-tweezers .H2}</a></li>
 <li class="toctree-l1"><a class="reference internal" href="12.%20entropy.html">11. Entropic Forces {#entropic-forces .H2}</a></li>
 <li class="toctree-l1"><a class="reference internal" href="13.%20aggregation.html">12. Aggregation &amp; Self-assembly {#aggregation-self-assembly .H2}</a></li>
@@ -344,16 +355,24 @@
 
 
 
-<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
-  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
-  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
-  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
-</button>
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
 
 
-<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-</button>
+  </button>
+`);
+</script>
 <button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
 </button>
@@ -384,16 +403,14 @@
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#strong-inter-atomic-and-intermolecular-forces">Strong Inter-atomic and intermolecular forces</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#electrostatic-coulomb-interactions-electrostatic-coulomb-interactions-h3">Electrostatic (Coulomb) Interactions {#electrostatic-coulomb-interactions .H3}</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-range-of-interactions">The range of interactions</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#example-range-of-electrostatic-interactions">Example: Range of electrostatic interactions</a></li>
-</ul>
-</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-range-of-interactions">The range of interactions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-range-of-electrostatic-interactions">Example: Range of electrostatic interactions</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ionic-crystals">Ionic Crystals</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#covalent-bonds">Covalent Bonds</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#metallic-bonding">Metallic bonding</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-do-we-mean-by-a-strong-interaction">What do we mean by a “Strong Interaction”?</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-do-we-mean-by-a-strong-interaction">What do we mean by a “Strong Interaction”?</a></li>
 </ul>
             </nav>
         </div>
@@ -405,7 +422,7 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="forces-and-potentials">
+  <section class="tex2jax_ignore mathjax_ignore" id="forces-and-potentials">
 <h1>2. Forces and Potentials<a class="headerlink" href="#forces-and-potentials" title="Link to this heading">#</a></h1>
 <section id="relationship-between-force-and-potential">
 <h2>Relationship between force and potential<a class="headerlink" href="#relationship-between-force-and-potential" title="Link to this heading">#</a></h2>
@@ -494,8 +511,9 @@ We can estimate the range of an interaction by comparing the thermal energy to t
 <li><p>When <span class="math notranslate nohighlight">\(|U(x)| \&gt; kT\)</span> the atoms/molecules still feel the interactions between them</p></li>
 </ul>
 <p><strong>When the two are equal we see a cross over from one regime to another. The distance, x, at which this occurs gives a measure of the range of an interaction.</strong></p>
+</section>
 <section id="example-range-of-electrostatic-interactions">
-<h4>Example: Range of electrostatic interactions<a class="headerlink" href="#example-range-of-electrostatic-interactions" title="Link to this heading">#</a></h4>
+<h3>Example: Range of electrostatic interactions<a class="headerlink" href="#example-range-of-electrostatic-interactions" title="Link to this heading">#</a></h3>
 <p>We can obtain an estimate of the range X~range~ of the electrostatic interaction between two charged atoms/molecules if we equate <em>kT</em> with our expression for the electrostatic potential energy (equation 2.2)</p>
 <div class="math notranslate nohighlight">
 \[
@@ -511,7 +529,6 @@ X_{range} = \frac{q_1q_2}{4\pi\varepsilon\varepsilon_0k_{B}T} \tag{2.6}
 to thermal energies</p></li>
 <li><p><span class="math notranslate nohighlight">\(x &lt; X_{range}\)</span> electrostatic interactions start to dominate interactions between atoms/molecules</p></li>
 </ul>
-</section>
 </section>
 <section id="ionic-crystals">
 <h3>Ionic Crystals<a class="headerlink" href="#ionic-crystals" title="Link to this heading">#</a></h3>
@@ -582,9 +599,8 @@ becomes confined and the properties change. In the gold nanoparticle
 solutions shown, the optical properties (colour) are changed by changing
 the size of the particles.</p>
 </section>
-</section>
 <section id="what-do-we-mean-by-a-strong-interaction">
-<h2>What do we mean by a “Strong Interaction”?<a class="headerlink" href="#what-do-we-mean-by-a-strong-interaction" title="Link to this heading">#</a></h2>
+<h3>What do we mean by a “Strong Interaction”?<a class="headerlink" href="#what-do-we-mean-by-a-strong-interaction" title="Link to this heading">#</a></h3>
 <p><strong>Strong</strong> and <strong>Weak</strong> are relative terms. In the context of interactions
 we can think of a <strong>Strong</strong> bond as something which is stable against
 thermal fluctuations. That is in a large sample, even if we wait a long
@@ -609,6 +625,7 @@ U/k_{B}T \sim 100 \rightarrow e^{-100} = 3.7 \times 10^{-44}
 U/k_{B}T \sim 2 \rightarrow e^{-2} = 0.13
 \]</div>
 <p>Since the probability is reasonable that a thermal fluctuation will break this bond the interaction is described as “weak”.</p>
+</section>
 </section>
 </section>
 
@@ -656,7 +673,7 @@ U/k_{B}T \sim 2 \rightarrow e^{-2} = 0.13
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">3. Polar interactions and Dipoles {#polar-interactions-and-dipoles .H2}</p>
+        <p class="prev-next-title">3. Polar interactions and Dipoles</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -667,8 +684,7 @@ U/k_{B}T \sim 2 \rightarrow e^{-2} = 0.13
             
             
               
-                <dialog id="pst-secondary-sidebar-modal"></dialog>
-                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
 
   <div class="sidebar-secondary-item">
@@ -684,16 +700,14 @@ U/k_{B}T \sim 2 \rightarrow e^{-2} = 0.13
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#strong-inter-atomic-and-intermolecular-forces">Strong Inter-atomic and intermolecular forces</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#electrostatic-coulomb-interactions-electrostatic-coulomb-interactions-h3">Electrostatic (Coulomb) Interactions {#electrostatic-coulomb-interactions .H3}</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-range-of-interactions">The range of interactions</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#example-range-of-electrostatic-interactions">Example: Range of electrostatic interactions</a></li>
-</ul>
-</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-range-of-interactions">The range of interactions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-range-of-electrostatic-interactions">Example: Range of electrostatic interactions</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ionic-crystals">Ionic Crystals</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#covalent-bonds">Covalent Bonds</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#metallic-bonding">Metallic bonding</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-do-we-mean-by-a-strong-interaction">What do we mean by a “Strong Interaction”?</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-do-we-mean-by-a-strong-interaction">What do we mean by a “Strong Interaction”?</a></li>
 </ul>
   </nav></div>
 
@@ -742,8 +756,8 @@ By Mike Smith
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script defer src="../../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549"></script>
-<script defer src="../../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549"></script>
+  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
 
   <footer class="bd-footer">
   </footer>

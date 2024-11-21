@@ -16,19 +16,17 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
-  <!-- 
-    this give us a css class that will be invisible only if js is disabled 
-  -->
-  <noscript>
-    <style>
-      .pst-js-only { display: none !important; }
-
-    </style>
-  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../_static/styles/theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
-<link href="../../_static/styles/pydata-sphinx-theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=a3416100" />
@@ -38,11 +36,10 @@
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
   
-  <!-- So that users can add custom icons -->
-  <script src="../../_static/scripts/fontawesome.js?digest=26a4bc78f4c0ddb94549"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
-<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
     <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
     <script src="../../_static/doctools.js?v=9a2dae69"></script>
@@ -69,7 +66,6 @@
     <link rel="prev" title="2. Forces and Potentials" href="2.%20forces_potentials.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="" />
   </head>
   
   
@@ -85,8 +81,19 @@
     <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
-  <dialog id="pst-search-dialog">
-    
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
 <form class="bd-search d-flex align-items-center"
       action="../../search.html"
       method="get">
@@ -94,6 +101,7 @@
   <input type="search"
          class="form-control"
          name="q"
+         id="search-input"
          placeholder="Search this book..."
          aria-label="Search this book..."
          autocomplete="off"
@@ -101,8 +109,8 @@
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form>
-  </dialog>
+</form></div>
+  </div>
 
   <div class="pst-async-banner-revealer d-none">
   <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
@@ -118,8 +126,7 @@
       
       
       
-      <dialog id="pst-primary-sidebar-modal"></dialog>
-      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+      <div class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -149,17 +156,21 @@
     
     
     <img src="../../_static/logo.jpg" class="logo__image only-light" alt="Force and function at the nanoscale - Home"/>
-    <img src="../../_static/logo.jpg" class="logo__image only-dark pst-js-only" alt="Force and function at the nanoscale - Home"/>
+    <script>document.write(`<img src="../../_static/logo.jpg" class="logo__image only-dark" alt="Force and function at the nanoscale - Home"/>`);</script>
   
   
 </a></div>
         <div class="sidebar-primary-item">
 
-<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
- <i class="fa-solid fa-magnifying-glass"></i>
- <span class="search-button__default-text">Search</span>
- <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-</button></div>
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
@@ -181,11 +192,11 @@
 <li class="toctree-l1"><a class="reference internal" href="2.%20forces_potentials.html">2. Forces and Potentials</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">3. Polar interactions and Dipoles</a></li>
 <li class="toctree-l1"><a class="reference internal" href="4.%20dispersion_interactions.html">Dispersion Interactions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="5.%20dispersion_bigger.html">5. Dispersion Interactions – larger objects {#dispersion-interactions-larger-objects .H2}</a></li>
-<li class="toctree-l1"><a class="reference internal" href="6.%20water_hydrogenbonds.html">6. Water, Hydrogen Bonds &amp; the Hydrophobic Interaction {#water-hydrogen-bonds-the-hydrophobic-interaction .H2}</a></li>
-<li class="toctree-l1"><a class="reference internal" href="7.%20surfacevbulk.html">7. Surface vs Bulk {#surface-vs-bulk .H2}</a></li>
-<li class="toctree-l1"><a class="reference internal" href="8.%20capillaryforces.html">8. Capillary Forces {#capillary-forces .H2}</a></li>
-<li class="toctree-l1"><a class="reference internal" href="9.%20afm.html">9. Nanoscale Force Measurement Techniques – AFM {#nanoscale-force-measurement-techniques-afm .H2}</a></li>
+<li class="toctree-l1"><a class="reference internal" href="5.%20dispersion_bigger.html">5. Dispersion Interactions – larger objects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="6.%20water_hydrogenbonds.html">6. Water, Hydrogen Bonds &amp; the Hydrophobic Interaction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="7.%20surfacevbulk.html">7. Surface vs Bulk</a></li>
+<li class="toctree-l1"><a class="reference internal" href="8.%20capillaryforces.html">8. Capillary Forces</a></li>
+<li class="toctree-l1"><a class="reference internal" href="9.%20afm.html">9. Nanoscale Force Measurement Techniques – AFM</a></li>
 <li class="toctree-l1"><a class="reference internal" href="10.%20opticaltweezers.html">10. Nanoscale Force Measurement Techniques – Optical Tweezers {#nanoscale-force-measurement-techniques-optical-tweezers .H2}</a></li>
 <li class="toctree-l1"><a class="reference internal" href="12.%20entropy.html">11. Entropic Forces {#entropic-forces .H2}</a></li>
 <li class="toctree-l1"><a class="reference internal" href="13.%20aggregation.html">12. Aggregation &amp; Self-assembly {#aggregation-self-assembly .H2}</a></li>
@@ -344,16 +355,24 @@
 
 
 
-<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
-  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
-  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
-  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
-</button>
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
 
 
-<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-</button>
+  </button>
+`);
+</script>
 <button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
 </button>
@@ -377,13 +396,17 @@
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#polar-molecules">Polar Molecules</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zwitterions-and-dipolar-ions">Zwitterions and dipolar ions</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-do-we-define-an-electric-dipole-moment">How do we define an electric dipole moment?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#polar-molecules">Polar Molecules</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#zwitterions-and-dipolar-ions">Zwitterions and dipolar ions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#how-do-we-define-an-electric-dipole-moment">How do we define an electric dipole moment?</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#electric-field-due-to-a-dipole">Electric Field due to a dipole</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#potential-energy-of-a-dipole-in-an-electric-field">Potential energy of a dipole in an electric field</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#polarisation-of-atoms-and-molecules-using-external-fields">Polarisation of atoms and molecules using external fields</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#polarisability-of-atoms-molecules-and-small-particles">Polarisability of atoms, molecules and small particles</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#polarisation-of-atoms-and-molecules-using-external-fields">Polarisation of atoms and molecules using external fields</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#polarisability-of-atoms-molecules-and-small-particles">Polarisability of atoms, molecules and small particles</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary-of-key-concepts">Summary of key concepts</a></li>
 </ul>
             </nav>
@@ -396,7 +419,7 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="polar-interactions-and-dipoles">
+  <section class="tex2jax_ignore mathjax_ignore" id="polar-interactions-and-dipoles">
 <h1>3. Polar interactions and Dipoles<a class="headerlink" href="#polar-interactions-and-dipoles" title="Link to this heading">#</a></h1>
 <section id="polar-molecules">
 <h2>Polar Molecules<a class="headerlink" href="#polar-molecules" title="Link to this heading">#</a></h2>
@@ -407,9 +430,8 @@ electrically neutral, the electrons in the HCl bond lie closer to the chlorine n
     <img src="media/3_1.jpg" alt="dipole" width="150" height=auto>
     <p><em>Figure 3.1 - An HCl molecule showing the dipole moment, which arises because the Chlorine atom pulls the electrons in the covalent bond towards itself.</em></p>
 </div>
-</section>
 <section id="zwitterions-and-dipolar-ions">
-<h2>Zwitterions and dipolar ions<a class="headerlink" href="#zwitterions-and-dipolar-ions" title="Link to this heading">#</a></h2>
+<h3>Zwitterions and dipolar ions<a class="headerlink" href="#zwitterions-and-dipolar-ions" title="Link to this heading">#</a></h3>
 <p>In some cases, the polar properties of the molecules depend upon the local environment (e.g. presence of solvents).
 Water soluble dipolar molecules of this type are called <strong>Zwitterions</strong> (Zwitter- German meaning ‘hybrid’ ). Some molecules contain both a net charge and a dipole moment. These molecules are referred to as <strong>dipolar ions</strong>.</p>
 <div style="text-align: center;">
@@ -418,7 +440,7 @@ Water soluble dipolar molecules of this type are called <strong>Zwitterions</str
 </div>
 </section>
 <section id="how-do-we-define-an-electric-dipole-moment">
-<h2>How do we define an electric dipole moment?<a class="headerlink" href="#how-do-we-define-an-electric-dipole-moment" title="Link to this heading">#</a></h2>
+<h3>How do we define an electric dipole moment?<a class="headerlink" href="#how-do-we-define-an-electric-dipole-moment" title="Link to this heading">#</a></h3>
 <p>Recall from electromagnetism that a dipole consists of two charges (<em>+q</em> and <em>-q</em>) separated by a distance <em>d</em>. The dipole moment, <strong>p</strong> is then defined as:</p>
 <div class="math notranslate nohighlight">
 \[\mathbf{p} = qd\ \widehat{\mathbf{r}}\]</div>
@@ -427,6 +449,7 @@ Water soluble dipolar molecules of this type are called <strong>Zwitterions</str
     <img src="media/3_3.jpg" alt="dipole definition" width="250" height=auto>
     <p><em>Figure 3.3 - diagram illustrating the definition of a dipole.</em></p>
 </div>
+</section>
 </section>
 <section id="electric-field-due-to-a-dipole">
 <h2>Electric Field due to a dipole<a class="headerlink" href="#electric-field-due-to-a-dipole" title="Link to this heading">#</a></h2>
@@ -469,9 +492,8 @@ external applied electric field by</strong></p>
 <div class="math notranslate nohighlight">
 \[\mathbf{p} = \alpha\mathbf{E}_{ext}\]</div>
 <p>where <em><span class="math notranslate nohighlight">\(\alpha\)</span></em> is the <strong>polarisability</strong> of the atom/molecule in units <span class="math notranslate nohighlight">\(C^{2}m^{2}J^{-1}\)</span>.</p>
-</section>
 <section id="polarisability-of-atoms-molecules-and-small-particles">
-<h2>Polarisability of atoms, molecules and small particles<a class="headerlink" href="#polarisability-of-atoms-molecules-and-small-particles" title="Link to this heading">#</a></h2>
+<h3>Polarisability of atoms, molecules and small particles<a class="headerlink" href="#polarisability-of-atoms-molecules-and-small-particles" title="Link to this heading">#</a></h3>
 <p>We can determine the polarisability of an atom, molecule or small
 particle in an applied external field by balancing the electrostatic
 forces between the separated charges and the force exerted due to the
@@ -482,6 +504,7 @@ application external field. This gives the result</p>
 atom, molecule or particle. So α scales with the volume of the
 atom/molecule ($\propto \sim R^{3} \sim Volume).</p>
 <p><strong>Polarisability scales with the volume of the molecule.</strong></p>
+</section>
 </section>
 <section id="summary-of-key-concepts">
 <h2>Summary of key concepts<a class="headerlink" href="#summary-of-key-concepts" title="Link to this heading">#</a></h2>
@@ -550,8 +573,7 @@ atom/molecule ($\propto \sim R^{3} \sim Volume).</p>
             
             
               
-                <dialog id="pst-secondary-sidebar-modal"></dialog>
-                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
 
   <div class="sidebar-secondary-item">
@@ -560,13 +582,17 @@ atom/molecule ($\propto \sim R^{3} \sim Volume).</p>
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#polar-molecules">Polar Molecules</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zwitterions-and-dipolar-ions">Zwitterions and dipolar ions</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-do-we-define-an-electric-dipole-moment">How do we define an electric dipole moment?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#polar-molecules">Polar Molecules</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#zwitterions-and-dipolar-ions">Zwitterions and dipolar ions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#how-do-we-define-an-electric-dipole-moment">How do we define an electric dipole moment?</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#electric-field-due-to-a-dipole">Electric Field due to a dipole</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#potential-energy-of-a-dipole-in-an-electric-field">Potential energy of a dipole in an electric field</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#polarisation-of-atoms-and-molecules-using-external-fields">Polarisation of atoms and molecules using external fields</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#polarisability-of-atoms-molecules-and-small-particles">Polarisability of atoms, molecules and small particles</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#polarisation-of-atoms-and-molecules-using-external-fields">Polarisation of atoms and molecules using external fields</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#polarisability-of-atoms-molecules-and-small-particles">Polarisability of atoms, molecules and small particles</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary-of-key-concepts">Summary of key concepts</a></li>
 </ul>
   </nav></div>
@@ -616,8 +642,8 @@ By Mike Smith
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script defer src="../../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549"></script>
-<script defer src="../../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549"></script>
+  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
 
   <footer class="bd-footer">
   </footer>

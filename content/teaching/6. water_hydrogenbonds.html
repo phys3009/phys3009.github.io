@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>6. Water, Hydrogen Bonds &amp; the Hydrophobic Interaction {#water-hydrogen-bonds-the-hydrophobic-interaction .H2} &#8212; Force and function at the nanoscale</title>
+    <title>6. Water, Hydrogen Bonds &amp; the Hydrophobic Interaction &#8212; Force and function at the nanoscale</title>
   
   
   
@@ -16,19 +16,17 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
-  <!-- 
-    this give us a css class that will be invisible only if js is disabled 
-  -->
-  <noscript>
-    <style>
-      .pst-js-only { display: none !important; }
-
-    </style>
-  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../_static/styles/theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
-<link href="../../_static/styles/pydata-sphinx-theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=a3416100" />
@@ -38,11 +36,10 @@
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
   
-  <!-- So that users can add custom icons -->
-  <script src="../../_static/scripts/fontawesome.js?digest=26a4bc78f4c0ddb94549"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
-<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
     <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
     <script src="../../_static/doctools.js?v=9a2dae69"></script>
@@ -65,11 +62,10 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'content/teaching/6. water_hydrogenbonds';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="7. Surface vs Bulk {#surface-vs-bulk .H2}" href="7.%20surfacevbulk.html" />
+    <link rel="next" title="7. Surface vs Bulk" href="7.%20surfacevbulk.html" />
     <link rel="prev" title="5. Dispersion Interactions – larger objects" href="5.%20dispersion_bigger.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="" />
   </head>
   
   
@@ -85,8 +81,19 @@
     <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
-  <dialog id="pst-search-dialog">
-    
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
 <form class="bd-search d-flex align-items-center"
       action="../../search.html"
       method="get">
@@ -94,6 +101,7 @@
   <input type="search"
          class="form-control"
          name="q"
+         id="search-input"
          placeholder="Search this book..."
          aria-label="Search this book..."
          autocomplete="off"
@@ -101,8 +109,8 @@
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form>
-  </dialog>
+</form></div>
+  </div>
 
   <div class="pst-async-banner-revealer d-none">
   <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
@@ -118,8 +126,7 @@
       
       
       
-      <dialog id="pst-primary-sidebar-modal"></dialog>
-      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+      <div class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -149,17 +156,21 @@
     
     
     <img src="../../_static/logo.jpg" class="logo__image only-light" alt="Force and function at the nanoscale - Home"/>
-    <img src="../../_static/logo.jpg" class="logo__image only-dark pst-js-only" alt="Force and function at the nanoscale - Home"/>
+    <script>document.write(`<img src="../../_static/logo.jpg" class="logo__image only-dark" alt="Force and function at the nanoscale - Home"/>`);</script>
   
   
 </a></div>
         <div class="sidebar-primary-item">
 
-<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
- <i class="fa-solid fa-magnifying-glass"></i>
- <span class="search-button__default-text">Search</span>
- <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-</button></div>
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
@@ -182,10 +193,10 @@
 <li class="toctree-l1"><a class="reference internal" href="3.%20polar_interactions.html">3. Polar interactions and Dipoles</a></li>
 <li class="toctree-l1"><a class="reference internal" href="4.%20dispersion_interactions.html">Dispersion Interactions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="5.%20dispersion_bigger.html">5. Dispersion Interactions – larger objects</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">6. Water, Hydrogen Bonds &amp; the Hydrophobic Interaction {#water-hydrogen-bonds-the-hydrophobic-interaction .H2}</a></li>
-<li class="toctree-l1"><a class="reference internal" href="7.%20surfacevbulk.html">7. Surface vs Bulk {#surface-vs-bulk .H2}</a></li>
-<li class="toctree-l1"><a class="reference internal" href="8.%20capillaryforces.html">8. Capillary Forces {#capillary-forces .H2}</a></li>
-<li class="toctree-l1"><a class="reference internal" href="9.%20afm.html">9. Nanoscale Force Measurement Techniques – AFM {#nanoscale-force-measurement-techniques-afm .H2}</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">6. Water, Hydrogen Bonds &amp; the Hydrophobic Interaction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="7.%20surfacevbulk.html">7. Surface vs Bulk</a></li>
+<li class="toctree-l1"><a class="reference internal" href="8.%20capillaryforces.html">8. Capillary Forces</a></li>
+<li class="toctree-l1"><a class="reference internal" href="9.%20afm.html">9. Nanoscale Force Measurement Techniques – AFM</a></li>
 <li class="toctree-l1"><a class="reference internal" href="10.%20opticaltweezers.html">10. Nanoscale Force Measurement Techniques – Optical Tweezers {#nanoscale-force-measurement-techniques-optical-tweezers .H2}</a></li>
 <li class="toctree-l1"><a class="reference internal" href="12.%20entropy.html">11. Entropic Forces {#entropic-forces .H2}</a></li>
 <li class="toctree-l1"><a class="reference internal" href="13.%20aggregation.html">12. Aggregation &amp; Self-assembly {#aggregation-self-assembly .H2}</a></li>
@@ -344,16 +355,24 @@
 
 
 
-<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
-  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
-  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
-  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
-</button>
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
 
 
-<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-</button>
+  </button>
+`);
+</script>
 <button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
 </button>
@@ -367,7 +386,7 @@
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>6. Water, Hydrogen Bonds & the Hydrophobic Interaction {#water-hydrogen-bonds-the-hydrophobic-interaction .H2}</h1>
+    <h1>6. Water, Hydrogen Bonds & the Hydrophobic Interaction</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -377,15 +396,22 @@
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#properties-of-water-properties-of-water-h3">Properties of Water {#properties-of-water .H3}</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-structure-of-ice-the-structure-of-ice-h3">The structure of ice {#the-structure-of-ice .H3}</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-structure-of-water-the-structure-of-water-h3">The structure of water {#the-structure-of-water .H3}</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary-of-properties-of-h-bonds-summary-of-properties-of-h-bonds-h3">Summary of properties of H-Bonds  {#summary-of-properties-of-h-bonds .H3}</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hydrogen-bonding-in-nanoscience-hydrogen-bonding-in-nanoscience-h3">Hydrogen bonding in nanoscience {#hydrogen-bonding-in-nanoscience .H3}</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hydrogen-bonding-in-nature-hydrogen-bonding-in-nature-h3">Hydrogen bonding in nature {#hydrogen-bonding-in-nature .H3}</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hydrophobic-interactions-hydrophobic-interactions-h3">Hydrophobic interactions {#hydrophobic-interactions .H3}</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-hydrophobic-force-the-hydrophobic-force-h3">The hydrophobic force {#the-hydrophobic-force .H3}</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hydrophobic-interactions-in-nature-hydrophobic-interactions-in-nature-h3">Hydrophobic interactions in nature {#hydrophobic-interactions-in-nature .H3}</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#properties-of-water">Properties of Water</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#how-strong-are-hydrogen-bonds">How strong are Hydrogen bonds?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-structure-of-ice">The structure of ice</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-structure-of-water">The structure of water</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#summary-of-properties-of-h-bonds">Summary of properties of H-Bonds</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hydrogen-bonding-in-nanoscience">Hydrogen bonding in nanoscience</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hydrogen-bonding-in-nature">Hydrogen bonding in nature</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hydrophobic-interactions">Hydrophobic interactions</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-hydrophobic-force">The hydrophobic force</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hydrophobic-interactions-in-nature">Hydrophobic interactions in nature</a></li>
+</ul>
+</li>
 </ul>
             </nav>
         </div>
@@ -397,8 +423,8 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="water-hydrogen-bonds-the-hydrophobic-interaction-water-hydrogen-bonds-the-hydrophobic-interaction-h2">
-<h1>6. Water, Hydrogen Bonds &amp; the Hydrophobic Interaction {#water-hydrogen-bonds-the-hydrophobic-interaction .H2}<a class="headerlink" href="#water-hydrogen-bonds-the-hydrophobic-interaction-water-hydrogen-bonds-the-hydrophobic-interaction-h2" title="Link to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="water-hydrogen-bonds-the-hydrophobic-interaction">
+<h1>6. Water, Hydrogen Bonds &amp; the Hydrophobic Interaction<a class="headerlink" href="#water-hydrogen-bonds-the-hydrophobic-interaction" title="Link to this heading">#</a></h1>
 <p>In this chapter we will study two interactions that deserve special
 mention in their own right. These are <strong>hydrogen bonding</strong> interactions
 and the <strong>hydrophobic interaction</strong>. These are both extremely important
@@ -408,12 +434,11 @@ and other biomacromolecules as well as the structure of cell membranes.
 However, before we begin to discuss these interactions it is worthwhile
 considering the properties of the solvent in which these interactions
 are usually most prevalent…water!</p>
-<section id="properties-of-water-properties-of-water-h3">
-<h2>Properties of Water {#properties-of-water .H3}<a class="headerlink" href="#properties-of-water-properties-of-water-h3" title="Link to this heading">#</a></h2>
+<section id="properties-of-water">
+<h2>Properties of Water<a class="headerlink" href="#properties-of-water" title="Link to this heading">#</a></h2>
 <p>Water is arguably the most important liquid on earth. All biological
 organisms have a high water content and need a relative abundance of it
-to survive.</p>
-<p>Nanoscience also exploits the dielectric properties of water to help
+to survive. Nanoscience also exploits the dielectric properties of water to help
 stabilise particles and surfaces in solution (via electrostatic
 colloidal interactions which we will cover later on in this course).</p>
 <p>Although to us, water may seem like a typical liquid, this is far from
@@ -422,14 +447,13 @@ has high melting and boiling points. It also has a high latent heat of
 vaporisation and surface energy when compared to other liquids. These
 properties all point to the fact that interactions other than simple
 dispersion interactions are present in water.</p>
-<p><img alt="polarbonds.jpg" src="content/teaching/media/image48.jpeg" />{width=”3.517361111111111in”
-height=”2.129166666666667in”}These properties are due to the special
-nature of the interactions between water molecules.</p>
+<div style="text-align: center;">
+    <img src="media/6_1.jpg" alt="Polar bonds" width="400" height=auto>
+    <p><em>Figure 6.1 - Molecules with strongly electronegative elements result in permanent polar bonds</em></p>
+</div>
 <p>If we consider atoms such as oxygen (O), nitrogen (N), fluorine (F) and
 chlorine (Cl) we find that they are highly electronegative (they tend to
-pull electrons towards themselves).</p>
-<p>This has the effect of making covalent bonds with these atoms quite
-polar. They are therefore <strong>permanent dipoles.</strong></p>
+pull electrons towards themselves). This has the effect of making covalent bonds with these atoms quite polar. They are therefore <strong>permanent dipoles.</strong></p>
 <p>Bonds between these atoms and hydrogen tend to have a greater polarity.
 Interactions between dipoles on different molecules are called <strong>dipolar
 interactions</strong>. When these dipoles are formed by hydrogen atoms
@@ -444,12 +468,11 @@ CH~3~Cl have dipole moments that do not cancel out and are thus polar
 molecules. However, although both BF~3~ and CCl~4~ have polar bonds in
 them, the symmetry in the distribution of these bonds means that the net
 dipole moment is zero and they are apolar.</p>
-<p><strong>How strong are Hydrogen bonds?</strong></p>
-<p>The energies associated with individual <strong>H-bonds</strong> are typically</p>
-<p>10-40 kJmol^-1^ (0.1 to 0.4 eV)</p>
-<p>Comparing this with the energies associated with other bonds we have</p>
-<p><strong>Metallic and Covalent Bonds</strong> ~ 500 kJmol^-1^ (5 eV)</p>
-<p><strong>Van der Waals (dispersion forces) bonds</strong> ~ 1 kJmol^-1^ (10 meV)</p>
+<section id="how-strong-are-hydrogen-bonds">
+<h3>How strong are Hydrogen bonds?<a class="headerlink" href="#how-strong-are-hydrogen-bonds" title="Link to this heading">#</a></h3>
+<p>The energies associated with individual <strong>H-bonds</strong> are typically <span class="math notranslate nohighlight">\(10-40 kJmol^{-1} (0.1 to 0.4 eV)\)</span>. Comparing this with the energies associated with other bonds we have:</p>
+<p><strong>Metallic and Covalent Bonds</strong> <span class="math notranslate nohighlight">\(\sim 500 kJmol^{-1} (5 eV)\)</span></p>
+<p><strong>Van der Waals (dispersion forces) bonds</strong> <span class="math notranslate nohighlight">\(\sim 1 kJmol^{-1} (10 meV)\)</span></p>
 <p>They are harder to overcome than simple dispersion interactions and are
 relatively stable at room temperature. The temperature controls whether
 these bonds break apart. If the temperature drops below T=0°C thermal
@@ -458,46 +481,43 @@ Temperature climbs to T=100°C thermal fluctuations have an increasing
 probability of overcoming the bond to enable the molecules to move
 apart.</p>
 </section>
-<section id="the-structure-of-ice-the-structure-of-ice-h3">
-<h2>The structure of ice {#the-structure-of-ice .H3}<a class="headerlink" href="#the-structure-of-ice-the-structure-of-ice-h3" title="Link to this heading">#</a></h2>
+<section id="the-structure-of-ice">
+<h3>The structure of ice<a class="headerlink" href="#the-structure-of-ice" title="Link to this heading">#</a></h3>
 <p>The location of hydrogen bonds on molecules infers greater specificity
 than simple dispersion interactions (i.e. dipoles will only interact
 electrostatically with dipoles and charges on other molecules), but it
 also introduces some directionality to the bonds. Dispersion forces on
 the other hand act between all molecules and tend to be indiscriminate
 in the directions in which they act (i.e. they have spherical symmetry).</p>
-<p><img alt="waterandice.jpg" src="content/teaching/media/image49.jpeg" />{width=”3.7666666666666666in”
-height=”2.8930555555555557in”}The <strong>directional nature of hydrogen bonds
-in water</strong> causes water molecules to pack into an open tetrahedral
-structure when it forms ice. When water crystallises, the average number
-of nearest neighbour molecules decreases from ~5 in liquid to 4 in ice
-(resulting in a lower density) as the structure becomes more open.</p>
-<p>This is unusual as crystalline solids are usually denser than the liquid
-because atoms/molecules become more closely spaced in the solid state.</p>
+<div style="text-align: center;">
+    <img src="media/6_2.jpg" alt="Ice" width="400" height=auto>
+    <p><em>Figure 6.2 - Hydrogen bonding in Ice and liquid water</em></p>
+</div>
+<p>The directional nature of hydrogen bonds in water causes water molecules to pack into an open tetrahedral structure when it forms ice. When water crystallises, the average number of nearest neighbour molecules decreases from ~5 in liquid to 4 in ice (resulting in a lower density) as the structure becomes more open. This is unusual as crystalline solids are usually denser than the liquid because atoms / molecules become more closely spaced in the solid state.</p>
 </section>
-<section id="the-structure-of-water-the-structure-of-water-h3">
-<h2>The structure of water {#the-structure-of-water .H3}<a class="headerlink" href="#the-structure-of-water-the-structure-of-water-h3" title="Link to this heading">#</a></h2>
-<p><img alt="722px-Liquid_water_hydrogen_bond.png" src="content/teaching/media/image50.png" />{width=”2.3618055555555557in”
-height=”1.9555555555555555in”}At low (~ room or body) temperature, the
-polar nature of the interactions between water molecules causes liquid
-water to retain some of this tetrahedral structure.</p>
-<p>The hydrogen bonds are still present, but the molecules are more mobile.
-The interactions between H-bonds are dipole-dipole interactions.</p>
+<section id="the-structure-of-water">
+<h3>The structure of water<a class="headerlink" href="#the-structure-of-water" title="Link to this heading">#</a></h3>
+<div style="text-align: center;">
+    <img src="media/6_3.png" alt="Structure water" width="400" height=auto>
+    <p><em>Figure 6.3 - Structure of water</em></p>
+</div>
+<p>At room or body temperature, the polar nature of the interactions between water molecules causes liquid water to retain some of this tetrahedral structure. The hydrogen bonds are still present, but the molecules are more mobile. The interactions between H-bonds are dipole-dipole interactions.</p>
 </section>
-<section id="summary-of-properties-of-h-bonds-summary-of-properties-of-h-bonds-h3">
-<h2>Summary of properties of H-Bonds  {#summary-of-properties-of-h-bonds .H3}<a class="headerlink" href="#summary-of-properties-of-h-bonds-summary-of-properties-of-h-bonds-h3" title="Link to this heading">#</a></h2>
-<p><img alt="Quadruple_Hydrogen_Bond.jpg" src="content/teaching/media/image51.jpeg" />{width=”1.3763888888888889in”
-height=”1.1159722222222221in”}<img alt="Carboxylic_acid_dimers_Hbond.png" src="content/teaching/media/image52.png" />{width=”2.504861111111111in”
-height=”1.1548611111111111in”}H-bonds are dipole-dipole interactions
-between specific functional groups. As such they have some
-directionality</p>
-<p>They have energies of ~ 4-16 k~B~T~room~ (dispersion energies ~ 1
-k~B~T~room~ )</p>
-<p>This makes them ‘sticky’ and more stable than simple dispersion forces
-but they can also be disrupted by thermal motion of the molecules</p>
+<section id="summary-of-properties-of-h-bonds">
+<h3>Summary of properties of H-Bonds<a class="headerlink" href="#summary-of-properties-of-h-bonds" title="Link to this heading">#</a></h3>
+<div style="text-align: center;">
+    <img src="media/6_4.png" alt="H Bonds" width="400" height=auto>
+    <p><em>Figure 6.4 - Hydrogen Bonded molecules schematics</em></p>
+</div>
+<div style="text-align: center;">
+    <img src="media/6_5.jpg" alt="H Bonds" width="400" height=auto>
+    <p><em>Figure 6.5 - Hydrogen Bonded molecules</em></p>
+</div>
+H-bonds are dipole-dipole interactions between specific functional groups. As such they have some directionality. They have energies of $\sim 4-16 k_{B}T$ wherease dispersion bonds have energies $\sim 1 k_{B}T. This makes them 'sticky' and more stable than simple dispersion forces but they can also be disrupted by thermal motion of the molecules.
 </section>
-<section id="hydrogen-bonding-in-nanoscience-hydrogen-bonding-in-nanoscience-h3">
-<h2>Hydrogen bonding in nanoscience {#hydrogen-bonding-in-nanoscience .H3}<a class="headerlink" href="#hydrogen-bonding-in-nanoscience-hydrogen-bonding-in-nanoscience-h3" title="Link to this heading">#</a></h2>
+</section>
+<section id="hydrogen-bonding-in-nanoscience">
+<h2>Hydrogen bonding in nanoscience<a class="headerlink" href="#hydrogen-bonding-in-nanoscience" title="Link to this heading">#</a></h2>
 <p>The above properties are highly desirable when trying to form networks
 of molecules that will self-assemble into large ordered structures.
 Directionality and stickiness are clearly very important for helping to
@@ -521,110 +541,76 @@ structures that they form; Moreover, if the locations of the H-Bonds are
 carefully designed into the molecules, the specificity of the
 interactions between them can be increased and greater control can be
 obtained over the structures that they will form.</p>
-<p><img alt="A picture containing diagram Description automaticallygenerated" src="content/teaching/media/image53.png" />{width=”3.151388888888889in”
-height=”3.839583333333333in”}If the molecules are designed carefully,
-the directionality of H-bonds can be used to form supramolecular
-aggregates that self-assemble in solution or on a surface. A nice
-example of this is the case of melamine and a molecule called PTCDI (see
-figure on the right). Each PTCDI molecule is capable of forming three
-specific hydrogen bonds with a melamine molecule. However, melamine can
-form a total of nine of these H-bonds with PTCDI, meaning that each
-melamine molecule can be connected to three PTCDI molecules. As result,
-when these molecules are mixed in the presence of a flat
-(noninteracting) surface, they tend to form large areas of a hexagonal
-lattice, where the vertices and edges of the hexagons are made of
+<div style="text-align: center;">
+    <img src="media/6_6.png" alt="PTCDI" width="400" height=auto>
+    <p><em>Figure 6.6 - </em></p>
+</div>
+<p>If the molecules are designed carefully, the directionality of H-bonds can be used to form supramolecular aggregates that self-assemble in solution or on a surface. A nice example of this is the case of melamine and a molecule called PTCDI (see figure 6.6). Each PTCDI molecule is capable of forming three specific hydrogen bonds with a melamine molecule. However, melamine can form a total of nine of these H-bonds with PTCDI, meaning that each melamine molecule can be connected to three PTCDI molecules. As result, when these molecules are mixed in the presence of a flat (noninteracting) surface, they tend to form large areas of a hexagonal lattice, where the vertices and edges of the hexagons are made of
 melamine and PTCDI molecules respectively.</p>
+<section id="hydrogen-bonding-in-nature">
+<h3>Hydrogen bonding in nature<a class="headerlink" href="#hydrogen-bonding-in-nature" title="Link to this heading">#</a></h3>
+<div style="text-align: center;">
+    <img src="media/6_7.png" alt="proteins" width="400" height=auto>
+    <p><em>Figure 6.7 - Secondary structures in proteins which are stablised by hydrogen bonds known as alpha helices (left) and beta sheets (middle). On the right is a picture of the structure of DNA where one strand is connected to the other via hydrogen bonds.</em></p>
+</div>
+<p>Biological molecules also exploit the directionality of H-bond formation to produce rigid, structural elements that give these large molecules a well-defined shape. For example, proteins use hydrogen bonds to create well-defined structural elements such as helical structures and folded chain structures called beta-sheets. DNA also uses the specificity of hydrogen bonding between complimentary base pairs to produce its characteristic double helix structure.</p>
 </section>
-<section id="hydrogen-bonding-in-nature-hydrogen-bonding-in-nature-h3">
-<h2>Hydrogen bonding in nature {#hydrogen-bonding-in-nature .H3}<a class="headerlink" href="#hydrogen-bonding-in-nature-hydrogen-bonding-in-nature-h3" title="Link to this heading">#</a></h2>
-<p><img alt="A picture containing arrow Description automaticallygenerated" src="content/teaching/media/image54.png" />{width=”4.719444444444444in”
-height=”2.5027777777777778in”}Biological molecules also exploit the
-directionality of H-bond formation to produce rigid, structural elements
-that give these large molecules a well-defined shape. For example,
-proteins use hydrogen bonds to create well-defined structural elements
-such as helical structures and folded chain structures called
-beta-sheets. DNA also uses the specificity of hydrogen bonding between
-complimentary base pairs to produce its characteristic double helix
-structure.</p>
-</section>
-<section id="hydrophobic-interactions-hydrophobic-interactions-h3">
-<h2>Hydrophobic interactions {#hydrophobic-interactions .H3}<a class="headerlink" href="#hydrophobic-interactions-hydrophobic-interactions-h3" title="Link to this heading">#</a></h2>
+<section id="hydrophobic-interactions">
+<h3>Hydrophobic interactions<a class="headerlink" href="#hydrophobic-interactions" title="Link to this heading">#</a></h3>
 <p><em>The hydrophobic effect is a difficult subject as it logically fits with
 two sections of this course. Here we give an explanation of the effect
 but we will revisit the topic later (“Entropic forces”). If you find the
 discussion of entropy initially confusing this is understandable.
 However, a more detailed explanation of this aspect is included later.</em></p>
-<p><img alt="clathratecagewithmethane.gif" src="content/teaching/media/image55.png" />{width=”1.7840277777777778in”
-height=”1.757638888888889in”}When a nonpolar molecule comes into contact
-with polar liquids such as water it can only interact via dispersion
-forces (~0.4 k~B~T~room~). These are much weaker than the hydrogen
-bonds that water prefers to form (~4-16 k~B~T~room~).</p>
-<p>As a result of these less favourable interactions, water molecules will
-tend to reorient themselves near non-polar molecules to form a more
-ordered structure which maximises H-bonding called a Clathrate cage (see
-image on right showing a methane molecule surrounded by water
-molecules).</p>
-<p>This increase in the local ordering of the molecules causes a reduction
-in the entropy of the water surrounding the non-polar molecules. There
-is a large entropic energy penalty (equivalent to ~10-30 kJmol^-1^ or
-approx 4-12 kT at room temperature) associated with increasing the local
-order (decreasing disorder) of water molecules around a nonpolar
-molecule. Since this entropic penalty is proportional to the area of
-contact between the nonpolar molecule and the water minimising this area
-will be favourable<img alt="A picture containing icon Description automaticallygenerated" src="content/teaching/media/image56.png" />{width=”2.0881944444444445in”
-height=”2.4930555555555554in”}. For this reason, nonpolar molecules will
-have a strong tendency to cluster together in water, to reduce the total
-area of the nonpolar/water interface. This is the physical origin of the
-<strong>hydrophobic effect.</strong></p>
-<p>Two droplets of a nonpolar liquid in water will experience an effective
-interaction due to the need to increase the entropy (decrease the order)
-of surrounding water molecules. They can satisfy this criteria by
-sticking together and reducing their total surface area.</p>
+<div style="text-align: center;">
+    <img src="media/6_8.png" alt="clathrate" width="400" height=auto>
+    <p><em>Figure 6.8 - Clathrate cage formed by water molecules around a methane molecule</em></p>
+</div>
+<p>When a nonpolar molecule comes into contact with polar liquids such as water it can only interact via dispersion forces (<span class="math notranslate nohighlight">\(\sim 0.4 k_{B}T\)</span>). These are much weaker than the hydrogen bonds that water prefers to form (<span class="math notranslate nohighlight">\(\sim 4-16 k_{B}T\)</span>).
+As a result of these less favourable interactions, water molecules will tend to reorient themselves near non-polar molecules to form a more ordered structure which maximises H-bonding called a Clathrate cage (see figure 6.7).</p>
+<p>This increase in the local ordering of the molecules causes a reduction in the entropy of the water surrounding the non-polar molecules. There is a large entropic energy penalty (equivalent to <span class="math notranslate nohighlight">\(\sim 10-30 kJmol^{-1} or 4-12 k_{B}T\)</span>) associated with increasing the local order (decreasing disorder) of water molecules around a nonpolar molecule. Since this entropic penalty is proportional to the area of contact between the nonpolar molecule and the water minimising this area will be favourable.</p>
+<div style="text-align: center;">
+    <img src="media/6_9.png" alt="Hydrophobic area" width="400" height=auto>
+    <p><em>Figure 6.9 - Two droplets of a nopolar liquid in water experience an effective interaction due to the need to increase the entropy of surrounding water molecules.</em></p>
+</div>
+<p>For this reason, nonpolar molecules will have a strong tendency to cluster together in water, to reduce the total area of the nonpolar/water interface. This is the physical origin of the <strong>hydrophobic effect.</strong> Two droplets of a nonpolar liquid in water will experience an effective interaction due to the need to increase the entropy (decrease the order) of surrounding water molecules. They can satisfy this criteria by sticking together and reducing their total surface area.</p>
 <p><strong>Note: The hydrophobic effect is not the result of a direct interaction
 between nonpolar molecules. It occurs as a consequence of the need to
-maximise the entropy of surrounding water molecules</strong></p>
-<p>There is still no satisfactory theory to explain the details of the
-hydrophobic interaction. This is because the interaction between two
-surfaces involves many layers of intervening molecules.</p>
-<p>Measurements show that the interaction energy, <em>U,</em> decays exponentially
-with the separation between surfaces</p>
+maximise the entropy of surrounding water molecules</strong>.</p>
+<p>There is still no satisfactory theory to explain the details of the hydrophobic interaction. This is because the interaction between two surfaces involves many layers of intervening molecules. Measurements show that the interaction energy, <em>U,</em> decays exponentially with the separation between surfaces</p>
 <div class="math notranslate nohighlight">
 \[U = - 2\gamma_{1}S\exp\left( - \frac{D}{\lambda_{0}} \right)\]</div>
-<p><strong>w</strong>here γ~1~ is the interfacial energy with water, S, is the
-interfacial area and λ~o~ is the range of the interaction</p>
-<p>λ~o~ ~1-2nm</p>
+<p><strong>w</strong> here <span class="math notranslate nohighlight">\(\gamma \sim 1\)</span> is the interfacial energy with water, <span class="math notranslate nohighlight">\(S\)</span>, is the
+interfacial area and <span class="math notranslate nohighlight">\(\lambda_{0}\)</span> is the range of the interaction <span class="math notranslate nohighlight">\(\sim 1-2nm\)</span></p>
 </section>
-<section id="the-hydrophobic-force-the-hydrophobic-force-h3">
-<h2>The hydrophobic force {#the-hydrophobic-force .H3}<a class="headerlink" href="#the-hydrophobic-force-the-hydrophobic-force-h3" title="Link to this heading">#</a></h2>
-<p><img alt="A picture containing application Description automaticallygenerated" src="content/teaching/media/image57.png" />{width=”3.4652777777777777in”
-height=”1.9020833333333333in”}The hydrophobic force between two flat
-surfaces with a separation D is given by</p>
+</section>
+<section id="the-hydrophobic-force">
+<h2>The hydrophobic force<a class="headerlink" href="#the-hydrophobic-force" title="Link to this heading">#</a></h2>
+<div style="text-align: center;">
+    <img src="media/6_10.png" alt="Two plates" width="400" height=auto>
+    <p><em>Figure 6.10 - Table of Hamaker constants for common materials (Taken from Surface and Intermolecular forces by J. Israelachvili $3^{rd}$ edition.)</em></p>
+</div>
+<p>The hydrophobic force between two flat surfaces with a separation D is given by</p>
 <div class="math notranslate nohighlight">
 \[F = - \frac{dU}{dD} = - \frac{2\gamma_{1}S}{\lambda_{0}}\exp\left( - \frac{D}{\lambda_{0}} \right)\]</div>
-<p>where γ~1~ is the interfacial energy with water, S, is the interfacial
-area and λ~o~ is the range of the interaction. λ~o~ ~1-2 nm</p>
-</section>
-<section id="hydrophobic-interactions-in-nature-hydrophobic-interactions-in-nature-h3">
-<h2>Hydrophobic interactions in nature {#hydrophobic-interactions-in-nature .H3}<a class="headerlink" href="#hydrophobic-interactions-in-nature-hydrophobic-interactions-in-nature-h3" title="Link to this heading">#</a></h2>
-<p><img alt="insulin foldedunfolded.bmp" src="content/teaching/media/image58.png" />{width=”2.2840277777777778in”
-height=”1.7118055555555556in”}<img alt="200px-Phospholipids_aqueous_solution_structures_svg.png" src="content/teaching/media/image59.png" />{width=”1.6402777777777777in”
-height=”2.0215277777777776in”}The hydrophobic interaction is also used
-by protein molecules to ensure that the molecules fold up in a specific
-way. Parts of the protein that are required to be in the centre of the
-molecule are hydrophobic, while those that need to be on the outside of
-the molecule are hydrophilic. When these molecules are placed in water,
-they ‘fold’ up in such a way that the hydrophilic parts are in contact
-with water while the hydrophobic parts cluster together in the centre of
-the folded structure. When combined with the hydrogen bonded structures
-mentioned above, these interactions lead to the formation of highly
-specific arrangements of the different structural elements in the
-protein molecules. This is important because the arrangement of
-structures such as beta-sheets and alpha-helices control the biological
-function of these large molecules.</p>
+<p>where <span class="math notranslate nohighlight">\(\gamma \sim 1\)</span> is the interfacial energy with water, <span class="math notranslate nohighlight">\(S\)</span>, is the interfacial area and <span class="math notranslate nohighlight">\(\lambda_{0}\)</span> is the range of the interaction. <span class="math notranslate nohighlight">\(\sim 1-2nm\)</span></p>
+<section id="hydrophobic-interactions-in-nature">
+<h3>Hydrophobic interactions in nature<a class="headerlink" href="#hydrophobic-interactions-in-nature" title="Link to this heading">#</a></h3>
+<div style="text-align: center;">
+    <img src="media/6_11.png" alt="micelle" width="400" height=auto>
+    <p><em>Figure 6.11 - Micelle structures formed by amphiphiles</em></p>
+</div>
+<div style="text-align: center;">
+    <img src="media/6_12.png" alt="proteins" width="400" height=auto>
+    <p><em>Figure 6.12 - Two proteins cluster to hide hydrophobic regions from the surrounding water.</em></p>
+</div>
+<p>The hydrophobic interaction is also used by protein molecules to ensure that the molecules fold up in a specific way. Parts of the protein that are required to be in the centre of the molecule are hydrophobic, while those that need to be on the outside of the molecule are hydrophilic. When these molecules are placed in water,
+they ‘fold’ up in such a way that the hydrophilic parts are in contact with water while the hydrophobic parts cluster together in the centre of the folded structure. When combined with the hydrogen bonded structures mentioned above, these interactions lead to the formation of highly specific arrangements of the different structural elements in the protein molecules. This is important because the arrangement of structures such as beta-sheets and alpha-helices control the biological function of these large molecules.</p>
 <p>As we will see later, the hydrophobic force is also important in the
 formation of biological (cell) membranes and in the self-assembly of
 surfactant micelles. The latter structures have numerous applications in
 nanotechnology.</p>
+</section>
 </section>
 </section>
 
@@ -672,7 +658,7 @@ nanotechnology.</p>
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">7. Surface vs Bulk {#surface-vs-bulk .H2}</p>
+        <p class="prev-next-title">7. Surface vs Bulk</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -683,8 +669,7 @@ nanotechnology.</p>
             
             
               
-                <dialog id="pst-secondary-sidebar-modal"></dialog>
-                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
 
   <div class="sidebar-secondary-item">
@@ -693,15 +678,22 @@ nanotechnology.</p>
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#properties-of-water-properties-of-water-h3">Properties of Water {#properties-of-water .H3}</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-structure-of-ice-the-structure-of-ice-h3">The structure of ice {#the-structure-of-ice .H3}</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-structure-of-water-the-structure-of-water-h3">The structure of water {#the-structure-of-water .H3}</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary-of-properties-of-h-bonds-summary-of-properties-of-h-bonds-h3">Summary of properties of H-Bonds  {#summary-of-properties-of-h-bonds .H3}</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hydrogen-bonding-in-nanoscience-hydrogen-bonding-in-nanoscience-h3">Hydrogen bonding in nanoscience {#hydrogen-bonding-in-nanoscience .H3}</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hydrogen-bonding-in-nature-hydrogen-bonding-in-nature-h3">Hydrogen bonding in nature {#hydrogen-bonding-in-nature .H3}</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hydrophobic-interactions-hydrophobic-interactions-h3">Hydrophobic interactions {#hydrophobic-interactions .H3}</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-hydrophobic-force-the-hydrophobic-force-h3">The hydrophobic force {#the-hydrophobic-force .H3}</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hydrophobic-interactions-in-nature-hydrophobic-interactions-in-nature-h3">Hydrophobic interactions in nature {#hydrophobic-interactions-in-nature .H3}</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#properties-of-water">Properties of Water</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#how-strong-are-hydrogen-bonds">How strong are Hydrogen bonds?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-structure-of-ice">The structure of ice</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-structure-of-water">The structure of water</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#summary-of-properties-of-h-bonds">Summary of properties of H-Bonds</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hydrogen-bonding-in-nanoscience">Hydrogen bonding in nanoscience</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hydrogen-bonding-in-nature">Hydrogen bonding in nature</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hydrophobic-interactions">Hydrophobic interactions</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-hydrophobic-force">The hydrophobic force</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hydrophobic-interactions-in-nature">Hydrophobic interactions in nature</a></li>
+</ul>
+</li>
 </ul>
   </nav></div>
 
@@ -750,8 +742,8 @@ By Mike Smith
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script defer src="../../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549"></script>
-<script defer src="../../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549"></script>
+  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
 
   <footer class="bd-footer">
   </footer>
