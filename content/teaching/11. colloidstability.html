@@ -1,0 +1,749 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>10. Colloidal Stability &amp; Osmotic Pressure {#colloidal-stability-osmotic-pressure .H2} &#8212; Force and function at the nanoscale</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=87e54e7c" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'content/teaching/11. colloidstability';</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/logo.jpg" class="logo__image only-light" alt="Force and function at the nanoscale - Home"/>
+    <script>document.write(`<img src="../../_static/logo.jpg" class="logo__image only-dark" alt="Force and function at the nanoscale - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../intro.html">
+                    PHYS3009: Force and function at the nanoscale
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Teaching Resources</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="1.%20nanoscale_world.html">1. The Nanoscale World</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2.%20forces_potentials.html">2. Forces and Potentials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3.%20polar_interactions.html">3. Polar interactions and Dipoles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="4.%20dispersion_interactions.html">Dispersion Interactions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="5.%20dispersion_bigger.html">5. Dispersion Interactions – larger objects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="6.%20water_hydrogenbonds.html">6. Water, Hydrogen Bonds &amp; the Hydrophobic Interaction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="7.%20surfacevbulk.html">7. Surface vs Bulk</a></li>
+<li class="toctree-l1"><a class="reference internal" href="8.%20capillaryforces.html">8. Capillary Forces</a></li>
+<li class="toctree-l1"><a class="reference internal" href="9.%20afm.html">9. Nanoscale Force Measurement Techniques – AFM</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/phys3009/phys3009.github.io" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/phys3009/phys3009.github.io/issues/new?title=Issue%20on%20page%20%2Fcontent/teaching/11. colloidstability.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/content/teaching/11. colloidstability.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>10. Colloidal Stability & Osmotic Pressure {#colloidal-stability-osmotic-pressure .H2}</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#colloids-and-nanoparticles-colloids-and-nanoparticles-h3">Colloids and nanoparticles  {#colloids-and-nanoparticles .H3}</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-do-we-stop-things-sticking-together-how-do-we-stop-things-sticking-together-h3">How do we stop things sticking together? {#how-do-we-stop-things-sticking-together .H3}</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-do-we-calculate-n-and-n-how-do-we-calculate-n-and-n-h3">How do we calculate n~+~ and n~-~? {#how-do-we-calculate-n-and-n- .H3}</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#width-1-925in-height-3-113888888888889in-what-form-of-v-x-should-we-use-potentialnearsurfacewhat-form-of-vx-should-we-use-h3">{width=”1.925in” height=”3.113888888888889in”}What form of V(x) should we use? {#potentialnearsurfacewhat-form-of-vx-should-we-use .H3}</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#potential-near-a-planar-flat-charged-surface-potential-near-a-planarflat-charged-surface-h3">Potential near a planar/flat charged surface  {#potential-near-a-planarflat-charged-surface .H3}</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#solution-of-the-poisson-equation-and-the-debye-screening-length-solution-of-the-poisson-equation-and-the-debye-screening-length-h3">Solution of the Poisson equation and the Debye screening length {#solution-of-the-poisson-equation-and-the-debye-screening-length .H3}</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#osmotic-pressure-between-surfaces-revisited-osmotic-pressure-between-surfaces-revisited-h3">Osmotic pressure between surfaces (revisited) {#osmotic-pressure-between-surfaces-revisited .H3}</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#width-3-384027777777778in-height-2-6319444444444446in-total-pressure-between-surfaces-potentialneartwosurfacestotal-pressure-between-surfaces-h3">{width=”3.384027777777778in” height=”2.6319444444444446in”}Total pressure between surfaces {#potentialneartwosurfacestotal-pressure-between-surfaces .H3}</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-effects-of-adding-electrolyte-the-effects-of-adding-electrolyte-h3">The effects of adding electrolyte {#the-effects-of-adding-electrolyte .H3}</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary-of-key-concepts-summary-of-key-concepts-3-h3">Summary of key concepts {#summary-of-key-concepts-3 .H3}</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="colloidal-stability-osmotic-pressure-colloidal-stability-osmotic-pressure-h2">
+<h1>10. Colloidal Stability &amp; Osmotic Pressure {#colloidal-stability-osmotic-pressure .H2}<a class="headerlink" href="#colloidal-stability-osmotic-pressure-colloidal-stability-osmotic-pressure-h2" title="Link to this heading">#</a></h1>
+<section id="colloids-and-nanoparticles-colloids-and-nanoparticles-h3">
+<h2>Colloids and nanoparticles  {#colloids-and-nanoparticles .H3}<a class="headerlink" href="#colloids-and-nanoparticles-colloids-and-nanoparticles-h3" title="Link to this heading">#</a></h2>
+<p>Colloids are mixtures where small particles (&lt;1 μm in diameter) of one
+substance are <strong>suspended</strong> in a second medium or <strong>continuous phase.</strong>
+They can be made of solid particles suspended in a liquid or liquid
+droplets suspended in another liquid (also called emulsions).</p>
+<p><strong>They are not solutions!</strong> The material is not completely dispersed,
+but exists as discrete particles.</p>
+<p>Colloidal interactions govern the properties of nanoscale particles and
+interactions between surfaces in liquid environments. Understanding and
+controlling these interactions is therefore essential in the manufacture
+of nanoparticles, ferrofluids (magnetic nanoparticles) and solution
+based quantum dots. These interactions are also important in mediating
+the interactions between large biological molecules such as proteins and
+play important role in stabilising the nano to micron scale fat droplets
+in milk.</p>
+<p>The key challenge in manufacturing nanoparticles and colloidal
+dispersions is preventing the interparticle/intersurface forces from
+causing the small particles from sticking together. Moreover, these
+systems have a very high surface to volume ratio when compared to bulk
+materials. This means that there is a large energy penalty associated
+with the large surface area of these dispersed systems.</p>
+<p>The natural tendency is for small particles to stick together or
+<em>flocculate</em> to form an aggregate (more on aggregation in a later
+lecture) and hence reduce their total surface area. We have already seen
+that dispersion forces result in a mutual attraction between particles.
+These can drive the flocculation of even very dilute systems.</p>
+</section>
+<section id="how-do-we-stop-things-sticking-together-how-do-we-stop-things-sticking-together-h3">
+<h2>How do we stop things sticking together? {#how-do-we-stop-things-sticking-together .H3}<a class="headerlink" href="#how-do-we-stop-things-sticking-together-how-do-we-stop-things-sticking-together-h3" title="Link to this heading">#</a></h2>
+<p><img alt="" src="content/teaching/media/image125.png" />{width=”4.847222222222222in”
+height=”1.8444444444444446in”}We need to introduce a short-range
+repulsion force to keep particles apart and prevent them flocculating
+under the action of dispersion forces. In water, this is often done by
+decorating the surface of the particles with charged groups and adding a
+small amount of salt.</p>
+<p><img alt="Sternlayer" src="content/teaching/media/image126.jpeg" />{width=”1.425in”
+height=”2.167361111111111in”}When the particles are added to salt water
+(or electrolyte) the dissociated salt ions cluster around the charged
+particles to form a <strong>counterion cloud.</strong> The counterion cloud can be
+thought of as having two regions. The first is the <strong>Stern (also
+sometimes referred to as the Helmholtz) layer</strong>. This layer consists of
+ions that carry the opposite charge to the surface groups on the
+particle surfaces and is usually tightly bound to the surface. The
+second layer is called the <strong>diffuse double layer.</strong> This layer consists
+of a mixture of positive and negative counterions which are relatively
+mobile and are distributed in such a way that the system becomes charge
+neutral.</p>
+<p>If the particles are charge neutral then there can be no net
+electrostatic interaction between them. So how does decorating the
+surface of particles with charged groups introduce a repulsive force
+between them?</p>
+<p>The answer to this question is that the presence of the counterions
+around the particles creates an <strong>osmotic pressure between the particle
+surfaces.</strong></p>
+<p>Pure water</p>
+<p>Water with particles</p>
+<p>Semi-permeable membrane</p>
+<p>Flow of water</p>
+<p><strong>Osmotic Pressure –</strong> the pressure arising from spatial gradients in
+the concentration of a solute. This pressure acts to restore a uniform
+concentration and will cause a flow of water unless or until a
+sufficient pressure acts to oppose it.</p>
+<p>When the particles/surfaces approach <strong>the local concentration of
+counterions between them increases relative to the bulk concentration of
+counterions (i.e. far away from the particles)</strong>.</p>
+<p>If we think of the charge neutral system of ions floating around in
+between the two particle surfaces as a non interacting (ideal) gas of
+ions we can use the ideal gas law to derive an expression for the
+pressure exerted by the counterion clouds. However, before we proceed it
+is worth mentioning that although the electrostatic potential energy of
+the charged particles does not influence their interactions directly in
+an electrolyte, it does determine how the counterions will be
+distributed around each particle. As we will show below, this has some
+influence on the local concentration of counterions and hence the
+osmotic pressure exerted between the particle surfaces.</p>
+<p>The osmotic pressure, Π, which pushes the surfaces apart and tries to
+restore a uniform counterion concentration is given by</p>
+<p>$$\Pi = \left( n_{+} + n_{-} - 2n_{0} \right)k_{B}T$$</p>
+<p>where <em>n~+~</em> and <em>n~-~</em> are number densities of positive and negative
+ions in the gap, and <em>n~o~</em> is their concentration far away from the
+surfaces. Note that for an electrolyte (salt) in bulk solution (e.g.
+NaCl) the concentration of positive counterions (Na^+^) is equal to that
+of the negative counterions (Cl^-^).</p>
+</section>
+<section id="how-do-we-calculate-n-and-n-how-do-we-calculate-n-and-n-h3">
+<h2>How do we calculate n~+~ and n~-~? {#how-do-we-calculate-n-and-n- .H3}<a class="headerlink" href="#how-do-we-calculate-n-and-n-how-do-we-calculate-n-and-n-h3" title="Link to this heading">#</a></h2>
+<p>We have deliberately assumed that the number densities/concentrations of
+positive and negative counterions in the gap between the two surfaces
+will be different. This is not unreasonable if we consider our diagram
+of the stern and diffuse double layers above, as we might expect an
+imbalance in these concentrations to occur for charge neutrality to be
+maintained.</p>
+<p>To determine the number densities of the counterions we need to consider
+the electrostatic potential energy of the counterions in solution and
+how this influences their local concentration.</p>
+<p>For an ion of charge ± ze, sitting in a spatially varying electrostatic
+potential V(x), the energy, E, is simply given by</p>
+<p>$$E = \pm zeV(x)$$</p>
+<p>To determine how this energy influences the distribution of counterions,
+we recall that the probability, p, of a particle occupying a given
+energy state can be described by Boltzmann statistics (See thermal
+physics notes)</p>
+<p>$$p_{\pm} = p_{0}\exp\left( - \frac{E_{\pm}}{k_{B}T} \right)$$</p>
+<p>In this case, the energy of the particle is determined by its position
+in the potential V(x) (as described above) and the local number density
+must scale with the probability associated with finding the particle
+with a given energy. Hence we can simply write the number densities of
+positive and negative counterions as</p>
+<p>$$n_{\pm} = n_{0}\exp\left( - \frac{E_{\pm}}{k_{B}T} \right) = n_{0}\exp\left( \pm \frac{zeV(x)}{k_{B}T} \right)$$</p>
+<p>Hence, our expression for the osmotic pressure becomes</p>
+<p>$$\Pi = \left( n_{+} + n_{-} - 2n_{0} \right)k_{B}T = {2n}<em>{0}k</em>{B}T\left( \cosh\left( \frac{zeV(x)}{k_{B}T} \right) - 1 \right)$$</p>
+<p><img alt="" src="content/teaching/media/image127.wmf" /></p>
+<p>In the limit of small surface potentials i.e. when this reduces to</p>
+<p>$$\Pi = n_{0}\frac{z^{2}e^{2}}{k_{B}T}\left( V(x) \right)^{2}$$</p>
+<p>So if we know how V(x) depends on the distance away from the surface we
+can calculate the osmotic pressure due to the counterions.</p>
+</section>
+<section id="width-1-925in-height-3-113888888888889in-what-form-of-v-x-should-we-use-potentialnearsurfacewhat-form-of-vx-should-we-use-h3">
+<h2><img alt="potentialnearsurface" src="content/teaching/media/image128.jpeg" />{width=”1.925in” height=”3.113888888888889in”}What form of V(x) should we use? {#potentialnearsurfacewhat-form-of-vx-should-we-use .H3}<a class="headerlink" href="#width-1-925in-height-3-113888888888889in-what-form-of-v-x-should-we-use-potentialnearsurfacewhat-form-of-vx-should-we-use-h3" title="Link to this heading">#</a></h2>
+<p>The true form of the electrical potential between colloids and charged
+surfaces is complicated. However, a good starting point is to
+approximate <em>V(x)</em> to the form expected for the potential due to an
+isolated charged surface in an electrolyte.</p>
+<p>To obtain this we must first solve the <strong>Poisson equation</strong> which
+relates the electrostatic potential V(x) to the local charge density,
+<em>ρ</em>, using the following formula.</p>
+<p>$$\ \ \frac{- d^{2}V}{dx^{2}} = \frac{\rho}{\varepsilon\varepsilon_{0}}\ \ $$</p>
+<p>where ε and ε~o~, are the relative permittivity of the medium in which
+the counterions are dissolved (usually water) and permittivity of free
+space (Fm^-1^) respectively.</p>
+</section>
+<section id="potential-near-a-planar-flat-charged-surface-potential-near-a-planarflat-charged-surface-h3">
+<h2>Potential near a planar/flat charged surface  {#potential-near-a-planarflat-charged-surface .H3}<a class="headerlink" href="#potential-near-a-planar-flat-charged-surface-potential-near-a-planarflat-charged-surface-h3" title="Link to this heading">#</a></h2>
+<p>The charge density associated with the counterions is simply the product
+of their charge and number densities;</p>
+<p><img alt="" src="content/teaching/media/image127.wmf" /></p>
+<p>In the limit of small potentials, , the Poisson equation for the cloud
+of counterions becomes</p>
+<p>$$\frac{d^{2}V}{dx^{2}} = \frac{2z^{2}e^{2}n_{0}}{\varepsilon\varepsilon_{0}k_{B}T}V(x)$$</p>
+</section>
+<section id="solution-of-the-poisson-equation-and-the-debye-screening-length-solution-of-the-poisson-equation-and-the-debye-screening-length-h3">
+<h2>Solution of the Poisson equation and the Debye screening length {#solution-of-the-poisson-equation-and-the-debye-screening-length .H3}<a class="headerlink" href="#solution-of-the-poisson-equation-and-the-debye-screening-length-solution-of-the-poisson-equation-and-the-debye-screening-length-h3" title="Link to this heading">#</a></h2>
+<p>The Poisson equation for the counterion cloud is very similar to the
+equation for simple harmonic motion (a=-ω^2^x) and therefore must have a
+solution which consists of a sum of positive and negative exponentials.
+However, we require that the potential decays to zero for infinite, x.
+(If it didn’t, the total energy of the counterion cloud would be
+infinite!). This means that we are left with a solution which consists
+of a simple negative exponential of the form</p>
+<p>$$V(x) = V_{0}\exp( - \kappa x)$$</p>
+<p>Where V~o~ is the surface potential (i.e. the electrostatic potential at
+the surface) and κ is a decay constant such that if we insert V(x) into
+the Poisson equation we obtain</p>
+<p>$$\frac{1}{\kappa} = \left( \frac{\varepsilon\varepsilon_{0}k_{B}T}{2{n_{0}z}^{2}e^{2}} \right)^{1/2}$$</p>
+<p>1/<em>κ</em> is the Debye screening length. <strong>(N.B the Debye length is 1/κ not
+κ!)</strong></p>
+<p>It is the distance over which electrostatic interactions are screened in
+an electrolyte and <em>V~o~</em> is the potential at the surface.</p>
+</section>
+<section id="osmotic-pressure-between-surfaces-revisited-osmotic-pressure-between-surfaces-revisited-h3">
+<h2>Osmotic pressure between surfaces (revisited) {#osmotic-pressure-between-surfaces-revisited .H3}<a class="headerlink" href="#osmotic-pressure-between-surfaces-revisited-osmotic-pressure-between-surfaces-revisited-h3" title="Link to this heading">#</a></h2>
+<p>Recall that the osmotic pressure due to counterions between charged
+surface has the form</p>
+<p>$$\Pi = n_{0}\frac{z^{2}e^{2}}{k_{B}T}\left( V(x) \right)^{2}$$</p>
+<p>where</p>
+<p>$$V(x) = V_{0}\exp( - \kappa x)$$</p>
+<p>If we insert our solution for the potential we obtain</p>
+<p>$$\Pi = {4n}<em>{0}\frac{z^{2}e^{2}V</em>{0}^{2}}{k_{B}T}\exp( - \kappa D)$$</p>
+<p>where D=2x is the distance between the two surfaces.</p>
+<p><strong>This expression describes the positive (repulsive) osmotic pressure
+caused by the condensation of counterions in the gap between two
+surfaces.</strong></p>
+</section>
+<section id="width-3-384027777777778in-height-2-6319444444444446in-total-pressure-between-surfaces-potentialneartwosurfacestotal-pressure-between-surfaces-h3">
+<h2><img alt="potentialneartwosurfaces" src="content/teaching/media/image129.jpeg" />{width=”3.384027777777778in” height=”2.6319444444444446in”}Total pressure between surfaces {#potentialneartwosurfacestotal-pressure-between-surfaces .H3}<a class="headerlink" href="#width-3-384027777777778in-height-2-6319444444444446in-total-pressure-between-surfaces-potentialneartwosurfacestotal-pressure-between-surfaces-h3" title="Link to this heading">#</a></h2>
+<p>The total pressure between two charged surfaces in an electrolyte is
+given by summing the contributions due to repulsive osmotic pressure and
+attractive dispersion forces to give</p>
+<p>$$P_{tot} = \Pi + P_{dispersion}$$</p>
+<p>where P~dispersion~ is the pressure due to the attractive dispersion
+interactions. We have</p>
+<p>$$P_{tot} = {4n}<em>{0}\frac{z^{2}e^{2}V</em>{0}^{2}}{k_{B}T}{\exp( - \kappa D)}^{} - \frac{A}{6\pi D^{3}}$$</p>
+<p>where the first term is due to the osmotic pressure and the second due
+to the attractive dispersion forces.</p>
+<p>This is a simplified form of the equations derived by Derjaguin, Landau,
+Verwey, Overbeek (DLVO) when formulating the DLVO theory of colloidal
+stability.</p>
+<p>The plot below shows how the dispersion pressure, the osmotic (double
+layer/counterion) pressure and total pressure vary with the separation
+of the surfaces.</p>
+<p><img alt="DLVOdispanddoublelayer" src="content/teaching/media/image130.jpg" />{width=”5.048610017497813in”
+height=”3.625in”}</p>
+<p>At short range (&lt;10 nm) the repulsive pressures are high until below a
+critical separation of ~4 nm the pressure becomes attractive as
+dispersion forces dominate. It is the large positive pressures in the
+range 4-10 nm which stop the surfaces from sticking together when they
+approach. However, if the surfaces are pushed together with pressures
+that exceed ~4000 Pa, the surfaces will adhere to one another.</p>
+<p>The inset shows that at long range (&gt;18 nm in this case) the pressure
+is weakly attractive and that at a separation of ~18 nm there is no net
+pressure on the surfaces. This corresponds to the equilibrium separation
+of the surfaces under these conditions.</p>
+</section>
+<section id="the-effects-of-adding-electrolyte-the-effects-of-adding-electrolyte-h3">
+<h2>The effects of adding electrolyte {#the-effects-of-adding-electrolyte .H3}<a class="headerlink" href="#the-effects-of-adding-electrolyte-the-effects-of-adding-electrolyte-h3" title="Link to this heading">#</a></h2>
+<p>As more salt is added, electrostatic effects are more strongly screened
+→ eventually attractive dispersion forces dominate and surfaces will
+stick together. This is manifested as a reduction in the height of the
+repulsive pressure ‘barrier’ until finally, the pressure becomes
+negative for all values of the inter-surface separation, D.</p>
+<p><img alt="DLVOeffectsofsalt" src="content/teaching/media/image132.jpeg" />{width=”3.9305555555555554in”
+height=”2.798611111111111in”}</p>
+<p>Increasing salt concentration</p>
+</section>
+<section id="summary-of-key-concepts-summary-of-key-concepts-3-h3">
+<h2>Summary of key concepts {#summary-of-key-concepts-3 .H3}<a class="headerlink" href="#summary-of-key-concepts-summary-of-key-concepts-3-h3" title="Link to this heading">#</a></h2>
+<p>Colloidal stability is important in many areas of nanotechnology</p>
+<p>It can be achieved by charging surfaces</p>
+<p><strong>The pressure exerted on charged surfaces in an electrolyte is
+determined by a balance between the osmotic pressure due to counter-ions
+and the dispersion pressure .</strong></p>
+<p>$$P_{tot} = {4n}<em>{0}\frac{z^{2}e^{2}V</em>{0}^{2}}{k_{B}T}{\exp( - \kappa D)}^{} - \frac{A}{6\pi D^{3}}$$</p>
+<p>**<br />
+**</p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./content\teaching"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#colloids-and-nanoparticles-colloids-and-nanoparticles-h3">Colloids and nanoparticles  {#colloids-and-nanoparticles .H3}</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-do-we-stop-things-sticking-together-how-do-we-stop-things-sticking-together-h3">How do we stop things sticking together? {#how-do-we-stop-things-sticking-together .H3}</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-do-we-calculate-n-and-n-how-do-we-calculate-n-and-n-h3">How do we calculate n~+~ and n~-~? {#how-do-we-calculate-n-and-n- .H3}</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#width-1-925in-height-3-113888888888889in-what-form-of-v-x-should-we-use-potentialnearsurfacewhat-form-of-vx-should-we-use-h3">{width=”1.925in” height=”3.113888888888889in”}What form of V(x) should we use? {#potentialnearsurfacewhat-form-of-vx-should-we-use .H3}</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#potential-near-a-planar-flat-charged-surface-potential-near-a-planarflat-charged-surface-h3">Potential near a planar/flat charged surface  {#potential-near-a-planarflat-charged-surface .H3}</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#solution-of-the-poisson-equation-and-the-debye-screening-length-solution-of-the-poisson-equation-and-the-debye-screening-length-h3">Solution of the Poisson equation and the Debye screening length {#solution-of-the-poisson-equation-and-the-debye-screening-length .H3}</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#osmotic-pressure-between-surfaces-revisited-osmotic-pressure-between-surfaces-revisited-h3">Osmotic pressure between surfaces (revisited) {#osmotic-pressure-between-surfaces-revisited .H3}</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#width-3-384027777777778in-height-2-6319444444444446in-total-pressure-between-surfaces-potentialneartwosurfacestotal-pressure-between-surfaces-h3">{width=”3.384027777777778in” height=”2.6319444444444446in”}Total pressure between surfaces {#potentialneartwosurfacestotal-pressure-between-surfaces .H3}</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-effects-of-adding-electrolyte-the-effects-of-adding-electrolyte-h3">The effects of adding electrolyte {#the-effects-of-adding-electrolyte .H3}</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary-of-key-concepts-summary-of-key-concepts-3-h3">Summary of key concepts {#summary-of-key-concepts-3 .H3}</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Mike Smith
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
