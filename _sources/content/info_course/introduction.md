@@ -22,16 +22,16 @@ Examination 100%:
 
 
 
-# PHYS3009: Force and function at the nanoscale {#phys3009-force-and-function-at-the-nanoscale .H1}
+# PHYS3009: Force and function at the nanoscale 
 
-**Handbook 2023-24**
+**Handbook 2024-25**
 
 **Module Convenor:** Dr Mike Smith, Rm C126, Physics Building,
 <mike.i.smith@nottingham.ac.uk>
 
 **This is a 10 credit Spring semester module**
 
-## Aims of the Module {#aims-of-the-module .H2}
+## Aims of the Module
 
 -   To provide an introduction to the kinematics of nanoscale systems
 
@@ -42,9 +42,9 @@ Examination 100%:
     intermolecular, interparticle and surface forces in nanoscale
     science, technology and biology.
 
-## Assessment {#assessment .H2}
+## Assessment
 
-> Examination 100%:
+Examination 100%:
 
 -   In the summer assessment period.
 
@@ -55,35 +55,8 @@ Examination 100%:
 -   Access to an equation sheet containing some key equations. This will
     be available in advance
 
-## Contents: {#contents .H2}
 
-1.  The Nanoscale World
-
-2.  Forces and potentials
-
-3.  Polar interactions
-
-4.  Dispersion interactions
-
-5.  Hydrogen Bonds & the Hydrophobic Effect
-
-6.  Measurement of nanoscale forces
-
-7.  Surface energy, surface tension and adhesion energy
-
-8.  Capillary pressure
-
-9.  Colloidal interactions
-
-10. Steric interactions and entropic repulsion
-
-11. Depletion Interactions
-
-12. Aggregation
-
-13. Self-assembly
-
-## Using this guide {#using-this-guide .H2}
+## Using this guide
 
 The material in this module is drawn from a range of different sources
 making it difficult to recommend a single textbook that is written at
@@ -97,7 +70,7 @@ therefore feel you need to read this guide cover to cover**, rather use
 it to complement the rest of your studies, looking up bits that perhaps
 you are unclear on or need to go over more slowly.
 
-## Questions? {#questions .H2}
+## Questions?
 
 If you are stuck on any part of this course, try reading through the
 appropriate part here but if you are still struggling to understand,
@@ -114,9 +87,9 @@ here are the options:
 3.  If your question is not already listed then please email me your
     question at:
 
-> <mike.i.smith@nottingham.ac.uk>
->
-> I'm always happy to answer your questions and will usually get back to
-> you in 1-2 working days. I will reply directly to your question and
-> post in an anonymized way with the corresponding answer. I prefer to
-> do this since then your question can then benefit others.
+<mike.i.smith@nottingham.ac.uk>
+
+I'm always happy to answer your questions and will usually get back to
+you in 1-2 working days. I will reply directly to your question and
+post in an anonymized way with the corresponding answer. I prefer to
+do this since then your question can then benefit others.
