@@ -1,0 +1,854 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>13. Micelles &amp; Membranes {#micelles-membranes .H2} &#8212; Force and function at the nanoscale</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!-- 
+    this give us a css class that will be invisible only if js is disabled 
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../../_static/scripts/fontawesome.js?digest=26a4bc78f4c0ddb94549"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
+
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'content/teaching/14. micelles';</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="prev" title="12. Aggregation &amp; Self-assembly {#aggregation-self-assembly .H2}" href="13.%20aggregation.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/logo.jpg" class="logo__image only-light" alt="Force and function at the nanoscale - Home"/>
+    <img src="../../_static/logo.jpg" class="logo__image only-dark pst-js-only" alt="Force and function at the nanoscale - Home"/>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../intro.html">
+                    Scientific Programming in Python Course - University of Nottingham (PHYS4038 & AS1)
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Information about the course</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../info_course/introduction.html">PHYS3009: Force and function at the nanoscale</a></li>
+
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Teaching Resources</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="1.%20nanoscale_world.html">1. The Nanoscale World</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2.%20forces_potentials.html">2. Forces and Potentials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3.%20polar_interactions.html">3. Polar interactions and Dipoles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="4.%20dispersion_interactions.html">Dispersion Interactions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="5.%20dispersion_bigger.html">5. Dispersion Interactions – larger objects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="6.%20water_hydrogenbonds.html">6. Water, Hydrogen Bonds &amp; the Hydrophobic Interaction {#water-hydrogen-bonds-the-hydrophobic-interaction .H2}</a></li>
+<li class="toctree-l1"><a class="reference internal" href="7.%20surfacevbulk.html">7. Surface vs Bulk {#surface-vs-bulk .H2}</a></li>
+<li class="toctree-l1"><a class="reference internal" href="8.%20capillaryforces.html">8. Capillary Forces {#capillary-forces .H2}</a></li>
+<li class="toctree-l1"><a class="reference internal" href="9.%20afm.html">9. Nanoscale Force Measurement Techniques – AFM {#nanoscale-force-measurement-techniques-afm .H2}</a></li>
+<li class="toctree-l1"><a class="reference internal" href="10.%20opticaltweezers.html">10. Nanoscale Force Measurement Techniques – Optical Tweezers {#nanoscale-force-measurement-techniques-optical-tweezers .H2}</a></li>
+<li class="toctree-l1"><a class="reference internal" href="12.%20entropy.html">11. Entropic Forces {#entropic-forces .H2}</a></li>
+<li class="toctree-l1"><a class="reference internal" href="13.%20aggregation.html">12. Aggregation &amp; Self-assembly {#aggregation-self-assembly .H2}</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">13. Micelles &amp; Membranes {#micelles-membranes .H2}</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fcontent/teaching/14. micelles.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/content/teaching/14. micelles.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>13. Micelles & Membranes {#micelles-membranes .H2}</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#further-reading-further-reading-h3">Further reading {#further-reading .H3}</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#width-3-157638888888889in-height-1-5430555555555556in-amphiphilic-molecules-amphiphilic-molecules-h3">{width=”3.157638888888889in” height=”1.5430555555555556in”}Amphiphilic molecules {#amphiphilic-molecules .H3}</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#width-1-9131944444444444in-height-1-6076388888888888in-the-critical-micelle-concentration-belowcmc-jpgthe-critical-micelle-concentration-h3">{width=”1.9131944444444444in” height=”1.6076388888888888in”}The critical micelle concentration {#belowcmc.jpgthe-critical-micelle-concentration .H3}</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#width-1-4493055555555556in-height-1-4402777777777778in-the-size-and-structure-of-a-micelle-massivemicelle-tifthe-size-and-structure-of-a-micelle-h3">{width=”1.4493055555555556in” height=”1.4402777777777778in”}The size and structure of a micelle {#massivemicelle.tifthe-size-and-structure-of-a-micelle .H3}</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#optimum-headgroup-area-optimum-headgroup-area-h3">Optimum headgroup area  {#optimum-headgroup-area .H3}</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#width-3-7041666666666666in-height-2-8270833333333334in-the-hydrocarbon-volume-and-critical-chain-length-jonesfigurep141-jpgthe-hydrocarbon-volume-and-critical-chain-length-h3">{width=”3.7041666666666666in” height=”2.8270833333333334in”}The hydrocarbon volume and critical chain length {#jonesfigurep141.jpgthe-hydrocarbon-volume-and-critical-chain-length .H3}</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#factors-affecting-the-shape-of-micelles-factors-affecting-the-shape-of-micelles-h3">Factors affecting the shape of micelles {#factors-affecting-the-shape-of-micelles .H3}</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-do-these-parameters-determine-the-shape-of-a-micelle-how-do-these-parameters-determine-the-shape-of-a-micelle-h3">How do these parameters determine the shape of a micelle? {#how-do-these-parameters-determine-the-shape-of-a-micelle .H3}</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#critical-packing-parameter-critical-packing-parameter-h3">Critical packing parameter {#critical-packing-parameter .H3}</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#width-3-0395833333333333in-height-1-3930555555555555in-spherical-micelles-spherical-micelles-h3">{width=”3.0395833333333333in” height=”1.3930555555555555in”}Spherical micelles {#spherical-micelles .H3}</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#width-2-540277777777778in-height-1-7930555555555556in-cylinders-cylinders-h3">{width=”2.540277777777778in” height=”1.7930555555555556in”}Cylinders {#cylinders .H3}</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#width-2-3368055555555554in-height-1-8555555555555556in-bi-layers-bi-layers-h3">{width=”2.3368055555555554in” height=”1.8555555555555556in”}Bi-layers {#bi-layers .H3}</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#width-2-342361111111111in-height-1-06875in-summary-of-key-concepts-summary-of-key-concepts-5-h3">{width=”2.342361111111111in” height=”1.06875in”}Summary of key concepts {#summary-of-key-concepts-5 .H3}</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vesicle-formation-vesicle-formation-h3">Vesicle formation  {#vesicle-formation .H3}</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#membrane-entropic-repulsion-membrane-entropic-repulsion-h3">Membrane (Entropic Repulsion) {#membrane-entropic-repulsion .H3}</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="micelles-membranes-micelles-membranes-h2">
+<h1>13. Micelles &amp; Membranes {#micelles-membranes .H2}<a class="headerlink" href="#micelles-membranes-micelles-membranes-h2" title="Link to this heading">#</a></h1>
+<section id="further-reading-further-reading-h3">
+<h2>Further reading {#further-reading .H3}<a class="headerlink" href="#further-reading-further-reading-h3" title="Link to this heading">#</a></h2>
+<p><img alt="jonescover.gif" src="content/teaching/media/image155.png" />{width=”1.0173611111111112in”
+height=”1.3354166666666667in”}A helpful explanation of self-assembly is
+also covered in the book ‘<em>Soft Condensed Matter’</em>, although everything
+required will be covered in these notes.</p>
+<p>R.A.L. Jones</p>
+<p>QC173.458.S62 JON</p>
+<p><strong>Soft Condensed Matter</strong></p>
+<p>R.A.L. Jones, Oxford University Press, 2002, Chapter 9</p>
+</section>
+<section id="width-3-157638888888889in-height-1-5430555555555556in-amphiphilic-molecules-amphiphilic-molecules-h3">
+<h2><img alt="" src="content/teaching/media/image156.png" />{width=”3.157638888888889in” height=”1.5430555555555556in”}Amphiphilic molecules {#amphiphilic-molecules .H3}<a class="headerlink" href="#width-3-157638888888889in-height-1-5430555555555556in-amphiphilic-molecules-amphiphilic-molecules-h3" title="Link to this heading">#</a></h2>
+<p>Amphiphiles are molecules which have a water soluble head group and a
+hydrophobic tail group. The head group can be anionic (negatively
+charged), cationic (positively charged) or uncharged. The tail group is
+made up of a hydrocarbon chain.</p>
+<p><img alt="" src="content/teaching/media/image158.jpeg" />{width=”1.4069444444444446in”
+height=”1.4069444444444446in”}<img alt="" src="content/teaching/media/image159.jpeg" />{width=”1.2208333333333334in”
+height=”1.5694444444444444in”}</p>
+<p>Amphiphiles are found in soaps, food stuffs, detergents, disinfectants
+and can be found in cosmetics and pharmaceuticals. They are also a major
+component of human and animal cell membranes.</p>
+<p>When amphiphiles sit at the interface between water and oil these 2
+liquids do not come into contact as much. This reduces or eliminates the
+energy cost of the interface. This can be used to stabilise an interface
+such as the oil-water emulsion of Mayonnaise.</p>
+<p>Oil</p>
+<p>Water</p>
+</section>
+<section id="width-1-9131944444444444in-height-1-6076388888888888in-the-critical-micelle-concentration-belowcmc-jpgthe-critical-micelle-concentration-h3">
+<h2><img alt="belowCMC.jpg" src="content/teaching/media/image160.jpeg" />{width=”1.9131944444444444in” height=”1.6076388888888888in”}The critical micelle concentration {#belowcmc.jpgthe-critical-micelle-concentration .H3}<a class="headerlink" href="#width-1-9131944444444444in-height-1-6076388888888888in-the-critical-micelle-concentration-belowcmc-jpgthe-critical-micelle-concentration-h3" title="Link to this heading">#</a></h2>
+<p>When amphiphilic molecules are added to water at low concentrations,
+they will initially disperse and some will migrate to the surface to
+reduce the unfavourable contact between the hydrocarbon tails and the
+water. The molecules exist as monomers.</p>
+<p><img alt="cylindricalmicelle.tif" src="content/teaching/media/image161.png" />{width=”2.472916666666667in”
+height=”1.2416666666666667in”}<img alt="sphericalmicelle.tif" src="content/teaching/media/image162.png" />{width=”1.2125in”
+height=”1.19375in”}</p>
+<p>At a concentration called the <strong>critical micelle concentration</strong>
+aggregates (or micelles) start to form in such a way that the
+hydrophobic tails become shielded from the aqueous environment.</p>
+</section>
+<section id="width-1-4493055555555556in-height-1-4402777777777778in-the-size-and-structure-of-a-micelle-massivemicelle-tifthe-size-and-structure-of-a-micelle-h3">
+<h2><img alt="massivemicelle.tif" src="content/teaching/media/image163.png" />{width=”1.4493055555555556in” height=”1.4402777777777778in”}The size and structure of a micelle {#massivemicelle.tifthe-size-and-structure-of-a-micelle .H3}<a class="headerlink" href="#width-1-4493055555555556in-height-1-4402777777777778in-the-size-and-structure-of-a-micelle-massivemicelle-tifthe-size-and-structure-of-a-micelle-h3" title="Link to this heading">#</a></h2>
+<p>The free energy per molecule of amphiphiles in a micelle has a minimum
+at a specific aggregation number. It is easy to see why this might be
+the case.</p>
+<p>When the micelles are too big, we must introduce amphiphiles into the
+core of the structure. The unfavourable interactions between the
+hydrophilic head groups of the molecules in the core and the tail groups
+of surrounding amphiphiles have an energy penalty associated with them.</p>
+<p><img alt="tinymicelle.tif" src="content/teaching/media/image164.png" />{width=”0.7583333333333333in”
+height=”0.7368055555555556in”}When micelles are too small, the
+headgroups of the amphiphiles at the surface are unable to pack
+efficiently enough to prevent water from contacting the hydrophobic tail
+groups in the core of the micelle. This unfavourable interaction also
+has an energy penalty associated with it.</p>
+<p><img alt="micelle.tif" src="content/teaching/media/image165.png" />{width=”1.25625in”
+height=”1.2319444444444445in”}As a result of these interactions, the
+micelles that form in solution will tend to have a well defined size
+which corresponds to the case when the amphililes are just able to pack
+together to ensure a) that no additional amphiphiles are introduced into
+the core of the micelle and b ) that the headgroups pack efficiently
+enough to shield the hydrophobic interior from water.</p>
+</section>
+<section id="optimum-headgroup-area-optimum-headgroup-area-h3">
+<h2>Optimum headgroup area  {#optimum-headgroup-area .H3}<a class="headerlink" href="#optimum-headgroup-area-optimum-headgroup-area-h3" title="Link to this heading">#</a></h2>
+<p>There is an optimum headgroup area, a~0~, occupied by an amphiphile at
+the interface. This is determined by a balance between competing
+contributions to the free energy. These contributions dominate at
+different head group areas.</p>
+<ol class="arabic simple">
+<li><p><em>a &lt; a~0~</em>: Electrostatic or steric repulsion between the head
+groups act to force neighbouring molecules apart.</p></li>
+<li><p><em>a &gt; a~0~:</em> If the head groups are separated too much then
+hydrocarbon tails are exposed to water resulting in hydrophobic
+interactions.</p></li>
+</ol>
+</section>
+<section id="width-3-7041666666666666in-height-2-8270833333333334in-the-hydrocarbon-volume-and-critical-chain-length-jonesfigurep141-jpgthe-hydrocarbon-volume-and-critical-chain-length-h3">
+<h2><img alt="jonesfigurep141.jpg" src="content/teaching/media/image166.png" />{width=”3.7041666666666666in” height=”2.8270833333333334in”}The hydrocarbon volume and critical chain length {#jonesfigurep141.jpgthe-hydrocarbon-volume-and-critical-chain-length .H3}<a class="headerlink" href="#width-3-7041666666666666in-height-2-8270833333333334in-the-hydrocarbon-volume-and-critical-chain-length-jonesfigurep141-jpgthe-hydrocarbon-volume-and-critical-chain-length-h3" title="Link to this heading">#</a></h2>
+<p><img alt="" src="content/teaching/media/image167.png" />{width=”2.2631944444444443in”
+height=”1.479861111111111in”}In addition to the headgroup area the
+amphiphile is characterised by two other parameters.</p>
+<ol class="arabic simple">
+<li><p>The hydrocarbon volume, <em>v</em>, is defined as the volume that is
+occupied by the hydrocarbon tails of the molecules.</p></li>
+</ol>
+<p><img alt="criticalchainlength.jpg" src="content/teaching/media/image168.jpeg" />{width=”0.8916666666666667in”
+height=”1.7680555555555555in”}</p>
+<ol class="arabic simple" start="2">
+<li><p>The critical chain length, <em>l~c~</em> , is the length of the hydrocarbon
+chain when it is fully extended.</p></li>
+</ol>
+<p><em>[It is important to realise that because of the definition of l~c~ as
+the maximum length of the amphiphile tail then it is
+<strong>[not]{.underline}</strong> generally true that a~0~*l~c~ = v</em>]</p>
+</section>
+<section id="factors-affecting-the-shape-of-micelles-factors-affecting-the-shape-of-micelles-h3">
+<h2>Factors affecting the shape of micelles {#factors-affecting-the-shape-of-micelles .H3}<a class="headerlink" href="#factors-affecting-the-shape-of-micelles-factors-affecting-the-shape-of-micelles-h3" title="Link to this heading">#</a></h2>
+<p>Amphiphiles are capable of forming many different shaped micelles
+including spheres, cylinders and bi-layers. The fluid like nature of
+these molecules means that we can determine the shape of micelles by
+considering how the amphiphiles pack together.</p>
+<p><img alt="bilayer.tif" src="content/teaching/media/image169.png" />{width=”2.5in”
+height=”1.0298611111111111in”}<img alt="cylindricalmicelle.tif" src="content/teaching/media/image170.png" />{width=”2.752083333333333in”
+height=”1.3840277777777779in”}<img alt="sphericalmicelle.tif" src="content/teaching/media/image171.png" />{width=”1.3680555555555556in”
+height=”1.3402777777777777in”}</p>
+<p>To do this we just require 3 parameters:</p>
+<p>The hydrocarbon volume, <em>v,</em> The critical chain length, <em>l~c~</em> The
+optimum head group area, <em>a~o\ ~</em></p>
+</section>
+<section id="how-do-these-parameters-determine-the-shape-of-a-micelle-how-do-these-parameters-determine-the-shape-of-a-micelle-h3">
+<h2>How do these parameters determine the shape of a micelle? {#how-do-these-parameters-determine-the-shape-of-a-micelle .H3}<a class="headerlink" href="#how-do-these-parameters-determine-the-shape-of-a-micelle-how-do-these-parameters-determine-the-shape-of-a-micelle-h3" title="Link to this heading">#</a></h2>
+<p>The critical chain length, l~c~ , determines the size and shape of a
+micelle as it sets the maximum length to which an individual amphiphile
+molecule can be stretched</p>
+<p><img alt="Rlessthanlc.jpg" src="content/teaching/media/image172.jpeg" />{width=”2.8319444444444444in”
+height=”1.5444444444444445in”}Clearly the radius of any micelle that
+forms has to be less than or equal to this chain length.</p>
+<div class="math notranslate nohighlight">
+\[R\  \leq l_{c}\]</div>
+</section>
+<section id="critical-packing-parameter-critical-packing-parameter-h3">
+<h2>Critical packing parameter {#critical-packing-parameter .H3}<a class="headerlink" href="#critical-packing-parameter-critical-packing-parameter-h3" title="Link to this heading">#</a></h2>
+<p>The shape of a micelle depends on the critical packing parameter.
+<span class="math notranslate nohighlight">\(H = \ \frac{v}{l_{c}a_{0}}\)</span></p>
+<p>In each case we can calculate the conditions through applying the same
+steps:</p>
+<ol class="arabic">
+<li><p>Calculate the number of amphiphiles in the micelle</p>
+<p>a.  N = surface area of micelle / a~0~</p>
+<p>b.  N = volume of micelle / v</p>
+</li>
+<li><p>Eliminate N to obtain an expression for R the radius of the micelle
+in terms of v and a~0~</p></li>
+<li><p>Substitute R ≤ l~c~</p></li>
+<li><p>Rearrange to find the condition on the critical packing parameter</p></li>
+</ol>
+</section>
+<section id="width-3-0395833333333333in-height-1-3930555555555555in-spherical-micelles-spherical-micelles-h3">
+<h2><img alt="" src="content/teaching/media/image173.png" />{width=”3.0395833333333333in” height=”1.3930555555555555in”}Spherical micelles {#spherical-micelles .H3}<a class="headerlink" href="#width-3-0395833333333333in-height-1-3930555555555555in-spherical-micelles-spherical-micelles-h3" title="Link to this heading">#</a></h2>
+<p>The volume and surface area of a spherical micelle can be related to the
+aggregation number, N, the hydrocarbon volume, v, and the optimum head
+group area, a~o~</p>
+<p>If the radius of the micelle is less than the critical chain length,
+<em>l~c~</em> for spheres to form we require that</p>
+<div class="math notranslate nohighlight">
+\[\ \frac{v}{l_{c}a_{0}}\  \leq \ \frac{1}{3}\]</div>
+</section>
+<section id="width-2-540277777777778in-height-1-7930555555555556in-cylinders-cylinders-h3">
+<h2><img alt="" src="content/teaching/media/image174.png" />{width=”2.540277777777778in” height=”1.7930555555555556in”}Cylinders {#cylinders .H3}<a class="headerlink" href="#width-2-540277777777778in-height-1-7930555555555556in-cylinders-cylinders-h3" title="Link to this heading">#</a></h2>
+<p>Similarly for cylindrical micelles</p>
+<p><img alt="" src="content/teaching/media/image175.wmf" /></p>
+<p>The 1/3 comes from the fact that the spherical micelle (above) is more
+energetically favourable than the cylinder, since the cylinder has
+exposed ends with hydrophobic tails. However, when H &gt; 1/3 it is no
+longer possible to form spheres.</p>
+</section>
+<section id="width-2-3368055555555554in-height-1-8555555555555556in-bi-layers-bi-layers-h3">
+<h2><img alt="" src="content/teaching/media/image176.png" />{width=”2.3368055555555554in” height=”1.8555555555555556in”}Bi-layers {#bi-layers .H3}<a class="headerlink" href="#width-2-3368055555555554in-height-1-8555555555555556in-bi-layers-bi-layers-h3" title="Link to this heading">#</a></h2>
+<p>Similarly for bi-layers:</p>
+<p><img alt="" src="content/teaching/media/image177.wmf" /></p>
+<p>Where in a similar way the ½ originates from the fact that when H is ≤ ½
+the amphiphiles will form cylinders.</p>
+</section>
+<section id="width-2-342361111111111in-height-1-06875in-summary-of-key-concepts-summary-of-key-concepts-5-h3">
+<h2><img alt="" src="content/teaching/media/image178.png" />{width=”2.342361111111111in” height=”1.06875in”}Summary of key concepts {#summary-of-key-concepts-5 .H3}<a class="headerlink" href="#width-2-342361111111111in-height-1-06875in-summary-of-key-concepts-summary-of-key-concepts-5-h3" title="Link to this heading">#</a></h2>
+<p>Amphiphilic molecules contain a hydrophobic head group and hydrophobic
+tail group.</p>
+<p>When added to water they form micelles above a critical concentration.
+Their shape is determined by the volume and length of the tail and the
+optimum area of the molecular headgroups.</p>
+<p><img alt="" src="content/teaching/media/image179.wmf" /><img alt="cylindricalmicelle.tif" src="content/teaching/media/image180.png" />{width=”1.8083333333333333in”
+height=”0.9041666666666667in”}<img alt="sphericalmicelle.tif" src="content/teaching/media/image181.png" />{width=”0.8402777777777778in”
+height=”0.8319444444444445in”} A geometric packing parameter can be used
+to identify whether spherical, cylindrical or bilayer structures will
+form.</p>
+<p><img alt="bilayer.tif" src="content/teaching/media/image182.png" />{width=”1.6402777777777777in”
+height=”0.6798611111111111in”}</p>
+<p><img alt="" src="content/teaching/media/image183.wmf" /></p>
+<p><img alt="" src="content/teaching/media/image184.wmf" /></p>
+</section>
+<section id="vesicle-formation-vesicle-formation-h3">
+<h2>Vesicle formation  {#vesicle-formation .H3}<a class="headerlink" href="#vesicle-formation-vesicle-formation-h3" title="Link to this heading">#</a></h2>
+<p>When lipid bi-layers are formed in solution, there is an excess energy
+associated with the exposed hydrophobic tail groups at the edges of the
+structure.</p>
+<p><img alt="" src="content/teaching/media/image185.png" />{width=”3.8375in” height=”1.0541666666666667in”}</p>
+<p>The bi-layers can offset this energy by folding around to close
+themselves off and form an isolated shell or vesicle.</p>
+<p>vesicle</p>
+<p>Vesicles are closed structures that can be used to encapsulate materials
+in their interior for use in drug delivery. If the outside of the
+vesicle is decorated with specific chemical receptors which cause the
+vesicle to rupture and deliver its cargo when it reaches its target, it
+can act like a ‘magic bullet’.</p>
+<blockquote>
+<div><p><img alt="" src="content/teaching/media/image188.jpeg" />{width=”2.339583333333333in”
+height=”1.8020833333333333in”}Vesicles are also the most basic model
+for understanding the physics of the cell wall. A cell membrane
+consists of a vesicle with additional molecules such as membrane
+proteins distributed in the lipid bi-layer (A lipid is a type of
+amphiphile).</p>
+</div></blockquote>
+<p><strong>Bi-layer / membrane elasticity</strong></p>
+<p>a0</p>
+<p>a0+Δa</p>
+<p>r</p>
+<p>d</p>
+<p>Earlier we considered the optimum headgroup area a~0~ which is at the
+minimum of the free energy. However, when a bi-layer is bent the
+amphiphiles on the outside of the bi-layer move slightly further apart,
+whilst the molecules on the inside are pushed closer together. Both
+these changes will increase the free energy of the bilayer leading to a
+resistive force or elasticity.</p>
+<p>In the simplest approximation:</p>
+<div class="math notranslate nohighlight">
+\[\mathrm{\Delta}U\  \approx \ \frac{1}{2}k\mathrm{\Delta}a^{2}\]</div>
+<p><strong>Calculation: Estimating the elasticity of a membrane</strong></p>
+<ol class="arabic">
+<li><p>Calculate the head group area at the middle and outside edge of the
+curved membrane:</p>
+<p>a.  <span class="math notranslate nohighlight">\(a_{0} = R\theta Z\)</span></p>
+<p>b.  <span class="math notranslate nohighlight">\(a_{0} + \mathrm{\Delta}a\)</span>=<span class="math notranslate nohighlight">\(\left( R + \frac{d}{2} \right)\theta Z\)</span></p>
+</li>
+<li><p>Solve to find:</p></li>
+</ol>
+<blockquote>
+<div><div class="math notranslate nohighlight">
+\[\mathrm{\Delta}a = \frac{da_{0}}{2R}\]</div>
+</div></blockquote>
+<ol class="arabic simple" start="3">
+<li><p>The number of headgroups per unit area is 2/a~0~. One on outer edge,
+one inner edge so the energy per unit area is 0.5kΔa^2^*2/a~0~.
+Substituting Δa gives:</p></li>
+</ol>
+<blockquote>
+<div><p><span class="math notranslate nohighlight">\(\frac{\mathrm{\Delta}U}{A}\  \approx \ \frac{\kappa}{2R^{2}}\)</span> where
+<span class="math notranslate nohighlight">\(\kappa = \ \frac{kl_{c}^{2}a_{0}}{2}\)</span></p>
+</div></blockquote>
+<p>This implies that a membrane has an elasticity with spring constant κ.
+It also shows that a membrane gets increasingly stiff if the constituent
+amphiphiles are long and / or fat.</p>
+</section>
+<section id="membrane-entropic-repulsion-membrane-entropic-repulsion-h3">
+<h2>Membrane (Entropic Repulsion) {#membrane-entropic-repulsion .H3}<a class="headerlink" href="#membrane-entropic-repulsion-membrane-entropic-repulsion-h3" title="Link to this heading">#</a></h2>
+<p>The stiffness or bending modulus of a typical membrane is sufficiently
+small that they may undergo thermal induced fluctuations. Below we
+compare a membrane with some other typical “soft” materials.</p>
+<hr class="docutils" />
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>           Material                          Modulus (kPa)
+</pre></div>
+</div>
+<hr class="docutils" />
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>            Rubber                               1000
+
+             Jelly                                10
+
+           Membrane                               0.1
+</pre></div>
+</div>
+<hr class="docutils" />
+<p><img alt="membraneundulation.jpg" src="content/teaching/media/image189.jpeg" />{width=”2.386111111111111in”
+height=”1.9770833333333333in”}The closer two membranes come together the
+more these “thermal undulations” become restricted by the presence of
+the other membrane. In comparison with the lecture on steric
+interactions we may be able to guess that as the number of
+configurations (or undulations) is reduced the entropy of the system
+increases. Since this is unfavourable we expect a repulsive entropic
+force between the membranes.</p>
+<p><strong>Calculation: What is the force experienced by 2 membranes?</strong></p>
+<p>To make this calculation tractable we have to make a number of
+simplifications. These it turns out affect the final prefactor but give
+rise to the correct physics.</p>
+<p>We start with the following assumptions:</p>
+<ol class="arabic simple">
+<li><p>2 bi-layers a distance D apart will interact when the modes have
+amplitude D/2</p></li>
+<li><p>From the equipartition principle each mode has k~B~T/2 energy
+associated with it.</p></li>
+<li><p>Each mode is a 2D wave and occupies an area πx^2^</p></li>
+</ol>
+<p>Comes from geometry. Write x in terms of R and D 🡪 x^2^≈RD</p>
+<blockquote>
+<div><p><span class="math notranslate nohighlight">\(Pressure = \ \frac{{\mathrm{\Delta}U}_{mode}}{{Vol}_{mode}} = \ \frac{k_{B}T}{\pi x^{2}D}\)</span>
+= <span class="math notranslate nohighlight">\(\frac{k_{B}T}{\pi RD^{2}}\)</span></p>
+</div></blockquote>
+<ol class="arabic simple" start="4">
+<li><p>Use earlier result to find an alternative expression for R. ΔU =
+k~B~T/2 and A = πx^2^</p></li>
+</ol>
+<blockquote>
+<div><p><span class="math notranslate nohighlight">\(\frac{\mathrm{\Delta}U}{A} \approx \ \frac{\kappa}{2R^{2}}\)</span> 🡪
+<span class="math notranslate nohighlight">\(\frac{1}{R} \approx \frac{{{(k}_{B}T)}^{2}}{\kappa\pi D}\)</span></p>
+</div></blockquote>
+<p>The final result is:</p>
+<div class="math notranslate nohighlight">
+\[\ P = \frac{{{(k}_{B}T)}^{2}}{\kappa\pi^{2}D^{3}}\]</div>
+<p>This pressure is always repulsive and is stronger for more flexible
+membranes. The pressure also varies as 1/D^3^. This is interesting since
+this is the same dependence we observed for the Van der Waals
+interaction between two surfaces but with the opposite sign. The
+combined pressure would therefore be:</p>
+<div class="math notranslate nohighlight">
+\[P_{Tot} = \left\lbrack \frac{\left( k_{B}T \right)^{2}}{{\kappa\pi}^{2}} - \frac{A}{6\pi} \right\rbrack\frac{1}{D^{3}}\]</div>
+<p>This has an interesting consequence that the pressure for a membrane is
+either always positive or always negative regardless of distance D,
+depending on the sign of the bracket. Compare this with the DLVO
+potential for a charged colloid in a solution of ions which has the
+electrostatic (osmotic) and VdWs terms which exhibits a maximum, meaning
+that at small separations the particles become stuck together, whereas
+at large separations the pressure is repulsive.</p>
+<p>DLVO</p>
+<p>Undulation + VdW</p>
+<p>Electrostatic</p>
+<p>Undulation</p>
+<p>Dispersion</p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./content\teaching"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="13.%20aggregation.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">12. Aggregation &amp; Self-assembly {#aggregation-self-assembly .H2}</p>
+      </div>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#further-reading-further-reading-h3">Further reading {#further-reading .H3}</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#width-3-157638888888889in-height-1-5430555555555556in-amphiphilic-molecules-amphiphilic-molecules-h3">{width=”3.157638888888889in” height=”1.5430555555555556in”}Amphiphilic molecules {#amphiphilic-molecules .H3}</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#width-1-9131944444444444in-height-1-6076388888888888in-the-critical-micelle-concentration-belowcmc-jpgthe-critical-micelle-concentration-h3">{width=”1.9131944444444444in” height=”1.6076388888888888in”}The critical micelle concentration {#belowcmc.jpgthe-critical-micelle-concentration .H3}</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#width-1-4493055555555556in-height-1-4402777777777778in-the-size-and-structure-of-a-micelle-massivemicelle-tifthe-size-and-structure-of-a-micelle-h3">{width=”1.4493055555555556in” height=”1.4402777777777778in”}The size and structure of a micelle {#massivemicelle.tifthe-size-and-structure-of-a-micelle .H3}</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#optimum-headgroup-area-optimum-headgroup-area-h3">Optimum headgroup area  {#optimum-headgroup-area .H3}</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#width-3-7041666666666666in-height-2-8270833333333334in-the-hydrocarbon-volume-and-critical-chain-length-jonesfigurep141-jpgthe-hydrocarbon-volume-and-critical-chain-length-h3">{width=”3.7041666666666666in” height=”2.8270833333333334in”}The hydrocarbon volume and critical chain length {#jonesfigurep141.jpgthe-hydrocarbon-volume-and-critical-chain-length .H3}</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#factors-affecting-the-shape-of-micelles-factors-affecting-the-shape-of-micelles-h3">Factors affecting the shape of micelles {#factors-affecting-the-shape-of-micelles .H3}</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-do-these-parameters-determine-the-shape-of-a-micelle-how-do-these-parameters-determine-the-shape-of-a-micelle-h3">How do these parameters determine the shape of a micelle? {#how-do-these-parameters-determine-the-shape-of-a-micelle .H3}</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#critical-packing-parameter-critical-packing-parameter-h3">Critical packing parameter {#critical-packing-parameter .H3}</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#width-3-0395833333333333in-height-1-3930555555555555in-spherical-micelles-spherical-micelles-h3">{width=”3.0395833333333333in” height=”1.3930555555555555in”}Spherical micelles {#spherical-micelles .H3}</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#width-2-540277777777778in-height-1-7930555555555556in-cylinders-cylinders-h3">{width=”2.540277777777778in” height=”1.7930555555555556in”}Cylinders {#cylinders .H3}</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#width-2-3368055555555554in-height-1-8555555555555556in-bi-layers-bi-layers-h3">{width=”2.3368055555555554in” height=”1.8555555555555556in”}Bi-layers {#bi-layers .H3}</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#width-2-342361111111111in-height-1-06875in-summary-of-key-concepts-summary-of-key-concepts-5-h3">{width=”2.342361111111111in” height=”1.06875in”}Summary of key concepts {#summary-of-key-concepts-5 .H3}</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vesicle-formation-vesicle-formation-h3">Vesicle formation  {#vesicle-formation .H3}</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#membrane-entropic-repulsion-membrane-entropic-repulsion-h3">Membrane (Entropic Repulsion) {#membrane-entropic-repulsion .H3}</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Mike Smith
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549"></script>
+<script defer src="../../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

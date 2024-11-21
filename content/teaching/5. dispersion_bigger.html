@@ -1,0 +1,715 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>5. Dispersion Interactions – larger objects &#8212; Force and function at the nanoscale</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!-- 
+    this give us a css class that will be invisible only if js is disabled 
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../../_static/scripts/fontawesome.js?digest=26a4bc78f4c0ddb94549"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
+
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'content/teaching/5. dispersion_bigger';</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="6. Water, Hydrogen Bonds &amp; the Hydrophobic Interaction {#water-hydrogen-bonds-the-hydrophobic-interaction .H2}" href="6.%20water_hydrogenbonds.html" />
+    <link rel="prev" title="Dispersion Interactions" href="4.%20dispersion_interactions.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/logo.jpg" class="logo__image only-light" alt="Force and function at the nanoscale - Home"/>
+    <img src="../../_static/logo.jpg" class="logo__image only-dark pst-js-only" alt="Force and function at the nanoscale - Home"/>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../intro.html">
+                    Scientific Programming in Python Course - University of Nottingham (PHYS4038 & AS1)
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Information about the course</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../info_course/introduction.html">PHYS3009: Force and function at the nanoscale</a></li>
+
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Teaching Resources</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="1.%20nanoscale_world.html">1. The Nanoscale World</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2.%20forces_potentials.html">2. Forces and Potentials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3.%20polar_interactions.html">3. Polar interactions and Dipoles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="4.%20dispersion_interactions.html">Dispersion Interactions</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">5. Dispersion Interactions – larger objects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="6.%20water_hydrogenbonds.html">6. Water, Hydrogen Bonds &amp; the Hydrophobic Interaction {#water-hydrogen-bonds-the-hydrophobic-interaction .H2}</a></li>
+<li class="toctree-l1"><a class="reference internal" href="7.%20surfacevbulk.html">7. Surface vs Bulk {#surface-vs-bulk .H2}</a></li>
+<li class="toctree-l1"><a class="reference internal" href="8.%20capillaryforces.html">8. Capillary Forces {#capillary-forces .H2}</a></li>
+<li class="toctree-l1"><a class="reference internal" href="9.%20afm.html">9. Nanoscale Force Measurement Techniques – AFM {#nanoscale-force-measurement-techniques-afm .H2}</a></li>
+<li class="toctree-l1"><a class="reference internal" href="10.%20opticaltweezers.html">10. Nanoscale Force Measurement Techniques – Optical Tweezers {#nanoscale-force-measurement-techniques-optical-tweezers .H2}</a></li>
+<li class="toctree-l1"><a class="reference internal" href="12.%20entropy.html">11. Entropic Forces {#entropic-forces .H2}</a></li>
+<li class="toctree-l1"><a class="reference internal" href="13.%20aggregation.html">12. Aggregation &amp; Self-assembly {#aggregation-self-assembly .H2}</a></li>
+<li class="toctree-l1"><a class="reference internal" href="14.%20micelles.html">13. Micelles &amp; Membranes {#micelles-membranes .H2}</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fcontent/teaching/5. dispersion_bigger.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/content/teaching/5. dispersion_bigger.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>5. Dispersion Interactions – larger objects</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gecko-feet">Gecko feet</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dispersion-interactions-between-macroscopic-bodies">Dispersion interactions between macroscopic bodies</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#interactions-between-a-sphere-and-a-semi-infinite-slab">Interactions between a sphere and a semi-infinite slab</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-general-strategy">A general strategy</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-hamaker-constant">The Hamaker Constant</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#some-other-important-geometries">Some other important geometries</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-big-are-hamaker-constants">How big are Hamaker constants?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-range-of-dispersion-interactions-between-macroscopic-bodies">The range of dispersion interactions between macroscopic bodies</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-magnitude-of-forces-between-macroscopic-bodies">The magnitude of forces between macroscopic bodies</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary-of-key-concepts">Summary of key concepts</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="dispersion-interactions-larger-objects">
+<h1>5. Dispersion Interactions – larger objects<a class="headerlink" href="#dispersion-interactions-larger-objects" title="Link to this heading">#</a></h1>
+<section id="gecko-feet">
+<h2>Gecko feet<a class="headerlink" href="#gecko-feet" title="Link to this heading">#</a></h2>
+<p>The additive nature of interactions is expected to effect the strength
+of the dispersion interaction between macroscopic bodies.</p>
+<p>Geckos live in hot dusty climates. These creatures have the extraordinary ability that they can climb sheer
+surfaces and walk upside down across smooth glass plates. The mechanism by which they do this depends on small soft structures on their feet which allow them to stick to almost any surface. These small structures deform when the gecko puts its foot on a surface. This increases the amount of contact between the foot and the surface and thus increases the effective strength of the dispersion interactions between the gecko and the thing it is standing on. As a result they can walk up walls and across ceilings.</p>
+<video width="600" controls>
+  <source src="media/vid5_1.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+</section>
+<section id="dispersion-interactions-between-macroscopic-bodies">
+<h2>Dispersion interactions between macroscopic bodies<a class="headerlink" href="#dispersion-interactions-between-macroscopic-bodies" title="Link to this heading">#</a></h2>
+<p>We have seen that the additive nature of short-range dispersion interactions can make these interactions significant, but how can we describe these interactions mathematically? We will begin by considering the interaction between an isolated
+atom/molecule and a semi-infinite solid surface separated by a distance D.</p>
+<div style="text-align: center;">
+    <img src="media/5_2.jpg" alt="semi-infinite plane" width="250" height=auto>
+    <p><em>Figure 5.1 - Schematic of a point atom at a distance D from a semi-infinite plane.</em></p>
+</div>
+<p>Consider a small annulus or ring in the solid surface which has a radius, y, and which is a distance, x, from the atom/molecule:</p>
+<div style="text-align: center;">
+    <img src="media/5_3.jpg" alt="semi-infinite plane" width="350" height=auto>
+    <p><em>Figure 5.2 - Splitting the plane up into elemental volumes. All the points a distance r from the atom form a circle with radius y.</em></p>
+</div>
+<p>All the elemental volumes in this ring are at the same distance r from the isolated atom, they therefore have the same interaction. Integrating over x and y we can add up all the contributions in the slab (see lectures for details).</p>
+<p><strong>Interactions between a slab of material and another semi-infinite slab.</strong></p>
+<p>Derive an expression for the dispersion forces acting between a perfectly flat slab of area S and a semi-infinite solid if the number density of atoms in the slab and solid are n~1~ and n~2~ respectively.</p>
+<div style="text-align: center;">
+    <img src="media/5_5.jpg" alt="finite slab" width="350" height=auto>
+    <p><em>Figure 5.3 - The interaction between a slab and the plane.</em></p>
+</div>
+<p>To solve this problem we start with the expression for the potential energy due to dispersion interactions between a molecule and
+semi-infinite surface which are separated by a distance x.</p>
+<div class="math notranslate nohighlight">
+\[U(D) = \mathbf{-}\frac{\pi nC}{{6x}^{3}}\]</div>
+<p>We then work out the number of atoms in a slice (red in the diagram above). We add up all the contributions to the dispersion interaction between this slice and the semi-infinite surface. Finally, we add up all the slices in the slab to reach the total interaction with the solid surface.</p>
+</section>
+<section id="interactions-between-a-sphere-and-a-semi-infinite-slab">
+<h2>Interactions between a sphere and a semi-infinite slab<a class="headerlink" href="#interactions-between-a-sphere-and-a-semi-infinite-slab" title="Link to this heading">#</a></h2>
+<p>Derive an expression for the dispersion forces which act between a sphere of radius R (for separations <span class="math notranslate nohighlight">\(D \&gt;\&gt;R\)</span>) and a semi-infinite solid if the number density of atoms in the slab and sphere are <span class="math notranslate nohighlight">\(n_{1} and \)</span>n_{2}$ respectively.</p>
+<p>As in the last example, we start with the expression for the potential energy due to dispersion interactions between an individual
+atom/molecule and a flat surface and add up the contributions due to all the atoms/molecules in the sphere.</p>
+</section>
+<section id="a-general-strategy">
+<h2>A general strategy<a class="headerlink" href="#a-general-strategy" title="Link to this heading">#</a></h2>
+<p>In all the examples above we follow a similar pattern</p>
+<ol class="arabic simple">
+<li><p>Look for the symmetries in the system. Eg. With the sphere it is
+symmetric about the middle.</p></li>
+<li><p>Split the problem up into elemental volumes (that is those atoms
+that are all the same distance from the semi-infinite sheet).</p></li>
+<li><p>Integrate between the limits to add up the different contributions</p></li>
+</ol>
+</section>
+<section id="the-hamaker-constant">
+<h2>The Hamaker Constant<a class="headerlink" href="#the-hamaker-constant" title="Link to this heading">#</a></h2>
+<p>The strength of the dispersion interaction between materials is often quantified in terms of the Hamaker constant, <em>A</em></p>
+<div class="math notranslate nohighlight">
+\[A_{12} = n_{1}n_{2}\pi^{2}C\]</div>
+<p><em><span class="math notranslate nohighlight">\(n_{1}* and *\)</span>n_{2}<span class="math notranslate nohighlight">\(* are the number densities of atoms/molecules in the two interacting materials (*\)</span>m^{-3}</em>)</p>
+<p>C is the ‘strength’ of the interaction between an atom/molecule from one
+material and an atom/molecule from the other (<span class="math notranslate nohighlight">\(Jm^{6}\)</span>)</p>
+<p><span class="math notranslate nohighlight">\(A_{12}\)</span> is the Hamaker constant for materials 1 and 2 (J). We can rewrite our expressions for the dispersion interaction energy
+between two macroscopic bodies in terms of the Hamaker constant:</p>
+<ul class="simple">
+<li><p>Dispersion Interaction energy between a flat slab of area, <em>S</em>, and a semi-infinite solid:</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[U(D) = \mathbf{-}\frac{n_{1}n_{2}\pi CS}{12D^{2}}\mathbf{= -}\frac{A_{12}S}{12\pi D^{2}}\]</div>
+<ul class="simple">
+<li><p>Dispersion Interaction energy between a sphere of radius, <em>R,</em> and a
+semi-infinite solid:</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[U(D) = \mathbf{-}\frac{n_{1}n_{2}\pi^{2}CR}{3D}\mathbf{= -}\frac{A_{12}R}{3D}\]</div>
+<p>We can also write the forces in terms of the Hamaker constant:</p>
+<ul class="simple">
+<li><p>Dispersion force between a flat slab of area, <em>S</em>, and a semi-infinite solid:</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[F(D) = \mathbf{-}\frac{dU}{dD}\mathbf{= -}\frac{A_{12}S}{6\pi D^{3}}\]</div>
+<ul class="simple">
+<li><p>Dispersion force between a sphere of radius, <em>R,</em> and a semi-infinite solid</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[F(D) = \mathbf{-}\frac{dU}{dD}\mathbf{= -}\frac{A_{12}R}{3D^{2}}\]</div>
+<p>Hence we can determine the strength of the dispersion interaction $A_{12} between two materials by measuring forces acting between two macroscopic bodies. The importance of a Hamaker constant is that we combine a bunch of constants into a single one which represents how two materials interact.</p>
+</section>
+<section id="some-other-important-geometries">
+<h2>Some other important geometries<a class="headerlink" href="#some-other-important-geometries" title="Link to this heading">#</a></h2>
+<p>The geometry of the macroscopic bodies is important in determining the separation dependence of the dispersion interaction.</p>
+<ul class="simple">
+<li><p>Sphere-sphere</p></li>
+</ul>
+<div style="text-align: center;">
+    <img src="media/5_7.jpg" alt="sphere sphere" width="250" height=auto>
+    <p><em>Figure 5.4 - Sphere - Sphere dispersion interaction</em></p>
+</div>
+<div class="math notranslate nohighlight">
+\[U(D) = \mathbf{-}\frac{A_{12}}{3D}\frac{R_{1}R_{2}}{R_{1} + R_{2}}\]</div>
+<ul class="simple">
+<li><p>Parallel cylinders</p></li>
+</ul>
+<div style="text-align: center;">
+    <img src="media/5_8.jpg" alt="parallel cylinders" width="250" height=auto>
+    <p><em>Figure 5.5 - Parallel Cylinders dispersion interaction</em></p>
+</div>
+<div class="math notranslate nohighlight">
+\[U(D) = \mathbf{-}\frac{A_{12}L}{12\sqrt{2}D^{3/2}}\left( \frac{R_{1}R_{2}}{R_{1} + R_{2}} \right)^{\mathbf{1/2}}\]</div>
+<ul class="simple">
+<li><p>Perpendicular cylinders</p></li>
+</ul>
+<div style="text-align: center;">
+    <img src="media/5_8.jpg" alt="perpendicular cylinders" width="250" height=auto>
+    <p><em>Figure 5.6 - Perpendicular cylinders</em></p>
+</div>
+<div class="math notranslate nohighlight">
+\[U(D) = \mathbf{-}\frac{A_{12}}{6D}\sqrt{R_{1}R_{2}}\]</div>
+</section>
+<section id="how-big-are-hamaker-constants">
+<h2>How big are Hamaker constants?<a class="headerlink" href="#how-big-are-hamaker-constants" title="Link to this heading">#</a></h2>
+<p>Values of <em>A</em> typically lie in the range <span class="math notranslate nohighlight">\(10^{-21}\)</span> to <span class="math notranslate nohighlight">\(10^{-19}\)</span> Joules
+(<span class="math notranslate nohighlight">\(k_{B}T\)</span> at room temperature <span class="math notranslate nohighlight">\(\sim 4.41 \times 10^{-21}J\)</span>)</p>
+<div style="text-align: center;">
+    <img src="media/5_9.png" alt="Hamaker Constants" width="400" height=auto>
+    <p><em>Figure 5.7 - Table of Hamaker constants for common materials (Taken from Surface and Intermolecular forces by J. Israelachvili $3^{rd}$ edition.)</em></p>
+</div>
+</section>
+<section id="the-range-of-dispersion-interactions-between-macroscopic-bodies">
+<h2>The range of dispersion interactions between macroscopic bodies<a class="headerlink" href="#the-range-of-dispersion-interactions-between-macroscopic-bodies" title="Link to this heading">#</a></h2>
+<p>We can calculate the range of the interaction by comparing dispersion and thermal energies i.e. <span class="math notranslate nohighlight">\(|U(D_{range})| \sim k_{B}T\)</span>. In reality, this description does not work for truly macroscopic objects, but is valid on the submicron and nanometre length scales where thermal effects are still important in influencing the behaviour of particles and inter-surface forces.</p>
+<p>For the interaction between a sphere of radius R and a solid surface we have:</p>
+<div class="math notranslate nohighlight">
+\[\left| U(D) \right| = \frac{A_{12}R}{3D_{range}}\mathbf{\approx}kT\]</div>
+<p>Hence</p>
+<div class="math notranslate nohighlight">
+\[D_{range} \approx \frac{A_{12}R}{3kT}\]</div>
+<p>For values of T=300K, R=10 nm and <span class="math notranslate nohighlight">\(A_{12}=10^{-19}J\)</span>, <span class="math notranslate nohighlight">\(D_{range} \sim 10R = 100 nm\)</span>. This is significantly longer range than the interaction between individual atoms/molecules (<span class="math notranslate nohighlight">\(\sim 0.3nm\)</span>). The potential for extended bodies depends on a much lower power of R usually <span class="math notranslate nohighlight">\(1/R^{2} or \)</span>1/R^{3}<span class="math notranslate nohighlight">\( depending on geometry, whereas for individual molecules it is \)</span>1/R^{6}$. This is why dispersion forces are so important because in material bodies when we add up the individual interactions we find the range over which they are not disrupted by thermal interactions is much longer.</p>
+</section>
+<section id="the-magnitude-of-forces-between-macroscopic-bodies">
+<h2>The magnitude of forces between macroscopic bodies<a class="headerlink" href="#the-magnitude-of-forces-between-macroscopic-bodies" title="Link to this heading">#</a></h2>
+<p>We can also calculate the magnitude of the forces exerted on macroscopic bodies due to dispersion forces. Sticking with the sphere and surface we have:</p>
+<div class="math notranslate nohighlight">
+\[F(D) = \mathbf{-}\frac{dU}{dD}\mathbf{= -}\frac{A_{12}R}{3D^{2}}\]</div>
+<p>If a nanoparticle has <span class="math notranslate nohighlight">\(R=10nm\)</span>, <span class="math notranslate nohighlight">\(A_{12}=10^{-19}J\)</span> and <span class="math notranslate nohighlight">\(D=100nm\)</span>, <span class="math notranslate nohighlight">\(F \sim 0.03pN\)</span>. If <span class="math notranslate nohighlight">\(D=10nm\)</span>, <span class="math notranslate nohighlight">\(F \sim 3pN\)</span>. These are very small forces but they can be measured.</p>
+<p>We can also calculate the force between a perfectly flat slab and a
+semi-infinite solid. Recall that the force is given by</p>
+<div class="math notranslate nohighlight">
+\[F(D) = \mathbf{-}\frac{A_{12}S}{6\pi D^{3}}\]</div>
+<p>If the area of the slab is <span class="math notranslate nohighlight">\(S=10^{-4}m^{2} (1cm^{2}) and \)</span>A_{12}=10^{-19}J$. What is the force between the slab and the surface at a separation of 0.3 nm? The answer is ~20,000 Newtons, This is a very large force!</p>
+</section>
+<section id="summary-of-key-concepts">
+<h2>Summary of key concepts<a class="headerlink" href="#summary-of-key-concepts" title="Link to this heading">#</a></h2>
+<p>Dispersion interactions arise due to instantaneous dipole fluctuations and the dipoles these induce in neighbouring atoms/molecules</p>
+<p>The potential energy due to attractive dispersion interactions between atoms and molecules has the form:</p>
+<div class="math notranslate nohighlight">
+\[U(x) = - \frac{\alpha(qd)^{2}}{\left( 2\pi\varepsilon\varepsilon_{0} \right)^{2}}\frac{1}{x^{6}}\mathbf{= -}\frac{C}{x^{6}}\]</div>
+<p>Range of dispersion forces between individual atoms is ~ 0.3 nm.</p>
+<p>The total interaction (dispersion + hard sphere repulsion) between neutral atoms and molecules can be described using a ‘6-12’
+Lennard-Jones potential of the form:</p>
+<div class="math notranslate nohighlight">
+\[U(x) = 4\gamma\left\lbrack \left( \frac{\sigma}{x} \right)^{12} - \left( \frac{\sigma}{x} \right)^{6} \right\rbrack\]</div>
+<p>Dispersion interactions between macroscopic bodies occur over significantly longer ranges than for isolated atoms/molecules.
+We can derive expressions for the dispersion interaction energy and forces between macroscopic objects.</p>
+<p><strong>Dispersion Interaction energy between a flat slab of area, <em>S</em>, and a
+semi-infinite solid</strong></p>
+<div class="math notranslate nohighlight">
+\[U(D) = \mathbf{-}\frac{n_{1}n_{2}\pi CS}{12D^{2}}\mathbf{= -}\frac{A_{12}S}{12\pi D^{2}}\]</div>
+<p><strong>Dispersion Interaction energy between a sphere of radius, <em>R,</em> and a
+semi-infinite solid</strong></p>
+<div class="math notranslate nohighlight">
+\[U(D) = \mathbf{-}\frac{n_{1}n_{2}\pi^{2}CR}{3D}\mathbf{= -}\frac{A_{12}R}{3D}\]</div>
+<p>Dispersion force between a flat slab of area, <em>S</em>, and a semi-infinite solid:</p>
+<div class="math notranslate nohighlight">
+\[F(D) = \mathbf{-}\frac{dU}{dD}\mathbf{= -}\frac{A_{12}S}{6\pi D^{3}}\]</div>
+<p>Dispersion force between a sphere of radius, <em>R,</em> and a semi-infinite solid:</p>
+<div class="math notranslate nohighlight">
+\[F(D) = \mathbf{-}\frac{dU}{dD}\mathbf{= -}\frac{A_{12}R}{3D^{2}}\]</div>
+<p>The strength of the dispersion interaction can be quantified in terms of the Hamaker constant <em>A</em></p>
+<p>Dispersion forces on nanoscale objects can be on the pN to nN scales</p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./content\teaching"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="4.%20dispersion_interactions.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Dispersion Interactions</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="6.%20water_hydrogenbonds.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">6. Water, Hydrogen Bonds &amp; the Hydrophobic Interaction {#water-hydrogen-bonds-the-hydrophobic-interaction .H2}</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gecko-feet">Gecko feet</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dispersion-interactions-between-macroscopic-bodies">Dispersion interactions between macroscopic bodies</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#interactions-between-a-sphere-and-a-semi-infinite-slab">Interactions between a sphere and a semi-infinite slab</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-general-strategy">A general strategy</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-hamaker-constant">The Hamaker Constant</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#some-other-important-geometries">Some other important geometries</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-big-are-hamaker-constants">How big are Hamaker constants?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-range-of-dispersion-interactions-between-macroscopic-bodies">The range of dispersion interactions between macroscopic bodies</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-magnitude-of-forces-between-macroscopic-bodies">The magnitude of forces between macroscopic bodies</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary-of-key-concepts">Summary of key concepts</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Mike Smith
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549"></script>
+<script defer src="../../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
