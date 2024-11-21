@@ -57,8 +57,6 @@
     <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'content/teaching/8. capillaryforces';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -255,7 +253,7 @@
       
       
       
-      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+      <li><a href="https://github.com/phys3009/phys3009.github.io" target="_blank"
    class="btn btn-sm btn-source-repository-button dropdown-item"
    title="Source repository"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -272,7 +270,7 @@
       
       
       
-      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fcontent/teaching/8. capillaryforces.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/phys3009/phys3009.github.io/issues/new?title=Issue%20on%20page%20%2Fcontent/teaching/8. capillaryforces.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -412,7 +410,7 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="capillary-forces">
+  <section id="capillary-forces">
 <h1>8. Capillary Forces<a class="headerlink" href="#capillary-forces" title="Link to this heading">#</a></h1>
 <section id="pressure-difference-across-a-liquid-interface">
 <h2>Pressure difference across a liquid interface<a class="headerlink" href="#pressure-difference-across-a-liquid-interface" title="Link to this heading">#</a></h2>
@@ -425,16 +423,15 @@ Consider, the water-air interface of some water in a tube. In the last lecture w
 <p>To study this question in more detail, we will use the principal of virtual work. That is we will ask the question, how much work would we need to do to change the curvature of the liquid interface? This work must then be equal in magnitude to the potential energy stored in the curved interface. From this information
 we will be able to determine the magnitude of the forces or the pressure (force per unit area) acting at the interface.</p>
 <p>We start by considering a curved liquid/air interface which has two
-principal radii of curvature, <span class="math notranslate nohighlight">\(R \sim 1\)</span> and <span class="math notranslate nohighlight">\(R \sim 2\)</span>, (see diagram).</p>
+principal radii of curvature, $R \sim 1$ and $R \sim 2$, (see diagram).</p>
 <div style="text-align: center;">
     <img src="media/8_2.jpg" alt="curved interface" width="250" height=auto>
     <p><em>Figure 8.2 - A schematic of a curved interface used in the calculation.</em></p>
 </div>
 <p>There is a pressure difference across a curved liquid interface which
 acts to try to reduce the area of the interface. This is called the <em>Capillary Pressure</em></p>
-<div class="math notranslate nohighlight">
-\[\Delta P = P_{1} - P_{2} = \gamma\left( \frac{1}{R_{1}} + \frac{1}{R_{2}} \right)\]</div>
-<p>where <span class="math notranslate nohighlight">\(\gamma\)</span> is surface energy/tension (<span class="math notranslate nohighlight">\(Jm^{-2}\)</span>), <span class="math notranslate nohighlight">\(R \sim 1\)</span> and <span class="math notranslate nohighlight">\(R \sim 2\)</span> are principal radii of curvature in two orthogonal (perpendicular) directions.</p>
+<p>$$\Delta P = P_{1} - P_{2} = \gamma\left( \frac{1}{R_{1}} + \frac{1}{R_{2}} \right)$$</p>
+<p>where $\gamma$ is surface energy/tension ($Jm^{-2}$), $R \sim 1$ and $R \sim 2$ are principal radii of curvature in two orthogonal (perpendicular) directions.</p>
 <div style="text-align: center;">
     <img src="media/8_3.png" alt="Pressure diff" width="250" height=auto>
     <p><em>Figure 8.3 - There is a pressure difference across a curved interface.</em></p>
@@ -448,20 +445,17 @@ can be observed routinely in a laboratory.</p>
     <img src="media/8_4.png" alt="capillary rise" width="250" height=auto>
     <p><em>Figure 8.4 - Capillary rise in a thin tube due to the pressure difference of a curved interface.</em></p>
 </div>
-<p>The height of fluid (<span class="math notranslate nohighlight">\(h\)</span>) in a capillary of radius, <span class="math notranslate nohighlight">\(R\)</span>, is determined
+<p>The height of fluid ($h$) in a capillary of radius, $R$, is determined
 by <em>balancing the capillary pressure drop across the meniscus with the
 pressure required to draw the fluid up the capillary.</em></p>
-<p>For a fluid of density, <span class="math notranslate nohighlight">\(\rho\)</span>, and surface tension, <span class="math notranslate nohighlight">\(\gamma\)</span>,</p>
-<div class="math notranslate nohighlight">
-\[h = \frac{2\gamma cos\theta}{\rho gR}\]</div>
+<p>For a fluid of density, $\rho$, and surface tension, $\gamma$,</p>
+<p>$$h = \frac{2\gamma cos\theta}{\rho gR}$$</p>
 <section id="summary-of-key-concepts">
 <h3>Summary of key concepts<a class="headerlink" href="#summary-of-key-concepts" title="Link to this heading">#</a></h3>
 <p>Capillary pressure due to a curved liquid interface</p>
-<div class="math notranslate nohighlight">
-\[P = \gamma\left( \frac{1}{R_{1}} + \frac{1}{R_{2}} \right)\]</div>
+<p>$$P = \gamma\left( \frac{1}{R_{1}} + \frac{1}{R_{2}} \right)$$</p>
 <p>Capillary pressure is responsible for the phenomenon of capillary rise</p>
-<div class="math notranslate nohighlight">
-\[h = \frac{2\gamma cos\theta}{\rho gR}\]</div>
+<p>$$h = \frac{2\gamma cos\theta}{\rho gR}$$</p>
 <div style="text-align: center;">
     <img src="media/8_5.jpg" alt="schematic" width="250" height=auto>
     <p><em>Figure 8.5 - Schematic used in calculations</em></p>
@@ -563,7 +557,7 @@ By Mike Smith
 
   <p class="copyright">
     
-      © Copyright 2023.
+      © Copyright 2024.
       <br/>
     
   </p>

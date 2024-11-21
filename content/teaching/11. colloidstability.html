@@ -57,8 +57,6 @@
     <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'content/teaching/11. colloidstability';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -255,7 +253,7 @@
       
       
       
-      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+      <li><a href="https://github.com/phys3009/phys3009.github.io" target="_blank"
    class="btn btn-sm btn-source-repository-button dropdown-item"
    title="Source repository"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -272,7 +270,7 @@
       
       
       
-      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fcontent/teaching/11. colloidstability.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/phys3009/phys3009.github.io/issues/new?title=Issue%20on%20page%20%2Fcontent/teaching/11. colloidstability.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -497,8 +495,7 @@ influence on the local concentration of counterions and hence the
 osmotic pressure exerted between the particle surfaces.</p>
 <p>The osmotic pressure, Π, which pushes the surfaces apart and tries to
 restore a uniform counterion concentration is given by</p>
-<div class="math notranslate nohighlight">
-\[\Pi = \left( n_{+} + n_{-} - 2n_{0} \right)k_{B}T\]</div>
+<p>$$\Pi = \left( n_{+} + n_{-} - 2n_{0} \right)k_{B}T$$</p>
 <p>where <em>n~+~</em> and <em>n~-~</em> are number densities of positive and negative
 ions in the gap, and <em>n~o~</em> is their concentration far away from the
 surfaces. Note that for an electrolyte (salt) in bulk solution (e.g.
@@ -518,28 +515,23 @@ the electrostatic potential energy of the counterions in solution and
 how this influences their local concentration.</p>
 <p>For an ion of charge ± ze, sitting in a spatially varying electrostatic
 potential V(x), the energy, E, is simply given by</p>
-<div class="math notranslate nohighlight">
-\[E = \pm zeV(x)\]</div>
+<p>$$E = \pm zeV(x)$$</p>
 <p>To determine how this energy influences the distribution of counterions,
 we recall that the probability, p, of a particle occupying a given
 energy state can be described by Boltzmann statistics (See thermal
 physics notes)</p>
-<div class="math notranslate nohighlight">
-\[p_{\pm} = p_{0}\exp\left( - \frac{E_{\pm}}{k_{B}T} \right)\]</div>
+<p>$$p_{\pm} = p_{0}\exp\left( - \frac{E_{\pm}}{k_{B}T} \right)$$</p>
 <p>In this case, the energy of the particle is determined by its position
 in the potential V(x) (as described above) and the local number density
 must scale with the probability associated with finding the particle
 with a given energy. Hence we can simply write the number densities of
 positive and negative counterions as</p>
-<div class="math notranslate nohighlight">
-\[n_{\pm} = n_{0}\exp\left( - \frac{E_{\pm}}{k_{B}T} \right) = n_{0}\exp\left( \pm \frac{zeV(x)}{k_{B}T} \right)\]</div>
+<p>$$n_{\pm} = n_{0}\exp\left( - \frac{E_{\pm}}{k_{B}T} \right) = n_{0}\exp\left( \pm \frac{zeV(x)}{k_{B}T} \right)$$</p>
 <p>Hence, our expression for the osmotic pressure becomes</p>
-<div class="math notranslate nohighlight">
-\[\Pi = \left( n_{+} + n_{-} - 2n_{0} \right)k_{B}T = {2n}_{0}k_{B}T\left( \cosh\left( \frac{zeV(x)}{k_{B}T} \right) - 1 \right)\]</div>
+<p>$$\Pi = \left( n_{+} + n_{-} - 2n_{0} \right)k_{B}T = {2n}<em>{0}k</em>{B}T\left( \cosh\left( \frac{zeV(x)}{k_{B}T} \right) - 1 \right)$$</p>
 <p><img alt="" src="content/teaching/media/image127.wmf" /></p>
 <p>In the limit of small surface potentials i.e. when this reduces to</p>
-<div class="math notranslate nohighlight">
-\[\Pi = n_{0}\frac{z^{2}e^{2}}{k_{B}T}\left( V(x) \right)^{2}\]</div>
+<p>$$\Pi = n_{0}\frac{z^{2}e^{2}}{k_{B}T}\left( V(x) \right)^{2}$$</p>
 <p>So if we know how V(x) depends on the distance away from the surface we
 can calculate the osmotic pressure due to the counterions.</p>
 </section>
@@ -552,8 +544,7 @@ isolated charged surface in an electrolyte.</p>
 <p>To obtain this we must first solve the <strong>Poisson equation</strong> which
 relates the electrostatic potential V(x) to the local charge density,
 <em>ρ</em>, using the following formula.</p>
-<div class="math notranslate nohighlight">
-\[\ \ \frac{- d^{2}V}{dx^{2}} = \frac{\rho}{\varepsilon\varepsilon_{0}}\ \ \]</div>
+<p>$$\ \ \frac{- d^{2}V}{dx^{2}} = \frac{\rho}{\varepsilon\varepsilon_{0}}\ \ $$</p>
 <p>where ε and ε~o~, are the relative permittivity of the medium in which
 the counterions are dissolved (usually water) and permittivity of free
 space (Fm^-1^) respectively.</p>
@@ -565,8 +556,7 @@ of their charge and number densities;</p>
 <p><img alt="" src="content/teaching/media/image127.wmf" /></p>
 <p>In the limit of small potentials, , the Poisson equation for the cloud
 of counterions becomes</p>
-<div class="math notranslate nohighlight">
-\[\frac{d^{2}V}{dx^{2}} = \frac{2z^{2}e^{2}n_{0}}{\varepsilon\varepsilon_{0}k_{B}T}V(x)\]</div>
+<p>$$\frac{d^{2}V}{dx^{2}} = \frac{2z^{2}e^{2}n_{0}}{\varepsilon\varepsilon_{0}k_{B}T}V(x)$$</p>
 </section>
 <section id="solution-of-the-poisson-equation-and-the-debye-screening-length-solution-of-the-poisson-equation-and-the-debye-screening-length-h3">
 <h2>Solution of the Poisson equation and the Debye screening length {#solution-of-the-poisson-equation-and-the-debye-screening-length .H3}<a class="headerlink" href="#solution-of-the-poisson-equation-and-the-debye-screening-length-solution-of-the-poisson-equation-and-the-debye-screening-length-h3" title="Link to this heading">#</a></h2>
@@ -577,13 +567,11 @@ However, we require that the potential decays to zero for infinite, x.
 (If it didn’t, the total energy of the counterion cloud would be
 infinite!). This means that we are left with a solution which consists
 of a simple negative exponential of the form</p>
-<div class="math notranslate nohighlight">
-\[V(x) = V_{0}\exp( - \kappa x)\]</div>
+<p>$$V(x) = V_{0}\exp( - \kappa x)$$</p>
 <p>Where V~o~ is the surface potential (i.e. the electrostatic potential at
 the surface) and κ is a decay constant such that if we insert V(x) into
 the Poisson equation we obtain</p>
-<div class="math notranslate nohighlight">
-\[\frac{1}{\kappa} = \left( \frac{\varepsilon\varepsilon_{0}k_{B}T}{2{n_{0}z}^{2}e^{2}} \right)^{1/2}\]</div>
+<p>$$\frac{1}{\kappa} = \left( \frac{\varepsilon\varepsilon_{0}k_{B}T}{2{n_{0}z}^{2}e^{2}} \right)^{1/2}$$</p>
 <p>1/<em>κ</em> is the Debye screening length. <strong>(N.B the Debye length is 1/κ not
 κ!)</strong></p>
 <p>It is the distance over which electrostatic interactions are screened in
@@ -593,14 +581,11 @@ an electrolyte and <em>V~o~</em> is the potential at the surface.</p>
 <h2>Osmotic pressure between surfaces (revisited) {#osmotic-pressure-between-surfaces-revisited .H3}<a class="headerlink" href="#osmotic-pressure-between-surfaces-revisited-osmotic-pressure-between-surfaces-revisited-h3" title="Link to this heading">#</a></h2>
 <p>Recall that the osmotic pressure due to counterions between charged
 surface has the form</p>
-<div class="math notranslate nohighlight">
-\[\Pi = n_{0}\frac{z^{2}e^{2}}{k_{B}T}\left( V(x) \right)^{2}\]</div>
+<p>$$\Pi = n_{0}\frac{z^{2}e^{2}}{k_{B}T}\left( V(x) \right)^{2}$$</p>
 <p>where</p>
-<div class="math notranslate nohighlight">
-\[V(x) = V_{0}\exp( - \kappa x)\]</div>
+<p>$$V(x) = V_{0}\exp( - \kappa x)$$</p>
 <p>If we insert our solution for the potential we obtain</p>
-<div class="math notranslate nohighlight">
-\[\Pi = {4n}_{0}\frac{z^{2}e^{2}V_{0}^{2}}{k_{B}T}\exp( - \kappa D)\]</div>
+<p>$$\Pi = {4n}<em>{0}\frac{z^{2}e^{2}V</em>{0}^{2}}{k_{B}T}\exp( - \kappa D)$$</p>
 <p>where D=2x is the distance between the two surfaces.</p>
 <p><strong>This expression describes the positive (repulsive) osmotic pressure
 caused by the condensation of counterions in the gap between two
@@ -611,12 +596,10 @@ surfaces.</strong></p>
 <p>The total pressure between two charged surfaces in an electrolyte is
 given by summing the contributions due to repulsive osmotic pressure and
 attractive dispersion forces to give</p>
-<div class="math notranslate nohighlight">
-\[P_{tot} = \Pi + P_{dispersion}\]</div>
+<p>$$P_{tot} = \Pi + P_{dispersion}$$</p>
 <p>where P~dispersion~ is the pressure due to the attractive dispersion
 interactions. We have</p>
-<div class="math notranslate nohighlight">
-\[P_{tot} = {4n}_{0}\frac{z^{2}e^{2}V_{0}^{2}}{k_{B}T}{\exp( - \kappa D)}^{} - \frac{A}{6\pi D^{3}}\]</div>
+<p>$$P_{tot} = {4n}<em>{0}\frac{z^{2}e^{2}V</em>{0}^{2}}{k_{B}T}{\exp( - \kappa D)}^{} - \frac{A}{6\pi D^{3}}$$</p>
 <p>where the first term is due to the osmotic pressure and the second due
 to the attractive dispersion forces.</p>
 <p>This is a simplified form of the equations derived by Derjaguin, Landau,
@@ -656,8 +639,7 @@ height=”2.798611111111111in”}</p>
 <p><strong>The pressure exerted on charged surfaces in an electrolyte is
 determined by a balance between the osmotic pressure due to counter-ions
 and the dispersion pressure .</strong></p>
-<div class="math notranslate nohighlight">
-\[P_{tot} = {4n}_{0}\frac{z^{2}e^{2}V_{0}^{2}}{k_{B}T}{\exp( - \kappa D)}^{} - \frac{A}{6\pi D^{3}}\]</div>
+<p>$$P_{tot} = {4n}<em>{0}\frac{z^{2}e^{2}V</em>{0}^{2}}{k_{B}T}{\exp( - \kappa D)}^{} - \frac{A}{6\pi D^{3}}$$</p>
 <p>**<br />
 **</p>
 </section>
@@ -743,7 +725,7 @@ By Mike Smith
 
   <p class="copyright">
     
-      © Copyright 2023.
+      © Copyright 2024.
       <br/>
     
   </p>

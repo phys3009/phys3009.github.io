@@ -57,8 +57,6 @@
     <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'content/teaching/2. forces_potentials';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -255,7 +253,7 @@
       
       
       
-      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+      <li><a href="https://github.com/phys3009/phys3009.github.io" target="_blank"
    class="btn btn-sm btn-source-repository-button dropdown-item"
    title="Source repository"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -272,7 +270,7 @@
       
       
       
-      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fcontent/teaching/2. forces_potentials.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/phys3009/phys3009.github.io/issues/new?title=Issue%20on%20page%20%2Fcontent/teaching/2. forces_potentials.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -422,16 +420,15 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="forces-and-potentials">
+  <section id="forces-and-potentials">
 <h1>2. Forces and Potentials<a class="headerlink" href="#forces-and-potentials" title="Link to this heading">#</a></h1>
 <section id="relationship-between-force-and-potential">
 <h2>Relationship between force and potential<a class="headerlink" href="#relationship-between-force-and-potential" title="Link to this heading">#</a></h2>
 <p>The force, <em>F,</em> on an object can be related to the gradient in its
 potential energy, <em>U,</em> with respect to distance, x, by the formula</p>
-<div class="math notranslate nohighlight">
-\[
+<p>$$
 F=-\frac{dU}{dx} \tag{2.1}
-\]</div>
+$$</p>
 <p>This is an extremely important formula in physics and we will use it a
 lot in this module.</p>
 <section id="the-sign-of-the-potential-energy">
@@ -475,24 +472,22 @@ charged when placed in aqueous environments. The charge that they
 acquire is sensitive to pH and salt concentrations. These molecules can
 interact via electrostatic forces</em></p>
 </div>
-<p>The <strong>electrostatic potential energy, U,</strong> of two molecules having charges <span class="math notranslate nohighlight">\(q_1\)</span> and <span class="math notranslate nohighlight">\(q_2\)</span> that are separated by a
-distance, <span class="math notranslate nohighlight">\(x\)</span>, is given by:</p>
-<div class="math notranslate nohighlight">
-\[
+<p>The <strong>electrostatic potential energy, U,</strong> of two molecules having charges $q_1$ and $q_2$ that are separated by a
+distance, $x$, is given by:</p>
+<p>$$
 U = \frac{q_1q_2}{4\pi\varepsilon\varepsilon_0x} \tag{2.2}
-\]</div>
-<p>where <span class="math notranslate nohighlight">\(\varepsilon_0 = 8.85 \times 10^{-12} Fm^{-1}\)</span> is the permittivity of free space. ε is the relative permittivity of medium in which the molecules are suspended and has values ranging from 1 (vacuum) to 80 (water).</p>
+$$</p>
+<p>where $\varepsilon_0 = 8.85 \times 10^{-12} Fm^{-1}$ is the permittivity of free space. ε is the relative permittivity of medium in which the molecules are suspended and has values ranging from 1 (vacuum) to 80 (water).</p>
 <div style="text-align: center;">
     <img src="media/2_6.jpg" alt="Coulomb force" width="150" height=auto>
 </div>
-<p>Differentiating this expression with respect to the distance, x, and using equation 2.1 we find that the <strong>electrostatic force acting between</strong> two molecules having charges <span class="math notranslate nohighlight">\(q_1\)</span> and <span class="math notranslate nohighlight">\(q_2\)</span> that are separated by a distance, <span class="math notranslate nohighlight">\(x\)</span>, is given by:</p>
-<div class="math notranslate nohighlight">
-\[
+<p>Differentiating this expression with respect to the distance, x, and using equation 2.1 we find that the <strong>electrostatic force acting between</strong> two molecules having charges $q_1$ and $q_2$ that are separated by a distance, $x$, is given by:</p>
+<p>$$
 F = \frac{q_1q_2}{4\pi\varepsilon\varepsilon_0x^2} \tag{2.3}
-\]</div>
+$$</p>
 <p>The sign of the force therefore depends upon the signs of the charges</p>
-<p>If <span class="math notranslate nohighlight">\(q_1, q_2 \&lt; 0\)</span> <strong>force is attractive</strong> (negative sign)</p>
-<p>If <span class="math notranslate nohighlight">\(q_1, q_2 \&gt; 0\)</span> <strong>force is repulsive</strong> (positive sign)</p>
+<p>If $q_1, q_2 &lt; 0$ <strong>force is attractive</strong> (negative sign)</p>
+<p>If $q_1, q_2 &gt; 0$ <strong>force is repulsive</strong> (positive sign)</p>
 </section>
 <section id="the-range-of-interactions">
 <h3>The range of interactions<a class="headerlink" href="#the-range-of-interactions" title="Link to this heading">#</a></h3>
@@ -507,27 +502,25 @@ to disrupt the interactions between them.</p>
 <p><em>Small</em> and <em>large</em> are relative terms and depend on the nature and strength of the interaction between two atoms/molecules.
 We can estimate the range of an interaction by comparing the thermal energy to the size (magnitude) of the potential energy of two molecules:</p>
 <ul class="simple">
-<li><p>When <span class="math notranslate nohighlight">\(|U(x)| ≤ kT\)</span> thermal motion disrupts the interactions</p></li>
-<li><p>When <span class="math notranslate nohighlight">\(|U(x)| \&gt; kT\)</span> the atoms/molecules still feel the interactions between them</p></li>
+<li><p>When $|U(x)| ≤ kT$ thermal motion disrupts the interactions</p></li>
+<li><p>When $|U(x)| &gt; kT$ the atoms/molecules still feel the interactions between them</p></li>
 </ul>
 <p><strong>When the two are equal we see a cross over from one regime to another. The distance, x, at which this occurs gives a measure of the range of an interaction.</strong></p>
 </section>
 <section id="example-range-of-electrostatic-interactions">
 <h3>Example: Range of electrostatic interactions<a class="headerlink" href="#example-range-of-electrostatic-interactions" title="Link to this heading">#</a></h3>
 <p>We can obtain an estimate of the range X~range~ of the electrostatic interaction between two charged atoms/molecules if we equate <em>kT</em> with our expression for the electrostatic potential energy (equation 2.2)</p>
-<div class="math notranslate nohighlight">
-\[
+<p>$$
 |U(X)| = \frac{q_1q_2}{4\pi\varepsilon\varepsilon_0X} = k_{B}T \tag{2.5}
-\]</div>
+$$</p>
 <p>rearanging for x gives</p>
-<div class="math notranslate nohighlight">
-\[
+<p>$$
 X_{range} = \frac{q_1q_2}{4\pi\varepsilon\varepsilon_0k_{B}T} \tag{2.6}
-\]</div>
+$$</p>
 <ul class="simple">
-<li><p><span class="math notranslate nohighlight">\(x ≥ X_{range}\)</span> electrostatic interactions become unimportant relative
+<li><p>$x ≥ X_{range}$ electrostatic interactions become unimportant relative
 to thermal energies</p></li>
-<li><p><span class="math notranslate nohighlight">\(x &lt; X_{range}\)</span> electrostatic interactions start to dominate interactions between atoms/molecules</p></li>
+<li><p>$x &lt; X_{range}$ electrostatic interactions start to dominate interactions between atoms/molecules</p></li>
 </ul>
 </section>
 <section id="ionic-crystals">
@@ -541,11 +534,10 @@ for the formation of ionic crystals. Large green ions are Cl^-^. Small red ions 
 </div>
 <p>Each Cl- ion has 6 nearest neighbour Na^+^ ions at a distance <em>r</em>; 12 next-nearest neighbour Cl^-^ ions at √2<em>r</em> and 8 next-next-nearest neighbour Na^+^ ions at √3<em>r</em>. We can use this information to calculate the (cohesive) energy per ion
 holding the crystal together by summing up the contributions to the potential energy from all neighbours to give:</p>
-<div class="math notranslate nohighlight">
-\[
+<p>$$
 U_{coh} = - \frac{e^{2}}{4\pi\varepsilon\varepsilon_{0}r}\left( \frac{6}{1} - \frac{12}{\sqrt{2}} + \frac{8}{\sqrt{3}} - \ldots \right) = - \frac{\alpha e^{2}}{4\pi\varepsilon\varepsilon_{0}r} \tag{2.7}
-\]</div>
-<p>Where <span class="math notranslate nohighlight">\(\alpha\)</span> is called the Madelung constant (<em>α</em>=1.748 for NaCl) and <span class="math notranslate nohighlight">\(e\)</span> is the electronic charge <span class="math notranslate nohighlight">\(1.6 \times 10^{-19}C\)</span></p>
+$$</p>
+<p>Where $\alpha$ is called the Madelung constant (<em>α</em>=1.748 for NaCl) and $e$ is the electronic charge $1.6 \times 10^{-19}C$</p>
 </section>
 <section id="covalent-bonds">
 <h3>Covalent Bonds<a class="headerlink" href="#covalent-bonds" title="Link to this heading">#</a></h3>
@@ -577,7 +569,7 @@ nuclei .</p>
 neighbouring nuclei and hold them together.</p>
 <ul class="simple">
 <li><p>Metallic bonds are comparable in strength to covalent bonds (a few
-eV per bond or <span class="math notranslate nohighlight">\(\sim 100k_{B}T\)</span>)</p></li>
+eV per bond or $\sim 100k_{B}T$)</p></li>
 </ul>
 <p>The delocalisation of electrons can be used to explain many of the
 properties of metals:</p>
@@ -610,20 +602,17 @@ being disrupted and hence the two atoms / molecules being held together
 by the interaction would then be free to diffuse away from one another.</p>
 <p>To define this probability more carefully we return to the Boltzmann
 probability:</p>
-<div class="math notranslate nohighlight">
-\[
+<p>$$
 P(x) \propto \exp^{- U/k_{B}T}  \tag{2.8}
-\]</div>
-<p>The probability of a bond / interaction being disrupted by thermal fluctuations is <em>proportional</em> to the potential of the interaction divided by <span class="math notranslate nohighlight">\(k_{B}T\)</span> (N.B it is proportional because the prefactor in front of the exponential is unknown – related to collision probabilities etc). The stronger the interaction the larger the value of <span class="math notranslate nohighlight">\(U/k_{B}T\)</span>. To illustrate, a covalent bond <span class="math notranslate nohighlight">\(\sim 100k_{B}T\)</span> whereas a Van der Waal’s interaction (to be covered in later lectures) <span class="math notranslate nohighlight">\(\sim 2k_{B}T\)</span>.</p>
-<div class="math notranslate nohighlight">
-\[
-U/k_{B}T \sim 100 \rightarrow e^{-100} = 3.7 \times 10^{-44} 
-\]</div>
+$$</p>
+<p>The probability of a bond / interaction being disrupted by thermal fluctuations is <em>proportional</em> to the potential of the interaction divided by $k_{B}T$ (N.B it is proportional because the prefactor in front of the exponential is unknown – related to collision probabilities etc). The stronger the interaction the larger the value of $U/k_{B}T$. To illustrate, a covalent bond $\sim 100k_{B}T$ whereas a Van der Waal’s interaction (to be covered in later lectures) $\sim 2k_{B}T$.</p>
+<p>$$
+U/k_{B}T \sim 100 \rightarrow e^{-100} = 3.7 \times 10^{-44}
+$$</p>
 <p>Since the probability is going to be really small this is a stable or “strong” interaction</p>
-<div class="math notranslate nohighlight">
-\[
+<p>$$
 U/k_{B}T \sim 2 \rightarrow e^{-2} = 0.13
-\]</div>
+$$</p>
 <p>Since the probability is reasonable that a thermal fluctuation will break this bond the interaction is described as “weak”.</p>
 </section>
 </section>
@@ -732,7 +721,7 @@ By Mike Smith
 
   <p class="copyright">
     
-      © Copyright 2023.
+      © Copyright 2024.
       <br/>
     
   </p>

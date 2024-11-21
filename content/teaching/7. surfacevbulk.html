@@ -57,8 +57,6 @@
     <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'content/teaching/7. surfacevbulk';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -255,7 +253,7 @@
       
       
       
-      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+      <li><a href="https://github.com/phys3009/phys3009.github.io" target="_blank"
    class="btn btn-sm btn-source-repository-button dropdown-item"
    title="Source repository"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -272,7 +270,7 @@
       
       
       
-      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fcontent/teaching/7. surfacevbulk.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/phys3009/phys3009.github.io/issues/new?title=Issue%20on%20page%20%2Fcontent/teaching/7. surfacevbulk.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -423,7 +421,7 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="surface-vs-bulk">
+  <section id="surface-vs-bulk">
 <h1>7. Surface vs Bulk<a class="headerlink" href="#surface-vs-bulk" title="Link to this heading">#</a></h1>
 <section id="cohesive-energy-of-bulk-atoms-and-surface-atoms">
 <h2>Cohesive energy of bulk atoms and surface atoms<a class="headerlink" href="#cohesive-energy-of-bulk-atoms-and-surface-atoms" title="Link to this heading">#</a></h2>
@@ -435,8 +433,7 @@ document.write(`
 </div>
 <p>If each interaction with the central atom/molecule has an energy, <em>-u,</em>
 the total interaction energy becomes</p>
-<div class="math notranslate nohighlight">
-\[U_{Bulk} = -N_{Bulk}u\]</div>
+<p>$$U_{Bulk} = -N_{Bulk}u$$</p>
 <p>When we create a surface in material and expose it to vacuum each
 surface atom/molecule has fewer nearest neighbours</p>
 <div style="text-align: center;">
@@ -444,30 +441,27 @@ surface atom/molecule has fewer nearest neighbours</p>
     <p><em>Figure 7.2 - Molecule at the surface of some material.</em></p>
 </div>
 <p>The interaction energy per atom/molecule is then</p>
-<div class="math notranslate nohighlight">
-\[U_{surf} = -N_{surf}u\]</div>
+<p>$$U_{surf} = -N_{surf}u$$</p>
 <p>There is therefore an excess amount of energy associated with each surface atom / molecule.</p>
-<div class="math notranslate nohighlight">
-\[\Delta U = U_{surf} -U_{Bulk} = (N_{Bulk} - N_{surf})u\]</div>
+<p>$$\Delta U = U_{surf} -U_{Bulk} = (N_{Bulk} - N_{surf})u$$</p>
 <p>Since this is positive it is unfavourable.</p>
 <div style="text-align: center;">
     <img src="media/7_3.png" alt="Surface energy" width="400" height=auto>
     <p><em>Figure 7.3 - Surface energy.</em></p>
 </div>
-<p><strong>Surface energy</strong> is the excess energy required per unit area to create a surface in a vacuum. The energy required to create two new surfaces in a material, each having area <span class="math notranslate nohighlight">\(S\)</span> is <span class="math notranslate nohighlight">\(W = 2\gamma S\)</span> where <span class="math notranslate nohighlight">\(\gamma\)</span> is the surface energy of the material in <span class="math notranslate nohighlight">\(Jm^{-2}\)</span>.</p>
+<p><strong>Surface energy</strong> is the excess energy required per unit area to create a surface in a vacuum. The energy required to create two new surfaces in a material, each having area $S$ is $W = 2\gamma S$ where $\gamma$ is the surface energy of the material in $Jm^{-2}$.</p>
 <section id="calculating-the-surface-energy-of-simple-materials-from-inter-surface-potentials">
 <h3>Calculating the surface energy of simple materials from inter-surface potentials<a class="headerlink" href="#calculating-the-surface-energy-of-simple-materials-from-inter-surface-potentials" title="Link to this heading">#</a></h3>
 <p>The surface energy of a material can also be thought of as the energy
 required to separate two surfaces from their inter-atomic/molecular
-distance, <span class="math notranslate nohighlight">\(D_{0}\)</span>, and to remove them to infinity.</p>
+distance, $D_{0}$, and to remove them to infinity.</p>
 <div style="text-align: center;">
     <img src="media/7_4.png" alt="Surface" width="400" height=auto>
     <p><em>Figure 7.4 - Calculating surface energy.</em></p>
 </div>
-<p>In lectures we showed that the potential energy due to dispersion interactions between two surfaces, <span class="math notranslate nohighlight">\(U\)</span>, is given by <span class="math notranslate nohighlight">\(U = - \frac{AS}{12\pi D_{0}^{2}}\)</span> where <em>A</em> is the Hamaker constant (J) and <em>S</em> is the area of the surfaces (<span class="math notranslate nohighlight">\(m^{2}\)</span>). This is also the energy required to separate the two surfaces from a separation <span class="math notranslate nohighlight">\(D_{o}\)</span> to infinity. We would expect therefore that the surface energy should be equal to half this potential energy (as there are two surfaces) per unit area.</p>
+<p>In lectures we showed that the potential energy due to dispersion interactions between two surfaces, $U$, is given by $U = - \frac{AS}{12\pi D_{0}^{2}}$ where <em>A</em> is the Hamaker constant (J) and <em>S</em> is the area of the surfaces ($m^{2}$). This is also the energy required to separate the two surfaces from a separation $D_{o}$ to infinity. We would expect therefore that the surface energy should be equal to half this potential energy (as there are two surfaces) per unit area.</p>
 <p>This gives:</p>
-<div class="math notranslate nohighlight">
-\[{\gamma = - \frac{U}{2S} = \frac{A}{24\pi D_{0}^{2}}}\]</div>
+<p>$${\gamma = - \frac{U}{2S} = \frac{A}{24\pi D_{0}^{2}}}$$</p>
 </section>
 <section id="do-calculations-agree-with-experiments">
 <h3>Do calculations agree with experiments?<a class="headerlink" href="#do-calculations-agree-with-experiments" title="Link to this heading">#</a></h3>
@@ -482,15 +476,14 @@ distance, <span class="math notranslate nohighlight">\(D_{0}\)</span>, and to re
 1 and 2 in a third medium (medium 3) is called the <em>work of adhesion
 (W)</em>. It is the energy required to break the interface between two materials
 and form two new interfaces.</p>
-<div class="math notranslate nohighlight">
-\[W = \underset{creation\ of\ new\ surfaces}{\overset{\gamma_{13} + \gamma_{23}}{︸}} - \underset{breaking\ of\ initial\ bonds}{\overset{\gamma_{12}}{︸}}\]</div>
+<p>$$W = \underset{creation\ of\ new\ surfaces}{\overset{\gamma_{13} + \gamma_{23}}{︸}} - \underset{breaking\ of\ initial\ bonds}{\overset{\gamma_{12}}{︸}}$$</p>
 <div style="text-align: center;">
     <img src="media/7_6.png" alt="Surface" width="400" height=auto>
     <p><em>Figure 7.6 - Work of adhesion - energy required to break one interface and create two new interfaces.</em></p>
 </div>
 <p><strong>Interfacial energy</strong> is the excess energy per unit area required to
 create an interface between two different materials.</p>
-<p>This standard definition can sometimes confuse people. <span class="math notranslate nohighlight">\(\gamma_{12}\)</span> is an interfacial energy and so is <span class="math notranslate nohighlight">\(\gamma_{23}\)</span>. Though we speak about “creating” an interface we mean the energy associated with the contact between two materials. Since those contacts change when we pull a material apart the work of adhesion measures the difference in those interfacial energies. The surface energy is very similar but concerns the specific case where a material surface is in contact with a vacuum. Often when the surface is in contact with air the difference is very small but strictly a material in air has an interfacial energy.</p>
+<p>This standard definition can sometimes confuse people. $\gamma_{12}$ is an interfacial energy and so is $\gamma_{23}$. Though we speak about “creating” an interface we mean the energy associated with the contact between two materials. Since those contacts change when we pull a material apart the work of adhesion measures the difference in those interfacial energies. The surface energy is very similar but concerns the specific case where a material surface is in contact with a vacuum. Often when the surface is in contact with air the difference is very small but strictly a material in air has an interfacial energy.</p>
 </section>
 </section>
 <section id="surface-and-interfacial-tension">
@@ -502,14 +495,14 @@ same thing as the surface energy. Consider:</p>
     <img src="media/7_7.png" alt="Stretch interface" width="400" height=auto>
     <p><em>Figure 7.7 - Schematic of stretching an interface showing that interfacial energy and interfacial tension are equivalent.</em></p>
 </div>
-<p>The energy (<span class="math notranslate nohighlight">\(dU\)</span>) required to increase the area of the liquid surface in the diagram by a small amount <span class="math notranslate nohighlight">\(Ldx\)</span> is <span class="math notranslate nohighlight">\(dU = \gamma Ldx\)</span>. The magnitude of the force exerted on the barrier is therefore <span class="math notranslate nohighlight">\(T = - F = \frac{dU}{dx} = \gamma L\)</span>. So <span class="math notranslate nohighlight">\(\gamma = T/l\)</span>.</p>
-<p>This means that surface energy <span class="math notranslate nohighlight">\(\gamma\)</span> is also the force acting per unit length at a liquid interface (also called surface tension). Similarly, interfacial
+<p>The energy ($dU$) required to increase the area of the liquid surface in the diagram by a small amount $Ldx$ is $dU = \gamma Ldx$. The magnitude of the force exerted on the barrier is therefore $T = - F = \frac{dU}{dx} = \gamma L$. So $\gamma = T/l$.</p>
+<p>This means that surface energy $\gamma$ is also the force acting per unit length at a liquid interface (also called surface tension). Similarly, interfacial
 energy and interfacial tension are the same quantity.</p>
 <section id="why-is-a-suspended-droplet-spherical">
 <h3>Why is a suspended droplet spherical?<a class="headerlink" href="#why-is-a-suspended-droplet-spherical" title="Link to this heading">#</a></h3>
 <p>A sphere has the minimum surface area for any given volume of fluid. Any
 shape other than a sphere will therefore result in an increased surface
-area <span class="math notranslate nohighlight">\(dA\)</span> and a consequent increase in the free energy <span class="math notranslate nohighlight">\(dG = \gamma_{12} \sim dA\)</span>.
+area $dA$ and a consequent increase in the free energy $dG = \gamma_{12} \sim dA$.
 Alternatively one could think of this in terms of the surface tension which pulls inwards equally in all directions leading to a spherical shape.</p>
 <div style="text-align: center;">
     <img src="media/7_8.png" alt="droplet" width="400" height=auto>
@@ -526,7 +519,7 @@ how macroscopic liquid droplets deform when they adhere to a surface</p>
     <img src="media/7_9.png" alt="Contact angle" width="400" height=auto>
     <p><em>Figure 7.9 - Contact angle of a droplet on a surface.</em></p>
 </div>
-<p>If we define <span class="math notranslate nohighlight">\(S = \gamma_{vs} - \gamma_{ls} - \gamma_{vl}\)</span>, a partially wetting film has <span class="math notranslate nohighlight">\(S &lt; 0\)</span> whereas a wetting film (one that spreads out into a thin layer) will have <span class="math notranslate nohighlight">\(S &gt;= 0\)</span>. The contact angle made between a droplet and a surface is determined by a subtle balance of the interfacial energies/tensions.</p>
+<p>If we define $S = \gamma_{vs} - \gamma_{ls} - \gamma_{vl}$, a partially wetting film has $S &lt; 0$ whereas a wetting film (one that spreads out into a thin layer) will have $S &gt;= 0$. The contact angle made between a droplet and a surface is determined by a subtle balance of the interfacial energies/tensions.</p>
 <div style="text-align: center;">
     <img src="media/7_10.png" alt="Contact angle" width="400" height=auto>
     <p><em>Figure 7.10 - Interfacial energies balance at the contact line to give a specific contact angle.</em></p>
@@ -544,7 +537,7 @@ or liquid</p></li>
 <p>If a surface has a small / large contact angle with water then it is
 known as <em>hydrophilic</em> / <em>hydrophobic</em>. Small and large are relative
 terms used to compare different surfaces but usually a hydrophobic
-surface would have a contact angle <span class="math notranslate nohighlight">\(\sim 90^{\circ}\)</span>.</p>
+surface would have a contact angle $\sim 90^{\circ}$.</p>
 </section>
 <section id="superhydrophobicity">
 <h2>Superhydrophobicity<a class="headerlink" href="#superhydrophobicity" title="Link to this heading">#</a></h2>
@@ -561,10 +554,9 @@ are also especially manufactured for various applications.</p>
 </div>
 <section id="summary-of-key-concepts">
 <h3>Summary of key concepts<a class="headerlink" href="#summary-of-key-concepts" title="Link to this heading">#</a></h3>
-<p>Surface/Interfacial Energy is the energy per unit area associated with the creation of a surface/interface (<span class="math notranslate nohighlight">\(Jm^{2}\)</span>)</p>
+<p>Surface/Interfacial Energy is the energy per unit area associated with the creation of a surface/interface ($Jm^{2}$)</p>
 <p>Surface energies can be calculated using the latent heat of vaporisation of a material or from the inter-atomic/molecular potentials</p>
-<div class="math notranslate nohighlight">
-\[\gamma = \frac{A}{24\pi D_{0}^{2}}\]</div>
+<p>$$\gamma = \frac{A}{24\pi D_{0}^{2}}$$</p>
 <p>A subtle balance of interfacial energies determines the adhesive properties of simple materials and the wetting properties of a liquid.</p>
 </section>
 </section>
@@ -674,7 +666,7 @@ By Mike Smith
 
   <p class="copyright">
     
-      © Copyright 2023.
+      © Copyright 2024.
       <br/>
     
   </p>

@@ -57,8 +57,6 @@
     <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'content/teaching/9. afm';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -255,7 +253,7 @@
       
       
       
-      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+      <li><a href="https://github.com/phys3009/phys3009.github.io" target="_blank"
    class="btn btn-sm btn-source-repository-button dropdown-item"
    title="Source repository"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -272,7 +270,7 @@
       
       
       
-      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fcontent/teaching/9. afm.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/phys3009/phys3009.github.io/issues/new?title=Issue%20on%20page%20%2Fcontent/teaching/9. afm.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -428,7 +426,7 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="nanoscale-force-measurement-techniques-afm">
+  <section id="nanoscale-force-measurement-techniques-afm">
 <h1>9. Nanoscale Force Measurement Techniques – AFM<a class="headerlink" href="#nanoscale-force-measurement-techniques-afm" title="Link to this heading">#</a></h1>
 <section id="forces-at-the-nanoscale">
 <h2>Forces at the Nanoscale<a class="headerlink" href="#forces-at-the-nanoscale" title="Link to this heading">#</a></h2>
@@ -468,9 +466,9 @@ and vary the tip-sample separation in such a way that the resonant frequency rem
 </section>
 <section id="force-measurements-using-the-afm">
 <h2>Force Measurements using the AFM<a class="headerlink" href="#force-measurements-using-the-afm" title="Link to this heading">#</a></h2>
-<p>AFM can also be used to measure forces. If an AFM tip is brought into contact with a surface, the forces on the tip will cause the cantilever on which it is mounted to deflect. The AFM cantilever bends/deflects in response to an applied force. The applied force is given by <span class="math notranslate nohighlight">\(F = kz\)</span></p>
+<p>AFM can also be used to measure forces. If an AFM tip is brought into contact with a surface, the forces on the tip will cause the cantilever on which it is mounted to deflect. The AFM cantilever bends/deflects in response to an applied force. The applied force is given by $F = kz$</p>
 <p>The spring constant of the cantilever can be derived using the physics
-of elastic beams and is given by <span class="math notranslate nohighlight">\(k = \frac{3EI}{l^{3}}\)</span> where <span class="math notranslate nohighlight">\(E\)</span> is the Youngs Modulus of the cantilever (<span class="math notranslate nohighlight">\(Pa\)</span>), <span class="math notranslate nohighlight">\(l\)</span> is its length and <span class="math notranslate nohighlight">\(I\)</span> is its geometric  moment of inertia (<span class="math notranslate nohighlight">\(m^{4}\)</span>).</p>
+of elastic beams and is given by $k = \frac{3EI}{l^{3}}$ where $E$ is the Youngs Modulus of the cantilever ($Pa$), $l$ is its length and $I$ is its geometric  moment of inertia ($m^{4}$).</p>
 <section id="detecting-the-deflection-of-the-cantilever">
 <h3>Detecting the deflection of the cantilever<a class="headerlink" href="#detecting-the-deflection-of-the-cantilever" title="Link to this heading">#</a></h3>
 <p>If small (pN - nN) forces are exerted on the cantilever, then the displacements of the cantilever are likely to be small (pm - nm). Our ability to detect small forces is controlled partly by the design of the cantilever and partly by the instrumentation used to detect the deflections of the cantilever.</p>
@@ -483,9 +481,8 @@ bar graph showing the measured intensities at the two photodiodes.</p>
 <section id="interpreting-the-photodiode-signal-interpreting-the-photodiode-signal-h3">
 <h3>Interpreting the photodiode signal {#interpreting-the-photodiode-signal .H3}<a class="headerlink" href="#interpreting-the-photodiode-signal-interpreting-the-photodiode-signal-h3" title="Link to this heading">#</a></h3>
 <p>The split photodiodes are connected to a differential current amplifier which produces a signal that is proportional to the difference in photocurrents generated by the two diodes</p>
-<div class="math notranslate nohighlight">
-\[i_{signal} = i_{1} - i_{2}\]</div>
-<p>If <span class="math notranslate nohighlight">\(i_{signal} &gt; 0\)</span> force acts upwards If <span class="math notranslate nohighlight">\(i_{signal} &lt; 0\)</span> force acts downwards.</p>
+<p>$$i_{signal} = i_{1} - i_{2}$$</p>
+<p>If $i_{signal} &gt; 0$ force acts upwards If $i_{signal} &lt; 0$ force acts downwards.</p>
 <p>The detection efficiency of the photodiodes is such that cantilever displacements as small as 0.1 nm can be routinely detected. This means that forces in the sub nN range can easily be measured using AFM.</p>
 <div style="text-align: center;">
     <img src="media/9_5.png" alt="split photodiode" width="250" height=auto>
@@ -499,23 +496,21 @@ bar graph showing the measured intensities at the two photodiodes.</p>
 <section id="calibration-thermal-tuning-of-the-cantilever">
 <h3>Calibration: Thermal tuning of the cantilever<a class="headerlink" href="#calibration-thermal-tuning-of-the-cantilever" title="Link to this heading">#</a></h3>
 <p>This method involves measuring the natural response of the cantilever in response to thermal motion. When the cantilever is agitated by thermal motions of the atoms around it, it starts to vibrate. Vibrations at the resonant frequency of the cantilever occur much more easily than vibrations at other frequencies (which are heavily damped).</p>
-<p>If we monitor the displacement of the cantilever <span class="math notranslate nohighlight">\(z\)</span> obtained from the noise signal when the cantilever is not being driven, we obtain something like the signal shown below:</p>
+<p>If we monitor the displacement of the cantilever $z$ obtained from the noise signal when the cantilever is not being driven, we obtain something like the signal shown below:</p>
 <div style="text-align: center;">
     <img src="media/9_7.png" alt="noise signal" width="250" height=auto>
     <p><em>Figure 9.7 - Noise signal from a thermally driven cantilever</em></p>
 </div>
-<p>We can calculate the mean square displacement of the cantilever <span class="math notranslate nohighlight">\(&lt;z^{2}\&gt;\)</span> from the data shown in the plot. We then assume that the potential energy stored in the cantilever is comparable to the thermal energy provided by its surroundings to give</p>
-<div class="math notranslate nohighlight">
-\[\frac{1}{2}k\left\langle z^{2} \right\rangle = \frac{1}{2}k_{B}T\]</div>
-<p>Note: the factor of <span class="math notranslate nohighlight">\(\frac{1}{2}\)</span> on the right hand side comes from equipartition theory (more on this in Thermal Physics), but the thermal energy is still of order <span class="math notranslate nohighlight">\(k_{B}T\)</span>, where <span class="math notranslate nohighlight">\(k_{B}\)</span> is Boltzmann’s constant. Rearranging
+<p>We can calculate the mean square displacement of the cantilever $&lt;z^{2}&gt;$ from the data shown in the plot. We then assume that the potential energy stored in the cantilever is comparable to the thermal energy provided by its surroundings to give</p>
+<p>$$\frac{1}{2}k\left\langle z^{2} \right\rangle = \frac{1}{2}k_{B}T$$</p>
+<p>Note: the factor of $\frac{1}{2}$ on the right hand side comes from equipartition theory (more on this in Thermal Physics), but the thermal energy is still of order $k_{B}T$, where $k_{B}$ is Boltzmann’s constant. Rearranging
 this equation gives:</p>
-<div class="math notranslate nohighlight">
-\[k = \frac{k_{B}T}{\left\langle z^{2} \right\rangle}\]</div>
-<p>Hence the spring constant of the cantilever can be determined using a knowledge of the temperature, <span class="math notranslate nohighlight">\(T\)</span>, and measurements of the mean square displacement of the cantilever under the influence of natural thermal vibrations.</p>
+<p>$$k = \frac{k_{B}T}{\left\langle z^{2} \right\rangle}$$</p>
+<p>Hence the spring constant of the cantilever can be determined using a knowledge of the temperature, $T$, and measurements of the mean square displacement of the cantilever under the influence of natural thermal vibrations.</p>
 </section>
 <section id="force-detection-limits-in-afm">
 <h3>Force detection limits in AFM<a class="headerlink" href="#force-detection-limits-in-afm" title="Link to this heading">#</a></h3>
-<p>In an AFM a typical cantilever spring constant is <span class="math notranslate nohighlight">\(\sim 0.01-50 Nm^{-1}\)</span>. We can routinely measure cantilever displacements of <span class="math notranslate nohighlight">\(\sim 0.1nm\)</span>. We can therefore measure forces <span class="math notranslate nohighlight">\(&gt; 10 pN\)</span> with relative ease using AFM.</p>
+<p>In an AFM a typical cantilever spring constant is $\sim 0.01-50 Nm^{-1}$. We can routinely measure cantilever displacements of $\sim 0.1nm$. We can therefore measure forces $&gt; 10 pN$ with relative ease using AFM.</p>
 </section>
 </section>
 <section id="force-vs-distance-curves">
@@ -564,10 +559,8 @@ precise motors capable of controlled motions well below a nanometre by changing 
 </div>
 <p>The changes in a piezo-electric crystal can be related by the following
 equations.</p>
-<div class="math notranslate nohighlight">
-\[P = \  - d\sigma + \alpha E\]</div>
-<div class="math notranslate nohighlight">
-\[\varepsilon = \frac{\sigma}{Y} + dE\]</div>
+<p>$$P = \  - d\sigma + \alpha E$$</p>
+<p>$$\varepsilon = \frac{\sigma}{Y} + dE$$</p>
 <p>P is the polarization, d is the piezo-electric constant, α is the
 polarizability of the material, E is the electric field. ɛ is the linear
 strain ie change in length / original length. Y is the young’s modulus.</p>
@@ -683,7 +676,7 @@ By Mike Smith
 
   <p class="copyright">
     
-      © Copyright 2023.
+      © Copyright 2024.
       <br/>
     
   </p>

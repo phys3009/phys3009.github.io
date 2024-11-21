@@ -57,8 +57,6 @@
     <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'content/teaching/12. entropy';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -255,7 +253,7 @@
       
       
       
-      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+      <li><a href="https://github.com/phys3009/phys3009.github.io" target="_blank"
    class="btn btn-sm btn-source-repository-button dropdown-item"
    title="Source repository"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -272,7 +270,7 @@
       
       
       
-      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fcontent/teaching/12. entropy.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/phys3009/phys3009.github.io/issues/new?title=Issue%20on%20page%20%2Fcontent/teaching/12. entropy.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -459,8 +457,7 @@ surfaces</strong>.</p>
 <h2>Boltzmann form of Entropy {#boltzmann-form-of-entropy .H3}<a class="headerlink" href="#boltzmann-form-of-entropy-boltzmann-form-of-entropy-h3" title="Link to this heading">#</a></h2>
 <p>Boltzmann derived a statistical form of the entropy of a system, <em>S</em>,
 such that:</p>
-<div class="math notranslate nohighlight">
-\[S = k_{B}\ln w\]</div>
+<p>$$S = k_{B}\ln w$$</p>
 <p>where <em>W</em> is the number of available (micro) states corresponding to a
 given macrostate and <em>k~B~</em> is Boltzmann’s constant (JK^-1^ ).</p>
 <p>In this case…</p>
@@ -499,8 +496,7 @@ the two surfaces</p>
 </ol>
 <p>For the case considered in the lecture where θ~min~ = 0 and θ~max~ is
 defined by the distance of the upper plate</p>
-<div class="math notranslate nohighlight">
-\[\mathrm{\Delta}S = \ k_{B}\ln\frac{D}{l}\]</div>
+<p>$$\mathrm{\Delta}S = \ k_{B}\ln\frac{D}{l}$$</p>
 </section>
 <section id="entropic-repulsion-force-entropic-repulsion-force-h3">
 <h2>Entropic repulsion force {#entropic-repulsion-force .H3}<a class="headerlink" href="#entropic-repulsion-force-entropic-repulsion-force-h3" title="Link to this heading">#</a></h2>
@@ -513,7 +509,7 @@ two surfaces together. The change in the Gibbs free energy, U, (see
 ‘Thermal physics’ notes) of the system at constant temperature is given
 by:</p>
 <blockquote>
-<div><p><span class="math notranslate nohighlight">\(\mathrm{\Delta}U = \ \mathrm{\Delta}H - T\mathrm{\Delta}S\)</span></p>
+<div><p>$\mathrm{\Delta}U = \ \mathrm{\Delta}H - T\mathrm{\Delta}S$</p>
 </div></blockquote>
 <p>The first term, ∆H is the change in enthalpy. Essentially this
 encompasses all the interactions we have met thus far in this course
@@ -521,8 +517,7 @@ such as the formation of bonds.</p>
 <p>The second term TΔS is the change in energy due to entropy. A decrease
 in entropy results in an increase in the free energy U. Therefore, if
 there are no changes in ∆H this will result in a repulsive force.</p>
-<div class="math notranslate nohighlight">
-\[F = \  - \frac{d\mathrm{\Delta}U}{dD} = \frac{- d\mathrm{\Delta}H}{dD} + \frac{Td\mathrm{\Delta}S}{dD}\]</div>
+<p>$$F = \  - \frac{d\mathrm{\Delta}U}{dD} = \frac{- d\mathrm{\Delta}H}{dD} + \frac{Td\mathrm{\Delta}S}{dD}$$</p>
 </section>
 <section id="how-does-entropy-result-in-a-force-how-does-entropy-result-in-a-force-h3">
 <h2>How does entropy result in a force? {#how-does-entropy-result-in-a-force .H3}<a class="headerlink" href="#how-does-entropy-result-in-a-force-how-does-entropy-result-in-a-force-h3" title="Link to this heading">#</a></h2>
@@ -651,23 +646,21 @@ objects reduces the total volume.</em></p>
 excluded volume decreases. There are therefore 2 scenarios:</p>
 <p>D &gt; 2r 🡪 No change in V~excl~ since no overlap</p>
 <p>D &lt; 2r 🡪
-<span class="math notranslate nohighlight">\(\mathrm{\Delta}V_{p} = \  - \mathrm{\Delta}V_{excl} = (2r - D)A\)</span></p>
+$\mathrm{\Delta}V_{p} = \  - \mathrm{\Delta}V_{excl} = (2r - D)A$</p>
 <p>This increase in the volume accessible to the small particles, means
 there are more possible configurations or microstates the closer the
 large plates come together.</p>
 <p>From our previous lecture we know that S=k~B~lnW 🡪 ΔS &gt; 0 as the
 separation between the plates, D, decreases.</p>
 <p>Consequently:</p>
-<div class="math notranslate nohighlight">
-\[F = \frac{- d\mathrm{\Delta}U}{dD} = \ \frac{Td\mathrm{\Delta}S}{dD} &lt; 0\ \]</div>
+<p>$$F = \frac{- d\mathrm{\Delta}U}{dD} = \ \frac{Td\mathrm{\Delta}S}{dD} &lt; 0\ $$</p>
 <p>This implies that if the plates are separated by a distance D &lt; 2r
 there will be an attractive force between the plates.</p>
 <p>Calculating the number of microstates is however tricky. We showed in
 lectures (<em>this will not be examined</em>) that this problem can also be
 equivalently described in terms of an osmotic pressure associated with
 the small colloidal particles. This lead to a key result:</p>
-<div class="math notranslate nohighlight">
-\[\mathbf{\mathrm{\Delta}U = \ }\mathbf{P}_{\mathbf{osmotic}}\mathbf{\mathrm{\Delta}}\mathbf{V}_{\mathbf{excl}}\]</div>
+<p>$$\mathbf{\mathrm{\Delta}U = \ }\mathbf{P}<em>{\mathbf{osmotic}}\mathbf{\mathrm{\Delta}}\mathbf{V}</em>{\mathbf{excl}}$$</p>
 </section>
 <section id="entropic-force-v-osmotic-pressure-entropic-force-v-osmotic-pressure-h3">
 <h2>Entropic Force v Osmotic Pressure {#entropic-force-v-osmotic-pressure .H3}<a class="headerlink" href="#entropic-force-v-osmotic-pressure-entropic-force-v-osmotic-pressure-h3" title="Link to this heading">#</a></h2>
@@ -706,7 +699,7 @@ different geometry makes the calculation a little trickier.</p>
 spherical cap.</p>
 <p>R’</p>
 <p>h</p>
-<p><span class="math notranslate nohighlight">\(V_{cap} = \frac{\pi}{3}h^{2}\left( 3R^{'} - h \right)\)</span></p>
+<p>$V_{cap} = \frac{\pi}{3}h^{2}\left( 3R^{’} - h \right)$</p>
 <blockquote>
 <div><p>h = R’ – D/2 and R’ = R + r</p>
 </div></blockquote>
@@ -778,8 +771,7 @@ molecules</p></li>
 <li><p>increased entropy</p></li>
 </ul>
 <p>Earlier we derived the expression:</p>
-<div class="math notranslate nohighlight">
-\[F = T\frac{dS}{dD}\]</div>
+<p>$$F = T\frac{dS}{dD}$$</p>
 <p>which relates the force to the change in entropy with distance. In this
 case as we reduce the distance between the non-polar molecules the
 entropy of the system of water molecules surrounding them increases. If
@@ -908,7 +900,7 @@ By Mike Smith
 
   <p class="copyright">
     
-      © Copyright 2023.
+      © Copyright 2024.
       <br/>
     
   </p>
