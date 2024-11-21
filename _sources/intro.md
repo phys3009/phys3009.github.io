@@ -1,7 +1,5 @@
 # PHYS3009: Force and function at the nanoscale
 
-Handbook 2023-24
-
 Module Convenor: Dr Mike Smith, Rm C126, Physics Building, mike.i.smith@nottingham.ac.uk
 This is a 10 credit Spring semester module
 
@@ -19,17 +17,6 @@ Examination 100%:
 -	In person, closed book
 -	2 hrs to complete paper
 -	Access to an equation sheet containing some key equations. This will be available in advance
-
-
-
-# PHYS3009: Force and function at the nanoscale 
-
-**Handbook 2024-25**
-
-**Module Convenor:** Dr Mike Smith, Rm C126, Physics Building,
-<mike.i.smith@nottingham.ac.uk>
-
-**This is a 10 credit Spring semester module**
 
 ## Aims of the Module
 
