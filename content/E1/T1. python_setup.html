@@ -1,0 +1,1218 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>1. Python getting setup &#8212; Scientific Programming in Python</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=87e54e7c" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'content/E1/T1. python_setup';</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="2 Introduction to python" href="../E2/T2.%20python_basics.html" />
+    <link rel="prev" title="Academic integrity" href="../info_course/integrity.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/logo.png" class="logo__image only-light" alt="Scientific Programming in Python - Home"/>
+    <script>document.write(`<img src="../../_static/logo.png" class="logo__image only-dark" alt="Scientific Programming in Python - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../intro.html">
+                    Scientific Programming in Python Course - University of Nottingham (PHYS4038 & AS1)
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Information about the course</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../info_course/overview.html">Overview of the course</a></li>
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../info_course/inclass_test.html">The in-class test</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../info_course/projects.html">Projects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../info_course/starter_projects.html">Starter materials / examples for projects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../info_course/assessment.html">Assessment details and criteria for PGT students</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../info_course/integrity.html">Academic integrity</a></li>
+
+
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Teaching Resources</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">1. Python getting setup</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../E2/T2.%20python_basics.html">2 Introduction to python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../E3/T3.%20numpy_matplotlib.html">3 Scientific Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../E4/T4.%20scipyetc.html">4. Exploring Scipy and other python packages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../E5/T5.%20pandas.html">5 Pandas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../E7/T7.%20OOP_python.html">7 Object Oriented Programming</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../E8/T8.%20learngit.html">8 Git and Github</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../E9/T9.%20testing_debugging_refactoring.html">9 Testing, Debugging and Refactoring</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fcontent/E1/T1. python_setup.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/content/E1/T1. python_setup.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>1. Python getting setup</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">1. Python getting setup</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#setting-up-on-your-own-machine-what-to-install">1.1 Setting up on your own machine - what to install:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#some-setup-stuff-for-vscode">1.2 Some setup stuff for VsCode</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#command-palette">1.2.2 Command Palette</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">1.2 Some setup stuff for VsCode</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">1.2.2 Command Palette</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#github-classroom-and-weekly-project-files">1.3 Github Classroom and Weekly Project Files</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#using-github-classroom">1.3.2 Using Github Classroom</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#anaconda">1.4 Anaconda</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#virtual-environments">1.4.1 Virtual environments</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-a-new-environment">1.4.1.1 Creating a new environment</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#activating-an-environment">1.4.1.2 Activating an environment</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#is-this-all-this-necessary">1.4.1.3 Is this all this necessary?</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#package-management">1.4.2 Package management</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#running-a-python-program">1.5 Running a python program</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#using-the-command-line">1.5.1 Using the command line</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#jupyter-notebooks">1.5.2 Jupyter Notebooks</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#markdown">1.5.2.1 Markdown</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#titles">Titles</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#headings">Headings</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#subheadings">subheadings</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#subsubheadings">subsubheadings</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#code-cells">1.5.2.2 Code cells</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ides">1.5.3 IDEs</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#running-a-script-in-vscode">1.5.4 Running a script in vscode</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#other-approaches">1.5.5 Other approaches</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#vscode-keyboard-shortcuts">1.5.6 Vscode Keyboard Shortcuts</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#importing-packages">1.6 Importing packages</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#warning-problems-importing"><em>Warning</em> - Problems importing</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#warning-version-numbers-and-my-code-has-stopped-working"><em>Warning</em> - version numbers and my code has stopped working!</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#resources">1.7 Resources</a></li>
+</ul>
+</li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="python-getting-setup">
+<h1>1. Python getting setup<a class="headerlink" href="#python-getting-setup" title="Link to this heading">#</a></h1>
+<section id="setting-up-on-your-own-machine-what-to-install">
+<h2>1.1 Setting up on your own machine - what to install:<a class="headerlink" href="#setting-up-on-your-own-machine-what-to-install" title="Link to this heading">#</a></h2>
+<p>In the sessions in Nottingham we have desktop PCs available with this software preinstalled but you’ll want to set up your own machine to work on outside of the sessions or if doing this course remotely.</p>
+<p>Install:</p>
+<ul class="simple">
+<li><p><a href="https://code.visualstudio.com/download">vscode</a></p></li>
+<li><p><a href="https://docs.conda.io/en/latest/miniconda.html">miniconda</a> or <a href="https://docs.anaconda.com/free/anaconda/install/index.html">anaconda</a> see discussion below (section 1.4).</p></li>
+<li><p><a href="https://git-scm.com/downloads">git</a></p></li>
+<li><p><a href="https://cli.github.com/">github cli</a></p></li>
+</ul>
+</section>
+<section id="some-setup-stuff-for-vscode">
+<h2>1.2 Some setup stuff for VsCode<a class="headerlink" href="#some-setup-stuff-for-vscode" title="Link to this heading">#</a></h2>
+<p>Check that vscode has been correctly installed.</p>
+<p>Press windows button and type <code class="docutils literal notranslate"><span class="pre">code</span></code>. Open the folder containing the project files.</p>
+<hr class="docutils" />
+<p>VsCode can be used with pretty much any programming language. It relies on installing extensions to increase the functionality whilst keeping its overall size small.</p>
+<p>To use VsCode properly you should always open a folder. During the course I will send you a link to project files for that week. Clicking on the link should download the appropriate materials and open them in a folder. Clicking on the 2 documents icon on the sidebar (shown below) will open a collapsing pane that shows all the current files and allows you to create new ones, rename, delete etc.</p>
+<img alt="Drawing" src="../../_images/sidebar.png" />
+<p>If setting up VsCode for yourself on your own computer you’ll need to install a few extensions. You can do this by clicking on the 4 squares icon on the side bar. You then need to search for the extension and click the install button. Some of these extensions are essential, but I have also added a few which you may find helpful.</p>
+<img alt="Drawing" src="../../_images/ext_python.png" />
+<p>This extension contains python features such as, Intellisense, Linting, Debugging.</p>
+<img alt="Drawing" src="../../_images/ext_jupyter.png" />
+<p>This is required to run a Jupyter Notebook inside VsCode.</p>
+<p>For this course you will also need github classroom integration. This will enable you to download the project files each week and submit your work.</p>
+<img alt="Drawing" src="../../_images/ext_githubclassroom.png" />
+<p>I also find <code class="docutils literal notranslate"><span class="pre">autodocstring</span></code> a particularly helpful extension. It will help create skeleton docstrings which you can then fill in.</p>
+<img alt="Drawing" src="../../_images/ext_autodoc.png" />
+<p>I also find <code class="docutils literal notranslate"><span class="pre">test</span> <span class="pre">explorer</span></code> useful.</p>
+<img alt="Drawing" src="../../_images/ext_testexplorer.png" />
+<p>There are a lot of extensions which are worth exploring.</p>
+<p>If you are doing these sessions remotely you will also need to install <code class="docutils literal notranslate"><span class="pre">liveshare</span></code> if you would like support during the sessions.</p>
+<img alt="Drawing" src="../../_images/ext_liveshare.png" />
+<p><a href="https://code.visualstudio.com/learn/collaboration/live-share">this video</a> explains how liveshare works and will help you learn how to get a link to enable someone to join the session and help you.</p>
+<section id="command-palette">
+<h3>1.2.2 Command Palette<a class="headerlink" href="#command-palette" title="Link to this heading">#</a></h3>
+<p>VsCode is setup so that everything can be accessed quickly through the command palette. To access it type: <code class="docutils literal notranslate"><span class="pre">ctrl</span> <span class="pre">+</span> <span class="pre">shift</span> <span class="pre">+</span> <span class="pre">p</span></code></p>
+<img alt="Drawing" src="../../_images/command_palette.png" />
+<p>Typing words into the bar will enable you to quickly find the setting you want. Two things to check here:</p>
+<ol class="arabic simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">Terminal:Select</span> <span class="pre">Default</span> <span class="pre">Profile</span></code>    –&gt; Select <code class="docutils literal notranslate"><span class="pre">Command</span> <span class="pre">Prompt</span></code>.</p></li>
+</ol>
+<p>If on Mac or Linux you want to select your default terminal.</p>
+<ol class="arabic simple" start="2">
+<li><p><code class="docutils literal notranslate"><span class="pre">Python:</span> <span class="pre">Select</span> <span class="pre">Interpreter</span></code>  –&gt; Allows you to select which python / environment you will use. After we’ve discussed environments below we’ll use this.</p></li>
+</ol>
+</section>
+</section>
+<section id="id1">
+<h2>1.2 Some setup stuff for VsCode<a class="headerlink" href="#id1" title="Link to this heading">#</a></h2>
+<p>Check that vscode has been correctly installed.</p>
+<p>Press windows button and type <code class="docutils literal notranslate"><span class="pre">code</span></code>. Open the folder containing the project files.</p>
+<hr class="docutils" />
+<p>VsCode can be used with pretty much any programming language. It relies on installing extensions to increase the functionality whilst keeping its overall size small.</p>
+<p>To use VsCode properly you should always open a folder. During the course I will send you a link to project files for that week. Clicking on the link should download the appropriate materials and open them in a folder. Clicking on the 2 documents icon on the sidebar (shown below) will open a collapsing pane that shows all the current files and allows you to create new ones, rename, delete etc.</p>
+<img alt="Drawing" src="../../_images/sidebar.png" />
+<p>If setting up VsCode for yourself on your own computer you’ll need to install a few extensions. You can do this by clicking on the 4 squares icon on the side bar. You then need to search for the extension and click the install button. Some of these extensions are essential, but I have also added a few which you may find helpful.</p>
+<img alt="Drawing" src="../../_images/ext_python.png" />
+<p>This extension contains python features such as, Intellisense, Linting, Debugging.</p>
+<img alt="Drawing" src="../../_images/ext_jupyter.png" />
+<p>This is required to run a Jupyter Notebook inside VsCode.</p>
+<p>For this course you will also need github classroom integration. This will enable you to download the project files each week and submit your work.</p>
+<img alt="Drawing" src="../../_images/ext_githubclassroom.png" />
+<p>I also find <code class="docutils literal notranslate"><span class="pre">autodocstring</span></code> a particularly helpful extension. It will help create skeleton docstrings which you can then fill in.</p>
+<img alt="Drawing" src="../../_images/ext_autodoc.png" />
+<p>I also find <code class="docutils literal notranslate"><span class="pre">test</span> <span class="pre">explorer</span></code> useful.</p>
+<img alt="Drawing" src="../../_images/ext_testexplorer.png" />
+<p>There are a lot of extensions which are worth exploring.</p>
+<p>If you are doing these sessions remotely you will also need to install <code class="docutils literal notranslate"><span class="pre">liveshare</span></code> if you would like support during the sessions.</p>
+<img alt="Drawing" src="../../_images/ext_liveshare.png" />
+<p><a href="https://code.visualstudio.com/learn/collaboration/live-share">this video</a> explains how liveshare works and will help you learn how to get a link to enable someone to join the session and help you.</p>
+<section id="id2">
+<h3>1.2.2 Command Palette<a class="headerlink" href="#id2" title="Link to this heading">#</a></h3>
+<p>VsCode is setup so that everything can be accessed quickly through the command palette. To access it type: <code class="docutils literal notranslate"><span class="pre">ctrl</span> <span class="pre">+</span> <span class="pre">shift</span> <span class="pre">+</span> <span class="pre">p</span></code></p>
+<img alt="Drawing" src="../../_images/command_palette.png" />
+<p>Typing words into the bar will enable you to quickly find the setting you want. Two things to check here:</p>
+<ol class="arabic simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">Terminal:Select</span> <span class="pre">Default</span> <span class="pre">Profile</span></code>    –&gt; Select <code class="docutils literal notranslate"><span class="pre">Command</span> <span class="pre">Prompt</span></code>.</p></li>
+</ol>
+<p>If on Mac or Linux you want to select your default terminal.</p>
+<ol class="arabic simple" start="2">
+<li><p><code class="docutils literal notranslate"><span class="pre">Python:</span> <span class="pre">Select</span> <span class="pre">Interpreter</span></code>  –&gt; Allows you to select which python / environment you will use. After we’ve discussed environments below we’ll use this.</p></li>
+</ol>
+</section>
+</section>
+<section id="github-classroom-and-weekly-project-files">
+<h2>1.3 Github Classroom and Weekly Project Files<a class="headerlink" href="#github-classroom-and-weekly-project-files" title="Link to this heading">#</a></h2>
+<p>(We assume you are working on windows here. Hopefully if on Mac or Linux you can figure out the equivalent steps. Once Anaconda is installed, restart your terminal and you should be able to follow the same steps as below using your regular terminal.)</p>
+<ol class="arabic simple">
+<li><p>Setup a <a href="https://github.com/join">github account</a></p></li>
+</ol>
+<p>Check all software is present and working:</p>
+<p>Open an Anaconda terminal by pressing windows key and typing <code class="docutils literal notranslate"><span class="pre">anaconda</span></code></p>
+<ol class="arabic" start="2">
+<li><p>Check git is working in terminal :  type <code class="docutils literal notranslate"><span class="pre">git</span></code> check you get help print out</p></li>
+<li><p>Check github cli is working in terminal : type <code class="docutils literal notranslate"><span class="pre">gh</span></code> check you get help print out</p></li>
+<li><p>register username and email globally by typing the following:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>    <span class="n">git</span> <span class="n">config</span> <span class="o">--</span><span class="k">global</span> <span class="n">user</span><span class="o">.</span><span class="n">name</span> <span class="s2">&quot;YOURGITUSERNAME&quot;</span>
+    <span class="n">git</span> <span class="n">config</span> <span class="o">--</span><span class="k">global</span> <span class="n">user</span><span class="o">.</span><span class="n">email</span> <span class="n">YOUR</span><span class="nd">@email</span><span class="o">.</span><span class="n">com</span>
+    <span class="n">git</span> <span class="n">config</span> <span class="o">--</span><span class="k">global</span> <span class="n">core</span><span class="o">.</span><span class="n">editor</span> <span class="s2">&quot;code --wait&quot;</span> 
+</pre></div>
+</div>
+</li>
+<li><p>Now open vscode again and open a terminal within vscode (Select terminal &gt; new terminal from the menu bar). Check that the steps 2-3 are still working (If not you may not have added the software to your path variable <a href="https://www.architectryan.com/2018/03/17/add-to-the-path-on-windows-10/"> Add program to path variable</a>.)</p></li>
+<li><p>Within vscode sign in to github by clicking on the github icon on the left hand side</p></li>
+</ol>
+<img alt="Drawing" src="../../_images/github_signin.png" />
+<ol class="arabic simple" start="7">
+<li><p>register for github classroom by clicking on the link sent to you via email and associate your github account with your name. If your name is not there let me know!</p></li>
+<li><p>Download this weeks files from link. You should now be able to see the files in the sidebar. One of the files should be a Jupyter Notebook called T1. python_setup.ipynb which contains the same information as this page. Open it and continue with the instructions there.</p></li>
+</ol>
+<hr class="docutils" />
+<section id="using-github-classroom">
+<h3>1.3.2 Using Github Classroom<a class="headerlink" href="#using-github-classroom" title="Link to this heading">#</a></h3>
+<p>Using github classroom is fairly simple but since it is so fundamental we’re going to walk through the important things you’ll need to do. Github Classroom is essentially a way to synchronise files between a remote webserver and your computer. Each week when you click on the link a personal webspace is made on this remote webserver for you containing that weeks files. Follow the link below to see this page, it should have a folder for the first weeks resources which you can look at online:</p>
+<p><a href="https://github.com/mpags-python">Github Classroom</a></p>
+<p>When you clicked the link these files were also copied to your computer. So there are two copies of everything: one local on your pc and one remote on the webserver. When you open Vscode the side bar has a few icons. The top one of 2 documents shows you the active files which you can select. There is also one that looks a bit like a cat at the bottom which is the github classroom.</p>
+<img alt="Drawing" src="../../_images/sidebar.png" />
+<p>If you open this you should see something like the following (though you may only have week1’s files)</p>
+<img alt="Drawing" src="../../_images/gc_open.png" />
+<p>If when you hover the mouse next to the week 1 project files you see a folder clicking on this will open this project. Then when you click on the icon of 2 documents at the top of the side bar you should see all the files for this week and be able to open them.</p>
+<img alt="Drawing" src="../../_images/gc_open2.png" />
+<p>Once you have a particular weeks resources open you’ll find that hovering no longer produces a folder but a pair of circular arrows indicating that the folder can be synced with the remote server. Click this button when you start and again when you finish working on the problems. Any changes to files you make can be backed up to the remote server by clicking these arrows.</p>
+<p>Open the <code class="docutils literal notranslate"><span class="pre">E1.</span> <span class="pre">python_setup_exercises.ipynb</span></code> file and follow the simple exercise to get you comfortable with this process before continuing.</p>
+<p><em>Workflow for using github classroom</em></p>
+<ul class="simple">
+<li><p>Every week click on the link to setup the project files for that week.</p></li>
+<li><p>Click the sync button</p></li>
+<li><p>Have a go at the exercises</p></li>
+<li><p>Press the sync button and check on the <a href="https://github.com/mpags-python">Github Classroom</a> page that your answers have uploaded.</p></li>
+</ul>
+<p>If you don’t finish the exercises in class then you can finish them at home on your own computer. Set it up with the instructions above, the first time you need to click the link in the email and it will download the latest version of your files.</p>
+<p>We recommend that whenever you sit down at any computer you start by pressing the sync button and then when you have finished you press it again. Forgetting this can lead to issues – if you realise that this is not working speak to us.</p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="anaconda">
+<h2>1.4 Anaconda<a class="headerlink" href="#anaconda" title="Link to this heading">#</a></h2>
+<p>There is an ecosystem of software tools that support python development which make your life
+easier and will help prevent conflicts etc highlighted above.</p>
+<ul class="simple">
+<li><p>Package managers (pip, conda)</p></li>
+<li><p>Virtual environments (virtualenv, conda environments)</p></li>
+</ul>
+<p>Anaconda is a piece of software that enables you to isolate your setup for a particular project from the rest of your system and install particular packages easily. It comes in two versions which can be installed from the following links:</p>
+<ol class="arabic simple">
+<li><p>Anaconda - Comes with huge number of packages pre-installed but takes up a lot of space (https://docs.anaconda.com/free/anaconda/install/index.html)</p></li>
+<li><p>Miniconda - The basics, smaller but can install exactly what you want for each project (https://docs.conda.io/en/latest/miniconda.html)</p></li>
+</ol>
+<section id="virtual-environments">
+<h3>1.4.1 Virtual environments<a class="headerlink" href="#virtual-environments" title="Link to this heading">#</a></h3>
+<p>Python often comes pre-installed on many operating systems. However tempting, don’t use it!!! Installing python packages directly will create a world of problems for you down the line. Virtual environments are effectively a sealed box around your python installation. They enable you to completely isolate the particular versions of python and installed packages so that they do not influence or conflict with work for other projects.</p>
+<p>We will focus on conda environments, similar behaviours are available for virtualenv (https://docs.python.org/3/library/venv.html)</p>
+<p>Whilst all of what we describe below is done in a separate terminal it will work just as well inside the terminal in vscode if you’ve set things up right. For now use the external Anaconda prompt (Mac and Linux just open a regular terminal).</p>
+<img alt="Drawing" src="../../_images/cmdprompt.png" />
+<p>When it opens you’ll see (base) at the front of the prompt. (base) is a kind of underlying environment.</p>
+<section id="creating-a-new-environment">
+<h4>1.4.1.1 Creating a new environment<a class="headerlink" href="#creating-a-new-environment" title="Link to this heading">#</a></h4>
+<p>There are 3 options for creating your own environment. We can either:</p>
+<ol class="arabic simple">
+<li><p>create an empty environment called myproject</p></li>
+</ol>
+<div class="highlight-conda notranslate"><div class="highlight"><pre><span></span>    conda create -n &quot;myproject&quot;
+</pre></div>
+</div>
+<ol class="arabic simple" start="2">
+<li><p>create an environment called myenv specifying the version of python and some packages we would like installed</p></li>
+</ol>
+<div class="highlight-conda notranslate"><div class="highlight"><pre><span></span>    conda create -n &quot;myenv&quot; python=3.10 numpy matplotlib pandas=1.5.3
+</pre></div>
+</div>
+<ol class="arabic simple" start="3">
+<li><p>use a special setup file called environment.yml which is in the current working directory which specifies all the details of what we want in the environment.</p></li>
+</ol>
+<p>Before we can do this we need our terminal to be in the same directory as the file environment.yml. Currently my command prompt is in my user directory:</p>
+<img alt="Drawing" src="../../_images/cmd_prompt.png" />
+<p>I can find the file path by right clicking on the files inside vscode and selecting “reveal in file explorer”. Then copy the filepath.</p>
+<img alt="Drawing" src="../../_images/path.png" />
+<img alt="Drawing" src="../../_images/filepath.png" />
+<p>Finally in the terminal type <code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">&quot;path\to\file&quot;</span></code> which you just copied and the command prompt will indicate that you have moved to a different directory which contains the files you can see in vscode.</p>
+<p>Then we can create the environment from the file environment.yml:</p>
+<div class="highlight-conda notranslate"><div class="highlight"><pre><span></span>    conda env create -f environment.yml 
+</pre></div>
+</div>
+</section>
+<section id="activating-an-environment">
+<h4>1.4.1.2 Activating an environment<a class="headerlink" href="#activating-an-environment" title="Link to this heading">#</a></h4>
+<p>Once we have created an environment we must activate it</p>
+<div class="highlight-conda notranslate"><div class="highlight"><pre><span></span>    conda activate myproject
+</pre></div>
+</div>
+<img alt="Drawing" src="../../_images/myproject_conda.png" />
+<p>This needs to be done when you open the prompt each time. People often forget and then end up installing things in <code class="docutils literal notranslate"><span class="pre">(base)</span></code> rather than the correct environment. Double check. If you see your environment in brackets at the start of the prompt you’ve done it correctly.</p>
+<p>We can see what environments are available and have previously been setup on a system</p>
+<div class="highlight-conda notranslate"><div class="highlight"><pre><span></span>    conda env list
+</pre></div>
+</div>
+</section>
+<section id="is-this-all-this-necessary">
+<h4>1.4.1.3 Is this all this necessary?<a class="headerlink" href="#is-this-all-this-necessary" title="Link to this heading">#</a></h4>
+<p>Suppose you have (at least) two projects:</p>
+<ol class="arabic simple">
+<li><p>myproject uses python 3.10 because scipy 1.35 requires certain dependencies that don’t exist in python 3.11. It also uses scikit-optimise which uses numpy. The latest version of numpy has deprecated (got rid of) np.int in favour of np.int64 and therefore you have to use an older version of numpy.</p></li>
+<li><p>mysecondproject uses python 3.11 and the latest numpy</p></li>
+</ol>
+<p>This is a trivial example. With virtual environments you can configure two environments setup the correct way and all you do is activate the correct virtual environment to work on each project. If you don’t do this you’d have to keep installing and uninstalling different versions of packages. People who use your code would also need to keep changing, and it all ends up in a horrible mess! This is particularly true if you use smaller packages (ie not just numpy, matplotlib etc). To make things easy I often name my virtual environments with a name related to the project I’m working on, to help identify which environment should be used for each project.</p>
+<p>If you need to switch environments either activate a different environment or deactivate the current one to return to base</p>
+<div class="highlight-conda notranslate"><div class="highlight"><pre><span></span>    conda deactivate
+</pre></div>
+</div>
+</section>
+</section>
+<section id="package-management">
+<h3>1.4.2 Package management<a class="headerlink" href="#package-management" title="Link to this heading">#</a></h3>
+<p>Once you have <strong>activated your environment</strong> you can see which packages are installed:</p>
+<div class="highlight-conda notranslate"><div class="highlight"><pre><span></span>    conda list
+</pre></div>
+</div>
+<p>you can then install additional packages (N.B pkgname is a placeholder for the name of the package you want to install):</p>
+<div class="highlight-conda notranslate"><div class="highlight"><pre><span></span>    conda install numpy
+</pre></div>
+</div>
+<p>install particular version</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>    <span class="n">conda</span> <span class="n">install</span> <span class="n">matplotlib</span><span class="o">=</span><span class="mf">3.5.2</span>
+</pre></div>
+</div>
+<p>In addition to conda there is another package manager called pip. This can also be used to install packages into conda environments. It is generally recommended to try conda first and then if that fails try pip like this:</p>
+<div class="highlight-conda notranslate"><div class="highlight"><pre><span></span>    pip install pkgname
+</pre></div>
+</div>
+<p>If you need to uninstall either conda or pip packages you can simply type:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>    <span class="n">conda</span> <span class="n">uninstall</span> <span class="n">pkgname</span>
+    <span class="n">pip</span> <span class="n">uninstall</span> <span class="n">pkgname</span>
+</pre></div>
+</div>
+<p>If you want to export the contents of your environment (perhaps so that someone else can set up theirs in an identical way)</p>
+<div class="highlight-conda notranslate"><div class="highlight"><pre><span></span>    conda env export --no-builds &gt; environment.yml
+</pre></div>
+</div>
+<p>The additional option (–no-builds) is not necessary but help to make sure that the file when exported will work on other machines.</p>
+<p>Now delete the environment (it’s important to do this before setting up the new one on the same computer. Normally you would use this file to setup the enviroment on a different computer but trying to setup on the same computer if the environment already exists creates a conflict).</p>
+<div class="highlight-conda notranslate"><div class="highlight"><pre><span></span>    conda env remove -n myproject
+</pre></div>
+</div>
+<p>Once you have exported your environment you can create a new environment from the file:</p>
+<div class="highlight-conda notranslate"><div class="highlight"><pre><span></span>    conda env create -f myproject.yml
+</pre></div>
+</div>
+<p>Don’t try and remember all the conda commands. Here is a quick cheat sheet where you can look things up:</p>
+<p><a href=https://know.continuum.io/rs/387-XNW-688/images/conda-cheatsheet.pdf>Conda quick reference</a></p>
+<p>If you need to dive a bit deeper then you can look at the <a href="https://docs.conda.io/projects/conda/en/latest/commands/index.html">conda reference api</a>.</p>
+</section>
+</section>
+<section id="running-a-python-program">
+<h2>1.5 Running a python program<a class="headerlink" href="#running-a-python-program" title="Link to this heading">#</a></h2>
+<section id="using-the-command-line">
+<h3>1.5.1 Using the command line<a class="headerlink" href="#using-the-command-line" title="Link to this heading">#</a></h3>
+<p>The most basic way to run python is at a command prompt.</p>
+<ol class="arabic simple">
+<li><p>Open Anaconda terminal</p></li>
+<li><p>Activate your myproject environment</p></li>
+<li><p>Type “python”</p></li>
+</ol>
+<p>The &gt;&gt;&gt; indicates you are using python in an interactive way</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Hello World&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="4">
+<li><p>ctrl + z exits the python mode and returns you to the command prompt.</p></li>
+<li><p>Use the windows file explorer to create a folder for your python projects in your OneDrive documents folder. Copy the address
+from the searchbar and use the following command to set the current working directory of the command prompt:</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="s2">&quot;C:\Users\&lt;USERNAME&gt;\OneDrive - The University of Nottingham\Documents\PROJECTS&quot;</span> 
+</pre></div>
+</div>
+<p>then type:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">notepad</span>
+</pre></div>
+</div>
+<p>Write: print(‘Hello World’) inside, save the file as hello.py (N.B .py extension. To do this you will change the file type dropdown to all files and type .py on the end of the filename) and close the file</p>
+<img alt="Drawing" src="../../_images/helloworld.png" />
+<p>then at the command prompt:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">hello</span><span class="o">.</span><span class="n">py</span>
+</pre></div>
+</div>
+<p>This is better since it enables us to write an entire python script and run it. It also can be great for running quick scripts without having to open Integrated Development Environments. However, writing code is a lot easier in dedicated IDEs with tools to support the coding.</p>
+</section>
+<section id="jupyter-notebooks">
+<h3>1.5.2 Jupyter Notebooks<a class="headerlink" href="#jupyter-notebooks" title="Link to this heading">#</a></h3>
+<p>Jupyter Notebooks provide an interactive approach and are used a lot in data analysis. This is because you can break code into little pieces and quickly test and rerun portions of code. They support python (and a number of other languages) mixed with markup text and are great for exploratory dataanalysis as code, graphs, outputs, notes can be kept together.</p>
+<p>At the anaconda prompt, activate your environment:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">activate</span> <span class="n">myproject</span>
+<span class="n">jupyter</span> <span class="n">notebook</span>
+</pre></div>
+</div>
+<p>These can be run inside an IDE like vscode or can be run independently. To run independently, in a conda environment install jupyter notebook support:</p>
+<div class="highlight-conda notranslate"><div class="highlight"><pre><span></span>    conda install jupyter notebook
+</pre></div>
+</div>
+<p>At the conda prompt then type:</p>
+<div class="highlight-conda notranslate"><div class="highlight"><pre><span></span>    jupyter notebook
+</pre></div>
+</div>
+<p>this starts a local webserver and opens the local file directory in a webbrowser.</p>
+<img alt="Drawing" src="../../_images/jupyterweb.png" />
+<p>Navigate to your notebook or create a new one and it opens up the notebook in a browser (Jupyter notebooks have a .ipynb extension):</p>
+<img alt="Drawing" src="../../_images/jupyternotebook.png" />
+<p>However, for this project we’ll run the Jupyter Notebook inside VsCode as it has more features. Open the notebook inside vscode. To do this you’ll need to have installed the Jupyter Extension:</p>
+<img alt="Drawing" src="../../_images/jupyter.png" />
+<p>As you can see in this notebook format there are different types of cells:</p>
+<ul class="simple">
+<li><p>Markdown for writing notes, structuring, displaying</p></li>
+<li><p>Code cells for running python code</p></li>
+</ul>
+<hr class="docutils" />
+<section id="markdown">
+<h4>1.5.2.1 Markdown<a class="headerlink" href="#markdown" title="Link to this heading">#</a></h4>
+<p><em>(Note to see how to write the markdown that results in each item below you’ll need to look at the Jupyter Notebook. Double clicking on this cell will show you the Markdown code used)</em></p>
+<p>Markdown comes with multiple ways to do things so here’s a quick guide to doing some common things. The top title can be deined with a # and progressively smaller headings just have more #####.</p>
+</section>
+</section>
+</section>
+</section>
+<section id="titles">
+<h1>Titles<a class="headerlink" href="#titles" title="Link to this heading">#</a></h1>
+<section id="headings">
+<h2>Headings<a class="headerlink" href="#headings" title="Link to this heading">#</a></h2>
+<section id="subheadings">
+<h3>subheadings<a class="headerlink" href="#subheadings" title="Link to this heading">#</a></h3>
+<section id="subsubheadings">
+<h4>subsubheadings<a class="headerlink" href="#subsubheadings" title="Link to this heading">#</a></h4>
+<p>Write in <strong>bold</strong> or <em>italics</em>.</p>
+<p>We can defined code blocks with proper syntax highlighting by adding ``` followed by the language (the one below is python but we can also use console, c, html etc)</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;typesetting some code like this&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<hr class="docutils" />
+<p>Draw horizontal lines to delineate sections by using  — at the start of a line</p>
+<hr class="docutils" />
+<p>HTML tags generally work although not as readable so use sparingly.</p>
+<p>Insert image from a file:</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;resources/images/logo.png&quot;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&quot;Drawing&quot;</span> <span class="na">style</span><span class="o">=</span><span class="s">&quot;width: 100px;&quot;</span><span class="p">/&gt;</span>
+</pre></div>
+</div>
+<img alt="Drawing" src="../../_images/logo.png" />
+<p>Insert video from file</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">video</span> <span class="na">alt</span><span class="o">=</span><span class="s">&quot;test&quot;</span> <span class="na">controls</span> <span class="na">style</span><span class="o">=</span><span class="s">&quot;width: 200px;&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">source</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;test.mp4&quot;</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;video/mp4&quot;</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">video</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<video alt="test" controls style="width: 200px;">
+    <source src="test.mp4" type="video/mp4">
+</video>
+<p>If you want to insert an image or video directly from a url (make sure it is url to image or video and not the page in which they are embedded)</p>
+<p>Insert image from url</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://www.ntuclearninghub.com/documents/39367/4216797/Python-Symbol.png/369e410e-a90f-f887-c2dc-61f7ef761476/&quot;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&quot;Drawing&quot;</span> <span class="na">style</span><span class="o">=</span><span class="s">&quot;width: 20em;&quot;</span><span class="p">/&gt;</span>
+</pre></div>
+</div>
+<img alt="Drawing" src="https://www.ntuclearninghub.com/documents/39367/4216797/Python-Symbol.png/369e410e-a90f-f887-c2dc-61f7ef761476/" />
+<p>For video change src attribute in video example.</p>
+<p>If you want to do something else you can use html as I have done above  or refer to this quick look up guide for <a href=https://github.com/tchapi/markdown-cheatsheet/blob/master/README.md>Markdown text</a></p>
+</section>
+<hr class="docutils" />
+<section id="code-cells">
+<h4>1.5.2.2 Code cells<a class="headerlink" href="#code-cells" title="Link to this heading">#</a></h4>
+<ul class="simple">
+<li><p>Type python code in directly</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">shift</span> <span class="pre">+</span> <span class="pre">Enter</span></code> to run that cell</p></li>
+<li><p>Results stay in memory so sequence matters
+(run the first cell followed by the second cell twice, then the first cell then the second cell and look at the values printed out)</p></li>
+<li><p>In vscode the jupyter notebook has all the features we describe in the IDEs section</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span><span class="o">=</span><span class="mi">1</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span><span class="o">+=</span><span class="mi">1</span>
+<span class="n">a</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="ides">
+<h3>1.5.3 IDEs<a class="headerlink" href="#ides" title="Link to this heading">#</a></h3>
+<p>Integrated development environments provide a whole range of tools that make development easier:</p>
+<ul class="simple">
+<li><p>Intellisense</p></li>
+<li><p>Viewing Documentaton</p></li>
+<li><p>Debugging</p></li>
+<li><p>Testing</p></li>
+<li><p>Git integration</p></li>
+<li><p>Host of add ons</p></li>
+</ul>
+<p>Whilst there are lots of IDEs the two main leaders in the python world are:</p>
+<ul class="simple">
+<li><p>PyCharm (www.jetbrains.com/pycharm)   :     Can use full featured paid version for free as a student if you register</p></li>
+<li><p>VsCode (code.visualstudio.com)</p></li>
+</ul>
+<p>For the purposes of this course we will be using VsCode</p>
+</section>
+<section id="running-a-script-in-vscode">
+<h3>1.5.4 Running a script in vscode<a class="headerlink" href="#running-a-script-in-vscode" title="Link to this heading">#</a></h3>
+<p>Before running a script you need to make sure you have activated the correct environment. You can do this by clicking on the environment name in the bottom left hand corner of the screen and selecting the correct environment. Alternatively use the command paletter <code class="docutils literal notranslate"><span class="pre">ctrl</span> <span class="pre">+</span> <span class="pre">shift</span> <span class="pre">+</span> <span class="pre">p</span></code> and type <code class="docutils literal notranslate"><span class="pre">Python:</span> <span class="pre">Select</span> <span class="pre">Interpreter</span></code> and select the correct environment.</p>
+<p>In an IDE you will usually create a .py script in the file tab and then run it directly. In vscode you can do this by clicking on the run button at the top of the screen.</p>
+<img alt="Drawing" src="../../_images/run.png" />
+<p>You can also run the script from the command line by typing:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">hello</span><span class="o">.</span><span class="n">py</span>
+</pre></div>
+</div>
+</section>
+<section id="other-approaches">
+<h3>1.5.5 Other approaches<a class="headerlink" href="#other-approaches" title="Link to this heading">#</a></h3>
+<p>Online coding:</p>
+<ul class="simple">
+<li><p>cocalc.com</p></li>
+<li><p>repl.it</p></li>
+<li><p>Github codespaces</p></li>
+<li><p>colab.research.google.com</p></li>
+</ul>
+<p>Explore at your own leisure</p>
+<hr class="docutils" />
+<section id="vscode-keyboard-shortcuts">
+<h4>1.5.6 Vscode Keyboard Shortcuts<a class="headerlink" href="#vscode-keyboard-shortcuts" title="Link to this heading">#</a></h4>
+<p>Sometimes these shortcuts maybe configured differently on different systems. You can see all the keybindings and provide some new ones of your own by going to
+<code class="docutils literal notranslate"><span class="pre">File</span> <span class="pre">&gt;</span> <span class="pre">Preferences</span> <span class="pre">&gt;</span> <span class="pre">Keyboard</span> <span class="pre">Shortcuts</span></code>. If you are running them on a Mac replace Ctrl with Cmd. Here are a few I use frequently.</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Short cut</p></th>
+<th class="head"><p>Command</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Ctrl</span> <span class="pre">+</span> <span class="pre">Shift</span> <span class="pre">+</span> <span class="pre">P</span></code></p></td>
+<td><p>Open Command Palette</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">Ctrl</span> <span class="pre">+</span> <span class="pre">]</span> <span class="pre">or</span> <span class="pre">[</span></code></p></td>
+<td><p>Indent / unindent selected text</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Ctrl</span> <span class="pre">+</span> <span class="pre">F2</span></code></p></td>
+<td><p>Select all occurences of word</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">Ctrl</span> <span class="pre">+</span> <span class="pre">or</span> <span class="pre">-</span></code></p></td>
+<td><p>Zoom in or out</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Ctrl</span> <span class="pre">+</span> <span class="pre">b</span></code></p></td>
+<td><p>Toggle sidebar visibility</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">Ctrl</span> <span class="pre">+</span> <span class="pre">'</span></code></p></td>
+<td><p>Toggle terminal visibility</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>In addition to keyboard shortcuts I recommend turning on autosave:  <code class="docutils literal notranslate"><span class="pre">File</span> <span class="pre">&gt;</span> <span class="pre">Autosave</span></code>. Once logged in to your github account, you can also turn on settings sync to make sure things are setup the same way on any computer you use.</p>
+</section>
+</section>
+</section>
+<section id="importing-packages">
+<h2>1.6 Importing packages<a class="headerlink" href="#importing-packages" title="Link to this heading">#</a></h2>
+<p>Once you have installed a package into your environment you can import it into either a Jupyter Notebook or a script you are writing in the IDE. These imports are usually done in a group at the top of your code. In your files you will find a folder called resources which contains a file called example_function.py. Open this in the editor and look at the contents. Python makes importing so easy. A <code class="docutils literal notranslate"><span class="pre">package</span></code> is a folder containing python files. Individual .py files are <code class="docutils literal notranslate"><span class="pre">modules</span></code>. Any .py python file can be imported using its name. There are multiple ways to import and they all mean subtlely different things.</p>
+<p>To import everything inside example_import.py we can write:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>from resources.example_import import *
+</pre></div>
+</div>
+<p>Whilst this works and you will find a few big projects (e.g. pyqt) which use this syntax it is not recommended. This is because:</p>
+<ol class="arabic simple">
+<li><p>I might have two modules imported and by chance they might have functions that are called the same thing. These would then conflict</p></li>
+<li><p>It makes code harder to understand. If I have lots of imports how do I know which module example_function() came from?</p></li>
+</ol>
+<p><em>N.B. This is sometimes referred to as “polluting the namespace”. When we look at functions you’ll see that you could have local and global scopes which effect which variables are accessible in and outside a function. A <code class="docutils literal notranslate"><span class="pre">namespace</span></code> is somewhat similar and consists of the collection of variables, functions, classes accessible to a particular script.</em></p>
+<p>Below are a few far better ways to import and then how to use the imported functions in your code.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">resources.example_import</span>
+<span class="kn">import</span> <span class="nn">resources.example_import</span> <span class="k">as</span> <span class="nn">example_nickname</span>     
+<span class="kn">from</span> <span class="nn">resources.example_import</span> <span class="kn">import</span> <span class="n">example_function</span>
+
+<span class="n">resources</span><span class="o">.</span><span class="n">example_import</span><span class="o">.</span><span class="n">example_function</span><span class="p">()</span>
+<span class="n">example_nickname</span><span class="o">.</span><span class="n">example_function</span><span class="p">()</span>
+<span class="n">example_function</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>This is executing the example function
+This is executing the example function
+This is executing the example function
+</pre></div>
+</div>
+</div>
+</div>
+<p>As we showed above you can import packages and give them a nickname. You usually do this to make it quick to type whilst clearly identifying which package functions have come from. You could use anything but well known packages such as numpy, pandas etc have standard imports which it’s worth following for clarity</p>
+<p><code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">numpy</span> <span class="pre">as</span> <span class="pre">np</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">pandas</span> <span class="pre">as</span> <span class="pre">pd</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">matplotlib.pyplot</span> <span class="pre">as</span> <span class="pre">plt</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">scipy</span></code></p>
+<hr class="docutils" />
+<section id="warning-problems-importing">
+<h3><em>Warning</em> - Problems importing<a class="headerlink" href="#warning-problems-importing" title="Link to this heading">#</a></h3>
+<p>If you install packages using conda or pip in your environment then you will be able to import them using their name e.g. <code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">numpy</span></code>. If you provide the address as we did above relative to where the python file is being run from it will also import them. However, it is worth understanding how python finds packages. If you are looking for a module example_import.py then python searches the current directory and then if it doesn’t find it, it will look in a list of other places that are specified by a path variable. The first time it finds a file with the right name it will stop. You can see this by running:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sys</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="p">)</span>     <span class="c1"># This is the list of places python searches</span>
+<span class="kn">import</span> <span class="nn">example_import</span>   <span class="c1"># Note it doesn&#39;t find this because it is inside the resources folder and so errors</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;C:\\Users\\ppzmis\\AppData\\Local\\miniconda3\\envs\\instructor\\python310.zip&#39;, &#39;C:\\Users\\ppzmis\\AppData\\Local\\miniconda3\\envs\\instructor\\DLLs&#39;, &#39;C:\\Users\\ppzmis\\AppData\\Local\\miniconda3\\envs\\instructor\\lib&#39;, &#39;C:\\Users\\ppzmis\\AppData\\Local\\miniconda3\\envs\\instructor&#39;, &#39;&#39;, &#39;C:\\Users\\ppzmis\\AppData\\Local\\miniconda3\\envs\\instructor\\lib\\site-packages&#39;, &#39;C:\\Users\\ppzmis\\AppData\\Local\\miniconda3\\envs\\instructor\\lib\\site-packages\\win32&#39;, &#39;C:\\Users\\ppzmis\\AppData\\Local\\miniconda3\\envs\\instructor\\lib\\site-packages\\win32\\lib&#39;, &#39;C:\\Users\\ppzmis\\AppData\\Local\\miniconda3\\envs\\instructor\\lib\\site-packages\\Pythonwin&#39;]
+</pre></div>
+</div>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">4</span><span class="p">],</span> <span class="n">line</span> <span class="mi">3</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="kn">import</span> <span class="nn">sys</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="nb">print</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="p">)</span>     <span class="c1"># This is the list of places python searches</span>
+<span class="ne">----&gt; </span><span class="mi">3</span> <span class="kn">import</span> <span class="nn">example_import</span>   <span class="c1"># Note it doesn&#39;t find this because it is inside the resources folder and so errors</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;example_import&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#If we want it to find a file in a different place</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="s1">&#39;resources&#39;</span><span class="p">)</span>  <span class="c1">#Add a relative address to the front of the path list</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="p">)</span>
+<span class="kn">import</span> <span class="nn">example_import</span>   <span class="c1"># Now the import works</span>
+
+<span class="n">example_import</span><span class="o">.</span><span class="n">example_function</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<hr class="docutils" />
+<section id="warning-version-numbers-and-my-code-has-stopped-working">
+<h3><em>Warning</em> - version numbers and my code has stopped working!<a class="headerlink" href="#warning-version-numbers-and-my-code-has-stopped-working" title="Link to this heading">#</a></h3>
+<p>Over time there have been important changes and developments to packages, some of which may break your code! If you are doing something important pay attention to package version numbers. <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">list</span></code> or exporting your environment is a good way to make sure you can get old code to work. Version numbers look like this:</p>
+<p><code class="docutils literal notranslate"><span class="pre">pandas</span> <span class="pre">2.0.1</span></code></p>
+<p>The further left the number, the more significant the changes and the more likely it is to make a difference to your code.</p>
+</section>
+</section>
+<section id="resources">
+<h2>1.7 Resources<a class="headerlink" href="#resources" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><a href="https://know.continuum.io/rs/387-XNW-688/images/conda-cheatsheet.pdf">Conda cheat sheet</a></p></li>
+<li><p><a href="https://code.visualstudio.com/docs/python/python-tutorial">VS Code</a></p></li>
+</ul>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./content\E1"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../info_course/integrity.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Academic integrity</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../E2/T2.%20python_basics.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">2 Introduction to python</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">1. Python getting setup</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#setting-up-on-your-own-machine-what-to-install">1.1 Setting up on your own machine - what to install:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#some-setup-stuff-for-vscode">1.2 Some setup stuff for VsCode</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#command-palette">1.2.2 Command Palette</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">1.2 Some setup stuff for VsCode</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">1.2.2 Command Palette</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#github-classroom-and-weekly-project-files">1.3 Github Classroom and Weekly Project Files</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#using-github-classroom">1.3.2 Using Github Classroom</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#anaconda">1.4 Anaconda</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#virtual-environments">1.4.1 Virtual environments</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-a-new-environment">1.4.1.1 Creating a new environment</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#activating-an-environment">1.4.1.2 Activating an environment</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#is-this-all-this-necessary">1.4.1.3 Is this all this necessary?</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#package-management">1.4.2 Package management</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#running-a-python-program">1.5 Running a python program</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#using-the-command-line">1.5.1 Using the command line</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#jupyter-notebooks">1.5.2 Jupyter Notebooks</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#markdown">1.5.2.1 Markdown</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#titles">Titles</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#headings">Headings</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#subheadings">subheadings</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#subsubheadings">subsubheadings</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#code-cells">1.5.2.2 Code cells</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ides">1.5.3 IDEs</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#running-a-script-in-vscode">1.5.4 Running a script in vscode</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#other-approaches">1.5.5 Other approaches</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#vscode-keyboard-shortcuts">1.5.6 Vscode Keyboard Shortcuts</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#importing-packages">1.6 Importing packages</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#warning-problems-importing"><em>Warning</em> - Problems importing</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#warning-version-numbers-and-my-code-has-stopped-working"><em>Warning</em> - version numbers and my code has stopped working!</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#resources">1.7 Resources</a></li>
+</ul>
+</li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Dr Mike Smith
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

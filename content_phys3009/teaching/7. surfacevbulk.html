@@ -1,0 +1,687 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>7. Surface vs Bulk &#8212; Scientific Programming in Python</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=87e54e7c" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'content_phys3009/teaching/7. surfacevbulk';</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/logo.png" class="logo__image only-light" alt="Scientific Programming in Python - Home"/>
+    <script>document.write(`<img src="../../_static/logo.png" class="logo__image only-dark" alt="Scientific Programming in Python - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../intro.html">
+                    Scientific Programming in Python Course - University of Nottingham (PHYS4038 & AS1)
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Information about the course</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../content/info_course/overview.html">Overview of the course</a></li>
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../../content/info_course/inclass_test.html">The in-class test</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../content/info_course/projects.html">Projects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../content/info_course/starter_projects.html">Starter materials / examples for projects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../content/info_course/assessment.html">Assessment details and criteria for PGT students</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../content/info_course/integrity.html">Academic integrity</a></li>
+
+
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Teaching Resources</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../content/E1/T1.%20python_setup.html">1. Python getting setup</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../../content/E2/T2.%20python_basics.html">2 Introduction to python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../content/E3/T3.%20numpy_matplotlib.html">3 Scientific Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../content/E4/T4.%20scipyetc.html">4. Exploring Scipy and other python packages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../content/E5/T5.%20pandas.html">5 Pandas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../content/E7/T7.%20OOP_python.html">7 Object Oriented Programming</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../content/E8/T8.%20learngit.html">8 Git and Github</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../../content/E9/T9.%20testing_debugging_refactoring.html">9 Testing, Debugging and Refactoring</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fcontent_phys3009/teaching/7. surfacevbulk.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/content_phys3009/teaching/7. surfacevbulk.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>7. Surface vs Bulk</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cohesive-energy-of-bulk-atoms-and-surface-atoms">Cohesive energy of bulk atoms and surface atoms</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#calculating-the-surface-energy-of-simple-materials-from-inter-surface-potentials">Calculating the surface energy of simple materials from inter-surface potentials</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#do-calculations-agree-with-experiments">Do calculations agree with experiments?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#work-of-adhesion">Work of Adhesion</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#surface-and-interfacial-tension">Surface and interfacial tension</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#why-is-a-suspended-droplet-spherical">Why is a suspended droplet spherical?</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#wetting-interactions-and-contact-angles">Wetting interactions and contact angles</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cohesive-v-adhesive-forces">Cohesive v Adhesive Forces</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#superhydrophobicity">Superhydrophobicity</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#summary-of-key-concepts">Summary of key concepts</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="surface-vs-bulk">
+<h1>7. Surface vs Bulk<a class="headerlink" href="#surface-vs-bulk" title="Link to this heading">#</a></h1>
+<section id="cohesive-energy-of-bulk-atoms-and-surface-atoms">
+<h2>Cohesive energy of bulk atoms and surface atoms<a class="headerlink" href="#cohesive-energy-of-bulk-atoms-and-surface-atoms" title="Link to this heading">#</a></h2>
+<p>In the bulk of a material, atoms and molecules are surrounded by
+<em>N~Bulk~</em> nearest neighbours.</p>
+<div style="text-align: center;">
+    <img src="media/7_1.png" alt="H Bonds" width="400" height=auto>
+    <p><em>Figure 7.1 - Molecule in the bulk of some material.</em></p>
+</div>
+<p>If each interaction with the central atom/molecule has an energy, <em>-u,</em>
+the total interaction energy becomes</p>
+<p>$$U_{Bulk} = -N_{Bulk}u$$</p>
+<p>When we create a surface in material and expose it to vacuum each
+surface atom/molecule has fewer nearest neighbours</p>
+<div style="text-align: center;">
+    <img src="media/7_2.png" alt="Surface" width="400" height=auto>
+    <p><em>Figure 7.2 - Molecule at the surface of some material.</em></p>
+</div>
+<p>The interaction energy per atom/molecule is then</p>
+<p>$$U_{surf} = -N_{surf}u$$</p>
+<p>There is therefore an excess amount of energy associated with each surface atom / molecule.</p>
+<p>$$\Delta U = U_{surf} -U_{Bulk} = (N_{Bulk} - N_{surf})u$$</p>
+<p>Since this is positive it is unfavourable.</p>
+<div style="text-align: center;">
+    <img src="media/7_3.png" alt="Surface energy" width="400" height=auto>
+    <p><em>Figure 7.3 - Surface energy.</em></p>
+</div>
+<p><strong>Surface energy</strong> is the excess energy required per unit area to create a surface in a vacuum. The energy required to create two new surfaces in a material, each having area $S$ is $W = 2\gamma S$ where $\gamma$ is the surface energy of the material in $Jm^{-2}$.</p>
+<section id="calculating-the-surface-energy-of-simple-materials-from-inter-surface-potentials">
+<h3>Calculating the surface energy of simple materials from inter-surface potentials<a class="headerlink" href="#calculating-the-surface-energy-of-simple-materials-from-inter-surface-potentials" title="Link to this heading">#</a></h3>
+<p>The surface energy of a material can also be thought of as the energy
+required to separate two surfaces from their inter-atomic/molecular
+distance, $D_{0}$, and to remove them to infinity.</p>
+<div style="text-align: center;">
+    <img src="media/7_4.png" alt="Surface" width="400" height=auto>
+    <p><em>Figure 7.4 - Calculating surface energy.</em></p>
+</div>
+<p>In lectures we showed that the potential energy due to dispersion interactions between two surfaces, $U$, is given by $U = - \frac{AS}{12\pi D_{0}^{2}}$ where <em>A</em> is the Hamaker constant (J) and <em>S</em> is the area of the surfaces ($m^{2}$). This is also the energy required to separate the two surfaces from a separation $D_{o}$ to infinity. We would expect therefore that the surface energy should be equal to half this potential energy (as there are two surfaces) per unit area.</p>
+<p>This gives:</p>
+<p>$${\gamma = - \frac{U}{2S} = \frac{A}{24\pi D_{0}^{2}}}$$</p>
+</section>
+<section id="do-calculations-agree-with-experiments">
+<h3>Do calculations agree with experiments?<a class="headerlink" href="#do-calculations-agree-with-experiments" title="Link to this heading">#</a></h3>
+<div style="text-align: center;">
+    <img src="media/7_5.png" alt="Table" width="400" height=auto>
+    <p><em>Figure 7.5 - Table of Hamaker constants</em></p>
+</div>
+</section>
+<section id="work-of-adhesion">
+<h3>Work of Adhesion<a class="headerlink" href="#work-of-adhesion" title="Link to this heading">#</a></h3>
+<p>The energy required per unit area to separate two surfaces of materials
+1 and 2 in a third medium (medium 3) is called the <em>work of adhesion
+(W)</em>. It is the energy required to break the interface between two materials
+and form two new interfaces.</p>
+<p>$$W = \underset{creation\ of\ new\ surfaces}{\overset{\gamma_{13} + \gamma_{23}}{︸}} - \underset{breaking\ of\ initial\ bonds}{\overset{\gamma_{12}}{︸}}$$</p>
+<div style="text-align: center;">
+    <img src="media/7_6.png" alt="Surface" width="400" height=auto>
+    <p><em>Figure 7.6 - Work of adhesion - energy required to break one interface and create two new interfaces.</em></p>
+</div>
+<p><strong>Interfacial energy</strong> is the excess energy per unit area required to
+create an interface between two different materials.</p>
+<p>This standard definition can sometimes confuse people. $\gamma_{12}$ is an interfacial energy and so is $\gamma_{23}$. Though we speak about “creating” an interface we mean the energy associated with the contact between two materials. Since those contacts change when we pull a material apart the work of adhesion measures the difference in those interfacial energies. The surface energy is very similar but concerns the specific case where a material surface is in contact with a vacuum. Often when the surface is in contact with air the difference is very small but strictly a material in air has an interfacial energy.</p>
+</section>
+</section>
+<section id="surface-and-interfacial-tension">
+<h2>Surface and interfacial tension<a class="headerlink" href="#surface-and-interfacial-tension" title="Link to this heading">#</a></h2>
+<p>Surface/interfacial tension is the force required per unit length to
+extend a surface/interface (measured in $Nm^{-1}). This is actually the
+same thing as the surface energy. Consider:</p>
+<div style="text-align: center;">
+    <img src="media/7_7.png" alt="Stretch interface" width="400" height=auto>
+    <p><em>Figure 7.7 - Schematic of stretching an interface showing that interfacial energy and interfacial tension are equivalent.</em></p>
+</div>
+<p>The energy ($dU$) required to increase the area of the liquid surface in the diagram by a small amount $Ldx$ is $dU = \gamma Ldx$. The magnitude of the force exerted on the barrier is therefore $T = - F = \frac{dU}{dx} = \gamma L$. So $\gamma = T/l$.</p>
+<p>This means that surface energy $\gamma$ is also the force acting per unit length at a liquid interface (also called surface tension). Similarly, interfacial
+energy and interfacial tension are the same quantity.</p>
+<section id="why-is-a-suspended-droplet-spherical">
+<h3>Why is a suspended droplet spherical?<a class="headerlink" href="#why-is-a-suspended-droplet-spherical" title="Link to this heading">#</a></h3>
+<p>A sphere has the minimum surface area for any given volume of fluid. Any
+shape other than a sphere will therefore result in an increased surface
+area $dA$ and a consequent increase in the free energy $dG = \gamma_{12} \sim dA$.
+Alternatively one could think of this in terms of the surface tension which pulls inwards equally in all directions leading to a spherical shape.</p>
+<div style="text-align: center;">
+    <img src="media/7_8.png" alt="droplet" width="400" height=auto>
+    <p><em>Figure 7.8 - A sphere minimises the surface area for a given volume.</em></p>
+</div>
+</section>
+</section>
+<section id="wetting-interactions-and-contact-angles">
+<h2>Wetting interactions and contact angles<a class="headerlink" href="#wetting-interactions-and-contact-angles" title="Link to this heading">#</a></h2>
+<p>If a droplet is placed on a surface the
+shape is more complicated. Surface and interfacial energies determine
+how macroscopic liquid droplets deform when they adhere to a surface</p>
+<div style="text-align: center;">
+    <img src="media/7_9.png" alt="Contact angle" width="400" height=auto>
+    <p><em>Figure 7.9 - Contact angle of a droplet on a surface.</em></p>
+</div>
+<p>If we define $S = \gamma_{vs} - \gamma_{ls} - \gamma_{vl}$, a partially wetting film has $S &lt; 0$ whereas a wetting film (one that spreads out into a thin layer) will have $S &gt;= 0$. The contact angle made between a droplet and a surface is determined by a subtle balance of the interfacial energies/tensions.</p>
+<div style="text-align: center;">
+    <img src="media/7_10.png" alt="Contact angle" width="400" height=auto>
+    <p><em>Figure 7.10 - Interfacial energies balance at the contact line to give a specific contact angle.</em></p>
+</div>
+</section>
+<section id="cohesive-v-adhesive-forces">
+<h2>Cohesive v Adhesive Forces<a class="headerlink" href="#cohesive-v-adhesive-forces" title="Link to this heading">#</a></h2>
+<p>The angle a liquid makes with a surface is controlled by a balance
+between the cohesive and adhesive forces.</p>
+<ul class="simple">
+<li><p><em>Cohesive</em> - interactions with other molecules of the same type</p></li>
+<li><p><em>Adhesive</em> - interactions with other molecules of a different material
+or liquid</p></li>
+</ul>
+<p>If a surface has a small / large contact angle with water then it is
+known as <em>hydrophilic</em> / <em>hydrophobic</em>. Small and large are relative
+terms used to compare different surfaces but usually a hydrophobic
+surface would have a contact angle $\sim 90^{\circ}$.</p>
+</section>
+<section id="superhydrophobicity">
+<h2>Superhydrophobicity<a class="headerlink" href="#superhydrophobicity" title="Link to this heading">#</a></h2>
+<p>Under certain situations if a surface contains microstructures it is
+possible to achieve contact angles as high or greater than 160˚. This is
+due to the fact that only a small portion of the droplet actually
+touches the surface. Under these circumstances it is possible for the
+droplet to simply roll off the surface with even a small angle of
+inclination. These structures occur naturally (eg the Lotus Leaf) but
+are also especially manufactured for various applications.</p>
+<div style="text-align: center;">
+    <img src="media/7_11.png" alt="superhydrophobic" width="400" height=auto>
+    <p><em>Figure 7.11 - Superhydrophobic surface.</em></p>
+</div>
+<section id="summary-of-key-concepts">
+<h3>Summary of key concepts<a class="headerlink" href="#summary-of-key-concepts" title="Link to this heading">#</a></h3>
+<p>Surface/Interfacial Energy is the energy per unit area associated with the creation of a surface/interface ($Jm^{2}$)</p>
+<p>Surface energies can be calculated using the latent heat of vaporisation of a material or from the inter-atomic/molecular potentials</p>
+<p>$$\gamma = \frac{A}{24\pi D_{0}^{2}}$$</p>
+<p>A subtle balance of interfacial energies determines the adhesive properties of simple materials and the wetting properties of a liquid.</p>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./content_phys3009\teaching"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cohesive-energy-of-bulk-atoms-and-surface-atoms">Cohesive energy of bulk atoms and surface atoms</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#calculating-the-surface-energy-of-simple-materials-from-inter-surface-potentials">Calculating the surface energy of simple materials from inter-surface potentials</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#do-calculations-agree-with-experiments">Do calculations agree with experiments?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#work-of-adhesion">Work of Adhesion</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#surface-and-interfacial-tension">Surface and interfacial tension</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#why-is-a-suspended-droplet-spherical">Why is a suspended droplet spherical?</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#wetting-interactions-and-contact-angles">Wetting interactions and contact angles</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cohesive-v-adhesive-forces">Cohesive v Adhesive Forces</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#superhydrophobicity">Superhydrophobicity</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#summary-of-key-concepts">Summary of key concepts</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Dr Mike Smith
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

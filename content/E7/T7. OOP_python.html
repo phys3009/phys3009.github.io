@@ -1,0 +1,996 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>7 Object Oriented Programming &#8212; Scientific Programming in Python</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=87e54e7c" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'content/E7/T7. OOP_python';</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="8 Git and Github" href="../E8/T8.%20learngit.html" />
+    <link rel="prev" title="5 Pandas" href="../E5/T5.%20pandas.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/logo.png" class="logo__image only-light" alt="Scientific Programming in Python - Home"/>
+    <script>document.write(`<img src="../../_static/logo.png" class="logo__image only-dark" alt="Scientific Programming in Python - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../intro.html">
+                    Scientific Programming in Python Course - University of Nottingham (PHYS4038 & AS1)
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Information about the course</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../info_course/overview.html">Overview of the course</a></li>
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../info_course/inclass_test.html">The in-class test</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../info_course/projects.html">Projects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../info_course/starter_projects.html">Starter materials / examples for projects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../info_course/assessment.html">Assessment details and criteria for PGT students</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../info_course/integrity.html">Academic integrity</a></li>
+
+
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Teaching Resources</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../E1/T1.%20python_setup.html">1. Python getting setup</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../E2/T2.%20python_basics.html">2 Introduction to python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../E3/T3.%20numpy_matplotlib.html">3 Scientific Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../E4/T4.%20scipyetc.html">4. Exploring Scipy and other python packages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../E5/T5.%20pandas.html">5 Pandas</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">7 Object Oriented Programming</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../E8/T8.%20learngit.html">8 Git and Github</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../E9/T9.%20testing_debugging_refactoring.html">9 Testing, Debugging and Refactoring</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fcontent/E7/T7. OOP_python.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/content/E7/T7. OOP_python.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>7 Object Oriented Programming</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-difference-between-procedural-and-object-oriented-programming">7.1 The difference between procedural and object oriented programming</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#you-ve-already-been-using-classes">7.2 You’ve already been using classes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#defining-a-simple-class-in-python">7.3 Defining a simple class in python</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#some-general-software-principles-for-writing-code-and-particularly-classes">7.4 Some general software principles for writing code and particularly classes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#having-objects-interact">7.5 Having objects interact</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#composition">7.6 Composition</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#inheritance">7.7 Inheritance</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#should-i-use-composition-or-inheritance">7.8 Should I use Composition or Inheritance?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#using-dunder-methods-and-a-brief-look-under-the-hood-of-how-python-dataypes-work">7.9 Using <code class="docutils literal notranslate"><span class="pre">__dunder__</span></code> methods and a brief look under the hood of how python dataypes work</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="object-oriented-programming">
+<h1>7 Object Oriented Programming<a class="headerlink" href="#object-oriented-programming" title="Link to this heading">#</a></h1>
+<section id="the-difference-between-procedural-and-object-oriented-programming">
+<h2>7.1 The difference between procedural and object oriented programming<a class="headerlink" href="#the-difference-between-procedural-and-object-oriented-programming" title="Link to this heading">#</a></h2>
+<p>Typically when performing self-contained data analysis or writing relatively short scripts it is preferable to keep code structure relatively simple. Our code might consist of a single file, perhaps with an imported additional module containing a series of functions. The structure of our program is to store data in variables and then to operate on that data with functions. The program starts at the top and sequentially works line by line towards the bottom, with simple tasks and repeated operations delegated to functions to increase code reuse. There is nothing wrong with this method! When programs are small, this kind of code is usually simpler to understand, quicker to write and easier to maintain. This approach to programming is often called <em>Procedural programming</em>.</p>
+<p><em>Object oriented programming (OOP)</em> takes a different approach. The idea is that in normal life people think of the world by dividing it up into objects, whether physical or abstract: Cars, People, Internet, Mind. Objects have attributes (a car is red) and they have actions (a car moves). These two things (attributes and actions) both belong to an object. There can be multiple objects of the same type which have the same type of attributes (a car has a colour) and actions, even if the values might be different (a car could be red or blue). Objects act on one another to change each others attributes ( A Person paints a car a different colour, thus changing the attribute colour of the car).</p>
+<p>In <em>OOP</em> we can define a blueprint of an object which defines the types of attributes and actions that a particular type of object should have. We could therefore define a generic car object as something which has the following <em>attributes</em>: colour, velocity and the following actions which we call <em>methods</em>: accelerate. One can think of an attribute like a variable and a method like a function, but in both cases these are attached to an object. This blueprint is called a <em>class</em>. Once we have a <em>class</em> or blueprint we can use it to create an actual object, known as an <em>instance</em>. So a Car <em>class</em> could be used to create a red car with a velocity of 30mph. The same class could then also be used to create a blue car with velocity 20mph.</p>
+<p>At first, this might sound a bit complicated. So why is this approach popular?</p>
+<p>It extends the logic we used when writing functions. It limits the amount of code I have to hold in my mind at once. A good function groups code into a block that performs a single task. Once I’m confident it works, I only need to know what the function does, its inputs and outputs. As programs get bigger this is essential. Classes enable me to group larger sections of related code together, both methods and variables (This is known as <code class="docutils literal notranslate"><span class="pre">encapsulation</span></code>). If well constructed this simplifies the cognitive load immensely. For example, if my class is called <code class="docutils literal notranslate"><span class="pre">Camera</span></code> and it has methods <code class="docutils literal notranslate"><span class="pre">start_record()</span></code> and <code class="docutils literal notranslate"><span class="pre">stop_record()</span></code> and attributes <code class="docutils literal notranslate"><span class="pre">framerate=30</span></code> and <code class="docutils literal notranslate"><span class="pre">number_of_pics=20</span></code> it is very easy to work out how to use it without knowing the details. This hiding of details is often called <code class="docutils literal notranslate"><span class="pre">abstraction</span></code>.</p>
+</section>
+<section id="you-ve-already-been-using-classes">
+<h2>7.2 You’ve already been using classes<a class="headerlink" href="#you-ve-already-been-using-classes" title="Link to this heading">#</a></h2>
+<p>You’ve been using classes everywhere in python, perhaps without even realising it. Whilst you didn’t define them, every time you create a new variable, collection etc in python you are using someone else’s class. Let’s create a list. This creates an instance of list from the blueprint or class list. Python allows you some shortcuts using [] but list() is what you are really doing. Notice if you ask python for the type it tells you it is a <em>class</em> of type <em>list</em>. That is it was prepared according to the list blueprint. We can then call a method <em>append</em> of that class list.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">instance_of_list</span> <span class="o">=</span> <span class="nb">list</span><span class="p">((</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">instance_of_list</span><span class="p">))</span>
+
+<span class="c1">#Lets access a method of this instance. The method append is defined in the class list and so can </span>
+<span class="c1">#be used by an instance to add a number to the list.</span>
+<span class="n">instance_of_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+<span class="n">instance_of_list</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;list&#39;&gt;
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1, 2, 3, 4]
+</pre></div>
+</div>
+</div>
+</div>
+<p>Similarly when we looked at the Pandas library we were creating instances from a class and accessing their attributes and methods. Here is an example of the DataFrame creation.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="c1">#   Create an instance of the DataFrame class</span>
+<span class="n">instance_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">&#39;a&#39;</span><span class="p">:[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">],</span><span class="s1">&#39;b&#39;</span><span class="p">:[</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">]})</span>     
+
+<span class="c1"># print an attribute called shape</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">instance_df</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+
+<span class="c1"># Call the method drop to remove the column labelled b.</span>
+<span class="n">instance_df</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s1">&#39;b&#39;</span><span class="p">,</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">instance_df</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(2, 2)
+</pre></div>
+</div>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>a</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</section>
+<section id="defining-a-simple-class-in-python">
+<h2>7.3 Defining a simple class in python<a class="headerlink" href="#defining-a-simple-class-in-python" title="Link to this heading">#</a></h2>
+<p>Below we will define our own simple camera class (remember this a blueprint from which objects can be created). This class will have a name <code class="docutils literal notranslate"><span class="pre">Camera</span></code>. Clearly it will not work as we don’t have a camera, but it demonstrates the principles!</p>
+<p><em>N.B by convention class definitions are always written with the first letter of all words capitalised</em></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Here we are creating the blueprint or class definition</span>
+
+<span class="kn">import</span> <span class="nn">time</span>
+
+<span class="k">class</span> <span class="nc">Camera</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;A Class for taking a picture with a camera</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">num_cameras</span> <span class="o">=</span> <span class="mi">0</span> <span class="c1"># This is a class variable which we will use to count how many cameras have been created.</span>
+
+    <span class="c1">#All class methods must have self as the first parameter. This is a reference to the instance of the class and allows us to access the class attributes and methods within the class definition.</span>
+    <span class="c1"># We can pass positional and keyword arguments to the methods just as with normal functions</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">camera_id</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>  
+        <span class="c1">#Every class has an initialisation method which is called and run automatically when we generate an instance</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Setting up camera </span><span class="si">{</span><span class="n">camera_id</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">camera_id</span> <span class="o">=</span> <span class="n">camera_id</span> <span class="c1">#   We can create instance variables / attributes by assigning them to self</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_complicated_setup_code</span><span class="p">()</span>  <span class="c1">#   I can call methods within the class like this</span>
+        <span class="n">Camera</span><span class="o">.</span><span class="n">num_cameras</span> <span class="o">+=</span> <span class="mi">1</span>     <span class="c1">#       Add 1 to the num_cameras class variable. We can access class variables with the class name or the instance name</span>
+          
+    <span class="k">def</span> <span class="nf">_complicated_setup_code</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>  <span class="c1">#   Convention is that any method that is only used internally and not by the user starts with an _</span>
+        <span class="c1">#Imagine there was a load of code here to handle connecting to camera</span>
+        <span class="k">pass</span>
+
+    <span class="k">def</span> <span class="nf">take_pic</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>    
+        <span class="c1"># Note each method has as its first parameter &quot;self&quot;. self refers to the object created with the class (instance)</span>
+        <span class="c1"># It means I can access camera_id even though it was defined in __init__</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Taking a pic with camera </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">camera_id</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+        <span class="n">image</span> <span class="o">=</span> <span class="s1">&#39;Imagine this is an image&#39;</span>
+        <span class="k">return</span> <span class="n">image</span>
+
+    <span class="k">def</span> <span class="nf">get_camera_settings</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">camera_id</span>
+    
+</pre></div>
+</div>
+</div>
+</div>
+<hr class="docutils" />
+<p>Having created the blueprint of the Camera class lets now use it</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cam</span> <span class="o">=</span> <span class="n">Camera</span><span class="p">()</span>  <span class="c1">#   Define an &quot;instance&quot; of the class Camera. Note we don&#39;t say Camera().__init__(). This is called autmatically when an object is created.</span>
+<span class="n">cam2</span> <span class="o">=</span> <span class="n">Camera</span><span class="p">(</span><span class="n">camera_id</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>    <span class="c1"># Create another instance with same blueprint but different properties.</span>
+<span class="n">cam3</span> <span class="o">=</span> <span class="n">Camera</span><span class="p">(</span><span class="n">camera_id</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>  <span class="c1">#   And another</span>
+
+<span class="c1">#   Access a property of the instance</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">cam3</span><span class="o">.</span><span class="n">camera_id</span><span class="p">)</span>   
+
+<span class="c1">#   Call the take_pic method on cam with camera_id=0. Note we don&#39;t pass self, this is done internally by python.</span>
+<span class="n">img</span><span class="o">=</span><span class="n">cam</span><span class="o">.</span><span class="n">take_pic</span><span class="p">()</span>  
+<span class="nb">print</span><span class="p">(</span><span class="n">img</span><span class="p">)</span>
+
+<span class="c1">#   Class methods can return values just like regular functions.</span>
+<span class="n">settings_cam2</span> <span class="o">=</span> <span class="n">cam2</span><span class="o">.</span><span class="n">get_camera_settings</span><span class="p">()</span>  
+<span class="nb">print</span><span class="p">(</span><span class="n">settings_cam2</span><span class="p">)</span>
+
+<span class="c1">#We can also have properties and methods associated with the class or blueprint e.g how many cameras are there currently?</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;There are currently </span><span class="si">{</span><span class="n">Camera</span><span class="o">.</span><span class="n">num_cameras</span><span class="si">}</span><span class="s1"> active cameras&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Can also access num cameras like this: </span><span class="si">{</span><span class="n">cam2</span><span class="o">.</span><span class="n">num_cameras</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Setting up camera 0
+Setting up camera 2
+Setting up camera 3
+3
+Taking a pic with camera 0
+Imagine this is an image
+2
+There are currently 3 active cameras
+Can also access num cameras like this: 3
+</pre></div>
+</div>
+</div>
+</div>
+<p>Notice there might have been some complicated code involved to establish a connection with a camera but as a user we just create a Camera instance and tell it to take a picture. This is exactly how I’d interact with a physical camera and so it makes intuitive sense.</p>
+</section>
+<section id="some-general-software-principles-for-writing-code-and-particularly-classes">
+<h2>7.4 Some general software principles for writing code and particularly classes<a class="headerlink" href="#some-general-software-principles-for-writing-code-and-particularly-classes" title="Link to this heading">#</a></h2>
+<p>It is easy to read this stuff and gloss over it. As you develop your project it is worth returning to these principles and reviewing whether your code violates any of them. They are handy principles to have in your mind as you develop.</p>
+<ol class="arabic">
+<li><p>DRY - We have met “Do Not Repeat Yourself” before in the context of functions but it is worth repeating that logically grouping code should prevent you needing to change it in multiple places, making your code easier to maintain / change.</p></li>
+<li><p>KISS stands for “Keep it simple stupid”. There is a big temptation once one starts writing classes to create huge classes with millions of properties and methods. There are a few reasons for not doing this:</p>
+<p>i. YAGNI    -   “You ain’t gonna need it”. Sometimes people try and pre-empt all the possible functionality they might need. YAGNI says you should keep a simple clear structure and just implement the most basic code that serves your needs. If you find you need something later you can come back and add it in.</p>
+<p>ii. SRP -   “Single Responsibility Principle”. Another mistake is to mix what should be multiple objects together into the same class. Consider the Camera class above. The method take_pic() returns an image from the camera to the attached computer. One might be tempted to therefore add a <code class="docutils literal notranslate"><span class="pre">save_img()</span></code> method to the camera class. Then you might think wouldn’t it be nice if a gui dialogue popped open to allow the user to enter the filename. This kind of thinking results in huge classes which are really hard to understand and therefore use. Saving the images is a borderline case, but gui dialogues have nothing logically to do with cameras. What happens if you want to change the gui framework from Tkinter to PyQT? You would have to completely rewrite your class. The core responsibility of your camera class is to control the camera so restrict it to properties and methods that are just associated with that. It can then interact with other classes which handle gui dialogues or whatever is needed.</p>
+</li>
+</ol>
+</section>
+<section id="having-objects-interact">
+<h2>7.5 Having objects interact<a class="headerlink" href="#having-objects-interact" title="Link to this heading">#</a></h2>
+<p>In python <em>OOP</em> does not mean that everything has to be written in classes. Python is flexible so we should do whatever keeps our programs simple (KISS). If we want a program where a gui opens and then the image from the camera is saved, we could write it like this. We just need our Camera class and two functions.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">save_img</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">img</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Code that saves an image to the specified filename&#39;</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">save_gui_dialog</span><span class="p">(</span><span class="n">default_filepath</span><span class="o">=</span><span class="s1">&#39;c:/Documents&#39;</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;This would open a gui and return a filename&#39;</span><span class="p">)</span>
+    <span class="n">filename</span> <span class="o">=</span><span class="s1">&#39;example_filename.png&#39;</span>
+    <span class="k">return</span> <span class="n">filename</span>
+
+<span class="n">cam</span> <span class="o">=</span> <span class="n">Camera</span><span class="p">()</span>
+<span class="n">img</span> <span class="o">=</span> <span class="n">cam</span><span class="o">.</span><span class="n">take_pic</span><span class="p">()</span>
+<span class="n">filename</span> <span class="o">=</span> <span class="n">save_gui_dialog</span><span class="p">()</span>
+<span class="n">save_img</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">img</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Setting up camera 0
+Taking a pic with camera 0
+This would open a gui and return a filename
+Code that saves an image to the specified filename
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="composition">
+<h2>7.6 Composition<a class="headerlink" href="#composition" title="Link to this heading">#</a></h2>
+<p>Another way to have objects interact is called “Composition”.</p>
+<p>Suppose we have a simple camera and we want to use python to create a timelapse video. The central part is still a camera that takes a picture, so we can reuse that. We’ll also need someway to add imgs to a video. A video makes a natural object. We’ll need to do some setup, a method to add images and some code to close the video.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">time</span>
+
+<span class="k">class</span> <span class="nc">Video</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">filename</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">filename</span><span class="o">=</span><span class="n">filename</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Open the video for writing&#39;</span><span class="p">)</span>
+    
+    <span class="k">def</span> <span class="nf">add_frame</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">img</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;adding img </span><span class="si">{img}</span><span class="s1"> to video&#39;</span><span class="p">)</span>
+    
+    <span class="k">def</span> <span class="nf">close</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;close the video&#39;</span><span class="p">)</span>
+
+<span class="k">class</span> <span class="nc">Timelapse</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">video</span><span class="p">,</span> <span class="n">camera</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">video</span><span class="o">=</span><span class="n">video</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">camera</span><span class="o">=</span><span class="n">camera</span>
+    
+    <span class="k">def</span> <span class="nf">start_timelapse</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">num_imgs</span><span class="p">,</span> <span class="n">delay_imgs</span><span class="o">=</span><span class="mf">0.5</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">num_imgs</span><span class="p">):</span>
+            <span class="n">img</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">camera</span><span class="o">.</span><span class="n">take_pic</span><span class="p">()</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">video</span><span class="o">.</span><span class="n">add_frame</span><span class="p">(</span><span class="n">img</span><span class="p">)</span>
+            <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="n">delay_imgs</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">video</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+<span class="n">video</span> <span class="o">=</span> <span class="n">Video</span><span class="p">(</span><span class="s1">&#39;C:/Documents/videofilename.mp4&#39;</span><span class="p">)</span>     <span class="c1">#   Create a video instance</span>
+<span class="n">cam</span> <span class="o">=</span> <span class="n">Camera</span><span class="p">()</span>                                      <span class="c1">#   Create a camera instance</span>
+
+<span class="n">time_lapse</span> <span class="o">=</span> <span class="n">Timelapse</span><span class="p">(</span><span class="n">video</span><span class="p">,</span> <span class="n">cam</span><span class="p">)</span>                  <span class="c1">#   Create a timelapse instance to which we supply a video and a camera.</span>
+<span class="n">time_lapse</span><span class="o">.</span><span class="n">start_timelapse</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="n">delay_imgs</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>       <span class="c1">#   Start the timelapse</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Open the video for writing
+Setting up camera 0
+Taking a pic with camera 0
+adding img {img} to video
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Taking a pic with camera 0
+adding img {img} to video
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Taking a pic with camera 0
+adding img {img} to video
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Taking a pic with camera 0
+adding img {img} to video
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Taking a pic with camera 0
+adding img {img} to video
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>close the video
+</pre></div>
+</div>
+</div>
+</div>
+<p>One of the major advantages of using this kind of composition is that it enables flexibility. Suppose we want to change how we write the video. Perhaps our Video class initially used OpenCV, but now we want to use FFMPEG. We can swap out the Video class for an FFMPEG class without it affecting the rest of our code. Our FFMPEG class needs the methods add_frame() and close() (technical term the same <code class="docutils literal notranslate"><span class="pre">interface</span></code>), but the TimeLapse code can be reused without any changes. This modularity beomes really important as projects get bigger. Now to use this code we would just write:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>    ffmpeg_video = FFMPEG(&#39;C:/Documents/videofilename.mp4&#39;)
+    cam=Camera()
+    time_lapse = Timelapse(ffmpeg_video, cam)
+    time_lapse.start_timelapse(5)
+</pre></div>
+</div>
+</section>
+<section id="inheritance">
+<h2>7.7 Inheritance<a class="headerlink" href="#inheritance" title="Link to this heading">#</a></h2>
+<p>Sometimes we have classes which do mostly the same thing but have a few small differences. For example we might have a Panasonic camera and a Canon camera. They are both cameras but there might be a few small differences. It doesn’t obey the DRY principle (Don’t repeat yourself) to write a whole new class for each camera. Instead we can use the idea of <code class="docutils literal notranslate"><span class="pre">inheritance</span></code>. We might setup what is called a parent class called <code class="docutils literal notranslate"><span class="pre">Camera</span></code> which contains all the things in common. We would then write two child classes called <code class="docutils literal notranslate"><span class="pre">Panasonic</span></code> and <code class="docutils literal notranslate"><span class="pre">Canon</span></code>. The child classes get access to the properties and methods of the parent class as well as their own. The child class can also reimplement methods in the parent class.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Create a Parent class</span>
+<span class="k">class</span> <span class="nc">Camera</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;A Parent class for taking a picture with a camera</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">camera_id</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>  <span class="c1"># We can pass positional and keyword arguments to the methods just as with normal functions</span>
+        <span class="c1">#Every class has an initialisation method which is called and run when we generate an instance</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Setting up camera </span><span class="si">{</span><span class="n">camera_id</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">camera_id</span> <span class="o">=</span> <span class="n">camera_id</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_complicated_setup_code</span><span class="p">()</span>  <span class="c1">#   I can call methods within the class like this</span>
+          
+    <span class="k">def</span> <span class="nf">_complicated_setup_code</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>  
+        <span class="c1">#This code is likely to be camera specific. We add this method to the Parent so that people</span>
+        <span class="c1">#writing the child class know they must implement it.</span>
+        <span class="c1">#Notice method name begins with an underscore to indicate this is an internal method not used by end user.</span>
+        <span class="k">pass</span>
+
+    <span class="k">def</span> <span class="nf">take_pic</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>    
+        <span class="c1"># Note each method has as its first parameter &quot;self&quot;. self refers to the object created with the class (instance)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Taking a pic with camera </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">camera_id</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+        <span class="c1"># It means I can access framerate even though it was defined in __init__</span>
+        <span class="n">image</span> <span class="o">=</span> <span class="s1">&#39;Imagine this is an image&#39;</span>
+        <span class="k">return</span> <span class="n">image</span>
+
+<span class="c1">#   This notation means the Class Panasonic inherits from the class Camera</span>
+<span class="k">class</span> <span class="nc">Panasonic</span><span class="p">(</span><span class="n">Camera</span><span class="p">):</span>    
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">camera_id</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
+        <span class="c1">#   This line calls the setup method of the Camera parent class</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">camera_id</span><span class="p">)</span>     
+
+    <span class="c1">#   Since it has the same name as a method in the Parent class it overwrites it</span>
+    <span class="k">def</span> <span class="nf">_complicated_setup_code</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;implement the bits specific to a Panasonic camera&#39;</span><span class="p">)</span>  
+    
+    <span class="k">def</span> <span class="nf">panasonic_only_method</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;A function which exists only in the Panasonic class&#39;</span><span class="p">)</span>
+        
+
+
+<span class="n">panasonic_camera</span> <span class="o">=</span> <span class="n">Panasonic</span><span class="p">()</span>
+<span class="n">panasonic_camera</span><span class="o">.</span><span class="n">take_pic</span><span class="p">()</span>     <span class="c1">#   This method is in the parent class but can be used by the child class because of inheritance.</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Camera id is </span><span class="si">{</span><span class="n">panasonic_camera</span><span class="o">.</span><span class="n">camera_id</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>   <span class="c1">#   The property camera_id is stored in the Parent Camera but panasonic_camera can access it.</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Setting up camera 0
+implement the bits specific to a Panasonic camera
+Taking a pic with camera 0
+Camera id is 0
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="should-i-use-composition-or-inheritance">
+<h2>7.8 Should I use Composition or Inheritance?<a class="headerlink" href="#should-i-use-composition-or-inheritance" title="Link to this heading">#</a></h2>
+<p>Maybe neither! Again make sure that you are genuinely making things simpler for people to read the code and simpler to use. However, done well both methods can help make code transparent. So is <code class="docutils literal notranslate"><span class="pre">Composition</span></code> or <code class="docutils literal notranslate"><span class="pre">Inheritance</span></code> the best way to go for your problem? A handy rule is to ask: is the relationship between the two objects / classes an <code class="docutils literal notranslate"><span class="pre">is</span> <span class="pre">a</span></code>  relationship or a <code class="docutils literal notranslate"><span class="pre">has</span> <span class="pre">a</span></code> relationship?</p>
+<p>A Pananasonic <code class="docutils literal notranslate"><span class="pre">is</span> <span class="pre">a</span></code> Camera. You can use a Panasonic wherever you can use a Camera therefore this is expressed in <code class="docutils literal notranslate"><span class="pre">inheritance</span></code>.</p>
+<p>A TimeLapse object <code class="docutils literal notranslate"><span class="pre">has</span> <span class="pre">a</span></code> Video and a Camera. One cannot use a TimeLapse in place of a Video, the video forms a part of a timelapse object. Therefore, this is best coded in terms of <code class="docutils literal notranslate"><span class="pre">Composition</span></code>.</p>
+<p>Designing classes and their relationships well is not easy. I usually find that code that uses the wrong relationships gets really messy. For example, I end up overwriting a large number of parent class methods to get it to work. Like most elements of design, its really hard to be prescriptive in each case. However, a good class design <em>feels</em> natural. When given to someone else who doesn’t understand the details, the structure means they should intuitively grasp the correct way to use it.</p>
+</section>
+<section id="using-dunder-methods-and-a-brief-look-under-the-hood-of-how-python-dataypes-work">
+<h2>7.9 Using <code class="docutils literal notranslate"><span class="pre">__dunder__</span></code> methods and a brief look under the hood of how python dataypes work<a class="headerlink" href="#using-dunder-methods-and-a-brief-look-under-the-hood-of-how-python-dataypes-work" title="Link to this heading">#</a></h2>
+<p>In a basic class we have met the <code class="docutils literal notranslate"><span class="pre">__init__</span></code> method. This is a reserved method that has a specific purpose to create a new instance of a class.  Python has a lot of other predefined <em>magic methods</em> which follow this pattern <code class="docutils literal notranslate"><span class="pre">__method__</span></code> and which can be implemented. Here we create a new datatype that is basically a float but that implements a special method so that when you divide by zero it returns numpy’s infinity value rather than throwing a divide by zero error.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="k">class</span> <span class="nc">DivideZeroFloat</span><span class="p">(</span><span class="nb">float</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;A new datatype that handles the case of dividing by zero. Returning +/- infinity as appropriate&quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="n">value</span>
+    
+    <span class="k">def</span> <span class="fm">__truediv__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Set up a magic method that defines what to do when we divide value by other&quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">other</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">value</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">inf</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="k">return</span> <span class="o">-</span><span class="n">np</span><span class="o">.</span><span class="n">inf</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__truediv__</span><span class="p">(</span><span class="n">other</span><span class="p">)</span>   <span class="c1">#   For all other numbers follow the usual division rules</span>
+    
+    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s2">&quot;Divide by zero float&quot;</span>
+            
+
+<span class="n">numerator</span> <span class="o">=</span> <span class="n">DivideZeroFloat</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">numerator</span> <span class="o">/</span> <span class="mi">5</span><span class="p">)</span>    <span class="c1">#   Here it works just like a float since the value other is passed to the parent class of float.</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">numerator</span> <span class="o">/</span> <span class="mi">0</span><span class="p">)</span>    <span class="c1">#   Note divide by zero would produce an error for a normal float, but we&#39;ve told it how to handle this special case</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">numerator</span><span class="p">)</span>        <span class="c1">#   Calls the __str__ method</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2.0
+inf
+Divide by zero float
+</pre></div>
+</div>
+</div>
+</div>
+<p>As discussed earlier python datatypes are actually classes that implement many of these special methods to define for example what the ‘+’ operator should do. This is why 5 + 3 = 8 but ‘5’ + ‘3’ = ‘53’ since the <code class="docutils literal notranslate"><span class="pre">__add__</span></code> method in the int and string class have been defined differently. You can also use some of these methods to implement functionality:</p>
+<p>A few cases that I have found really useful to know about:</p>
+<ol class="arabic">
+<li><p>Creating your own context managers : If a class has the methods <code class="docutils literal notranslate"><span class="pre">__enter__</span></code> &amp; <code class="docutils literal notranslate"><span class="pre">__exit__</span></code> defined, it creates a context manager. We saw this in connection with reading files, but it is also really helpful if communicating with devices. You can make sure that the connection is properly closed even if the code crashes.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span> with Arduino(&#39;COM1&#39;) as arduino:
+     do stuff
+</pre></div>
+</div>
+</li>
+<li><p>Creating your own generators : a generator needs a <code class="docutils literal notranslate"><span class="pre">__iter__</span></code> and  <code class="docutils literal notranslate"><span class="pre">__next__</span></code> method to be defined. Here’s an implementation of the Fibonnacci sequence.</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Fib</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">a</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">b</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span> 
+
+    <span class="k">def</span> <span class="fm">__next__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">return_value</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">a</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">a</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">b</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">b</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">a</span><span class="o">+</span><span class="bp">self</span><span class="o">.</span><span class="n">b</span>
+        <span class="k">return</span> <span class="n">return_value</span>
+
+    <span class="k">def</span> <span class="fm">__iter__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">a</span>
+
+<span class="n">f</span> <span class="o">=</span> <span class="n">Fib</span><span class="p">()</span>
+<span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="nb">next</span><span class="p">(</span><span class="n">f</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0
+1
+1
+2
+3
+5
+8
+13
+21
+34
+</pre></div>
+</div>
+</div>
+</div>
+<p>To explore these ideas further take a <a href="https://mathspp.com/blog/pydonts/dunder-methods">look at this article</a></p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./content\E7"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../E5/T5.%20pandas.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">5 Pandas</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../E8/T8.%20learngit.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">8 Git and Github</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-difference-between-procedural-and-object-oriented-programming">7.1 The difference between procedural and object oriented programming</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#you-ve-already-been-using-classes">7.2 You’ve already been using classes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#defining-a-simple-class-in-python">7.3 Defining a simple class in python</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#some-general-software-principles-for-writing-code-and-particularly-classes">7.4 Some general software principles for writing code and particularly classes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#having-objects-interact">7.5 Having objects interact</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#composition">7.6 Composition</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#inheritance">7.7 Inheritance</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#should-i-use-composition-or-inheritance">7.8 Should I use Composition or Inheritance?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#using-dunder-methods-and-a-brief-look-under-the-hood-of-how-python-dataypes-work">7.9 Using <code class="docutils literal notranslate"><span class="pre">__dunder__</span></code> methods and a brief look under the hood of how python dataypes work</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Dr Mike Smith
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

@@ -1,0 +1,831 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>9 Testing, Debugging and Refactoring &#8212; Scientific Programming in Python</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=87e54e7c" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'content/E9/T9. testing_debugging_refactoring';</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="prev" title="8 Git and Github" href="../E8/T8.%20learngit.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/logo.png" class="logo__image only-light" alt="Scientific Programming in Python - Home"/>
+    <script>document.write(`<img src="../../_static/logo.png" class="logo__image only-dark" alt="Scientific Programming in Python - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../intro.html">
+                    Scientific Programming in Python Course - University of Nottingham (PHYS4038 & AS1)
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Information about the course</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../info_course/overview.html">Overview of the course</a></li>
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../info_course/inclass_test.html">The in-class test</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../info_course/projects.html">Projects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../info_course/starter_projects.html">Starter materials / examples for projects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../info_course/assessment.html">Assessment details and criteria for PGT students</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../info_course/integrity.html">Academic integrity</a></li>
+
+
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Teaching Resources</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../E1/T1.%20python_setup.html">1. Python getting setup</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../E2/T2.%20python_basics.html">2 Introduction to python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../E3/T3.%20numpy_matplotlib.html">3 Scientific Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../E4/T4.%20scipyetc.html">4. Exploring Scipy and other python packages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../E5/T5.%20pandas.html">5 Pandas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../E7/T7.%20OOP_python.html">7 Object Oriented Programming</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../E8/T8.%20learngit.html">8 Git and Github</a></li>
+
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">9 Testing, Debugging and Refactoring</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fcontent/E9/T9. testing_debugging_refactoring.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/content/E9/T9. testing_debugging_refactoring.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>9 Testing, Debugging and Refactoring</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#writing-clean-code">9.1 Writing “Clean Code”</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-zen-of-python">9.1.1 The Zen of python</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tools-to-make-style-easy">9.1.2 Tools to make style easy</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#structure">9.1.3 Structure</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#writing-pythonic-code">9.1.4 Writing Pythonic Code</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#docstrings-and-comments">9.1.5 Docstrings and comments</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#testing-code">9.2 Testing code</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pytest">9.2.1 Pytest</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#when-should-i-write-tests">9.2.2 When should I write tests?</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#debugging-code">9.3 Debugging code</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#break-points">9.3.1 Break points</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#refactoring-code">9.4 Refactoring code</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#code-smells">9.4.1 Code Smells</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#resources">Resources</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="testing-debugging-and-refactoring">
+<h1>9 Testing, Debugging and Refactoring<a class="headerlink" href="#testing-debugging-and-refactoring" title="Link to this heading">#</a></h1>
+<p>Not even the best programmers in the world sit down at their computers and write the perfect code in one pass.</p>
+<ol class="arabic simple">
+<li><p>The code may not work    -      there is a mistake in the program’s logic which means it does not run as we expect (<em>bugs</em>)</p></li>
+<li><p>The code may not be very clear   -   code needs to be readable / understandable if we are to use it efficiently, extend or modify it.</p></li>
+</ol>
+<p>These might seem like separate issues but being consistent and clear in the way we code is a good way to reduce the number of bugs and improve our success rate at writing code that works. It will also help us debug code much faster, so we will look at this aspect first.</p>
+<section id="writing-clean-code">
+<h2>9.1 Writing “Clean Code”<a class="headerlink" href="#writing-clean-code" title="Link to this heading">#</a></h2>
+<p>Python due to its basic design philosophy is a very “free” language with few restrictions. However, <em>with power comes great responsibility</em>! That freedom can turn into <em>spaghetti code</em> that is impossible to unravel. Sometimes throwing it away and starting from scratch is quicker than picking up and understanding an old project.</p>
+<p>Instead of restrictions, python has guidelines. The most important of these is <a href="https://peps.python.org/pep-0008/">PEP 8</a>. This document isn’t too long and it is worth flicking through. The document is infused with a desire for consistency mixed with pragmatism. It is the sum product  of a lot of very experienced python programmers and so shouldn’t be discarded lightly.</p>
+<section id="the-zen-of-python">
+<h3>9.1.1 The Zen of python<a class="headerlink" href="#the-zen-of-python" title="Link to this heading">#</a></h3>
+<p>The underlying philosophy is nicely expressed in this famous poem from <a href="https://peps.python.org/pep-0020/">PEP 20</a>:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>    Beautiful is better than ugly.
+    Explicit is better than implicit.
+    Simple is better than complex.
+    Complex is better than complicated.
+    Flat is better than nested.
+    Sparse is better than dense.
+    Readability counts.
+    Special cases aren&#39;t special enough to break the rules.
+    Although practicality beats purity.
+    Errors should never pass silently.
+    Unless explicitly silenced.
+    In the face of ambiguity, refuse the temptation to guess.
+    There should be one-- and preferably only one --obvious way to do it.
+    Although that way may not be obvious at first unless you&#39;re Dutch.
+    Now is better than never.
+    Although never is often better than *right* now.
+    If the implementation is hard to explain, it&#39;s a bad idea.
+    If the implementation is easy to explain, it may be a good idea.
+    Namespaces are one honking great idea -- let&#39;s do more of those!
+</pre></div>
+</div>
+<p>I’d recommend every so often looking at some of your code and then reading this and seeing how it matches up.</p>
+</section>
+<section id="tools-to-make-style-easy">
+<h3>9.1.2 Tools to make style easy<a class="headerlink" href="#tools-to-make-style-easy" title="Link to this heading">#</a></h3>
+<p>Modern python / IDEs can make this process easier. Code formatters can be setup which can either point out where your code deviates from the style guidelines or be configured to reformat the code when you save it etc. <a href="https://pypi.org/project/pycodestyle/"><code class="docutils literal notranslate"><span class="pre">pycodestyle</span></code></a>, <a href="https://pypi.org/project/autopep8/"><code class="docutils literal notranslate"><span class="pre">autopep8</span></code></a>, <a href="https://pypi.org/project/black/"><code class="docutils literal notranslate"><span class="pre">black</span></code></a>.</p>
+<p>Many of these can also be setup with an extension in vscode.</p>
+<img alt="Drawing" src="../../_images/autopep8.png" />
+<p>I also recommend the <code class="docutils literal notranslate"><span class="pre">autodocstring</span></code> extension which will create a template docstring based on your function or class definition.</p>
+<img alt="Drawing" src="../../_images/autodocstring.png" />
+<p>However, these won’t do everything for you. Get into the habit of trying to write good clean code. For example, using good descriptive variable, function and class names with the correct formatting:</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>type</p></th>
+<th class="head"><p>format</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>constant</p></td>
+<td><p>ALL_CAPS_WITH_UNDERSCORES</p></td>
+</tr>
+<tr class="row-odd"><td><p>variable</p></td>
+<td><p>lower_case</p></td>
+</tr>
+<tr class="row-even"><td><p>function</p></td>
+<td><p>lower_case</p></td>
+</tr>
+<tr class="row-odd"><td><p>class</p></td>
+<td><p>FirstLetterCaps</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><em>n.b at least for the moment I can only get some of these extensions to work in scripts, not jupyter notebooks (if you know how I’d like to know!)</em></p>
+</section>
+<section id="structure">
+<h3>9.1.3 Structure<a class="headerlink" href="#structure" title="Link to this heading">#</a></h3>
+<p>One of the biggest helps to making code easy to follow is structuring and laying out your code logically. Within a single script this can be done by placing functions in logical groups, ordering things in relation to how they are called by your code.</p>
+<p>As your code expands you can place related functions and classes into their own modules and then group modules together in packages. However, just as we discussed when writing classes, it is better to have more, smaller modules, where each has a very definite purpose rather than one huge file called <code class="docutils literal notranslate"><span class="pre">allmyfunctions.py</span></code>.</p>
+</section>
+<section id="writing-pythonic-code">
+<h3>9.1.4 Writing Pythonic Code<a class="headerlink" href="#writing-pythonic-code" title="Link to this heading">#</a></h3>
+<p>As described in the <code class="docutils literal notranslate"><span class="pre">zen</span> <span class="pre">of</span> <span class="pre">python</span></code>, code needs to be simple without being simplistic. Python is a very expressive language. When written well it is clear what bits of code mean, even in the absence of good docstrings. As a simple example:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">letter</span> <span class="ow">in</span> <span class="n">alphabet</span><span class="p">:</span><span class="err">`</span>
+</pre></div>
+</div>
+<p>is much clearer than:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">idx</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">alphabet</span><span class="p">)):</span>
+    <span class="n">letter</span> <span class="o">=</span> <span class="n">alphabet</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span>
+</pre></div>
+</div>
+</section>
+<section id="docstrings-and-comments">
+<h3>9.1.5 Docstrings and comments<a class="headerlink" href="#docstrings-and-comments" title="Link to this heading">#</a></h3>
+<p>When writing longer bits of code it is important to view a function or class docstring as an important piece of the code and not an afterthought. Code with a docstring saves enormous amounts of cognitive work, both when using or modifying. However, there is nothing more frustrating than reading a docstring which explains how code works and finding that, this is not in fact how it works! The code was changed but the docstring was not updated at the time. It takes real discipline but when you change code update the docstring at the same time.</p>
+<p>Docstrings are the lines directly follow a function or class definition. These are really good and should be present all the time. However, comments shouldn’t be used too much. Beginners are often told to comment their work. This can often result in over commenting which clutters a program and makes it harder to read. If code is written well in small chunks, with good docstrings then comments are not always necessary. One might add occasional comments where a particular line is hard to understand but often it is better to change the code to make it more obvious how it works.</p>
+</section>
+</section>
+<section id="testing-code">
+<h2>9.2 Testing code<a class="headerlink" href="#testing-code" title="Link to this heading">#</a></h2>
+<p>The simplest way to test your code is to run it and check it does what you think it should! It is quite a common problem however to write some code, test it in this way and then having later made changes to the code discover it no longer works that way. In bigger projects it could go unnoticed for quite some time that part of the code is broken. Fortunately, you now know how to roll back changes in github so it is not irretrievable! However, it is better if you can know immediately when making changes that all your code still works. This helps you spot bugs, makes it easier to fix and more confident that your code is in working order.</p>
+<p>If you have very small program then the simplest way to create a test is to use the <code class="docutils literal notranslate"><span class="pre">assert</span></code> statement. This can be written directly into your code. It asserts that a certain statement is <code class="docutils literal notranslate"><span class="pre">True</span></code>. If it is the test passes and has no affect on your code. If it is <code class="docutils literal notranslate"><span class="pre">False</span></code> then it throws an error with a message.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">assert</span> <span class="n">correct_value</span> <span class="o">==</span> <span class="mi">5</span><span class="p">,</span> <span class="s1">&#39;Hmm looks like a bug in your buggy function&#39;</span>
+</pre></div>
+</div>
+<p>A more long term approach is to use a testing framework. This allows you to write small bits of code to test different parts of your program. These can then be run in an automated fashion passing or failing and therefore highlighting an issue if changes you’ve made have broken something.</p>
+<p>Python has two main testing frameworks:</p>
+<ol class="arabic simple">
+<li><p><a href="https://docs.python.org/3/library/unittest.html">unittest</a>     -       A builtin package</p></li>
+<li><p><a href="https://docs.pytest.org/en/7.3.x/">pytest</a>       -       Needs to be installed</p></li>
+</ol>
+<p>Both contain very similar ideas. We will demonstrate using pytest as this is a little simpler to use.</p>
+<section id="pytest">
+<h3>9.2.1 Pytest<a class="headerlink" href="#pytest" title="Link to this heading">#</a></h3>
+<p>Running tests on a module of code is more common in conventional scripts than a Jupyter notebook but it can be done in both. Let us suppose that we want to write tests for the following simple function:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">single_digit_integers</span><span class="p">(</span><span class="n">number</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;This function tests if a supplied number is an integer and only one digit. It</span>
+<span class="sd">    should only evaluate True if number in [0,1,2,3,4,5,6,7,8,9]</span>
+<span class="sd">    </span>
+<span class="sd">    Note for the purposes of demonstation this code works with any integer not just numbers 0-9</span>
+<span class="sd">    so we can see tests showing up issues with the code.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="nb">type</span><span class="p">(</span><span class="n">number</span><span class="p">)</span> <span class="o">==</span> <span class="nb">int</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">True</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">False</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>To write tests we need to start our function names with <code class="docutils literal notranslate"><span class="pre">test_</span></code> or end with <code class="docutils literal notranslate"><span class="pre">_test</span></code>. These test functions are normal functions containing an <code class="docutils literal notranslate"><span class="pre">assert</span></code> statement that should evaluate to <code class="docutils literal notranslate"><span class="pre">True</span></code> if the test passes. Here I’m firstly testing that the returned type is an integer. This test should pass. Secondly I’m testing that only single digit integers pass. Since the original function doesn’t implement this, supplying 10 should cause the test to fail.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">test_integer</span><span class="p">():</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;test that a 10 is an integer</span>
+<span class="sd">    </span>
+<span class="sd">    Since 10 is an integer this test should pass</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">assert</span> <span class="n">single_digit_integers</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span> <span class="ow">is</span> <span class="kc">True</span>
+
+<span class="k">def</span> <span class="nf">test_single_digit</span><span class="p">():</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;test single digit</span>
+<span class="sd">    </span>
+<span class="sd">    Since 10 is a 2 digit integer this should evaluate to False but it doesn&#39;t because our code is wrong.    </span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">assert</span> <span class="n">single_digit_integers</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span> <span class="ow">is</span> <span class="kc">False</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>If running a script I can run the tests from the terminal like this:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">pytest</span>
+</pre></div>
+</div>
+<p>This searches my entire project for tests. I can restrict it to just a particular file:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">pytest &quot;notebooks/resources/test_functions.py&quot;</span>
+</pre></div>
+</div>
+<p>or even a particular test function (test_func) in a particular file (test_functions.py)</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">pytest &quot;notebooks/resources/test_functions.py::test_func&quot;</span>
+</pre></div>
+</div>
+<p>Alternatively if my tests are in a Jupyter notebook we should import ipytest</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">ipytest</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">ipytest</span><span class="o">.</span><span class="n">autoconfig</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>We then decorate each cell containing tests with</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="n">ipytest</span>
+</pre></div>
+</div>
+<p>Using the test_functions.py file discussed above the output looks like this:</p>
+<img alt="Drawing" src="../../_images/pytest.png" />
+<p>The report highlights that one test passed and one test failed. It shows me where the test failed.</p>
+</section>
+<section id="when-should-i-write-tests">
+<h3>9.2.2 When should I write tests?<a class="headerlink" href="#when-should-i-write-tests" title="Link to this heading">#</a></h3>
+<p>There is no point writing tests for code that is to be used once for some quick dataanalysis. However, if you are writing code that is to be reused, or code that will be used by other code later on, tests can be really helpful. The danger is that without tests you refactor code and inadvertantly introduce a bug. Since other code depends on what you have done, you could be breaking other bits of code without realising. There is a tradeoff here but generally speaking, the bigger and more longterm the project the more it should rely on these automated tests.</p>
+<p>Once you have these tests you can run them each time you plan to push changes to a repository. They don’t guarantee everything is perfect but they should catch a lot of issues.</p>
+<p>There is a lot more to testing but we will leave you to explore.</p>
+</section>
+</section>
+<section id="debugging-code">
+<h2>9.3 Debugging code<a class="headerlink" href="#debugging-code" title="Link to this heading">#</a></h2>
+<p>If you test or develop code you will spend a lot of time trying to find and fix bugs. The main issue in trying to find a bug is to check that the variables etc have the values you expect at different points in the program. This helps you to check that the logic of your code does what you want. Where the variables or actions of the program do something unexpected you can analyse why and correct the code to fix the bug.</p>
+<p>The simplest approach which is quick and dirty but ultimately still used, is to use the python <code class="docutils literal notranslate"><span class="pre">print()</span></code> statement at various points in your code to examine the value of different variables. I still use this approach for small issues and it works fine. The downside with this approach is you can quite quickly end up with print statements littered throughout multiple modules. It also often means that even when you find the bug a small change to one line requires you to run the entire code to check if the updated logic will work.</p>
+<p>Modern IDEs come with a suite of debugging tools that can help make this process easier. Below we will explore a very simple example. A function that doesn’t behave exactly as expected. Debugging can be done in both a main script or the Jupyter notebook. In VsCode clicking on the bug on lefthand toolbar to open debugging view.</p>
+<img alt="Drawing" src="../../_images/debug.png" />
+<p>To run a script in debug mode click the arrow to the side of the run button (top right of script) and select <code class="docutils literal notranslate"><span class="pre">Debug</span> <span class="pre">python</span> <span class="pre">file</span></code>. In Jupyter notebook each cell can be debugged by similarly clicking the arrow to the right of the run button next to each cell.</p>
+<img alt="Drawing" src="../../_images/debug2.png" />
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">categorise_value</span><span class="p">(</span><span class="n">a</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;The aim of this function is any number from 0 to 2 should result in:</span>
+<span class="sd">    &#39;a is between 0 and 2 inclusive&#39; being printed out. However, there is a deliberate bug.</span>
+<span class="sd">    Since the first if is a &gt;= 2 rather than a &gt; 2 the value 2 will end up in the top</span>
+<span class="sd">    if statement.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">pointless_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">]</span>
+
+    <span class="k">if</span> <span class="n">a</span> <span class="o">&gt;=</span> <span class="mi">2</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;a is bigger than 2&#39;</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">a</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;a is between 0 and 2 inclusive&#39;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;a is less than 0&#39;</span><span class="p">)</span>
+
+<span class="n">b</span><span class="o">=</span><span class="mi">1</span>
+<span class="n">categorise_value</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span> <span class="c1">#   Expecting this to print out a is between 0 and 2 inclusive, but the bug means it doesn&#39;t</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>a is bigger than 2
+</pre></div>
+</div>
+</div>
+</div>
+<section id="break-points">
+<h3>9.3.1 Break points<a class="headerlink" href="#break-points" title="Link to this heading">#</a></h3>
+<p>The equivalent of putting print statements in your code is to add a breakpoint. This is a position that will pause the code so you can examine the values of all the variables, trial a quick line of code etc. To create a breakpoint click in the margin to the left of the code.</p>
+<img alt="Drawing" src="../../_images/breakpoint.png" />
+<p>Running in debug mode I have some controls. The left hand play button will run the code stopping at the next break point. The downwards arrow will step through the code, following the execution of the program, one line at a time.</p>
+<img alt="Drawing" src="../../_images/debugcontrols.png" />
+<p>If we run the debug on the above cell pressing the play button twice brings us to the line <code class="docutils literal notranslate"><span class="pre">if</span> <span class="pre">a&gt;=2:</span></code>. The <code class="docutils literal notranslate"><span class="pre">Locals</span></code> variable window shows us the values of all variables in the current scope. Since we are inside the function only <code class="docutils literal notranslate"><span class="pre">a</span></code> and <code class="docutils literal notranslate"><span class="pre">pointless_list</span></code> are visible. However, <code class="docutils literal notranslate"><span class="pre">b</span></code> which is in the wider scope is listed under <code class="docutils literal notranslate"><span class="pre">Globals</span></code></p>
+<img alt="Drawing" src="../../_images/breakpoints.png" />
+<p>The breakpoints window shows us a list of all the current breakpoints. We can turn these on or off and delete them when no longer needed, without having to search through our code.</p>
+<p>When the debugger is stopped at a breakpoint we can try small snippets of code using the <code class="docutils literal notranslate"><span class="pre">debug</span> <span class="pre">console</span></code>. This is a tab in the terminal window. This inherits all the values of the variables at the current point in the program being debugged. This means I can check the output of the the first if statement. I can then try an alternative to check that if I input a &gt; 2 it will produce False.</p>
+<img alt="Drawing" src="../../_images/debugconsole.png" />
+</section>
+</section>
+<section id="refactoring-code">
+<h2>9.4 Refactoring code<a class="headerlink" href="#refactoring-code" title="Link to this heading">#</a></h2>
+<p>Refactoring is a process of making changes to improve code quality. Why would you want to change code that already works? A key feature of code is that it is not just read by computers but to be useful must be read and understood by people. That person may even be you in several months time. What seemed obvious when it was written then seems like an incomprehensible spaghetti mess! Making code clearer, more readable makes it easier to use, easier to modify or maintain.</p>
+<p>Good refactoring consists of many of the elements we have already introduced such as writing “clean code” - naming, structuring, making code logical, clear and explicit rather than convoluted. Refactoring is a kind of continuous iterative process. When we revisit code and find it hard to understand, or recognise it could be written better, we should spend a bit of time improving it.</p>
+<section id="code-smells">
+<h3>9.4.1 Code Smells<a class="headerlink" href="#code-smells" title="Link to this heading">#</a></h3>
+<p>Code smells are patterns that help us recognise when code needs refactoring. Many of these are failures to do the sort of things we discussed under clean code:</p>
+<ol class="arabic simple">
+<li><p>Structure your code into modules of related functions and classes. Even within a module think about how to layout the code to make most sense.</p></li>
+<li><p>Duplication of code DRY (Don’t repeat yourself). Where we recognise a repeated bit of code we can abstract this to a single function helping maintainability and readability.</p></li>
+<li><p>Overly long functions or classes that try to do everything. Remember the SRP - Single responsibility principle or YAGNI - You ain’t gonna need it. We can refactor by splitting these up into smaller more focussed chunks of code making it easier to understand.</p></li>
+<li><p>Overly complex convoluted logic. “Explicit is better than Implicit, Simple is better than complex”.</p></li>
+<li><p>Think about how you name things to make the meaning obvious. Don’t hard code numbers into your code but assign them to a meaningfully named variable.</p></li>
+</ol>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">value</span> <span class="o">&gt;</span> <span class="n">THRESHOLD</span>
+</pre></div>
+</div>
+<p>rather than</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">value</span> <span class="o">&gt;</span> <span class="mi">105</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="6">
+<li><p>Remove redundant code</p></li>
+<li><p>Ensure docstrings are up to date and reflect what the code actually does.</p></li>
+</ol>
+</section>
+<section id="resources">
+<h3>Resources<a class="headerlink" href="#resources" title="Link to this heading">#</a></h3>
+<p><a href="https://peps.python.org/pep-0008/">PEP8 guidelines</a></p>
+<p>Helpful webpage about <a href="https://refactoring.guru/refactoring">Refactoring code</a></p>
+<p>Fantastic pdf book on the subject <a href="https://github.com/jnguyen095/clean-code/blob/master/Clean.Code.A.Handbook.of.Agile.Software.Craftsmanship.pdf"> Clean Code by Robert C. Martin </a></p>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./content\E9"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../E8/T8.%20learngit.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">8 Git and Github</p>
+      </div>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#writing-clean-code">9.1 Writing “Clean Code”</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-zen-of-python">9.1.1 The Zen of python</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tools-to-make-style-easy">9.1.2 Tools to make style easy</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#structure">9.1.3 Structure</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#writing-pythonic-code">9.1.4 Writing Pythonic Code</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#docstrings-and-comments">9.1.5 Docstrings and comments</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#testing-code">9.2 Testing code</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pytest">9.2.1 Pytest</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#when-should-i-write-tests">9.2.2 When should I write tests?</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#debugging-code">9.3 Debugging code</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#break-points">9.3.1 Break points</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#refactoring-code">9.4 Refactoring code</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#code-smells">9.4.1 Code Smells</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#resources">Resources</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Dr Mike Smith
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

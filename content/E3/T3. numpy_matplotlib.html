@@ -1,0 +1,1194 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>3 Scientific Python &#8212; Scientific Programming in Python</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=87e54e7c" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script type="application/vnd.jupyter.widget-state+json">{"state": {"1d10e7b90fc142d68438d537c4a9c4c5": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "2.0.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border_bottom": null, "border_left": null, "border_right": null, "border_top": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "bf3cbf633130411a95d2eb2673f6bf24": {"model_name": "VBoxModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "state": {"_dom_classes": ["widget-interact"], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "VBoxModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "2.0.0", "_view_name": "VBoxView", "box_style": "", "children": ["IPY_MODEL_8f3ce046b7fc4cf9bf9a7d5c45cd9e70", "IPY_MODEL_9f1e2c4aa63445d9892ad71f4eee0291"], "layout": "IPY_MODEL_1d10e7b90fc142d68438d537c4a9c4c5", "tabbable": null, "tooltip": null}}, "cf0064e1a21f435cab5b24bddcd6369a": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "2.0.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border_bottom": null, "border_left": null, "border_right": null, "border_top": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "d0f87ccaed184b069dd5fdd7012e0eb5": {"model_name": "DescriptionStyleModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "DescriptionStyleModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "StyleView", "description_width": ""}}, "8f3ce046b7fc4cf9bf9a7d5c45cd9e70": {"model_name": "DropdownModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "DropdownModel", "_options_labels": ["blue", "red", "green"], "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "2.0.0", "_view_name": "DropdownView", "description": "colour", "description_allow_html": false, "disabled": false, "index": 0, "layout": "IPY_MODEL_cf0064e1a21f435cab5b24bddcd6369a", "style": "IPY_MODEL_d0f87ccaed184b069dd5fdd7012e0eb5", "tabbable": null, "tooltip": null}}, "ba94b2aa041e458c877ca965b64026ed": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "2.0.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border_bottom": null, "border_left": null, "border_right": null, "border_top": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "9f1e2c4aa63445d9892ad71f4eee0291": {"model_name": "OutputModel", "model_module": "@jupyter-widgets/output", "model_module_version": "1.0.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/output", "_model_module_version": "1.0.0", "_model_name": "OutputModel", "_view_count": null, "_view_module": "@jupyter-widgets/output", "_view_module_version": "1.0.0", "_view_name": "OutputView", "layout": "IPY_MODEL_ba94b2aa041e458c877ca965b64026ed", "msg_id": "", "outputs": [{"output_type": "stream", "name": "stdout", "text": "blue\n"}], "tabbable": null, "tooltip": null}}, "d3a54490d7b645c68ec6fba51bc1f2f1": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "2.0.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border_bottom": null, "border_left": null, "border_right": null, "border_top": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "2b4b16f11d694e4a9af571d0a3658a4d": {"model_name": "VBoxModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "state": {"_dom_classes": ["widget-interact"], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "VBoxModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "2.0.0", "_view_name": "VBoxView", "box_style": "", "children": ["IPY_MODEL_fac202923b704dbc9b66255691e6d3bf", "IPY_MODEL_b04122c17af5455e9d394a055291463b"], "layout": "IPY_MODEL_d3a54490d7b645c68ec6fba51bc1f2f1", "tabbable": null, "tooltip": null}}, "06acd96e9e6143f0b12bea2e8440d55c": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "2.0.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border_bottom": null, "border_left": null, "border_right": null, "border_top": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "ea4ab7e6b7944b9297dc1823440ad1e6": {"model_name": "SliderStyleModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "SliderStyleModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "StyleView", "description_width": "", "handle_color": null}}, "fac202923b704dbc9b66255691e6d3bf": {"model_name": "FloatSliderModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "FloatSliderModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "2.0.0", "_view_name": "FloatSliderView", "behavior": "drag-tap", "continuous_update": true, "description": "freq", "description_allow_html": false, "disabled": false, "layout": "IPY_MODEL_06acd96e9e6143f0b12bea2e8440d55c", "max": 3.0, "min": 0.0, "orientation": "horizontal", "readout": true, "readout_format": ".2f", "step": 0.1, "style": "IPY_MODEL_ea4ab7e6b7944b9297dc1823440ad1e6", "tabbable": null, "tooltip": null, "value": 1.5}}, "0c1a74c69d144dceb11ed2af21d21bb4": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "2.0.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border_bottom": null, "border_left": null, "border_right": null, "border_top": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "b04122c17af5455e9d394a055291463b": {"model_name": "OutputModel", "model_module": "@jupyter-widgets/output", "model_module_version": "1.0.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/output", "_model_module_version": "1.0.0", "_model_name": "OutputModel", "_view_count": null, "_view_module": "@jupyter-widgets/output", "_view_module_version": "1.0.0", "_view_name": "OutputView", "layout": "IPY_MODEL_0c1a74c69d144dceb11ed2af21d21bb4", "msg_id": "", "outputs": [{"output_type": "display_data", "metadata": {}, "data": {"text/plain": "<Figure size 300x200 with 1 Axes>", "image/png": "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"}}], "tabbable": null, "tooltip": null}}, "922e247d5d004c23800cf5df505b1365": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "2.0.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border_bottom": null, "border_left": null, "border_right": null, "border_top": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "acd582b0018041e9bfff4efc1baa447a": {"model_name": "SliderStyleModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "SliderStyleModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "StyleView", "description_width": "", "handle_color": null}}, "a877a4cbf51e45fab7b1628254834f5d": {"model_name": "FloatRangeSliderModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "FloatRangeSliderModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "2.0.0", "_view_name": "FloatRangeSliderView", "behavior": "drag-tap", "continuous_update": true, "description": "xlim:", "description_allow_html": false, "disabled": false, "layout": "IPY_MODEL_922e247d5d004c23800cf5df505b1365", "max": 5.0, "min": -5.0, "orientation": "horizontal", "readout": true, "readout_format": ".1f", "step": 0.1, "style": "IPY_MODEL_acd582b0018041e9bfff4efc1baa447a", "tabbable": null, "tooltip": null, "value": [-1.0, 1.0]}}, "fc2bfe37d8c642b7a259cf99d3130550": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "2.0.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border_bottom": null, "border_left": null, "border_right": null, "border_top": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "33086c6edc024238a9b152aebfc40e7d": {"model_name": "VBoxModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "state": {"_dom_classes": ["widget-interact"], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "VBoxModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "2.0.0", "_view_name": "VBoxView", "box_style": "", "children": ["IPY_MODEL_d4ad67f579f04e63ba1122e1e1747bb0", "IPY_MODEL_aec35f5ee6c34f80bdf12f702332da4a", "IPY_MODEL_a0b8831e6cfc4cadabec94debc4c49d6", "IPY_MODEL_22ea15d160b04869a7f5f7348289dab9", "IPY_MODEL_49cf29c3328c41bf897110d8125530ef"], "layout": "IPY_MODEL_fc2bfe37d8c642b7a259cf99d3130550", "tabbable": null, "tooltip": null}}, "1d3292059969431db55bebe7068d1f59": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "2.0.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border_bottom": null, "border_left": null, "border_right": null, "border_top": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "0af14bc8ce9a4213973faa904394af24": {"model_name": "SliderStyleModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "SliderStyleModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "StyleView", "description_width": "", "handle_color": null}}, "d4ad67f579f04e63ba1122e1e1747bb0": {"model_name": "FloatSliderModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "FloatSliderModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "2.0.0", "_view_name": "FloatSliderView", "behavior": "drag-tap", "continuous_update": true, "description": "freq", "description_allow_html": false, "disabled": false, "layout": "IPY_MODEL_1d3292059969431db55bebe7068d1f59", "max": 3.0, "min": 0.0, "orientation": "horizontal", "readout": true, "readout_format": ".2f", "step": 0.2, "style": "IPY_MODEL_0af14bc8ce9a4213973faa904394af24", "tabbable": null, "tooltip": null, "value": 1.0}}, "584d5433ae5f40feb1c7ec7bd7771060": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "2.0.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border_bottom": null, "border_left": null, "border_right": null, "border_top": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "f9d60dab8f724096b2de80843888948b": {"model_name": "DescriptionStyleModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "DescriptionStyleModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "StyleView", "description_width": ""}}, "aec35f5ee6c34f80bdf12f702332da4a": {"model_name": "DropdownModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "DropdownModel", "_options_labels": ["blue", "red", "green"], "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "2.0.0", "_view_name": "DropdownView", "description": "color", "description_allow_html": false, "disabled": false, "index": 0, "layout": "IPY_MODEL_584d5433ae5f40feb1c7ec7bd7771060", "style": "IPY_MODEL_f9d60dab8f724096b2de80843888948b", "tabbable": null, "tooltip": null}}, "02749bcb19284665b78a11b40f2554a8": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "2.0.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border_bottom": null, "border_left": null, "border_right": null, "border_top": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "74d287cacb154f1887c5917af80e8fab": {"model_name": "SliderStyleModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "SliderStyleModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "StyleView", "description_width": "", "handle_color": null}}, "a0b8831e6cfc4cadabec94debc4c49d6": {"model_name": "FloatSliderModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "FloatSliderModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "2.0.0", "_view_name": "FloatSliderView", "behavior": "drag-tap", "continuous_update": true, "description": "lw", "description_allow_html": false, "disabled": false, "layout": "IPY_MODEL_02749bcb19284665b78a11b40f2554a8", "max": 10.0, "min": 1.0, "orientation": "horizontal", "readout": true, "readout_format": ".2f", "step": 0.1, "style": "IPY_MODEL_74d287cacb154f1887c5917af80e8fab", "tabbable": null, "tooltip": null, "value": 2.0}}, "6dd8b7cb4efe45dd804d325dcf3bc250": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "2.0.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border_bottom": null, "border_left": null, "border_right": null, "border_top": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "cdb4ed16cd8d4da9bd446f60b021666f": {"model_name": "CheckboxStyleModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "CheckboxStyleModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "StyleView", "background": null, "description_width": ""}}, "22ea15d160b04869a7f5f7348289dab9": {"model_name": "CheckboxModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "CheckboxModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "2.0.0", "_view_name": "CheckboxView", "description": "grid", "description_allow_html": false, "disabled": false, "indent": true, "layout": "IPY_MODEL_6dd8b7cb4efe45dd804d325dcf3bc250", "style": "IPY_MODEL_cdb4ed16cd8d4da9bd446f60b021666f", "tabbable": null, "tooltip": null, "value": true}}, "7c906efb58a647419a7e16e9ff83f2e3": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "2.0.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border_bottom": null, "border_left": null, "border_right": null, "border_top": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "49cf29c3328c41bf897110d8125530ef": {"model_name": "OutputModel", "model_module": "@jupyter-widgets/output", "model_module_version": "1.0.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/output", "_model_module_version": "1.0.0", "_model_name": "OutputModel", "_view_count": null, "_view_module": "@jupyter-widgets/output", "_view_module_version": "1.0.0", "_view_name": "OutputView", "layout": "IPY_MODEL_7c906efb58a647419a7e16e9ff83f2e3", "msg_id": "", "outputs": [{"output_type": "display_data", "metadata": {}, "data": {"text/plain": "<Figure size 300x200 with 1 Axes>", "image/png": "iVBORw0KGgoAAAANSUhEUgAAASgAAADFCAYAAADnqm/xAAAAOXRFWHRTb2Z0d2FyZQBNYXRwbG90bGliIHZlcnNpb24zLjguNCwgaHR0cHM6Ly9tYXRwbG90bGliLm9yZy8fJSN1AAAACXBIWXMAAA9hAAAPYQGoP6dpAAAvPUlEQVR4nO2de1hTR/rHvycQbhailXJRES+r4l2EKljBW4lCda21rq0t1W3r1rr9Wctar7ut2q223VZ9uq26XVFbq6273noBKVRFqeANwSteuirQCioWCahAgPn9MZycEwkkITnJSTKf5+FhcjI5553M5J2Zd955hyOEEDAYDIYMUdhbAAaDwWgOpqAYDIZsYQqKwWDIFqagGAyGbGEKisFgyBamoBgMhmxhCorBYMgWd3sLYG0aGhpw/fp1+Pr6guM4e4vDYDAegBCCyspKdOjQAQpFy2Mkp1NQ169fR0hIiL3FYDAYRiguLkanTp1azON0CsrX1xcALbyfn1+LebVaLdLT06FWq6FUKm0hnuSwMjkGzlYmc8qj0WgQEhKi+622hNMpKH5a5+fnZ5KC8vHxgZ+fn1M0EoCVyVFwtjK1pjymmGAkNZIfOnQIEyZMQIcOHcBxHPbs2WP0MwcPHkRERAS8vLzQrVs3rF+/XkoRGQyGjJFUQd29excDBw7EJ598YlL+q1evIiEhATExMcjLy8PixYsxZ84c7Ny5U0oxGQyGTJF0ihcfH4/4+HiT869fvx6dO3fGmjVrAAC9e/fGiRMn8OGHH2Ly5MkSSSk9NTWARgO0bQs4wWjeaamqAqqrgfbtAbYALA9kZYPKycmBWq3WuzZ27FgkJydDq9UanNvW1NSgpqZG91qj0QCgc2KtVtvi8/j3jeVrLfv3c/jHPxQ4dIiDVsvBy4tg9GiCBQsaEB0tTZQbqctkD6QsU20t8K9/KbBhgwIFBVQrBQQQ/OEPDZg3rwEdOlj9kQCcr57MKY85ZZaVgiotLUVgYKDetcDAQNTV1aGsrAzBwcFNPrNy5UosW7asyfX09HT4+PiY9NyMjIzWCdwMWq0C//53f6Snd9G7Xl3NITWVQ2qqApMmXcbzz5+Hm5tVH63D2mWSA9Yu040b3li5ciiuXVPpXb95k8Mnn7hh8+Z6vP76STz66A2rPleMs9WTKeW5d++eyfeTlYICmlr2+Xh6zVn8Fy1ahKSkJN1rfglTrVabtIqXkZGBuLg4q62kaLXAlCluSE8XzHtduhCEhRGcPs3h+nVajt27e8DbuzuSk+utqqSkKJO9kaJM//sf8Mor7rhxQ2hXkZEN8PMDcnI43L/PoarKA++9NxSbN9dj6lTrjnidrZ7MKQ8/yzEFWSmooKAglJaW6l27efMm3N3d0b59e4Of8fT0hKenZ5PrSqXS5Io3J29LEAK88gqQmkpfe3kBH38MvPQSB4WCg1YL/POfwIIFQF0dsG2bAp06KfD++xY/ugnWKpOcsFaZysqA8eOBG40Do549ga1bgchI2qncvAm8+iqwaxdQX8/hj390R9euwGOPWfzoJjhbPZlSHnPKK6u9eNHR0U2GiOnp6YiMjHSISvziC2DTJpr29KSKauZMgPfmVyqBpCRgxw7AvbFr+OADwATvC4aVIAR46SU6ggKAvn2BnBwgMlLIExAA/Pe/tO4A2pk8/bSg0Bi2Q1IFVVVVhfz8fOTn5wOgbgT5+fkoKioCQKdnL7zwgi7/rFmzUFhYiKSkJBQUFGDjxo1ITk7GvHnzpBTTKhQWAn/+s/B682Zg1CjDeSdOBD78UHj9pz8Bv/0mqXiMRpKTgW+/pWl/fyAtDXj44ab5FApg7VqhDktLgTlzbCcngyKpgjpx4gTCw8MRHh4OAEhKSkJ4eDjeeustAEBJSYlOWQFA165dkZqaiszMTAwaNAjvvPMOPv74Y4dwMUhKAu7epekXXwSeeabl/HPmAE8+SdO3bgHz50sqHgO0E1iwQHi9aRPQ0lYwd3fg66+p2wEA/Oc/wHffSSsj4wGIk1FRUUEAkIqKCqN5a2tryZ49e0htba1Fz8zIIIROHggJDCTkzh3TPvfLL4T4+gqfzcuzSAxCiPXKJCesVaY//1n4rp9/3vTPbdkifK5nT0K0WovEIIQ4Xz2ZUx5zfqOyskE5IoToj37eew9QqZrPL6ZjR2D5cuH14sXWlY0hcPkysG4dTbdpQ+vJVJ57DoiJoelLlwQ7I0N6mIKykJQUIC+PpgcPBkQmNZN49VWgc2ea3rsXyMqyrnwMyooVQEMDTS9YQDsHU+E4fYW2dCn1OGdID1NQFkAI8M47wuu//U1YsTMVT0/a4HlWrrSKaAwRV68CW7bQdLt2wOuvm3+PYcOA3/+epq9fB7780nryMZqHKSgL2LcPOHaMpvv3FxqwuSQmAl260PTevcDZs1YRj9HIhx8C9fU0/frrgBH/3Wb561/178mPyBjSwRSUBXz8sZBessT80ROPuzswd67wetUqi8RiiKioAD7/nKbbtLHMVeDRR4HYWJq+eBH4/nvL5WO0DFNQreTaNaGBduwIWOoJ8eKLNNoBQL2ay8osux+D8sUXgvtHYiKd4lnCm28K6U8/texeDOMwBdVKPvuM2qAAur3F3cJNQ76+1MMZoDvsv/jCsvsx6BRMHIpM7EjbWhISgG7daDo9ndq3GNLBFFQrqKkBNmygaaVS2BJhKS+/LKQ3bBAUIKN1ZGZStwAAGDEC6NfP8nsqFPr1zbcDhjQwBdUKUlOp9zcAPPUUEBRknfuGhQn+NgUFQHa2de7rqvC2J4C6c1iLGTOEEfPGjTSCBUMamIJqBfySNQD88Y/WvTfrna1DVRXAR4pWqej+R2sRFCSs2JaW0v18DGlgCspMfvtNMI4HBQFjxlj3/k8/LSyD79wJ3L9v3fu7Crt3C8bxqVNp6Btr8uKLQnrbNuvemyHAFJSZbN8uDOmnTbPcOP4g3t502ggAlZVCbCmGeYgXGcz17jcFtVrYRPzNN3TExrA+TEGZiXh6l5gozTOefVZIf/WVNM9wZn79lTrRAnTFbdgw6z9DqQSmTKHp+/eFEC4M68IUlBkUFtLgZgBdERo4UJrnjB5Ng6YBdDppRoRUBujUmF8Bff556U5oEXckbJonDUxBmcHu3UJ66lTpGr67O/CHP9B0TQ2LuGku4mMU+VGOFAwfLsST+uEH4PZt6Z7lqjAFZQbihi91DD1x7/yf/0j7LGfixg0hIkTPnjSkr1QoFEJgwro6FsxOCpiCMpHSUuDwYZoOCwN695b2eVFR0J3J9uOPzAhrKnv2CNO7yZOlP4CTX9Dgn82wLkxBmciDDV9qFArB16amhm6rYBjHlqNcABg6FOCPckxPB8w48o1hAkxBmciuXUJa3GtKCR+zHGC9syn89htw4ABNd+lCAwhKjUIhOIHev886EmvDFJQJlJfrN/zGMyAkZ9QowWnz++/ZlgpjpKRQWxBAOxGpp3c8rCORDqagTCA9XWj4kybZruF7eADx8TRdXs7CARsjJUVIW3NrizFGj6bRKABqKOfbCsNymIIyAXHDf+IJ2z6b9c6mUVdHl/oBGldLCufM5vD0pGFYADrNZB2J9WAKyggNDTQMLwA89BD1fbEl8fHCdpqUFBaCpTlycoA7d2h67Fjrb0EyhjjcM99eGJbDFJQRTpwQols+/jjtLW2JSiUoxStXgJ9/tu3zHQXxnkV+NGNL1Gph6s8UlPWQXEGtXbsWXbt2hZeXFyIiIpDVwvg3MzMTHMc1+btw4YLUYjaLuOHbenrHw9uhANb4m4OfhnMcMG6c7Z/v7w8MGULTZ88CxcW2l8EZkVRBbd++HXPnzsWSJUuQl5eHmJgYxMfH6x13boiLFy+ipKRE99ejRw8pxWwRsf1JrChsifgHx2IPNaW4GDhzhqYffVTYx2hrxO2Dt4cxLENSBbVq1Sq89NJLePnll9G7d2+sWbMGISEhWMcf8doMAQEBCAoK0v25ublJKWaz3LhBp3gA3RhszmGP1qR/f+HZBw6wGFEPIodRLqDfkbCRrnWQzJRYW1uL3NxcLFy4UO+6Wq1GtpFYtuHh4aiurkafPn3w17/+FaNGjWo2b01NDWpqanSvNY1b/7VaLbRGHIf495vL9/33HPivaOzYemi19jsITa12w6ZNClRXA/v310GtNmwtN1YmR8R4PbmB72vV6jpotfZZSRg4EGjf3h23b3P48UeCe/fqoFQazuts9WROecwps2QKqqysDPX19Qjk9wE0EhgYiNLSUoOfCQ4OxmeffYaIiAjU1NRgy5YtGDNmDDIzMxHLH0j2ACtXrsSyZcuaXE9PT4ePj49JsmZkZBi8vnlzBAC6Xb1t22ykpv5m0v2k4JFHggFQI8f69YWoq2v5dM/myuTIGCpTXR2HH39MAKBA27bVKCn5wa5B/vr2HYxDh0Kg0XBYvfoo+vVrOcSBs9WTKeW5Z8Z+II4QaRaur1+/jo4dOyI7OxvR0dG66++++y62bNlisuF7woQJ4DgO3zYTEczQCCokJARlZWXwM3KErFarRUZGBuLi4qB8oKtraAA6dXJHWRkHPz+C0tI6my9di7lzBwgOdkd9PYeePQnOnjXsDdhSmRyVlsp0+DCHUaNoxUyb1oDNm+vtIaKOrVs5/PGPVJ558+qxYoXhUbez1ZM55dFoNPD390dFRYXR36hkPzl/f3+4ubk1GS3dvHmzyaiqJaKiovDll182+76npyc8Daz9K5VKkyveUN78fMG9YNQoDt7e9m1EjzwCREcDP/0EXLrE4fp1JUJDm89vTvkdBUNlyswU0nFxCiiV9vWcEbs4HDjgBqWyZfups9WTKeUxp7yS1aaHhwciIiKaDPkyMjIwzAw337y8PAQHB1tbPKP8+KOQtvbBCK0lLk5I8yFtXR251VNAADBgAE2fPEk9yxmtR9LuJikpCRs2bMDGjRtRUFCAN954A0VFRZg1axYAYNGiRXhBFNF+zZo12LNnDy5fvoxz585h0aJF2LlzJ1577TUpxTSIWAE8/rjNH28Q8Q+QKSgaCvnIEZru1QsICbGvPDx8PRGiP8JjmI+kVpWpU6fi9u3bWL58OUpKStCvXz+kpqYitHFuUlJSoucTVVtbi3nz5uHXX3+Ft7c3+vbti5SUFCTY2DW4pgY4dIimO3SgAerkwJAhdLtNVRWwfz/9Adhq47IcOXQIqG80OcmlEwGoglq9mqb37bNdeB5nRHKz7+zZszF79myD723evFnv9fz58zF//nypRTLKkSNC4LExY+SjBJRKIDaW+v2UltLTh/v0sbdU9kM8vZOTgoqNpXsB6+rYSNdS2F48A8hxesczerSQdvXGzysohQIYOdKuoujh6ytse7l4kR6DxWgdTEEZQG6GVzHMDkUpLQXOnaPpRx+lIVbkBKsn68AU1ANoNMCxYzTdu7f9trc0x4ABdGMqQA2wrhocTfyjl1snAuiPvJmCaj1MQT3AwYOC4VWODV+hoKGAAaCigi5luyJytT/xREUB/EaGfftYHK/WwhTUA8i94QPMDkWIUG4vL+rAKjc8PICYGJr+9Vfg0iX7yuOoMAX1AAcP0v8cB4wYYV9ZmsPV7RuFhUK8pcceo0pKjrh6PVkDpqBElJcDp0/T9KBB8jO88vzud4JT4uHD1G/LleA7EYAu6csVsYLav99+cjgyTEGJyMoSbAVyHT0BdHTH26GqqwWjvqsgVlByrqeBA2nIZoA6lTI7lPkwBSXCURo+oC+fWG5XgPfy9/AQ/I3kiJubYIe6dYs61jLMgykoEXzDB2x/eou5uKqC+vVX4H//o+mhQwFvb/vKYwzxFFTcvhimwRRUIxqNsGTfr5/gayRXunUTfLSys13n1GHxj1zuo1zAdTsSa8EUVCOHD9MgdYBjNHzxKuO9e0Burn3lsRWOYiDnGTyYbvAGqOzMDmUeTEE14mg9M+CavTNfTnd3254e3Frc3akrBACUlLBzDc2FKahGxD9w3rApd8QjCFdQUDdvAnyk6IgIoE0b+8pjKq7YkVgLpqAA3L0LHD9O0716AUFB9pXHVHr1AvjoyT/95Pz78rKyhLg3jjLKBZiCsgSmoAAcOcLpftyO1PA5ThhFVVbSOOrOzE8/OaaCiowUVhuZHco8mIKCfs/sCIZXMa7UOx86RJurQiHYdRwBDw/BXlZcDFy7ZldxHAqmoOC4UwdAX15n9rOprFTibONRgIMGCR7ajoKr2QuthcsrqNpaBY4dowqqWzegUyc7C2QmffoA7dvTdFaW4CrhbBQUtAchtJ4crRMBXGuka01cXkFdvtwONTW04Tva9A6g0x1e7vJy4MwZ+8ojFWfPttelHbGehg4F+OMbnXmka21cXkGJG74j9syA/g82K8s5q/TcOcG131HcQMR4eVElBQBXrgC//GJfeRwF52zNZiBu+I6qoPTtUDI5gsaKaDTA1avU6NSvnzCldTScvZ6kwKUVVG0tcOFCOwA0vlKXLvaVp7UMGCAYjX/6iXO6ZezsbA4NDY5rf+IRy+6sI11r49Lf0smTHGpr6dGAsbHyOf/OXMRhPcrKOPzyi699BbIyjrzKKiY6mm59AdgIylRcWkGJG4kjN3xAX36xXc0ZECsoR7Q/8fj40COyAODyZQ7l5Z72FcgBkFxBrV27Fl27doWXlxciIiKQlZXVYv6DBw8iIiICXl5e6NatG9avXy+ZbM7SMwP6hvLz551HQd29C5w4QeupZ0/iMNuQmkPczs6dc556kgpJFdT27dsxd+5cLFmyBHl5eYiJiUF8fDyKiooM5r969SoSEhIQExODvLw8LF68GHPmzMHOnTutLltdHbVtAEBgIEGPHlZ/hE0ZPFjYPHv2rL/T2KGOHAHq6mg9xcQ4fqH0FZTMg46ZwZEjHEpLfaze7jhCpGvKQ4cOxeDBg7Fu3Trdtd69e+PJJ5/EypUrm+RfsGABvv32WxSIYqPOmjULp06dQk5OjsFn1NTUoEZ0aoBGo0FISAjKysrg5+fXrGy5uRyio6lBYPLkOnz1leM3/ieecENGBu1zTp++j7AwdztLZDlLlyqwYoUbACA5uQaJiY5tldBogIAAdzQ0cOjcWYOCAncolUp7i2Ux/fu74eJFBUJDG1BQUK+ztRlCo9HA398fFRUVLf5GAUCyFlxbW4vc3FwsXLhQ77parUZ2drbBz+Tk5ECtVutdGzt2LJKTk6HVag1W5MqVK7Fs2bIm19PT0+HDn5xogD17ugPoBwBo3/4cUlOvGSmR/AkI6AGgDwDgX/+6gLg4wyNVR+Kbbx4DQEcaDQ2ZSE2ttq9AVqBbt1j8/HM7FBX5YefOvfDzq7W3SBZx544HLl6MBwB4ed1BenrLZpx79+6ZfG/JFFRZWRnq6+sRyMcDaSQwMBClpaUGP1NaWmowf11dHcrKyhAcHNzkM4sWLUJSUpLuNT+CUqvVLWrntm05eHlpsXfvPcyc2RMDB/Yxp3iypG1bDlu30nR5eX8kJPSzr0AWUl0N/PwzbaKBgXcxbVqMU4w2Dh5UYPVqmlYqRyMhwbFHhbt3C7bc+HhfJCQktJhfo9GYfG/J5wDcA2v3hJAm14zlN3Sdx9PTE56eTVdDlEpli415xAhg2DAtUlMzMXBgglM0/KgowMuLoLqaw+HDblAqHXspOydHOPOvb9/bUCqDnaKeRo6ETkHl5LjjmWfc7CqPpYgnRLGxHJTKltWKOXUomer29/eHm5tbk9HSzZs3m4ySeIKCggzmd3d3R3tHdR+2IZ6eQFQUVeiFhRwKC+0skIWI96z17XvbfoJYmZgYgONoPfEhZBwZ4TRugsces64tV7Jvx8PDAxEREcjIyNC7npGRgWHNBJOOjo5ukj89PR2RkZFO0XPaguHDhQbi6JtSxbv++/Yts58gVqZdO7plBwBOnQIqKuwrjyXcuUPLAAChoRq0a2fd+0uqvpOSkrBhwwZs3LgRBQUFeOONN1BUVIRZs2YBoPajF154QZd/1qxZKCwsRFJSEgoKCrBx40YkJydj3rx5UorpVMTGCgrKkcN6aLXC1KFTJ4LAQNMNq45AbCyNi0MIh59+srMwFnD4sBAhtF8/63cikiqoqVOnYs2aNVi+fDkGDRqEQ4cOITU1FaGhoQCAkpISPZ+orl27IjU1FZmZmRg0aBDeeecdfPzxx5g8ebKUYjoVQ4cSuLvTxu/II6jcXHqcFkBHhY66Dak5xD5djtyRiGXv08f603DJjeSzZ8/G7NmzDb63efPmJtdGjBiBk/wJmgyz8fYGevQoR0FBe1y+TI86MrD4KXv0z79zvih8zjIVl9pO6PgWOkYTxA3FUXtn/WPoHd+J9kECAoBOnSoBACdOAFVVdhaoFVRVUdkBICyMQKWyvj8XU1BOiNig7Ii9c309dHaZwEB6vJYzwtts6uv1l+odhZwcKjsg3SiXKSgnJCysHG5udNThiCOoU6folhDAscPgGENss3HEjkTctqQa5TIF5YR4e9dh8GDaYM6fB27dsrNAZqJvf7KfHFLTr59jT8XFSlWqjdxMQTkp4gZjJMKN7BD/WB09DE5LPPxwNX73O1pPx44B9+/bWSAzuH8fOHqUprt3Bzp2lOY5TEE5KY66jN3QICjUhx8G+va1rzxSw0+NamuFH7wjcOwYlRmQthNhCspJeewxwXfIkewb584Bv/1G0zEx9FgtZyYmRjAuO1JHYqtpuJNXv+vSti0wcCBNnzpFz8xzBMTK1JntTzyO6vkvric2gmK0Cr7hEEK3JDgCrmJ/4gkNBTp3pumcHGHaJGdqawW3iJAQWgapYArKiRGPQByhdyZEkNPXFxg0yK7i2AxeEVdXA8eP21cWU8jNFQz6I0ZI6wbCFJQTIz4BxRHsUJcuATdv0vTw4fQ4LVdA/0BP+8lhKrZ0A2EKyol55BGgT2Og0NxcoLLSvvIYw9WmdzyONtK1pZ2QKSgnh/+hO8J2Cldx0HyQ3/1O2NB9+DA9cUiuaLWCG0hgINCzp7TPYwrKyXGU6QMhwP79NN2mDRAZaV95bAnHCQq5qgrIy7OvPC0h3tg8erT025CYgnJyHGX6UFAA8NGeY2MBVwugKu5I5FxPfCcCUAUlNUxBOTnBwdAdSirn7RTihj9mjP3ksBeOoqD27RPSTEExrAI/ihKH0ZUbtu6Z5Ubv3oB/40HDWVlCGBM5cf++0H66dAG6dZP+mUxBuQDiH7y4B5QL9fXAgQM0/fDDgge8K8FxwiiqokKedijxMWC26kSYgnIBxFOmH3+0nxzNkZ9PTwcBgFGjnH//XXM8/riQfuBwI1lgj1GuizYF1yIwEBgwgKZPnJDfvjxXtz/xxMUJaTl2JLa2PwFMQbkMfO8sXs6XC/Zo+HKkWzdq2wFoyON7MjppS6MRtuH07m27gziYgnIRxNMHOfXOtbWC41+HDtI7/skZjhPqqbYWsjovT2y4t2UnwhSUiyD2LZKTgjp6VBgpjBnjvPHHTUWu0zx7rbIyBeUitGkD8CfO//wzcO2aXcXR4eruBQ8i/g7kZCjnlSXHASNH2u65kiqo8vJyJCYmQqVSQaVSITExEXf45ZpmmDFjBjiO0/uLioqSUkyXQTzNk4u7wQ8/CGlXNpDz+PsD4eE0nZ8vjwMvrl8HTp+m6YgI6gpiKyRVUNOmTUN+fj7S0tKQlpaG/Px8JCYmGv3cuHHjUFJSovtLTU2VUkyXQW52qN9+E+Jw9+lDg58x9Kd5cljQSE8X0uPG2fbZkh19XlBQgLS0NBw5cgRDhw4FAPz73/9GdHQ0Ll68iF4tnMbo6emJoKAgk55TU1ODGt57DICm8UA1rVYLrVbb4mf5943lcyRaKtPAgYCfnzs0Gg4//khQU1NnV5+jtDQODQ20CarV9dBqDR/+6Gr1NHIkhw8+oN/LDz804Kmn7OtWnprqBn4s8/jjddBqmx4xZU4dmVOPkimonJwcqFQqnXICgKioKKhUKmRnZ7eooDIzMxEQEIC2bdtixIgRePfddxEQEGAw78qVK7Fs2bIm19PT0+Hj42OSrBlymuxbiebKFBY2BMeOBaOsjMOnnx5G9+4VNpZMYOPGQQBovNi2bY8iNbXl+Yyr1FNNjQJKZQK0Wjd8/301UlIy7LZ4UF8P7N0bD8ADPj5a3L69F6mpzZ+BZ0od3TPDf0IyBVVaWmpQqQQEBKCU37ZugPj4eEyZMgWhoaG4evUq/va3v2H06NHIzc2Fp6dnk/yLFi1CUlKS7rVGo0FISAjUajX8/PxalFGr1SIjIwNxcXFQOsn2eWNlKi5W4Ngxmq6sjEFCgjRHVhuDEODVV2nz8/YmSEp6FF5ehvO6Yj3FxnLYtw+4dcsHXbsm6AIP2pqjRzlUVdF6GjfODRMmxBvMZ04d8bMcUzBbQS1dutTgiEXM8UaPLs6A2ieEGLzOM3XqVF26X79+iIyMRGhoKFJSUvDUU081ye/p6WlQcSmVSpMbszl5HYXmyvT73wP/9380nZbmhrfftk9c3dOngZISmh41ioOvr/Hv35Xq6YknhIWM9HSl3fYnim2V8fEKKJUt2wRMqSNz6tBsBfXaa6/hmWeeaTFPly5dcPr0ady4caPJe7du3UJgYKDJzwsODkZoaCguX75srqgMA3TuDPTrB5w9Sw3Ut27R0MC2Ji1NSMcb7pRdmieeAPiJQUoK8Oab9pFDXE9jx9r++WYrKH9/f/jzcSFaIDo6GhUVFTh27BiGDBkCADh69CgqKiowjHfIMYHbt2+juLgYwbbyrXcBEhKogiKENkATFlatzt69QtrWK0OOQM+eNBTwzz9Tj/LycqBdO9vKcPu2sL2lb1/7rLJKtobTu3dvjBs3DjNnzsSRI0dw5MgRzJw5E+PHj9czkIeFhWH37t0AgKqqKsybNw85OTm4du0aMjMzMWHCBPj7+2PSpElSiepyPPGEkE5Jsf3zKyuFbRzdu9MfIqMp48fT//X1+kv9tiI9nR5FD9ivE5F0kXnr1q3o378/1Go11Go1BgwYgC1btujluXjxIioq6EqSm5sbzpw5g4kTJ6Jnz56YPn06evbsiZycHPj6+kopqksxbBg9eRigjpK2DtKfliY8k42emsfeHck33wjphATbPx+QcBUPAB5++GF8+eWXLeYhRFiy9Pb2xg9i12KGJLi7U3vC9u00DlN2tm1PURE3/IkTbfdcRyM2FnjoIXpIwd69dCRlq7MCa2uFaXjbtvpnLNoSthfPRRH3zt9/b7vnarXC81Qq1zr/zlw8PAC1mqbLyqBzD7EFmZk0xApA24q9Fk+ZgnJR4uOFyAHffEMN5rbg4EEa0hag0wYPD9s811ERdyTffWe758pllMsUlIvi7y8M2y9dAs6ds81zxQ3/ySdt80xH5oknhBDIO3bYpiMhBPj2W5r28LCvnZApKBfm6aeF9I4d0j+PEEFBKZXMQG4KgYGCffDyZeDMGemfefIk8MsvND1mDGDP9SmmoFwYsWP+zp3SPy83FygupukxYwAjO5EYjdi6I9m1S0jbexGDKSgXpmNHIYjd2bPAhQvSPm/7diHN3NpM56mnBHuh1AqKEODrr2laobD/NJwpKBdH3DtLOYpqaBAavrs7MHmydM9yNoKDgeHDabqgQFp74fHjwJUrND16NJ1i2hOmoFwc8TTvv/+V7jmHDwt2DbUaaN9eumc5I+KORMp64jsRADCy5dYmMAXl4oSGAnzIrlOnhNCu1uarr4T0s89K8wxnZvJkYZq3das0q3kNDcI0XKnU77zsBVNQDLzwgpD+/HPr37+uTuj1vbzsb3h1RDp2FA5U+Pln6v1vbbKyaPxxgK6w2npzsiGYgmLgmWcEh8mtW62/Ny81lXpCA8CECfZdtnZkZswQ0ps3W//+GzcKaTlM7wCmoBigp3RMmEDTN27on7RiDTZsENLiHxnDPCZNonvzADoVs+bJwxUVwii3bVv5rLIyBcUAAEyfLqQ3bbLefX/9VdiJ36mTfYKeOQtt2gB/+ANNV1YCjVGKrMJXXwH379P0c88B3t7Wu7clMAXFAEBtDvyS8p49woqbpWzeLMQUevFF2+3Gd1bEI9B166x33+RkIf3yy9a7r6UwBcUAQFdt/vQnmq6vB9avt/yedXXAZ5/RNMdRBcWwjOHDaXRLgLpu5OZafs8jR4ATJ2h68GBg0CDL72ktmIJi6Jg1izpRAlSxVFdbdr8dO4CiIppOSKAuDQzL4Dhgzhzh9T//afk9V68W0q+9Zvn9rAlTUAwdHToIHt63bun7LpkLIcBHHwmv//IXy2RjCDz/vOAC8NVXQAunuBnl2jVh+0xgIDBtmsXiWRWmoBh6vP66kH733da7HGRmCtOG8HBg5EhLJWPw+PgAM2fSdG0t8I9/tP5eH30k2Aj//GfAwAludoUpKIYe0dGCQ+D//gds22b+PQgBliwRXs+bB7udjOuszJ0L3UGn69a1bhRVWAj861803aYNneLLDaagGE14+20hvWyZ+baolBQgJ4em+/QBRGexMqxEcDDw6qs0ff8+sGKF+fd45x0aghmgI2d7nI9oDKagGE2IjRVGUVeuAKtWmf7Z2lpg/nzh9d//zlwLpGLBAsFfae1a84LZnTwp+LupVHSUK0eYgmIYZPVqQbH8/e90OmAK//gHDQkC0E3I9o4n5MwEBgpT6fp6akPi7UktUV9PR1983sWL5bHvzhBMQTEMMmAAbfAAnUI8/7xxg3luLrB8OU27uVFfKmZ7kpZ584SDT7OyTBvtrlghnBDTpw+1Z8kVpqAYzbJ8ueC79NNPdOrWXJiPW7eAKVPoFA8AkpLk5fDnrHh66jvVLloEHDjQfP4ffgCWLqVphYIayeV8so6kCurdd9/FsGHD4OPjg7b8UbZGIIRg6dKl6NChA7y9vTFy5Eics9WRIww9VCrqZ8NP9VavBt56q+k0oqQEiIsDrl6lr4cOpdNChm0YM4YqJoCOcidMoG4eD5KRQWM88fW3bJkQqVOuSKqgamtrMWXKFLzKLzeYwAcffIBVq1bhk08+wfHjxxEUFIS4uDhUVlZKKCmjOaKj9fd8/f3vNCJmejpw/jzw6ad0pHTqFH2/Y0e6K17OvbIzsnw5MH48Td+9Czz+OHWOPXGChvF9/XW635KPgDBpkqDU5IykR58vW7YMALDZxOA1hBCsWbMGS5YswVON4fw+//xzBAYGYtu2bXjllVeafKampgY1NTW615rG41C1Wi20/BpqM/DvG8vnSEhRphkzAI1GgTffVIAQDvv2Afv2Nc3XqRNBWlodgoKE5WtrwOrJNLZtA6ZMccMPPyhQX0/tUYZsUuPHN+CLL+rR0GCaUd0UzCmPOWXmCJH+KMDNmzdj7ty5uHPnTov5rly5gu7du+PkyZMIDw/XXZ84cSLatm2Lzw2Ee1y6dKlOEYrZtm0bfHx8LJadIXDyZADWrRuIW7eafq9RUdfx6qunoFLV2kEyBk99PfCf//TC7t09UFur79/h6VmHp5++hMmTL+sOA7UH9+7dw7Rp01BRUQE/I2ePSTqCMpfSRnfYwAeOkggMDERhM+vcixYtQlJSku61RqNBSEgI1Gq10cJrtVpkZGQgLi4OSnsdPm9lpCxTQgLw5pvAN9/UISuLQ1UVhy5dCH7/+waEhz8C4HGrPo+H1ZN5TJgAlJQ0YMcO4NQpDgoFEB5OMGkSQVBQDwA9rPo8wLzy8LMcUzBbQTU3YhFz/PhxREZGmntrHdwDa9OEkCbXeDw9PeFpYAORUqk0ueLNyesoSFUmpZIGNHvuOfFV23hisnoync6d6UqqPtLXkynlMae8Ziuo1157Dc8YCVjcpUsXc28LAAgKCgJAR1LBwcG66zdv3mwyqmIwGM6P2QrK398f/v7+UsiCrl27IigoCBkZGTobVG1tLQ4ePIj3339fkmcyGAz5IqmprKioCPn5+SgqKkJ9fT3y8/ORn5+PqqoqXZ6wsDDsbgyuzHEc5s6dixUrVmD37t04e/YsZsyYAR8fH0yTW6AaBoMhOZIayd966y29lTd+VHTgwAGMbAwQdPHiRVRUVOjyzJ8/H/fv38fs2bNRXl6OoUOHIj09Hb4mnlXEL0qaYojTarW4d+8eNBqN09g2WJkcA2crkznl4X+bpjgQ2MTNwJb88ssvCAkJsbcYDAbDCMXFxejUqVOLeZxOQTU0NOD69evw9fVtduWPh3dJKC4uNuqS4CiwMjkGzlYmc8pDCEFlZSU6dOgAhRGHLFn5QVkDhUJhVCs/iJ+fn1M0EjGsTI6Bs5XJ1PKoVCqT7seiGTAYDNnCFBSDwZAtLq2gPD098fbbbxv0RHdUWJkcA2crk1TlcTojOYPBcB5cegTFYDDkDVNQDAZDtjAFxWAwZAtTUAwGQ7YwBcVgMGSLyykoZzxppry8HImJiVCpVFCpVEhMTDQaXnnGjBngOE7vLyoqyjYCG2Dt2rXo2rUrvLy8EBERgaysrBbzHzx4EBEREfDy8kK3bt2wXnz2kgwwpzyZmZlN6oLjOFy4cMGGErfMoUOHMGHCBHTo0AEcx2HPnj1GP2ONOnI5BeWMJ81MmzYN+fn5SEtLQ1paGvLz85GYmGj0c+PGjUNJSYnuLzU11QbSNmX79u2YO3culixZgry8PMTExCA+Ph5FRUUG81+9ehUJCQmIiYlBXl4eFi9ejDlz5mDnzp02ltww5paH5+LFi3r10aOH9UPztpa7d+9i4MCB+OSTT0zKb7U6Ii7Kpk2biEqlMpqvoaGBBAUFkffee093rbq6mqhUKrJ+/XoJJTSN8+fPEwDkyJEjums5OTkEALlw4UKzn5s+fTqZOHGiDSQ0zpAhQ8isWbP0roWFhZGFCxcazD9//nwSFhamd+2VV14hUVFRksloDuaW58CBAwQAKS8vt4F0lgOA7N69u8U81qojlxtBmcvVq1dRWloKtVqtu+bp6YkRI0YgOzvbjpJRcnJyoFKpMHToUN21qKgoqFQqo/JlZmYiICAAPXv2xMyZM3Hz5k2pxW1CbW0tcnNz9b5fAFCr1c3Kn5OT0yT/2LFjceLECbsfTdWa8vCEh4cjODgYY8aMwYGWjgd2AKxVR0xBGaGlk2b49+xJaWkpAgICmlwPCAhoUb74+Hhs3boV+/fvx0cffYTjx49j9OjRemcM2oKysjLU19eb9f2WlpYazF9XV4eysjLJZDWF1pQnODgYn332GXbu3Ildu3ahV69eGDNmDA4dOmQLkSXBWnXkFOFW5HbSjDUwtUyGZAOMyzd16lRdul+/foiMjERoaChSUlJ0h6baEnO/X0P5DV23F+aUp1evXujVq5fudXR0NIqLi/Hhhx8iNjZWUjmlxBp15BQKyhlPmjG1TKdPn8aNGzeavHfr1i2z5AsODkZoaCguX75stqyW4O/vDzc3tyaji5a+36CgIIP53d3d0b59e8lkNYXWlMcQUVFR+PLLL60tns2wVh05hYJyxpNmTC1TdHQ0KioqcOzYMQwZMgQAcPToUVRUVGDYsGEmP+/27dsoLi7WU8K2wMPDAxEREcjIyMCkSZN01zMyMjBx4kSDn4mOjsZ3332ndy09PR2RkZF2j+/dmvIYIi8vz+Z1YU2sVkdmmdSdgMLCQpKXl0eWLVtGHnroIZKXl0fy8vJIZWWlLk+vXr3Irl27dK/fe+89olKpyK5du8iZM2fIs88+S4KDg4lGo7FHEZowbtw4MmDAAJKTk0NycnJI//79yfjx4/XyiMtUWVlJ/vKXv5Ds7Gxy9epVcuDAARIdHU06duxolzJ9/fXXRKlUkuTkZHL+/Hkyd+5c0qZNG3Lt2jVCCCELFy4kiYmJuvxXrlwhPj4+5I033iDnz58nycnJRKlUkh07dthcdkOYW57Vq1eT3bt3k0uXLpGzZ8+ShQsXEgBk586d9ipCEyorK3W/FQBk1apVJC8vjxQWFhJCpKsjl1NQ06dPJwCa/B04cECXBwDZtGmT7nVDQwN5++23SVBQEPH09CSxsbHkzJkzthe+GW7fvk2ee+454uvrS3x9fclzzz3XZMlaXKZ79+4RtVpNHnnkEaJUKknnzp3J9OnTSVFRke2Fb+TTTz8loaGhxMPDgwwePJgcPHhQ99706dPJiBEj9PJnZmaS8PBw4uHhQbp06ULWrVtnY4lbxpzyvP/++6R79+7Ey8uLtGvXjgwfPpykpKTYQerm4V0hHvybPn06IUS6OmLxoBgMhmxhbgYMBkO2MAXFYDBkC1NQDAZDtjAFxWAwZAtTUAwGQ7YwBcVgMGQLU1AMBkO2MAXFYDBkC1NQDAZDtjAFxWAwZAtTUAwGQ7b8P7yi52khC87kAAAAAElFTkSuQmCC"}}], "tabbable": null, "tooltip": null}}}, "version_major": 2, "version_minor": 0}</script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script crossorigin="anonymous" data-jupyter-widgets-cdn="https://cdn.jsdelivr.net/npm/" src="https://cdn.jsdelivr.net/npm/@jupyter-widgets/html-manager@1.0.6/dist/embed-amd.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'content/E3/T3. numpy_matplotlib';</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="4. Exploring Scipy and other python packages" href="../E4/T4.%20scipyetc.html" />
+    <link rel="prev" title="2 Introduction to python" href="../E2/T2.%20python_basics.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/logo.png" class="logo__image only-light" alt="Scientific Programming in Python - Home"/>
+    <script>document.write(`<img src="../../_static/logo.png" class="logo__image only-dark" alt="Scientific Programming in Python - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../intro.html">
+                    Scientific Programming in Python Course - University of Nottingham (PHYS4038 & AS1)
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Information about the course</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../info_course/overview.html">Overview of the course</a></li>
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../info_course/inclass_test.html">The in-class test</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../info_course/projects.html">Projects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../info_course/starter_projects.html">Starter materials / examples for projects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../info_course/assessment.html">Assessment details and criteria for PGT students</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../info_course/integrity.html">Academic integrity</a></li>
+
+
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Teaching Resources</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../E1/T1.%20python_setup.html">1. Python getting setup</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../E2/T2.%20python_basics.html">2 Introduction to python</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">3 Scientific Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../E4/T4.%20scipyetc.html">4. Exploring Scipy and other python packages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../E5/T5.%20pandas.html">5 Pandas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../E7/T7.%20OOP_python.html">7 Object Oriented Programming</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../E8/T8.%20learngit.html">8 Git and Github</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../E9/T9.%20testing_debugging_refactoring.html">9 Testing, Debugging and Refactoring</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fcontent/E3/T3. numpy_matplotlib.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/content/E3/T3. numpy_matplotlib.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>3 Scientific Python</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">3.1 Introduction</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#numpy">3.2 Numpy</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#warning-rows-and-columns-or-columns-and-rows"><em>Warning</em>: - rows and columns or columns and rows</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#numpy-provides-two-special-values">3.2.1 Numpy provides two special values:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#warning-np-nan-is-not-equal-to-np-nan"><em>Warning</em> - np.nan is not equal to np.nan</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#performing-calculations">3.2.2 Performing calculations</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#reading-and-writing-data-from-files">3.2.3 Reading and writing data from files:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#using-documentation">3.2.4 Using Documentation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-find-the-time-at-which-the-maximum-intensity-data-was-measured">3.2.5 Example - find the time at which the maximum intensity data was measured</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">3.2.5.1</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#intellisense-tab-completion-and-in-built-docs">3.2.5.2 Intellisense, tab completion and in-built docs</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#plotting-graphs-in-python">3.3 Plotting graphs in python</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matplotlib">3.3.1 Matplotlib</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#a-simple-line-plot">3.3.1.1 A simple line plot</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#a-simple-scatter-plot">3.3.1.2 A simple scatter plot</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#multiple-plots">3.3.2 Multiple plots</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#customising-plots">3.3.3 Customising plots</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#using-widgets">Using Widgets</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="scientific-python">
+<h1>3 Scientific Python<a class="headerlink" href="#scientific-python" title="Link to this heading">#</a></h1>
+<section id="introduction">
+<h2>3.1 Introduction<a class="headerlink" href="#introduction" title="Link to this heading">#</a></h2>
+<p>One of the main reasons why python is great is because it is supported by such a large community of people developing opensource (free) packages. A package is a collection of code that can be run using python and augments the capabilities of standard python. In fact, it is often very hard to come up with an idea for which there is not already a python package. Many of these packages are available and can be installed either via Conda or Pip which we discussed at the beginning of the course. In this set of lectures we will look at a particular set of packages which are specifically targeted at scientific computing / datascience.</p>
+<p>Whilst users interact with these packages using python code, many of the key datastructures and operations are really written in low-level languages like c or Fortran. As a result one can largely overcome one of the main limitations of python - its speed.</p>
+<img alt="Drawing" src="../../_images/scistack.png" />
+<p>The packages are related to one another:</p>
+<ul class="simple">
+<li><p>The foundational package is <code class="docutils literal notranslate"><span class="pre">Numpy</span></code> - this introduces arrays and matrices and a range of associated operations. Whilst they look quite similar to lists they are fundamentally different in their use of memory which makes them extremely fast. This also means, the items in a numpy array must be of the same type.</p></li>
+<li><p>Built on <code class="docutils literal notranslate"><span class="pre">Numpy</span></code> are a key plotting package <code class="docutils literal notranslate"><span class="pre">Matplotlib</span></code>, <code class="docutils literal notranslate"><span class="pre">Pandas</span></code> which enables one to efficiently work with tables of data and <code class="docutils literal notranslate"><span class="pre">SciPy</span></code> which contains many routines for fitting, solving equations and optimisation.</p></li>
+</ul>
+</section>
+<section id="numpy">
+<h2>3.2 Numpy<a class="headerlink" href="#numpy" title="Link to this heading">#</a></h2>
+<p>Numpy is the base package for all of the other packages mentioned above. It handles single or multi-dimensional arrays and provides functions to perform many common operations using fast c and Fortran code whilst giving us a nice simple python interface. To use numpy we must use its own special datatypes the most basic of which is a 1d array.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="n">my_1d_horizontal_array</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">])</span>    <span class="c1"># create a numpy array from a list</span>
+<span class="n">my_1d_vertical_array</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">],[</span><span class="mi">2</span><span class="p">],[</span><span class="mi">3</span><span class="p">],[</span><span class="mi">4</span><span class="p">],[</span><span class="mi">5</span><span class="p">]])</span>  <span class="c1"># create vertical array.</span>
+
+
+<span class="nb">print</span><span class="p">(</span><span class="n">my_1d_horizontal_array</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">my_1d_vertical_array</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">my_1d_horizontal_array</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1 2 3 4 5]
+[[1]
+ [2]
+ [3]
+ [4]
+ [5]]
+&lt;class &#39;numpy.int32&#39;&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<p>By default the values stored in these arrays are floats but we can save memory and specify the datatype. For example, it is common for images to be represented by arrays which have 8 bit integers (values ranging from 0 to 255).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_1d_horizontal_array</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">],</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">int8</span><span class="p">)</span>
+<span class="nb">type</span><span class="p">(</span><span class="n">my_1d_horizontal_array</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>numpy.int8
+</pre></div>
+</div>
+</div>
+</div>
+<p>We can also create multidimensional arrays</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_2d_array</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">],[</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">],[</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">],[</span><span class="mi">10</span><span class="p">,</span><span class="mi">11</span><span class="p">,</span><span class="mi">12</span><span class="p">]])</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;2d arrays&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">my_2d_array</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">my_2d_array</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>   <span class="c1"># Access row    equivalent to my_2d_array[0, :]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">my_2d_array</span><span class="p">[:,</span><span class="mi">0</span><span class="p">])</span> <span class="c1"># Access column</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">my_2d_array</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">2</span><span class="p">])</span>    <span class="c1">#Access value   my_2d_array[row, col]   </span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;shape=&#39;</span><span class="p">,</span><span class="n">np</span><span class="o">.</span><span class="n">shape</span><span class="p">(</span><span class="n">my_2d_array</span><span class="p">))</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">3d arrays&#39;</span><span class="p">)</span>
+<span class="n">my_3d_array</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">],[</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">]],[[</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">],[</span><span class="mi">9</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">11</span><span class="p">]]])</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">my_3d_array</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">my_3d_array</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;shape=&#39;</span><span class="p">,</span><span class="n">np</span><span class="o">.</span><span class="n">shape</span><span class="p">(</span><span class="n">my_3d_array</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2d arrays
+[[ 1  2  3]
+ [ 4  5  6]
+ [ 7  8  9]
+ [10 11 12]]
+[1 2 3]
+[ 1  4  7 10]
+3
+shape= (4, 3)
+
+3d arrays
+[[[ 0  1  2]
+  [ 3  4  5]]
+
+ [[ 6  7  8]
+  [ 9 10 11]]]
+5
+shape= (2, 2, 3)
+</pre></div>
+</div>
+</div>
+</div>
+<hr class="docutils" />
+<section id="warning-rows-and-columns-or-columns-and-rows">
+<h3><em>Warning</em>: - rows and columns or columns and rows<a class="headerlink" href="#warning-rows-and-columns-or-columns-and-rows" title="Link to this heading">#</a></h3>
+<p>Numpy arrays are accessed by their rows first, then columns, then depth and so on for higher dimensions. This is described as the axis where row=0, col=1, depth=2 etc. This can cause confusion when working with images (3d arrays) since other image processing modules often describe x or the column as the first number.</p>
+<hr class="docutils" />
+<p>Numpy arrays enable us to do arithmetic, matrix muliplication, linear algebra etc. The same indexing and slicing behaviour we observed for lists and tuples also applies to numpy arrays. However, numpy is a bit more restrictive:</p>
+<ul class="simple">
+<li><p>all values in an array must have the same type.</p></li>
+<li><p>Nested arrays have to have a consistent length.</p></li>
+</ul>
+<p>The advantage is that they are fast and that you can do things like select a column of data easily (see above).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">])</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="o">+</span><span class="n">b</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="o">+</span><span class="mi">3</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[2 4 6]
+[4 5 6]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">c</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">],[</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">]])</span>
+<span class="n">d</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">],[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">]])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">c</span><span class="o">*</span><span class="n">d</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[2 0]
+ [0 5]]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">c</span><span class="o">.</span><span class="n">T</span><span class="p">)</span>  <span class="c1"># Transpose of a matrix</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">det</span><span class="p">(</span><span class="n">c</span><span class="p">))</span> <span class="c1"># Determinant of a matrix</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">inv</span><span class="p">(</span><span class="n">c</span><span class="p">))</span> <span class="c1"># Inverse of a matrix</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[2 4]
+ [3 5]]
+-2.0
+[[-2.5  1.5]
+ [ 2.  -1. ]]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">initial_array</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">20</span><span class="p">,</span><span class="mi">21</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">initial_array</span><span class="p">)</span>
+<span class="n">third_value</span> <span class="o">=</span> <span class="n">initial_array</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>  <span class="c1">#   Note indexing starts at 0 so third item is at index 2</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">third_value</span><span class="p">)</span>
+<span class="n">sliced_array</span> <span class="o">=</span> <span class="n">initial_array</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">9</span><span class="p">:</span><span class="mi">2</span><span class="p">]</span>     <span class="c1"># Start at index 1, stop at index 9 (where 9 is not included) and take every other value in between.</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">sliced_array</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[ 0.  1.  2.  3.  4.  5.  6.  7.  8.  9. 10. 11. 12. 13. 14. 15. 16. 17.
+ 18. 19. 20.]
+2.0
+[1. 3. 5. 7.]
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="numpy-provides-two-special-values">
+<h3>3.2.1 Numpy provides two special values:<a class="headerlink" href="#numpy-provides-two-special-values" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">np.nan</span></code>    :      nan stands for Not A Number and is used to indicate invalid data</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">np.inf</span></code>    :      represents mathematical infinity</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="warning-np-nan-is-not-equal-to-np-nan">
+<h3><em>Warning</em> - np.nan is not equal to np.nan<a class="headerlink" href="#warning-np-nan-is-not-equal-to-np-nan" title="Link to this heading">#</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">nan</span> <span class="o">==</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span>
+</pre></div>
+</div>
+<p>One might think this should evaluate to <code class="docutils literal notranslate"><span class="pre">True</span></code> but it actually produces <code class="docutils literal notranslate"><span class="pre">False</span></code>. If you want to check if a value is a nan or inf use Numpy’s built in methods: <code class="docutils literal notranslate"><span class="pre">np.isnan()</span></code> and <code class="docutils literal notranslate"><span class="pre">np.isinf()</span></code></p>
+</section>
+<hr class="docutils" />
+<section id="performing-calculations">
+<h3>3.2.2 Performing calculations<a class="headerlink" href="#performing-calculations" title="Link to this heading">#</a></h3>
+<p>Numpy enables us to perform calculations on whole arrays at once. Whilst we can still loop through each index, Numpy intends us to use its builtin array methods. These come in two types:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>        <span class="n">new_array</span> <span class="o">=</span> <span class="n">array</span><span class="o">.</span><span class="n">method</span><span class="p">()</span>
+        <span class="n">np</span><span class="o">.</span><span class="n">method</span><span class="p">(</span><span class="n">array</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>For some methods only one of these formats exists, but sometimes both are possible. Check the documentation as often the second method modifies the existing array (ie has no return value).  In contrast the first method leaves the original array unchanged and produces an entirely new copy of the array with the method having been applied.</p>
+<p>Other methods may not return a complete array but a single value. For example, suppose we want to sum all the numbers in an array:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>        <span class="n">total</span> <span class="o">=</span> <span class="n">array</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+        <span class="n">total</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">array</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Despite both returning a value they are not always the same in terms of performance. Regardless either method will be much quicker than writing it yourself in python. To make the point here is me summing an array of numbers using a loop and then doing the same with array.sum() and finally np.sum(array)Look at the difference in time. A bit of thought can speed up your code a lot.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">num_values</span> <span class="o">=</span> <span class="mi">10000000</span>
+<span class="n">lots_of_numbers</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">num_values</span><span class="p">,</span> <span class="n">num_values</span><span class="p">)</span>    <span class="c1">#   create large number of consecutive values</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%time</span>
+<span class="c1"># Sum numbers using a loop</span>
+<span class="n">total</span><span class="o">=</span><span class="mi">0</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">num_values</span><span class="p">):</span>
+    <span class="n">total</span> <span class="o">+=</span> <span class="n">lots_of_numbers</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">total</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>50000000000038.51
+CPU times: total: 2.7 s
+Wall time: 2.72 s
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%time</span>
+<span class="c1">#Use builtin methods.</span>
+<span class="n">total</span> <span class="o">=</span> <span class="n">lots_of_numbers</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">total</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>50000000000000.08
+CPU times: total: 15.6 ms
+Wall time: 19 ms
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%time</span>
+<span class="n">total</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">lots_of_numbers</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">total</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>50000000000000.08
+CPU times: total: 31.2 ms
+Wall time: 20 ms
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="reading-and-writing-data-from-files">
+<h3>3.2.3 Reading and writing data from files:<a class="headerlink" href="#reading-and-writing-data-from-files" title="Link to this heading">#</a></h3>
+<p>Often numpy arrays will be populated with data stored in a file or alternatively the results calculated from that data will need to be stored again.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Read array from file</span>
+<span class="n">old_data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">loadtxt</span><span class="p">(</span><span class="s1">&#39;resources/textfiles/numerical_data.txt&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">old_data</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[0.43763659 0.30886399 0.77923026 0.95339834 0.15372851 0.71259856
+ 0.31177016 0.93333965 0.52173694 0.02331096 0.74909259 0.166828
+ 0.89000551 0.96823857 0.59876399 0.3527579  0.48324985 0.55538789
+ 0.2919381  0.85985251]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Write data to a file</span>
+<span class="n">data1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
+<span class="n">data2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
+<span class="n">np</span><span class="o">.</span><span class="n">savetxt</span><span class="p">(</span><span class="s1">&#39;resources/textfiles/data1.txt&#39;</span><span class="p">,</span> <span class="n">data1</span><span class="p">)</span>
+<span class="n">np</span><span class="o">.</span><span class="n">savetxt</span><span class="p">(</span><span class="s1">&#39;resources/textfiles/combined_data.txt&#39;</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">c_</span><span class="p">[</span><span class="n">data1</span><span class="p">,</span> <span class="n">data2</span><span class="p">])</span>  <span class="c1">#Puts two 1d arrays together. Open the text file and see how it is displayed</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="using-documentation">
+<h3>3.2.4 Using Documentation<a class="headerlink" href="#using-documentation" title="Link to this heading">#</a></h3>
+<p>Numpy like many significant python packages is enormous. There are literally thousands of functions designed to allow you to do all kinds of manipulations to data. Even if we spent several weeks working through its main sections what would that achieve? It is an impossible task to memorise how to use even a small subset of these functions. Plus this is just Numpy, there are loads of other useful python modules some which you may use a lot and some which you might use once in one project.</p>
+<p>A key skill as a programmer is to be able to know roughly what you are trying to achieve, find an appropriate python package, look up the documentation concerning a particular function and then to work out how to use it in your own code. Fortunately, for most mainstream scientific packages the documentation is very well written.</p>
+</section>
+<section id="example-find-the-time-at-which-the-maximum-intensity-data-was-measured">
+<h3>3.2.5 Example - find the time at which the maximum intensity data was measured<a class="headerlink" href="#example-find-the-time-at-which-the-maximum-intensity-data-was-measured" title="Link to this heading">#</a></h3>
+<p>Here is a quick example. Suppose I am running an experiment that measures a signal that changes in intensity over time. I want to work out at what time the intensity was highest. The data consists of an array of time values and an array of intensity values. It’s a fairly safe guess that numpy will have some functions to help me but I’m not sure exactly what I need. To solve this problem I need:</p>
+<ol class="arabic simple">
+<li><p>To find the maximum intensity</p></li>
+<li><p>Find the index in the intensity array at which this maximum value exists</p></li>
+<li><p>Use this index on the time array to find the time at which the maximum occurs</p></li>
+</ol>
+<p>We need to look at the documentation and find some tools to help</p>
+<hr class="docutils" />
+<section id="id1">
+<h4>3.2.5.1<a class="headerlink" href="#id1" title="Link to this heading">#</a></h4>
+<p>Before we try and look up the documentation its worth checking which version of Numpy we are using. From the terminal <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">list</span></code></p>
+<img alt="Drawing" src="../../_images/numpyversion.png" />
+<p>There are many versions and not every function will be backwards compatible, so we want to make sure the version number is similar. We are using v1.23 and google comes up with 1.25. It’s probably close enough but if things don’t seem to match double check. The further left the number is the more significant the changes will be.</p>
+<hr class="docutils" />
+<p>I therefore google <code class="docutils literal notranslate"><span class="pre">numpy</span></code> and <code class="docutils literal notranslate"><span class="pre">max</span></code>. It gives me a few options.</p>
+<img alt="Google Numpy Max" src="../../_images/googlenpmax.png" />
+<p>Follow this link to the docs for <a href=https://numpy.org/doc/stable/reference/generated/numpy.maximum.html>numpy.maximum</a></p>
+<p>At the top of the page is the function definition. The next bit has a description of what the function does: “Compare two arrays and return a new array containing the element-wise maxima”. This doesn’t sound like what we want to do so I move on.</p>
+<p>The next two links are <code class="docutils literal notranslate"><span class="pre">numpy.ndarray.max</span></code> and <code class="docutils literal notranslate"><span class="pre">numpy.max</span></code>. The first is telling you this is a method that operates on an array (i.e max_val = array.max()). The second is telling you this is a numpy function (i.e <code class="docutils literal notranslate"><span class="pre">max_val</span> <span class="pre">=</span> <span class="pre">np.max(array)</span></code>). <em>compare with the examples using numpy.sum above</em></p>
+<p><a href=https://numpy.org/doc/stable/reference/generated/numpy.max.html>numpy.max</a></p>
+<p>If we look at the numpy.max page we again see a function definition and a description</p>
+<img alt="Drawing" src="../../_images/npmax.png" />
+<p>This is close. It will find the maximum number. We could use this to solve the problem but always scroll down and look at the “See also” section, sometimes there is a function that does what you want more exactly.</p>
+<img alt="Drawing" src="../../_images/seealso.png" />
+<p>argmax  -   return the indices of the maximum values. This is exactly what we need.</p>
+<img alt="Drawing" src="../../_images/npargmax.png" />
+<p>Whilst different packages will look slightly differently, most good documentation will have a similar format. Once we get used to it we can find answers really quickly.</p>
+<p>The top gives us the quick function definition. This tells us how to use the function. We then get the parameters, which are described in more detail below. Notice some are positional arguments and others are keyword arguments. With keyword arguments, we only need to supply a value if we want to change the default behaviour. There is a section that explains the values returned from a function. Both the parameters and returns tell us what datatype to use or expect. If we are still unsure how to use it the documentation has some simple examples demonstrating its use.</p>
+<img alt="Drawing" src="../../_images/npexamples.png" />
+<p>Webpages like <a href="https://stackoverflow.com/">stackoverflow</a>, tools like chatGpt can be useful, but checking the docs for your version is better.</p>
+</section>
+<section id="intellisense-tab-completion-and-in-built-docs">
+<h4>3.2.5.2 Intellisense, tab completion and in-built docs<a class="headerlink" href="#intellisense-tab-completion-and-in-built-docs" title="Link to this heading">#</a></h4>
+<p>Over time you’ll learn the names of different functions, but you’ll never remember it all. However, it becomes frustrating to have to look up the parameters, types etc every time. This is where a modern IDE comes in. In a new code cell, start typing <code class="docutils literal notranslate"><span class="pre">np.m</span></code>, you’ll notice that vscode starts suggesting options to you which you can choose (intellisense). When you write an opening bracket pause (<code class="docutils literal notranslate"><span class="pre">np.max(</span></code>). The documentation which we’ve just been looking at should then pop up. You can scroll through it directly in vscode.</p>
+<img alt="Drawing" src="../../_images/docs.png" />
+</section>
+</section>
+</section>
+<section id="plotting-graphs-in-python">
+<h2>3.3 Plotting graphs in python<a class="headerlink" href="#plotting-graphs-in-python" title="Link to this heading">#</a></h2>
+<p>Visualising your data is a key part of science. Python has lots of different libraries for producing graphs. Some are general, some are more specialist. I list a few really popular ones:</p>
+<p><a href = https://matplotlib.org/ > Matplotlib </a>     -   The place everyone should start, used very widely</p>
+<p><a href = https://seaborn.pydata.org> Seaborn </a>      -   Built on top of Matplotlib to make it easier to produce nice looking plots</p>
+<p><a href = https://plotly.com/python/getting-started> Plotly </a>  - Another framework, easier to produce interactivity.</p>
+<p><a href = https://bokeh.org > Bokeh </a>    -   Interactive Web ready plots</p>
+<p><a href = https://veusz.github.io> Veusz </a>   -   Gui based plotting package but completely scriptable in python</p>
+<p><a href = https://www.pyqtgraph.org/ > PyQt Graph </a>  -   Links to the Gui framework PyQt</p>
+<p><a href = https://gleam.run/documentation/ > Gleam </a>     -   Interactive Web apps</p>
+<p><a href = https://github.com/andrea-cuttone/geoplotlib> Geoplotlib </a> -  Plotting geographical data</p>
+<section id="matplotlib">
+<h3>3.3.1 Matplotlib<a class="headerlink" href="#matplotlib" title="Link to this heading">#</a></h3>
+<p>For the purposes of these notes we will solely focus on Matplotlib, since it is probably the most widely used. Matplotlib creates both figures and axes. A figure is the container into which a plot will go. That container may hold one or more sets of axes.</p>
+<section id="a-simple-line-plot">
+<h4>3.3.1.1 A simple line plot<a class="headerlink" href="#a-simple-line-plot" title="Link to this heading">#</a></h4>
+<p>Below we will create a sin wave with numpy and plot a quick line chart. Just as Numpy is almost always imported using a standard alias, Matplotlib is often imported using a standard pattern. This is isn’t imperative but you’ll confuse people if you change this.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="n">k</span> <span class="o">=</span> <span class="mi">1</span><span class="o">/</span><span class="mi">4</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">6</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span><span class="mi">100</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">k</span><span class="o">*</span><span class="n">x</span><span class="p">)</span>
+
+<span class="c1">#Function driven</span>
+<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
+<span class="n">ax</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">()</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;y&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Example line plot&#39;</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="s1">&#39;o-&#39;</span><span class="p">)</span> <span class="c1">#   The first two params are our data, the final optional parameter specifes what our line / symbols should look like.</span>
+<span class="c1">#plt.show()     #If you are running this code in the usual editor rather than a Jupyter notebook you need to also write plt.show()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x1dafbd9ee00&gt;]
+</pre></div>
+</div>
+<img alt="../../_images/30fa85432be26ad078a299e97121a6a701a271e6c8bb4ce272fa3f6bc713e72c.png" src="../../_images/30fa85432be26ad078a299e97121a6a701a271e6c8bb4ce272fa3f6bc713e72c.png" />
+</div>
+</div>
+</section>
+<section id="a-simple-scatter-plot">
+<h4>3.3.1.2 A simple scatter plot<a class="headerlink" href="#a-simple-scatter-plot" title="Link to this heading">#</a></h4>
+<p>There are two slightly different syntaxes in Matplotlib. One uses functions drawn from plt and the other operates on the axes objects. The line plot above shows the second approach whereas here we show a scatter plot which uses the first.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="c1"># Data</span>
+<span class="n">x</span> <span class="o">=</span> <span class="mi">10</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">=</span> <span class="mi">10</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+
+<span class="c1"># Create a scatter plot</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+
+<span class="c1"># Add labels and title</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;X data&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Y data&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Scatter Plot&#39;</span><span class="p">)</span>
+
+<span class="c1"># Display the plot</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/de899b6aa7caa916f179dbb7406ebbaeab213e58b7efd363ca6eefb17e5b19e5.png" src="../../_images/de899b6aa7caa916f179dbb7406ebbaeab213e58b7efd363ca6eefb17e5b19e5.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#### 3.3.1.3 A simple histogram</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="n">heights</span> <span class="o">=</span> <span class="mf">1.5</span><span class="o">+</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">heights</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="mi">8</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Height&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Frequency&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Height distribution&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/9e2a6d3fa62379e47b6067906b6b62c1743547169ac183032a8c15e56e16fdf4.png" src="../../_images/9e2a6d3fa62379e47b6067906b6b62c1743547169ac183032a8c15e56e16fdf4.png" />
+</div>
+</div>
+</section>
+</section>
+<section id="multiple-plots">
+<h3>3.3.2 Multiple plots<a class="headerlink" href="#multiple-plots" title="Link to this heading">#</a></h3>
+<p>We can put multiple plots on the same figure.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="n">x</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">4</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span><span class="mi">50</span><span class="p">)</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">axes</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>   <span class="c1">#   rows, columns</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">[::</span><span class="mi">2</span><span class="p">],</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">x</span><span class="p">[::</span><span class="mi">2</span><span class="p">]),</span> <span class="s1">&#39;gx--&#39;</span><span class="p">)</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="s1">&#39;ro&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x1dafbe56590&gt;]
+</pre></div>
+</div>
+<img alt="../../_images/8f08cea9598da9152bb470f324f1a37b7195dbcf89e45100a24d19afeda0e522.png" src="../../_images/8f08cea9598da9152bb470f324f1a37b7195dbcf89e45100a24d19afeda0e522.png" />
+</div>
+</div>
+</section>
+<section id="customising-plots">
+<h3>3.3.3 Customising plots<a class="headerlink" href="#customising-plots" title="Link to this heading">#</a></h3>
+<p>If all you want to do is plot some data, the above plots are probably fine. You can do a lot more with Matplotlib. However, before you do, it is worth asking yourself the question if this is the most efficient way to get the job done. Matplotlib enables you to customise absolutely everything and produce very sophisticated plots. However, this usually takes a lot of time. If your aim is to produce a one off, really nice looking plot for a publication or report you might be better off using a dedicated graph producing software. <a href = https://veusz.github.io> Veusz </a> (mentioned above) is free to download, entirely gui based and will allow you to customise things very nicely in a very short amount of time.</p>
+<p>You can however customise pretty much everything in a Matplotlib plot. This helpful graphic tells you what different features are called so you can look them up.</p>
+<img alt="Drawing" src="../../_images/matplotlib.png" />
+<p>Another very useful approach if you want to create a more complicated plot is to look at the <a href="https://matplotlib.org/stable/gallery/index.html">Matplotlib graph gallery</a>, where example plots come with the accompanying code. There you can understand how to alter linestyles, axes appearance and much more. This also demonstrates other more advanced plot types: contours, heatmaps etc some of which we’ll explore in the exercises.</p>
+</section>
+<section id="using-widgets">
+<h3>Using Widgets<a class="headerlink" href="#using-widgets" title="Link to this heading">#</a></h3>
+<p>Sometimes it is helpful to be able to interact with your data interactively. There are a number of ways to do this. If you are building more complicated programs you may want to use a gui framework such as <a href="https://docs.python.org/3/library/tkinter.html">Tkinter</a> or <a href="https://zetcode.com/gui/pyqt5/">PyQT5</a>. Matplotlib also provides its own <a href="https://matplotlib.org/stable/gallery/widgets/index.html">widgets</a> which are quick to setup. In my experience these work well when running a python script but there are a lot of compatibility challenges when using these in Jupyter Notebooks for dataanalysis. If you are interested in exploring these I recommend reading up about <a href="https://matplotlib.org/ipympl/"><code class="docutils literal notranslate"><span class="pre">ipympl</span></code></a>.</p>
+<p>In the context of Jupyter Notebooks (or IPython) the quickest way to build simple interactive elements is <a href="https://ipywidgets.readthedocs.io/en/stable/examples/Using%20Interact.html">IPyWidgets</a>. We will look at some simple use cases.</p>
+<p>You can install this library from Conda:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">    conda install ipywidgets</span>
+</pre></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">ipywidgets</span> <span class="k">as</span> <span class="nn">widgets</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="o">%</span><span class="k">matplotlib</span> inline
+</pre></div>
+</div>
+</div>
+</div>
+<p>The simplest way to use IPyWidgets is to use the <code class="docutils literal notranslate"><span class="pre">interact</span></code> function. This takes what is called a callback function as the first argument. This is a function that is run every time a widget is updated. Notice this has not got brackets after it. This is because we don’t want to call it. The interact function will call this function every time a change is made to a widget. We also supply options that indicate what type of widget we want.</p>
+<p>Here is a really simple example:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Here is our callback function which must have a default argument</span>
+<span class="k">def</span> <span class="nf">what_colour</span><span class="p">(</span><span class="n">colour</span><span class="o">=</span><span class="s1">&#39;blue&#39;</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">colour</span><span class="p">)</span>
+
+<span class="c1"># Here we supply the call back function and a list of options for a dropdown box.</span>
+<span class="n">widgets</span><span class="o">.</span><span class="n">interact</span><span class="p">(</span><span class="n">what_colour</span><span class="p">,</span> <span class="n">colour</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;blue&#39;</span><span class="p">,</span><span class="s1">&#39;red&#39;</span><span class="p">,</span><span class="s1">&#39;green&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<script type="application/vnd.jupyter.widget-view+json">{"version_major": 2, "version_minor": 0, "model_id": "bf3cbf633130411a95d2eb2673f6bf24"}</script><div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;function __main__.what_colour(colour=&#39;blue&#39;)&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># This example makes a slider that adjusts a graph</span>
+<span class="k">def</span> <span class="nf">plot_sin</span><span class="p">(</span><span class="n">freq</span><span class="o">=</span><span class="mf">1.5</span><span class="p">):</span>
+    <span class="n">xlim</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">]</span>
+    <span class="n">t</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">xlim</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">xlim</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="mi">1000</span><span class="p">)</span>
+    <span class="n">f</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="n">freq</span> <span class="o">*</span> <span class="n">t</span><span class="p">),</span>
+            <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">)</span>
+
+<span class="n">widgets</span><span class="o">.</span><span class="n">interact</span><span class="p">(</span><span class="n">plot_sin</span><span class="p">,</span> <span class="n">freq</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mf">3.0</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<script type="application/vnd.jupyter.widget-view+json">{"version_major": 2, "version_minor": 0, "model_id": "2b4b16f11d694e4a9af571d0a3658a4d"}</script><div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;function __main__.plot_sin(freq=1.5)&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># You can also make widgets independently.</span>
+<span class="n">range_slider</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">FloatRangeSlider</span><span class="p">(</span>
+    <span class="n">value</span><span class="o">=</span><span class="p">[</span><span class="o">-</span><span class="mf">1.</span><span class="p">,</span> <span class="o">+</span><span class="mf">1.</span><span class="p">],</span>
+    <span class="nb">min</span><span class="o">=-</span><span class="mf">5.</span><span class="p">,</span> <span class="nb">max</span><span class="o">=+</span><span class="mf">5.</span><span class="p">,</span> <span class="n">step</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s1">&#39;xlim:&#39;</span><span class="p">,</span>
+    <span class="n">readout_format</span><span class="o">=</span><span class="s1">&#39;.1f&#39;</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="n">range_slider</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<script type="application/vnd.jupyter.widget-view+json">{"version_major": 2, "version_minor": 0, "model_id": "a877a4cbf51e45fab7b1628254834f5d"}</script></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#And then access their value.</span>
+<span class="n">range_slider</span><span class="o">.</span><span class="n">value</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(-1.0, 1.0)
+</pre></div>
+</div>
+</div>
+</div>
+<p>IPyWidgets use the datatype of your input arguments to determine what sort of widget to create:</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Keyword arguments</p></th>
+<th class="head"><p>Widget</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">True</span></code> or <code class="docutils literal notranslate"><span class="pre">False</span></code></p></td>
+<td><p>Checkbox</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">A</span> <span class="pre">String</span></code></p></td>
+<td><p>Textbox</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">integer</span></code> or <code class="docutils literal notranslate"><span class="pre">(min,</span> <span class="pre">max)</span></code> or <code class="docutils literal notranslate"><span class="pre">(min,</span> <span class="pre">max,</span> <span class="pre">step)</span></code></p></td>
+<td><p>Integer Slider</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">float</span></code>   or <code class="docutils literal notranslate"><span class="pre">(min,max)</span></code> or <code class="docutils literal notranslate"><span class="pre">(min,</span> <span class="pre">max,</span> <span class="pre">step)</span></code></p></td>
+<td><p>Float Slider</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">['Option1','Option2']</span></code> or <code class="docutils literal notranslate"><span class="pre">[('one':1),('two':2)]</span></code></p></td>
+<td><p>Dropdown</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>We can also use a shorthand called a decorator to indicate that a function should contain interactive elements. To do this we add <code class="docutils literal notranslate"><span class="pre">&#64;widgets.interact(arguments)</span></code> above the callback function.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nd">@widgets</span><span class="o">.</span><span class="n">interact</span><span class="p">(</span><span class="n">freq</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">),</span> <span class="n">color</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;blue&#39;</span><span class="p">,</span> <span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="s1">&#39;green&#39;</span><span class="p">],</span> <span class="n">lw</span><span class="o">=</span><span class="p">(</span><span class="mf">1.</span><span class="p">,</span> <span class="mf">10.</span><span class="p">))</span>
+<span class="k">def</span> <span class="nf">plot</span><span class="p">(</span><span class="n">freq</span><span class="o">=</span><span class="mf">1.</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;blue&#39;</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">grid</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+    <span class="n">t</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mf">1.</span><span class="p">,</span> <span class="o">+</span><span class="mf">1.</span><span class="p">,</span> <span class="mi">1000</span><span class="p">)</span>
+    <span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="n">freq</span> <span class="o">*</span> <span class="n">t</span><span class="p">),</span>
+            <span class="n">lw</span><span class="o">=</span><span class="n">lw</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">color</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="n">grid</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<script type="application/vnd.jupyter.widget-view+json">{"version_major": 2, "version_minor": 0, "model_id": "33086c6edc024238a9b152aebfc40e7d"}</script></div>
+</div>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./content\E3"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../E2/T2.%20python_basics.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">2 Introduction to python</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../E4/T4.%20scipyetc.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">4. Exploring Scipy and other python packages</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">3.1 Introduction</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#numpy">3.2 Numpy</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#warning-rows-and-columns-or-columns-and-rows"><em>Warning</em>: - rows and columns or columns and rows</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#numpy-provides-two-special-values">3.2.1 Numpy provides two special values:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#warning-np-nan-is-not-equal-to-np-nan"><em>Warning</em> - np.nan is not equal to np.nan</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#performing-calculations">3.2.2 Performing calculations</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#reading-and-writing-data-from-files">3.2.3 Reading and writing data from files:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#using-documentation">3.2.4 Using Documentation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-find-the-time-at-which-the-maximum-intensity-data-was-measured">3.2.5 Example - find the time at which the maximum intensity data was measured</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">3.2.5.1</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#intellisense-tab-completion-and-in-built-docs">3.2.5.2 Intellisense, tab completion and in-built docs</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#plotting-graphs-in-python">3.3 Plotting graphs in python</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matplotlib">3.3.1 Matplotlib</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#a-simple-line-plot">3.3.1.1 A simple line plot</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#a-simple-scatter-plot">3.3.1.2 A simple scatter plot</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#multiple-plots">3.3.2 Multiple plots</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#customising-plots">3.3.3 Customising plots</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#using-widgets">Using Widgets</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Dr Mike Smith
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

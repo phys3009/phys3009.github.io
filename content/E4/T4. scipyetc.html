@@ -1,0 +1,957 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>4. Exploring Scipy and other python packages &#8212; Scientific Programming in Python</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=87e54e7c" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'content/E4/T4. scipyetc';</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="5 Pandas" href="../E5/T5.%20pandas.html" />
+    <link rel="prev" title="3 Scientific Python" href="../E3/T3.%20numpy_matplotlib.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/logo.png" class="logo__image only-light" alt="Scientific Programming in Python - Home"/>
+    <script>document.write(`<img src="../../_static/logo.png" class="logo__image only-dark" alt="Scientific Programming in Python - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../intro.html">
+                    Scientific Programming in Python Course - University of Nottingham (PHYS4038 & AS1)
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Information about the course</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../info_course/overview.html">Overview of the course</a></li>
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../info_course/inclass_test.html">The in-class test</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../info_course/projects.html">Projects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../info_course/starter_projects.html">Starter materials / examples for projects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../info_course/assessment.html">Assessment details and criteria for PGT students</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../info_course/integrity.html">Academic integrity</a></li>
+
+
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Teaching Resources</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../E1/T1.%20python_setup.html">1. Python getting setup</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../E2/T2.%20python_basics.html">2 Introduction to python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../E3/T3.%20numpy_matplotlib.html">3 Scientific Python</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">4. Exploring Scipy and other python packages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../E5/T5.%20pandas.html">5 Pandas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../E7/T7.%20OOP_python.html">7 Object Oriented Programming</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../E8/T8.%20learngit.html">8 Git and Github</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../E9/T9.%20testing_debugging_refactoring.html">9 Testing, Debugging and Refactoring</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fcontent/E4/T4. scipyetc.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/content/E4/T4. scipyetc.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>4. Exploring Scipy and other python packages</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#scipy">4.1 Scipy</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-1-curve-fitting-with-scipy">4.1.1 Example 1 - Curve fitting with Scipy</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#a-minimal-working-example">A minimal working example</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-2-numerical-integration">4.1.2 Example 2 - Numerical integration</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#image-processing-with-scikit-image">4.2 Image Processing with scikit-image</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#using-requests-package-and-nasa-api-to-grab-images-from-nasa-server">4.3 Using requests package and NASA API to grab images from NASA server</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gui-frameworks">4.5 GUI frameworks</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="exploring-scipy-and-other-python-packages">
+<h1>4. Exploring Scipy and other python packages<a class="headerlink" href="#exploring-scipy-and-other-python-packages" title="Link to this heading">#</a></h1>
+<p>There are things which, as scientists, we are all likely to need to do at some point which we haven’t covered yet e.g. fitting a function to some data. However, the challenge with a module like this is that one could spend forever looking in depth at different python packages of which there are quadrillions! The problem with this is twofold:</p>
+<ul class="simple">
+<li><p>You’ll probably use very little of the small subset of things we look at</p></li>
+<li><p>You probably will need some things that we don’t look at!</p></li>
+</ul>
+<p>Up to this point we’ve tried to provide you with a good grounding in fundamental concepts in both python and foundational packages like numpy, matplotlib. This grounding means you can understand good documentation and therefore can take advantage of packages which you’ve never used before. Ultimately becoming a good programmer is about using what you do know to teach yourself new things as and when you need them. This isn’t always easy but it is ultimately about practise (programming is a skill).</p>
+<section id="scipy">
+<h2>4.1 Scipy<a class="headerlink" href="#scipy" title="Link to this heading">#</a></h2>
+<p>Perhaps the most famous package we have yet to cover is <a href="https://docs.scipy.org/doc/scipy/">scipy</a>. This has a wide range of scientific and numerical computing tools with specialist modules which cover different areas:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>    scipy.integrate: Integration techniques and solvers for ordinary differential equations.
+    scipy.optimize: Optimization algorithms for finding the minimum or maximum of functions.
+    scipy.stats: Statistical distributions, hypothesis testing, and descriptive statistics.
+    scipy.linalg: Linear algebra operations and matrix decompositions.
+    scipy.signal: Signal processing tools such as filtering, spectral analysis, and wavelet transforms.
+    scipy.sparse: Sparse matrix data structures and linear algebra operations on sparse matrices.
+    scipy.interpolate: Interpolation techniques for 1-D and N-D data.
+    scipy.special: Special mathematical functions like Bessel functions, gamma functions, etc.
+</pre></div>
+</div>
+<p>In the case of SciPy there is also a very useful resource called the <a href="https://scipy-cookbook.readthedocs.io/">SciPy Cookbook</a> which gives many examples of solving common scientific problems using Scipy and related libraries. I recommend at this point having a quick flick through this page to get a sense of the range of problems scipy can be used to solve.</p>
+<p>We will cover two common tasks (curve fitting, numeical integration) but leave you more exercises. In solving these problems we will try to explain the process we go through in understanding how to use the packages that are available.</p>
+<section id="example-1-curve-fitting-with-scipy">
+<h3>4.1.1 Example 1 - Curve fitting with Scipy<a class="headerlink" href="#example-1-curve-fitting-with-scipy" title="Link to this heading">#</a></h3>
+<p>Suppose our experiment produces a noisy periodic signal which our model suggests should be a 2Hz sin wave centred around y=0 but with unknown amplitude or phase.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="c1"># Here we generate the &quot;noisy sin wave&quot; but the challenge normally would be to work out what these numbers were from the raw data.</span>
+<span class="n">amplitude</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">phase</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">/</span><span class="mi">3</span>
+<span class="n">freq</span><span class="o">=</span><span class="mi">2</span>
+<span class="n">numpts</span><span class="o">=</span><span class="mi">1000</span>
+<span class="n">noise</span><span class="o">=</span><span class="mi">2</span>
+<span class="n">tdata</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="n">numpts</span><span class="p">)</span>
+<span class="n">experimental_data</span> <span class="o">=</span> <span class="n">amplitude</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">*</span><span class="n">freq</span><span class="o">*</span><span class="n">tdata</span> <span class="o">+</span> <span class="n">phase</span><span class="p">)</span> <span class="o">+</span> <span class="n">noise</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mf">0.5</span><span class="p">,</span><span class="n">numpts</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">tdata</span><span class="p">,</span> <span class="n">experimental_data</span><span class="p">,</span> <span class="s1">&#39;rx&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Time (s)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Signal&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0, 0.5, &#39;Signal&#39;)
+</pre></div>
+</div>
+<img alt="../../_images/ce25e7f10d4ef9ac150b86068a1e2ecfb3d48eea05bf42f63fe25c2881186654.png" src="../../_images/ce25e7f10d4ef9ac150b86068a1e2ecfb3d48eea05bf42f63fe25c2881186654.png" />
+</div>
+</div>
+<p>One way to go about this is to try and fit a model of a sine wave to the data and extract the fit parameters to find out what the phase and amplitude are. It might take a little google search but I quickly find a function in scipy Optimize toolbox which seems appropriate:</p>
+<p><a href = "https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.curve_fit.html">Curve fit</a></p>
+<p>Have a look at the docs. What stands out? Here were my observations:</p>
+<ul class="simple">
+<li><p>Assumes ydata=f(xdata, *params) + eps</p></li>
+</ul>
+<p>The equation I want to fit has to have this format. Ours does. That’s not always the case. If I had a circle which was R^2 = x^2 + y^2 I’d need to rearrange or possibly look at another function. I’m not really sure what eps stands for.</p>
+<ul class="simple">
+<li><p>The first parameter is a function, so I will need to send a function to this function. This function has to have a format which takes xdata as first input and then the coefficients as the other inputs. If I scroll down to look at the first example this confirms what I was thinking.</p></li>
+<li><p>I need to supply x and y data to be fit</p></li>
+<li><p>p0 means I need to supply initial guesses for the coefficients in my function. This is an optional argument so I might get away without supplying any as a first attempt.</p></li>
+<li><p>It returns two things. <code class="docutils literal notranslate"><span class="pre">popt</span></code> is the optimal values of the coefficients which is what I want. <code class="docutils literal notranslate"><span class="pre">pcov</span></code> I’m not interested in at the moment.</p></li>
+</ul>
+<section id="a-minimal-working-example">
+<h4>A minimal working example<a class="headerlink" href="#a-minimal-working-example" title="Link to this heading">#</a></h4>
+<p>Next I wouldn’t try to solve my problem which might be a bit complicated, but I’d just try and get a feel for using this library with the simplest possible setup. The simplest function I could fit is a straight line. I therefore make up some test data that forms a perfect straight line.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">scipy.optimize</span> <span class="kn">import</span> <span class="n">curve_fit</span>
+
+<span class="n">xdata</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">])</span>
+<span class="n">ydata</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">])</span>
+
+<span class="k">def</span> <span class="nf">straight_line</span><span class="p">(</span><span class="n">xdata</span><span class="p">,</span> <span class="n">m</span><span class="p">,</span> <span class="n">c</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Equation straight line y=mx+c&quot;&quot;&quot;</span>
+    <span class="n">ydata</span> <span class="o">=</span> <span class="n">m</span><span class="o">*</span><span class="n">xdata</span><span class="o">+</span><span class="n">c</span>
+    <span class="k">return</span> <span class="n">ydata</span>
+
+<span class="n">popt</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">curve_fit</span><span class="p">(</span><span class="n">straight_line</span><span class="p">,</span> <span class="n">xdata</span><span class="p">,</span> <span class="n">ydata</span><span class="p">)</span>    <span class="c1">#   Note _ receives pcov because not interested</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">popt</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[ 1.0000000e+00 -2.1808451e-12]
+</pre></div>
+</div>
+</div>
+</div>
+<p>It returns a gradient of 1 and an intercept that is very close to zero and only differs due to finite precision. Now we are confident using this function lets build the model we <em>are</em> interested in.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">scipy.optimize</span> <span class="kn">import</span> <span class="n">curve_fit</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="k">def</span> <span class="nf">general_sinwave</span><span class="p">(</span><span class="n">tdata</span><span class="p">,</span> <span class="n">amplitude</span><span class="p">,</span> <span class="n">freq</span><span class="p">,</span> <span class="n">phase</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;A function to generate a general sinwave centred about y=0&quot;&quot;&quot;</span>
+    <span class="n">ydata</span> <span class="o">=</span> <span class="n">amplitude</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">*</span><span class="n">freq</span><span class="o">*</span><span class="n">tdata</span> <span class="o">+</span> <span class="n">phase</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">ydata</span>
+
+<span class="c1"># Note I&#39;m not interested in pcov so I assign it to _ to make this transparent</span>
+<span class="n">popt</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">curve_fit</span><span class="p">(</span><span class="n">general_sinwave</span><span class="p">,</span> <span class="n">tdata</span><span class="p">,</span> <span class="n">experimental_data</span><span class="p">)</span>
+
+<span class="n">amplitude</span><span class="p">,</span> <span class="n">freq</span><span class="p">,</span> <span class="n">phase</span> <span class="o">=</span> <span class="n">popt</span>   <span class="c1">#   Use unpacking</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">tdata</span><span class="p">,</span> <span class="n">experimental_data</span><span class="p">,</span> <span class="s1">&#39;rx&#39;</span><span class="p">)</span>    <span class="c1">#   The &quot;experiment data&quot;</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">tdata</span><span class="p">,</span> <span class="n">general_sinwave</span><span class="p">(</span><span class="n">tdata</span><span class="p">,</span> <span class="n">amplitude</span><span class="p">,</span> <span class="n">freq</span><span class="p">,</span> <span class="n">phase</span><span class="p">),</span><span class="s1">&#39;b-&#39;</span><span class="p">)</span>    <span class="c1">#   The fit to the data</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x13e410d0130&gt;]
+</pre></div>
+</div>
+<img alt="../../_images/b57cb150061efceebd37f8f07d0a5f4453a07242dabc29b4a85b002551bac89a.png" src="../../_images/b57cb150061efceebd37f8f07d0a5f4453a07242dabc29b4a85b002551bac89a.png" />
+</div>
+</div>
+<p>oh dear! Not great. Go back to the docs. The initial guess <code class="docutils literal notranslate"><span class="pre">p0</span></code> was originally <code class="docutils literal notranslate"><span class="pre">None</span></code> but let’s try and estimate those things we know. We know the frequency is going to be 2Hz. Looking at the docs there is also a parameter <code class="docutils literal notranslate"><span class="pre">bounds</span></code> which allows me to specify the min and max values a param can take. The format is a 2 tuple of arrays. To double check I get this format right I have a look at the examples.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">popt</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">curve_fit</span><span class="p">(</span><span class="n">general_sinwave</span><span class="p">,</span> <span class="n">tdata</span><span class="p">,</span> <span class="n">experimental_data</span><span class="p">,</span> <span class="n">p0</span><span class="o">=</span><span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">bounds</span><span class="o">=</span><span class="p">([</span><span class="mf">0.5</span><span class="p">,</span><span class="mf">1.9999</span><span class="p">,</span><span class="mi">0</span><span class="p">],[</span><span class="mi">5</span><span class="p">,</span><span class="mf">2.0001</span><span class="p">,</span><span class="mi">2</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">]))</span>
+
+<span class="n">amplitude</span><span class="p">,</span> <span class="n">freq</span><span class="p">,</span> <span class="n">phase</span> <span class="o">=</span> <span class="n">popt</span>   <span class="c1">#   Use unpacking</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">tdata</span><span class="p">,</span> <span class="n">experimental_data</span><span class="p">,</span> <span class="s1">&#39;rx&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">tdata</span><span class="p">,</span> <span class="n">general_sinwave</span><span class="p">(</span><span class="n">tdata</span><span class="p">,</span> <span class="n">amplitude</span><span class="p">,</span> <span class="n">freq</span><span class="p">,</span> <span class="n">phase</span><span class="p">),</span><span class="s1">&#39;b-&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x13e41682890&gt;]
+</pre></div>
+</div>
+<img alt="../../_images/2dc668ba28be27dbb1310bfea40357536e957af76e5515797144f5efa8a6c497.png" src="../../_images/2dc668ba28be27dbb1310bfea40357536e957af76e5515797144f5efa8a6c497.png" />
+</div>
+</div>
+<p>This gives a really nice fit.</p>
+<p>In this example I’ve overly laboured the point about interacting with the docs. I’ll spare you this from now on, but this is the kind of approach that enables you to start with no clue how to use something and relatively quickly get to using it. It often doesn’t quite work first time but this too is part of programming. Learning from what goes wrong and fixing it.</p>
+</section>
+</section>
+<section id="example-2-numerical-integration">
+<h3>4.1.2 Example 2 - Numerical integration<a class="headerlink" href="#example-2-numerical-integration" title="Link to this heading">#</a></h3>
+<p>In this example we’ll numerically integrate a function between two limits. Take a <a href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.integrate.quad.html">look at the “quad” docs</a> and see if you could piece together how you would use it.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">scipy.integrate</span> <span class="kn">import</span> <span class="n">quad</span>    <span class="c1"># one-dimensional integration (first argument is variable of interest)</span>
+
+<span class="c1">#  Quick oneliner lambda function. </span>
+<span class="c1">#  Note func_to_integrate isn&#39;t called because there are no brackets.</span>
+<span class="n">func_to_integrate</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span> <span class="p">:</span> <span class="n">x</span><span class="o">**</span><span class="mi">3</span> <span class="o">+</span> <span class="mi">3</span>     
+
+<span class="n">lower_limit</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">upper_limit</span> <span class="o">=</span> <span class="mi">5</span>
+
+<span class="c1">#  Numerical integration answer</span>
+<span class="n">result_integral</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">quad</span><span class="p">(</span><span class="n">func_to_integrate</span><span class="p">,</span> <span class="n">lower_limit</span><span class="p">,</span> <span class="n">upper_limit</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">result_integral</span><span class="p">)</span>
+
+<span class="c1">#  cf with analytical answer</span>
+<span class="n">analytical_func</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span> <span class="p">:</span> <span class="n">x</span><span class="o">**</span><span class="mi">4</span> <span class="o">/</span> <span class="mi">4</span> <span class="o">+</span> <span class="mi">3</span><span class="o">*</span><span class="n">x</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">analytical_func</span><span class="p">(</span><span class="n">upper_limit</span><span class="p">)</span> <span class="o">-</span> <span class="n">analytical_func</span><span class="p">(</span><span class="n">lower_limit</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>168.0
+168.0
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="image-processing-with-scikit-image">
+<h2>4.2 Image Processing with scikit-image<a class="headerlink" href="#image-processing-with-scikit-image" title="Link to this heading">#</a></h2>
+<p>There are multiple libraries worth exploring. Two big projects are <a href="https://scikit-image.org/">scikit-image</a> and <a href="https://docs.opencv.org/4.8.0/">OpenCV</a>.</p>
+<p><em>OpenCV is written in c++ but you can use python wrappers to use it.</em></p>
+<p><em>Confusingly although its called scikit-image the import statement uses skimage</em></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">from</span> <span class="nn">skimage</span> <span class="kn">import</span> <span class="n">feature</span>
+
+
+<span class="c1"># Import an image</span>
+<span class="kn">from</span> <span class="nn">skimage</span> <span class="kn">import</span> <span class="n">io</span>
+<span class="n">image</span> <span class="o">=</span> <span class="n">io</span><span class="o">.</span><span class="n">imread</span><span class="p">(</span><span class="s1">&#39;resources/images/edges.png&#39;</span><span class="p">)[:,:,</span><span class="mi">0</span><span class="p">]</span>
+
+<span class="c1"># Compute the Canny filter for two values of sigma</span>
+<span class="n">edges</span> <span class="o">=</span> <span class="n">feature</span><span class="o">.</span><span class="n">canny</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">sigma</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+
+<span class="c1"># display results</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">nrows</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">ncols</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
+
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;gray&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;original image&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">edges</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;gray&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;canny edge filter&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0.5, 1.0, &#39;canny edge filter&#39;)
+</pre></div>
+</div>
+<img alt="../../_images/b062ba47b55c40dd13ad21c81dd0276983a8ad1830f796cdc266cf45e412f6f9.png" src="../../_images/b062ba47b55c40dd13ad21c81dd0276983a8ad1830f796cdc266cf45e412f6f9.png" />
+</div>
+</div>
+</section>
+<section id="using-requests-package-and-nasa-api-to-grab-images-from-nasa-server">
+<h2>4.3 Using requests package and NASA API to grab images from NASA server<a class="headerlink" href="#using-requests-package-and-nasa-api-to-grab-images-from-nasa-server" title="Link to this heading">#</a></h2>
+<p>This next example is a little bit more challenging but shows you how working from your computer you can interact with data held on the other side of the world! The info I needed was found at <a href="https://api.nasa.gov/">Nasa’s API page</a>. Select <code class="docutils literal notranslate"><span class="pre">Browse</span> <span class="pre">APIs</span></code> and then expand the APOD (Astronomy Picture of the Day). The table tells you about information you can send or request.</p>
+<p>The <a href="https://requests.readthedocs.io/en/latest/">requests package</a> is a python package that allows you to send http requests. This effectively enables you to interrogate particular web sites / servers and receive information back. Many software tools (Microsoft Office365, ChatGPT), have an API (application programming interface). the api is your way to run these tools. Most of these tools require some authentication (see api_keys below) and then use a json format to send and receive information. The <code class="docutils literal notranslate"><span class="pre">GET</span></code> request is the one we are interested in. This is the request you send to the server to get information back. The <code class="docutils literal notranslate"><span class="pre">GET</span></code> request is the most common type of request. The <code class="docutils literal notranslate"><span class="pre">POST</span></code> request is the other common type of request. This is where you send information to the server.</p>
+<p>To have a go at this you’ll need to register with NASA and <a href="https://api.nasa.gov/">get an api key</a>.</p>
+<p><strong>Be careful with API_KEYS. If someone has your API_KEY they can access resources and pretend to be you. Store your API_KEY somewhere else on your computer and load it. Don’t hard code it in and don’t upload it anywhere like github.</strong></p>
+<p>I’ve stored my API_KEY in a file called nasa_api_key.json. I would do similar things with usernames and passwords. I opened a text editor and added the following.
+{“API_KEY”:”ASKDJNNwenn232kjndskjslkj2”}</p>
+<p>(note the above is not really my API key ;-) .json is the file ending indicating the type of data stored in the file. Be careful to select <em>all files</em> when saving, or you can inadvertantly end up with a file called filename.json.txt</p>
+<p>Then in the program import the API_KEY</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">json</span>
+<span class="kn">import</span> <span class="nn">os</span>
+
+<span class="c1"># This little trick grabs the current user which you can then slot into your filepath. I use this because my username is different on my home and work computer.</span>
+<span class="n">user_profile</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s1">&#39;USERPROFILE&#39;</span><span class="p">]</span>
+<span class="c1">#For MAC or LINUX this is user_profile = os.environ[&#39;HOME&#39;]</span>
+
+<span class="c1"># You&#39;ll need to modify this path to the place you&#39;ve stored yours.</span>
+<span class="n">apikey_filepath</span> <span class="o">=</span> <span class="n">user_profile</span> <span class="o">+</span> <span class="s1">&#39;/OneDrive - The University of Nottingham/Documents/Programming/credentials/nasa_api_key.json&#39;</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">apikey_filepath</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="n">apikey</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">())[</span><span class="s1">&#39;API_KEY&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now we write a function that takes a keyword argument date in format ‘YYYY-MM-DD’. The function uses the <a href="https://requests.readthedocs.io/en/latest/">requests package</a> and <a href="https://api.nasa.gov/">Nasa’s API</a> to print the description of Nasa’s Astronomy Picture of the Day in the terminal. It then offers the user a choice: “Do you want to view this picture? (Y or N). The python inbuilt function <a href="https://docs.python.org/3/library/functions.html#input">input</a> is used to get user input to a question. If the user types Y then it finds the url of the picture and uses the library <a href="https://docs.python.org/3/library/webbrowser.html">webbrowser</a> to open the picture.</p>
+<p><em>Note json.loads can turn a string that looks like a dictionary into a python dictionary</em></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">requests</span>
+<span class="kn">import</span> <span class="nn">webbrowser</span>
+<span class="kn">import</span> <span class="nn">json</span>
+
+<span class="k">def</span> <span class="nf">nasa_apod</span><span class="p">(</span><span class="n">date</span><span class="o">=</span><span class="s1">&#39;2023-01-01&#39;</span><span class="p">):</span>
+    <span class="n">json_request</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;date&#39;</span><span class="p">:</span><span class="s1">&#39;2023-01-01&#39;</span><span class="p">,</span> <span class="s1">&#39;api_key&#39;</span><span class="p">:</span><span class="n">apikey</span><span class="p">}</span>
+    <span class="n">data</span> <span class="o">=</span><span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;https://api.nasa.gov/planetary/apod&#39;</span><span class="p">,</span><span class="n">params</span><span class="o">=</span><span class="n">json_request</span><span class="p">)</span>
+    
+    <span class="n">description</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">text</span><span class="p">)[</span><span class="s1">&#39;explanation&#39;</span><span class="p">]</span>
+    <span class="n">url</span> <span class="o">=</span><span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">text</span><span class="p">)[</span><span class="s1">&#39;url&#39;</span><span class="p">]</span>
+    
+    <span class="c1"># commented next section to avoid user interaction</span>
+    <span class="n">want_to_view</span><span class="o">=</span><span class="nb">input</span><span class="p">(</span><span class="n">description</span> <span class="o">+</span> <span class="s1">&#39;</span><span class="se">\n\n</span><span class="s1"> Would you like to view the image? (Y / N)&#39;</span><span class="p">)</span>   
+    <span class="n">want_to_view</span> <span class="o">=</span> <span class="n">want_to_view</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span><span class="o">.</span><span class="n">lstrip</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">want_to_view</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;Y&#39;</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Opening image&#39;</span><span class="p">)</span>
+        <span class="n">chrome</span> <span class="o">=</span> <span class="n">webbrowser</span><span class="o">.</span><span class="n">get</span><span class="p">()</span>
+        <span class="n">chrome</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">url</span>
+
+<span class="n">url</span> <span class="o">=</span> <span class="n">nasa_apod</span><span class="p">(</span><span class="n">date</span><span class="o">=</span><span class="s1">&#39;2023-01-01&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">StdinNotImplementedError</span><span class="g g-Whitespace">                  </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">8</span><span class="p">],</span> <span class="n">line</span> <span class="mi">21</span>
+<span class="g g-Whitespace">     </span><span class="mi">18</span>         <span class="n">chrome</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">19</span>     <span class="k">return</span> <span class="n">url</span>
+<span class="ne">---&gt; </span><span class="mi">21</span> <span class="n">url</span> <span class="o">=</span> <span class="n">nasa_apod</span><span class="p">(</span><span class="n">date</span><span class="o">=</span><span class="s1">&#39;2023-01-01&#39;</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">22</span> <span class="nb">print</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+
+<span class="nn">Cell In[8], line 13,</span> in <span class="ni">nasa_apod</span><span class="nt">(date)</span>
+<span class="g g-Whitespace">     </span><span class="mi">10</span> <span class="n">url</span> <span class="o">=</span><span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">text</span><span class="p">)[</span><span class="s1">&#39;url&#39;</span><span class="p">]</span>
+<span class="g g-Whitespace">     </span><span class="mi">12</span> <span class="c1"># commented next section to avoid user interaction</span>
+<span class="ne">---&gt; </span><span class="mi">13</span> <span class="n">want_to_view</span><span class="o">=</span><span class="nb">input</span><span class="p">(</span><span class="n">description</span> <span class="o">+</span> <span class="s1">&#39;</span><span class="se">\n\n</span><span class="s1"> Would you like to view the image? (Y / N)&#39;</span><span class="p">)</span>   
+<span class="g g-Whitespace">     </span><span class="mi">14</span> <span class="n">want_to_view</span> <span class="o">=</span> <span class="n">want_to_view</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span><span class="o">.</span><span class="n">lstrip</span><span class="p">()</span>
+<span class="g g-Whitespace">     </span><span class="mi">15</span> <span class="k">if</span> <span class="n">want_to_view</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;Y&#39;</span><span class="p">:</span>
+
+<span class="nn">File ~\AppData\Local\miniconda3\envs\instructor\lib\site-packages\ipykernel\kernelbase.py:1281,</span> in <span class="ni">Kernel.raw_input</span><span class="nt">(self, prompt)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1279</span> <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">_allow_stdin</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1280</span>     <span class="n">msg</span> <span class="o">=</span> <span class="s2">&quot;raw_input was called, but this frontend does not support input requests.&quot;</span>
+<span class="ne">-&gt; </span><span class="mi">1281</span>     <span class="k">raise</span> <span class="n">StdinNotImplementedError</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1282</span> <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_input_request</span><span class="p">(</span>
+<span class="g g-Whitespace">   </span><span class="mi">1283</span>     <span class="nb">str</span><span class="p">(</span><span class="n">prompt</span><span class="p">),</span>
+<span class="g g-Whitespace">   </span><span class="mi">1284</span>     <span class="bp">self</span><span class="o">.</span><span class="n">_parent_ident</span><span class="p">[</span><span class="s2">&quot;shell&quot;</span><span class="p">],</span>
+<span class="g g-Whitespace">   </span><span class="mi">1285</span>     <span class="bp">self</span><span class="o">.</span><span class="n">get_parent</span><span class="p">(</span><span class="s2">&quot;shell&quot;</span><span class="p">),</span>
+<span class="g g-Whitespace">   </span><span class="mi">1286</span>     <span class="n">password</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1287</span> <span class="p">)</span>
+
+<span class="ne">StdinNotImplementedError</span>: raw_input was called, but this frontend does not support input requests.
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">llamaapi</span> <span class="kn">import</span> <span class="n">LlamaAPI</span>
+<span class="kn">import</span> <span class="nn">json</span>
+<span class="kn">import</span> <span class="nn">pprint</span>
+<span class="kn">import</span> <span class="nn">os</span>
+
+<span class="c1"># This little trick grabs the current user which you can then slot into your filepath. I use this because my username is different on my home and work computer.</span>
+<span class="n">user_profile</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s1">&#39;USERPROFILE&#39;</span><span class="p">]</span>
+<span class="n">credentials</span> <span class="o">=</span> <span class="n">user_profile</span> <span class="o">+</span> <span class="s2">&quot;/OneDrive - The University of Nottingham/Documents/Programming/credentials/llama_api_key.json&quot;</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">credentials</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="n">llama</span> <span class="o">=</span> <span class="n">LlamaAPI</span><span class="p">(</span><span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">())[</span><span class="s1">&#39;API_KEY&#39;</span><span class="p">])</span>
+
+<span class="c1"># API Request JSON Cell</span>
+<span class="n">api_request_json</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="s2">&quot;model&quot;</span><span class="p">:</span> <span class="s2">&quot;llama3-70b&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;messages&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">{</span><span class="s2">&quot;role&quot;</span><span class="p">:</span> <span class="s2">&quot;system&quot;</span><span class="p">,</span> <span class="s2">&quot;content&quot;</span><span class="p">:</span> <span class="s2">&quot;You are a philosophical type who never gets round to really answering the question.&quot;</span><span class="p">},</span>
+    <span class="p">{</span><span class="s2">&quot;role&quot;</span><span class="p">:</span> <span class="s2">&quot;user&quot;</span><span class="p">,</span> <span class="s2">&quot;content&quot;</span><span class="p">:</span> <span class="s2">&quot;Why is the sky blue?&quot;</span><span class="p">},</span>
+  <span class="p">]</span>
+<span class="p">}</span>
+
+<span class="c1"># Make your request and handle the response</span>
+<span class="n">response</span> <span class="o">=</span> <span class="n">llama</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">api_request_json</span><span class="p">)</span>
+<span class="n">response_dict</span> <span class="o">=</span>  <span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+<span class="n">pprint</span><span class="o">.</span><span class="n">pprint</span><span class="p">(</span><span class="n">response_dict</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n\n</span><span class="s2">Here is my answer:</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">response_dict</span><span class="p">[</span><span class="s2">&quot;choices&quot;</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;message&quot;</span><span class="p">][</span><span class="s2">&quot;content&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;choices&#39;: [{&#39;finish_reason&#39;: &#39;max_token&#39;,
+              &#39;index&#39;: 0,
+              &#39;message&#39;: {&#39;content&#39;: &#39;The sky, blue, you say? But what, &#39;
+                                     &#39;precisely, do we mean by &quot;the sky&quot;? Is &#39;
+                                     &#39;it not merely a construct, a conceptual &#39;
+                                     &#39;framework we impose upon the vast &#39;
+                                     &#39;expanse of atmosphere that surrounds our &#39;
+                                     &#39;terrestrial existence? And &quot;blue&quot;, this &#39;
+                                     &#39;seemingly innocuous descriptor, does it &#39;
+                                     &#39;not belie the complexity of wavelengths &#39;
+                                     &#39;and perceptions that underlie our &#39;
+                                     &#39;experience of color?\n&#39;
+                                     &#39;\n&#39;
+                                     &#39;Consider, if you will, the ancient &#39;
+                                     &#39;Greeks, who believed the sky to be a &#39;
+                                     &#39;physical dome, a solid vault above the &#39;
+                                     &#39;earth&#39;,
+                          &#39;function_call&#39;: None,
+                          &#39;role&#39;: &#39;assistant&#39;}}],
+ &#39;created&#39;: 1720098916,
+ &#39;model&#39;: &#39;llama3-70b&#39;,
+ &#39;usage&#39;: {&#39;completion_tokens&#39;: 100, &#39;prompt_tokens&#39;: 74, &#39;total_tokens&#39;: 174}}
+
+
+Here is my answer:
+
+The sky, blue, you say? But what, precisely, do we mean by &quot;the sky&quot;? Is it not merely a construct, a conceptual framework we impose upon the vast expanse of atmosphere that surrounds our terrestrial existence? And &quot;blue&quot;, this seemingly innocuous descriptor, does it not belie the complexity of wavelengths and perceptions that underlie our experience of color?
+
+Consider, if you will, the ancient Greeks, who believed the sky to be a physical dome, a solid vault above the earth
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="gui-frameworks">
+<h2>4.5 GUI frameworks<a class="headerlink" href="#gui-frameworks" title="Link to this heading">#</a></h2>
+<p>Sometimes using a gui can speed up your interaction with data. It also enables you to write programs that can be used by people who can’t code.</p>
+<p>Python has a number of very well established gui frameworks:</p>
+<ul class="simple">
+<li><p><a href="https://docs.python.org/3/library/tkinter.html">tkinter</a><br />
+Builtin gui library. Short learning curve but looks a bit clunky. Intuitive layout system.</p></li>
+<li><p><a href="https://www.wxpython.org/">wxPython</a>
+Feature rich widgets. Bit harder to learn.</p></li>
+<li><p><a href="https://pypi.org/project/PyQt5/">PyQt5</a>
+Python bindings to Qt. For small things like a dialogue box you have to write quite a lot of boiler plate code which makes it seem overly complex. However, for larger programs it works really well allowing you to send messages between different parts of your program really easily. The guis look like the native components on your particular operating system and so feel quite professional.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">tkinter</span> <span class="kn">import</span> <span class="n">filedialog</span><span class="p">,</span> <span class="n">Tk</span>
+
+<span class="n">root</span><span class="o">=</span><span class="n">Tk</span><span class="p">()</span>
+<span class="n">filename</span> <span class="o">=</span> <span class="n">filedialog</span><span class="o">.</span><span class="n">askopenfilename</span><span class="p">()</span>
+<span class="n">root</span><span class="o">.</span><span class="n">destroy</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Learning the details of a gui framework can take some time. If it is something you really need, it is worth picking one that you like and learning it well.</p>
+<p>Some common principles:</p>
+<ul class="simple">
+<li><p>Gui frameworks always use some kind of <code class="docutils literal notranslate"><span class="pre">event</span> <span class="pre">loop</span></code>. When you perform some action on a particular component e.g move a slider, click a button this triggers an <code class="docutils literal notranslate"><span class="pre">event</span></code>. Your code will need to link a callback function to a particular event that occurred on a gui component. We saw an example of this with IPyWidgets. The callback function then determines what happens.</p></li>
+<li><p>If you have multiple gui components organising them becomes important. There are several methods that can be used, known as layout managers. These can be grids where you specify where to place the component or more commonly you produce a hierarchical series of components in which gui components are placed inside other layout components.</p></li>
+</ul>
+<p>Tip: When writing code that uses a large gui, try to keep the code that does the work separate from the code that creates the gui. Each gui component should have a callback function which separates as much as possible into two bits changes to other parts of the gui and code that can run independently of the gui.</p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./content\E4"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../E3/T3.%20numpy_matplotlib.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">3 Scientific Python</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../E5/T5.%20pandas.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">5 Pandas</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#scipy">4.1 Scipy</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-1-curve-fitting-with-scipy">4.1.1 Example 1 - Curve fitting with Scipy</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#a-minimal-working-example">A minimal working example</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-2-numerical-integration">4.1.2 Example 2 - Numerical integration</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#image-processing-with-scikit-image">4.2 Image Processing with scikit-image</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#using-requests-package-and-nasa-api-to-grab-images-from-nasa-server">4.3 Using requests package and NASA API to grab images from NASA server</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gui-frameworks">4.5 GUI frameworks</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Dr Mike Smith
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
