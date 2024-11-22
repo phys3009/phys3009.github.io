@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>12. Aggregation &amp; Self-assembly {#aggregation-self-assembly .H2} &#8212; Force and function at the nanoscale</title>
+    <title>15. Aggregation &amp; Self-assembly &#8212; Force and function at the nanoscale</title>
   
   
   
@@ -16,30 +16,33 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
+  <!-- 
+    this give us a css class that will be invisible only if js is disabled 
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-
-  
-  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+  <link href="../../_static/styles/theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=87e54e7c" />
   
+  <!-- So that users can add custom icons -->
+  <script src="../../_static/scripts/fontawesome.js?digest=26a4bc78f4c0ddb94549"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
-<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
-  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
 
     <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
     <script src="../../_static/doctools.js?v=9a2dae69"></script>
@@ -57,11 +60,16 @@
     <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'content/teaching/13. aggregation';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="16. Micelles / self-assembly" href="14.%20micelles.html" />
+    <link rel="prev" title="13 &amp; 14. Entropic Forces {#entropic-forces .H2}" href="12.%20entropy.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
   </head>
   
   
@@ -77,19 +85,8 @@
     <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-primary-sidebar-checkbox"/>
-  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
-  
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-secondary-sidebar-checkbox"/>
-  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
-  
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
+  <dialog id="pst-search-dialog">
+    
 <form class="bd-search d-flex align-items-center"
       action="../../search.html"
       method="get">
@@ -97,7 +94,6 @@
   <input type="search"
          class="form-control"
          name="q"
-         id="search-input"
          placeholder="Search this book..."
          aria-label="Search this book..."
          autocomplete="off"
@@ -105,8 +101,8 @@
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
-  </div>
+</form>
+  </dialog>
 
   <div class="pst-async-banner-revealer d-none">
   <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
@@ -122,9 +118,8 @@
       
       
       
-        
-      
-      <div class="bd-sidebar-primary bd-sidebar">
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -154,21 +149,17 @@
     
     
     <img src="../../_static/logo.jpg" class="logo__image only-light" alt="Force and function at the nanoscale - Home"/>
-    <script>document.write(`<img src="../../_static/logo.jpg" class="logo__image only-dark" alt="Force and function at the nanoscale - Home"/>`);</script>
+    <img src="../../_static/logo.jpg" class="logo__image only-dark pst-js-only" alt="Force and function at the nanoscale - Home"/>
   
   
 </a></div>
         <div class="sidebar-primary-item">
 
- <script>
- document.write(`
-   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script></div>
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
@@ -179,17 +170,51 @@
                 </a>
             </li>
         </ul>
-        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Teaching Resources</span></p>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">About the course</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="1.%20nanoscale_world.html">1. The Nanoscale World</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../info_course/how_to_study.html">How to study this course</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 20 (27th Jan)</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="1.%20nanoscale_world.html">Week 20 (27th Jan) - 1. Nanoscale World</a></li>
 <li class="toctree-l1"><a class="reference internal" href="2.%20forces_potentials.html">2. Forces and Potentials</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 21 (3rd Feb)</span></p>
+<ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="3.%20polar_interactions.html">3. Polar interactions and Dipoles</a></li>
 <li class="toctree-l1"><a class="reference internal" href="4.%20dispersion_interactions.html">Dispersion Interactions</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 22 (10th Feb)</span></p>
+<ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="5.%20dispersion_bigger.html">5. Dispersion Interactions – larger objects</a></li>
 <li class="toctree-l1"><a class="reference internal" href="6.%20water_hydrogenbonds.html">6. Water, Hydrogen Bonds &amp; the Hydrophobic Interaction</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 23 (17th Feb)</span></p>
+<ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="7.%20surfacevbulk.html">7. Surface vs Bulk</a></li>
 <li class="toctree-l1"><a class="reference internal" href="8.%20capillaryforces.html">8. Capillary Forces</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 24 (24th Feb)</span></p>
+<ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="9.%20afm.html">9. Nanoscale Force Measurement Techniques – AFM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="10.%20opticaltweezers.html">10. Nanoscale Force Measurement Techniques – Optical Tweezers</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 26 (10th March)</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="12.%20entropy.html">13 &amp; 14. Entropic Forces {#entropic-forces .H2}</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 27 (17th March)</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">15. Aggregation &amp; Self-assembly</a></li>
+<li class="toctree-l1"><a class="reference internal" href="14.%20micelles.html">16. Micelles / self-assembly</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 28 - 24th March</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="15.%20vesicles_membranes.html">17. Vesicle formation</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Revision</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../info_course/revision.html">How to study this course</a></li>
 </ul>
 
     </div>
@@ -344,24 +369,16 @@
 
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
-    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
-    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
-  </button>
-`);
-</script>
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-  </button>
-`);
-</script>
+</button>
 <button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
 </button>
@@ -375,7 +392,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>12. Aggregation & Self-assembly {#aggregation-self-assembly .H2}</h1>
+    <h1>15. Aggregation & Self-assembly</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -385,14 +402,13 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#why-do-aggregates-form-why-do-aggregates-form-h3">Why do aggregates form?  {#why-do-aggregates-form .H3}</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#chemical-potential-of-a-molecule-chemical-potential-of-a-molecule-h3">Chemical potential of a molecule {#chemical-potential-of-a-molecule .H3}</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#width-2-2847222222222223in-height-1-8416666666666666in-one-dimensional-aggregates-rods-one-dimensional-aggregates-rods-h3">{width=”2.2847222222222223in” height=”1.8416666666666666in”}One Dimensional aggregates (rods) {#one-dimensional-aggregates-rods .H3}</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#two-dimensional-aggregates-disks-two-dimensional-aggregates-disks-h3">Two dimensional aggregates (disks)  {#two-dimensional-aggregates-disks .H3}</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#width-2-3368055555555554in-height-1-6722222222222223in-three-dimensional-aggregates-spheres-three-dimensional-aggregates-spheres-h3">{width=”2.3368055555555554in” height=”1.6722222222222223in”}Three Dimensional aggregates (spheres) {#three-dimensional-aggregates-spheres .H3}</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-happens-as-the-aggregation-number-increases-what-happens-as-the-aggregation-number-increases-h3">What happens as the aggregation number increases? {#what-happens-as-the-aggregation-number-increases .H3}</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#so-how-do-2d-and-3d-aggregates-start-growing-so-how-do-2d-and-3d-aggregates-start-growing-h3">So how do 2D and 3D aggregates start growing? {#so-how-do-2d-and-3d-aggregates-start-growing .H3}</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary-of-key-concepts-summary-of-key-concepts-4-h3">Summary of key concepts {#summary-of-key-concepts-4 .H3}</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#why-do-aggregates-form">Why do aggregates form?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#chemical-potential-of-a-molecule">Chemical potential of a molecule</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#one-dimensional-aggregates-rods">One Dimensional aggregates (rods)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#two-dimensional-aggregates-discs">Two dimensional aggregates (discs)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#three-dimensional-aggregates-spheres">Three Dimensional aggregates (spheres)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-happens-as-the-aggregation-number-increases">What happens as the aggregation number increases?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#so-how-do-2d-and-3d-aggregates-start-growing">So how do 2D and 3D aggregates start growing?</a></li>
 </ul>
             </nav>
         </div>
@@ -404,135 +420,149 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="aggregation-self-assembly-aggregation-self-assembly-h2">
-<h1>12. Aggregation &amp; Self-assembly {#aggregation-self-assembly .H2}<a class="headerlink" href="#aggregation-self-assembly-aggregation-self-assembly-h2" title="Link to this heading">#</a></h1>
+  <section id="aggregation-self-assembly">
+<h1>15. Aggregation &amp; Self-assembly<a class="headerlink" href="#aggregation-self-assembly" title="Link to this heading">#</a></h1>
 <p><strong>Aggregation</strong> We have seen that particles and surfaces can interact
 via many different physical interactions (e.g. dispersion, double layer
 and steric forces). The subtle balance between these interactions
 determines whether the particles/surfaces will remain separated in
 solution.</p>
-<p><img alt="blukphaseseparation.jpg" src="content/teaching/media/image147.jpeg" />{width=”2.85625in”
-height=”1.4284722222222221in”}When the interactions between particles
+<p>When the interactions between particles
 favour the attraction of particles, they will tend to aggregate. If
 these interactions become really strong, they will eventually drive
 phase separation in the system and the components will unmix forming
 effectively infinite aggregates.</p>
-<section id="why-do-aggregates-form-why-do-aggregates-form-h3">
-<h2>Why do aggregates form?  {#why-do-aggregates-form .H3}<a class="headerlink" href="#why-do-aggregates-form-why-do-aggregates-form-h3" title="Link to this heading">#</a></h2>
+<section id="why-do-aggregates-form">
+<h2>Why do aggregates form?<a class="headerlink" href="#why-do-aggregates-form" title="Link to this heading">#</a></h2>
 <p>When the energy per particle/molecule associated with a
 particle/molecule inside an aggregate is less than the energy of a free
 molecule, then aggregates will start to form. If this average energy
 becomes lower (more favourable/negative) the bigger the aggregate gets,
 then the aggregate will continue to grow.</p>
+<div style="text-align: center;">
+    <img src="imgs/13_1.png" alt="aggregate" width="250" height=auto>
+    <p><em>Figure 15.1</em></p>
+</div>
 <p>The shape of the aggregate that forms will depend upon the nature of the
 interactions between individual molecules. If for example, the molecules
 have highly directional interactions at opposite ends, they will tend to
 link up to form long chains or one dimensional aggregates. If the
-molecules interact in <strong>two dimensions</strong> they will tend to form disks or
+molecules interact in two dimensions they will tend to form discs or
 planar aggregates. And if the interactions are isotropic (i.e. the same
-in all directions), the molecules will tend to form <strong>three dimensional
-aggregates, droplets or clusters</strong>.</p>
+in all directions), the molecules will tend to form three dimensional aggregates, droplets or clusters.</p>
 </section>
-<section id="chemical-potential-of-a-molecule-chemical-potential-of-a-molecule-h3">
-<h2>Chemical potential of a molecule {#chemical-potential-of-a-molecule .H3}<a class="headerlink" href="#chemical-potential-of-a-molecule-chemical-potential-of-a-molecule-h3" title="Link to this heading">#</a></h2>
-<p>In order for an aggregate to grow the change in the ‘free’ energy when
+<section id="chemical-potential-of-a-molecule">
+<h2>Chemical potential of a molecule<a class="headerlink" href="#chemical-potential-of-a-molecule" title="Link to this heading">#</a></h2>
+<p>In order for an aggregate to grow the change in the free energy when
 an additional molecule or particle is added must be negative. We define
-the chemical potential μ of an aggregate as the rate of change of the
-free energy with particle number N.</p>
-<blockquote>
-<div><p>ie $\mu = \frac{dU}{dN}$</p>
-</div></blockquote>
+the chemical potential <span class="math notranslate nohighlight">\(\mu\)</span> of an aggregate as the rate of change of the
+free energy with particle number <span class="math notranslate nohighlight">\(N\)</span>.</p>
+<p><span class="math notranslate nohighlight">\(\mu = \frac{dU}{dN}\)</span></p>
 <p>As we will see the chemical potential depends upon the shape of the
-aggregates and the number of particles in the aggregate (N)</p>
+aggregates and the number of particles in the aggregate (<span class="math notranslate nohighlight">\(N\)</span>)</p>
 </section>
-<section id="width-2-2847222222222223in-height-1-8416666666666666in-one-dimensional-aggregates-rods-one-dimensional-aggregates-rods-h3">
-<h2><img alt="" src="content/teaching/media/image148.png" />{width=”2.2847222222222223in” height=”1.8416666666666666in”}One Dimensional aggregates (rods) {#one-dimensional-aggregates-rods .H3}<a class="headerlink" href="#width-2-2847222222222223in-height-1-8416666666666666in-one-dimensional-aggregates-rods-one-dimensional-aggregates-rods-h3" title="Link to this heading">#</a></h2>
-<p>Consider a linear aggregate where all the N particles/molecules are
-joined together in a line.</p>
-<p>Most particles have 2 bonds which we will say results in a negative
-change in the free energy μ~Bulk~. The two particles on the end each
+<section id="one-dimensional-aggregates-rods">
+<h2>One Dimensional aggregates (rods)<a class="headerlink" href="#one-dimensional-aggregates-rods" title="Link to this heading">#</a></h2>
+<p>Consider a linear aggregate where all the <span class="math notranslate nohighlight">\(N\)</span> particles/molecules are
+joined together in a line. Most particles have 2 bonds which we will say results in a negative change in the free energy <span class="math notranslate nohighlight">\({\mu}_{Bulk}\)</span>. The two particles on the end each
 have an exposed surface with one bond each that is unsatisfied. This is
-equivalent to one particle with two unsatisfied bonds. One way to write
-the energy change down is to firstly write the free energy change of N
+equivalent to one particle with two unsatisfied bonds.</p>
+<div style="text-align: center;">
+    <img src="imgs/13_2.png" alt="excluded volume" width="250" height=auto>
+    <p><em>Figure 15.2 - Overlap of the excluded volumes of two spheres.</em></p>
+</div>
+<p>One way to write the energy change down is to firstly write the free energy change of <span class="math notranslate nohighlight">\(N\)</span>
 normal particles and then add a correction for the “one particle” which
 has unsatisified bonds.</p>
-<p>$$U = U_{Bulk} + U_{surface} = - N\mu_{Bulk} + 1*\mu_{Bulk} = - (N - 1)\mu_{Bulk}$$</p>
-<p>To calculate the change in the free energy we differentiate this
-expression:</p>
-<p>$$\mu = \frac{dU}{dN} = - \mu_{Bulk} &lt; 0$$</p>
+<div class="math notranslate nohighlight">
+\[U = U_{Bulk} + U_{surface} = - N\mu_{Bulk} + 1*\mu_{Bulk} = - (N - 1)\mu_{Bulk}\]</div>
+<p>To calculate the change in the free energy we differentiate this expression:</p>
+<div class="math notranslate nohighlight">
+\[\mu = \frac{dU}{dN} = - \mu_{Bulk} &lt; 0\]</div>
 <p>Since this value is always negative adding a single molecule to a linear
 aggregate will always be favourable. As a result, molecules that form
 these kind of aggregates will tend to form very long (essentially
 infinite) rods or fibres.</p>
-<p>Excess surface area</p>
-<p>R</p>
-<p>t</p>
 </section>
-<section id="two-dimensional-aggregates-disks-two-dimensional-aggregates-disks-h3">
-<h2>Two dimensional aggregates (disks)  {#two-dimensional-aggregates-disks .H3}<a class="headerlink" href="#two-dimensional-aggregates-disks-two-dimensional-aggregates-disks-h3" title="Link to this heading">#</a></h2>
-<p>The case of 2D aggregation is slightly more complicated.</p>
-<p>As a disk-like aggregate grows the area of the surface on which the
-particles attach increases with the radius of the disk. The production
-of this excess surface area has an energy penalty associated with it.</p>
-<p>How many molecules are required to form an aggregate of radius R?
-Equating the volume of the aggregate with the volume of the N molecules
+<section id="two-dimensional-aggregates-discs">
+<h2>Two dimensional aggregates (discs)<a class="headerlink" href="#two-dimensional-aggregates-discs" title="Link to this heading">#</a></h2>
+<p>The case of 2D aggregation is slightly more complicated. As a disc-like aggregate grows the area of the surface on which the particles attach increases with the radius of the disc. The production of this excess surface area has an energy penalty associated with it.</p>
+<div style="text-align: center;">
+    <img src="imgs/13_3.png" alt="2d" width="250" height=auto>
+    <p><em>Figure 15.3 - A 2D disc aggregate.</em></p>
+</div>
+<p>How many molecules are required to form an aggregate of radius <span class="math notranslate nohighlight">\(R\)</span>?
+Equating the volume of the aggregate with the volume of the <span class="math notranslate nohighlight">\(N\)</span> molecules
 from which it is made and rearranging gives:</p>
-<p>$R = \ \left( \frac{Nv}{\pi t} \right)^{\frac{1}{2}}$</p>
+<div class="math notranslate nohighlight">
+\[R = \ \left( \frac{Nv}{\pi t} \right)^{\frac{1}{2}}\]</div>
 <p>Following the same logic as for the 1D aggregate, we will work out the
 bulk energy of N particles but then correct for those particles at the
 edge of the aggregate that have unsatisfied bonds. In this case the
 surface correction term is related to the area of the exposed edge and
-we also define the surface energy per unit area γ. We then substitute
-for R to obtain the expression for U.</p>
-<p>$U = U_{Bulk} + U_{Surface} = - N\mu_{Bulk} + 2\pi Rt\gamma = \  - N\mu_{Bulk} + 2\gamma(\pi tvN)^{\frac{1}{2}}$</p>
-<p>Differentiating with respect to N gives an expression for the chemical
-potential:</p>
-<p>$$\mu = \frac{dU}{dN} = - \mu_{bulk} + \gamma\left( \frac{\pi tv}{N} \right)^{\frac{1}{2}}$$</p>
+we also define the surface energy per unit area <span class="math notranslate nohighlight">\(\gamma\)</span>. We then substitute
+for <span class="math notranslate nohighlight">\(R\)</span> to obtain the expression for <span class="math notranslate nohighlight">\(U\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[U = U_{Bulk} + U_{Surface} = - N\mu_{Bulk} + 2\pi Rt\gamma = \  - N\mu_{Bulk} + 2\gamma(\pi tvN)^{\frac{1}{2}}\]</div>
+<p>Differentiating with respect to <span class="math notranslate nohighlight">\(N\)</span> gives an expression for the chemical potential:</p>
+<div class="math notranslate nohighlight">
+\[\mu = \frac{dU}{dN} = - \mu_{bulk} + \gamma\left( \frac{\pi tv}{N} \right)^{\frac{1}{2}}\]</div>
 </section>
-<section id="width-2-3368055555555554in-height-1-6722222222222223in-three-dimensional-aggregates-spheres-three-dimensional-aggregates-spheres-h3">
-<h2><img alt="" src="content/teaching/media/image150.png" />{width=”2.3368055555555554in” height=”1.6722222222222223in”}Three Dimensional aggregates (spheres) {#three-dimensional-aggregates-spheres .H3}<a class="headerlink" href="#width-2-3368055555555554in-height-1-6722222222222223in-three-dimensional-aggregates-spheres-three-dimensional-aggregates-spheres-h3" title="Link to this heading">#</a></h2>
+<section id="three-dimensional-aggregates-spheres">
+<h2>Three Dimensional aggregates (spheres)<a class="headerlink" href="#three-dimensional-aggregates-spheres" title="Link to this heading">#</a></h2>
 <p>Similarly for 3D aggregation we consider bulk and surface terms:</p>
 <ol class="arabic simple">
 <li><p>Work out how N is related to R 🡪 N = (4πR^3^/3v)</p></li>
+</ol>
+<div style="text-align: center;">
+    <img src="imgs/13_4.png" alt="excluded volume" width="250" height=auto>
+    <p><em>Figure 15.4 - 3D spherical aggregate.</em></p>
+</div>
+<ol class="arabic simple" start="2">
 <li><p>Write down energy of bulk and surface</p></li>
 </ol>
-<blockquote>
-<div><p>U = U~Bulk~ + U~Surface~ = -Nµ~bulk\ +~ 4πR^2^γ</p>
-</div></blockquote>
+<div class="math notranslate nohighlight">
+\[U = U_{Bulk} + U_{Surface} = -N{\mu}_{Bulk} + 4{\pi}R^{2}{\gamma}\]</div>
 <ol class="arabic simple" start="3">
 <li><p>Simplify expression to remove dependence on R</p></li>
-<li><p>µ = dU/dN</p></li>
+<li><p><span class="math notranslate nohighlight">\({\mu} = \frac{dU}{dN}\)</span></p></li>
 </ol>
-<p>$$\mu = - \mu_{bulk} + \frac{8\pi\gamma}{3}\left( \frac{3v}{4\pi} \right)^{\frac{2}{3}}\left( \frac{1}{N} \right)^{\frac{1}{3}}$$</p>
+<div class="math notranslate nohighlight">
+\[\mu = - \mu_{bulk} + \frac{8\pi\gamma}{3}\left( \frac{3v}{4\pi} \right)^{\frac{2}{3}}\left( \frac{1}{N} \right)^{\frac{1}{3}}\]</div>
 </section>
-<section id="what-happens-as-the-aggregation-number-increases-what-happens-as-the-aggregation-number-increases-h3">
-<h2>What happens as the aggregation number increases? {#what-happens-as-the-aggregation-number-increases .H3}<a class="headerlink" href="#what-happens-as-the-aggregation-number-increases-what-happens-as-the-aggregation-number-increases-h3" title="Link to this heading">#</a></h2>
+<section id="what-happens-as-the-aggregation-number-increases">
+<h2>What happens as the aggregation number increases?<a class="headerlink" href="#what-happens-as-the-aggregation-number-increases" title="Link to this heading">#</a></h2>
 <p>For a 1D aggregate we saw that the chemical potential is always negative
 and so aggregates grow regardless of N. However, for 2 and 3D aggregates
 this is not necessarily the case.</p>
-<p>$$\mathrm{\Delta}U(N + 1) = \ \frac{dU}{dN}((N + 1) - N)$$</p>
+<div class="math notranslate nohighlight">
+\[\mathrm{\Delta}U(N + 1) = \ \frac{dU}{dN}((N + 1) - N)\]</div>
 <p>Whether this change is positive depends on the sign of the chemical
 potential.</p>
-<p><img alt="" src="content/teaching/media/image151.png" />{width=”3.1478258967629045in”
-height=”3.1478258967629045in”}</p>
-<p>A plot of the free energy shows that the gradient dU/dN is positive for
-N &lt; Nc and negative above this value. This means that for 2 and 3D
-aggregates adding a single molecule to a small aggregate (N&lt; Nc) will
+<div style="text-align: center;">
+    <img src="imgs/13_5.png" alt="excluded volume" width="250" height=auto>
+    <p><em>Figure 15.5 - Free energy of a growing spherical aggregate</em></p>
+</div>
+<p>A plot of the free energy shows that the gradient <span class="math notranslate nohighlight">\(\frac{dU}{dN}\)</span> is positive for
+<span class="math notranslate nohighlight">\(N \&lt; N_{c}\)</span> and negative above this value. This means that for 2 and 3D
+aggregates adding a single molecule to a small aggregate (<span class="math notranslate nohighlight">\(N\&lt; N_{c}\)</span>) will
 be unfavourable. Consequently, if you were to place a ready formed
-aggregate of N &lt; Nc molecules in solution it would fall apart in order
+aggregate of <span class="math notranslate nohighlight">\(N \&lt; N_{c}\)</span> molecules in solution it would fall apart in order
 to decrease the free energy of the system. However, once a critical
-nucleus (N=Nc) of molecules has been formed it becomes favourable for
+nucleus (<span class="math notranslate nohighlight">\(N=N_{c}\)</span>) of molecules has been formed it becomes favourable for
 the aggregate to grow. There is therefore an energy barrier to
 aggregation for isolated molecules in solution which must be overcome if
 an aggregate is to grow. The size of this critical nucleus occurs at the
-turning point (μ = dU/dN)</p>
+turning point (<span class="math notranslate nohighlight">\({\mu} = \frac{dU}{dN}\)</span>)</p>
 <p>For a 2D aggregate this gives:</p>
-<p>$$N_{c} = {\pi tv\left( \frac{\gamma}{\mu_{B}} \right)}^{2}$$</p>
+<div class="math notranslate nohighlight">
+\[N_{c} = {\pi tv\left( \frac{\gamma}{\mu_{B}} \right)}^{2}\]</div>
 <p>and for 3D:</p>
-<p>$$N_{c} = \left( \frac{3v}{4\pi} \right)^{2}\left( \frac{8\pi\gamma}{{3\mu}_{B}} \right)^{3}$$</p>
+<div class="math notranslate nohighlight">
+\[N_{c} = \left( \frac{3v}{4\pi} \right)^{2}\left( \frac{8\pi\gamma}{{3\mu}_{B}} \right)^{3}\]</div>
 </section>
-<section id="so-how-do-2d-and-3d-aggregates-start-growing-so-how-do-2d-and-3d-aggregates-start-growing-h3">
-<h2>So how do 2D and 3D aggregates start growing? {#so-how-do-2d-and-3d-aggregates-start-growing .H3}<a class="headerlink" href="#so-how-do-2d-and-3d-aggregates-start-growing-so-how-do-2d-and-3d-aggregates-start-growing-h3" title="Link to this heading">#</a></h2>
+<section id="so-how-do-2d-and-3d-aggregates-start-growing">
+<h2>So how do 2D and 3D aggregates start growing?<a class="headerlink" href="#so-how-do-2d-and-3d-aggregates-start-growing" title="Link to this heading">#</a></h2>
 <p>Since all aggregates start off as individual particles this raises the
 question as to how 2D or 3D aggregates can start growing. We have seen
 that to grow, a critical cluster size has to form before it becomes
@@ -547,11 +577,14 @@ molecules together to form a cluster/nucleus of the required size.</strong>
 This is usually extremely unlikely and therefore takes a very long time.
 There is an energy barrier that must be overcome by a chance
 fluctuation. For a 3D aggregate this energy barrier has a height of</p>
-<p>$$\mathrm{\Delta}U = \frac{\mu_{Bulk}N_{c}}{2}$$</p>
+<div class="math notranslate nohighlight">
+\[\mathrm{\Delta}U = \frac{\mu_{Bulk}N_{c}}{2}\]</div>
 <p>The probability of this energy being supplied by chance is given by
 Boltzmann statistics:</p>
-<p>$$P(N = Nc) = \ e^{- \mathrm{\Delta}U/k_{B}T}$$</p>
-<p>$$P(N = Nc) = \ e^{- \mu_{Bulk}N_{c}/2k_{B}T}$$</p>
+<div class="math notranslate nohighlight">
+\[P(N = Nc) = \ e^{- \mathrm{\Delta}U/k_{B}T}\]</div>
+<div class="math notranslate nohighlight">
+\[P(N = Nc) = \ e^{- \mu_{Bulk}N_{c}/2k_{B}T}\]</div>
 <p>Thus the probability of Homogeneous nucleation is strongly dependent on
 the bulk cohesive energy, the size of aggregate and the temperature.
 Hence aggregation is faster at higher temperatures. This is often a very
@@ -563,30 +596,15 @@ interactions.</strong> (Heterogeneous nucleation). These foreign surfaces can
 simply be dust particles, or the surfaces of a container in which the
 material is being held. This mechanism is usually the cause of nucleus
 formation in ‘dirty’ samples.</p>
-<p><img alt="" src="content/teaching/media/image152.png" />{width=”3.0695352143482064in”
-height=”3.0695352143482064in”}<img alt="" src="content/teaching/media/image153.png" />{width=”2.5388888888888888in”
-height=”1.7819444444444446in”}</p>
-<p>Less exposed surface area</p>
-<p>Smaller surface term</p>
+<div style="text-align: center;">
+    <img src="imgs/13_6.png" alt="excluded volume" width="250" height=auto>
+    <p><em>Figure 15.6 - Overlap of the excluded volumes of two spheres.</em></p>
+</div>
 <p>If an aggregate forms on an impurity, it results in less exposed surface
 area reducing the size of the correction U~surface~. This results in a
 smaller critical aggregate size and a lower energy barrier to
 nucleation. Consequently, it is easier for an aggregate to form under
 these conditions.</p>
-</section>
-<section id="summary-of-key-concepts-summary-of-key-concepts-4-h3">
-<h2>Summary of key concepts {#summary-of-key-concepts-4 .H3}<a class="headerlink" href="#summary-of-key-concepts-summary-of-key-concepts-4-h3" title="Link to this heading">#</a></h2>
-<p><img alt="" src="content/teaching/media/image154.png" />{width=”1.711111111111111in”
-height=”1.4493055555555556in”}Aggregates form when the free energy
-change on adding a molecule to an aggregate is negative.</p>
-<p>The form of the free energy or chemical potential depends upon the shape
-of the aggregate and the aggregation number</p>
-<p>A critical cluster size sometimes has to form before growth can occur.
-This is needed to overcome the contributions due to the excess surface
-energy of the aggregate.</p>
-<p>This critical cluster size can be achieved via a chance thermal
-fluctuation (homogeneous nucleation) or through the addition of surfaces
-/ foreign particles (heterogeneous nucleation).</p>
 </section>
 </section>
 
@@ -620,6 +638,24 @@ fluctuation (homogeneous nucleation) or through the addition of surfaces
                 <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
+    <a class="left-prev"
+       href="12.%20entropy.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">13 &amp; 14. Entropic Forces {#entropic-forces .H2}</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="14.%20micelles.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">16. Micelles / self-assembly</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
 </div>
                 </footer>
               
@@ -627,7 +663,8 @@ fluctuation (homogeneous nucleation) or through the addition of surfaces
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
 
   <div class="sidebar-secondary-item">
@@ -636,14 +673,13 @@ fluctuation (homogeneous nucleation) or through the addition of surfaces
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#why-do-aggregates-form-why-do-aggregates-form-h3">Why do aggregates form?  {#why-do-aggregates-form .H3}</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#chemical-potential-of-a-molecule-chemical-potential-of-a-molecule-h3">Chemical potential of a molecule {#chemical-potential-of-a-molecule .H3}</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#width-2-2847222222222223in-height-1-8416666666666666in-one-dimensional-aggregates-rods-one-dimensional-aggregates-rods-h3">{width=”2.2847222222222223in” height=”1.8416666666666666in”}One Dimensional aggregates (rods) {#one-dimensional-aggregates-rods .H3}</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#two-dimensional-aggregates-disks-two-dimensional-aggregates-disks-h3">Two dimensional aggregates (disks)  {#two-dimensional-aggregates-disks .H3}</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#width-2-3368055555555554in-height-1-6722222222222223in-three-dimensional-aggregates-spheres-three-dimensional-aggregates-spheres-h3">{width=”2.3368055555555554in” height=”1.6722222222222223in”}Three Dimensional aggregates (spheres) {#three-dimensional-aggregates-spheres .H3}</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-happens-as-the-aggregation-number-increases-what-happens-as-the-aggregation-number-increases-h3">What happens as the aggregation number increases? {#what-happens-as-the-aggregation-number-increases .H3}</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#so-how-do-2d-and-3d-aggregates-start-growing-so-how-do-2d-and-3d-aggregates-start-growing-h3">So how do 2D and 3D aggregates start growing? {#so-how-do-2d-and-3d-aggregates-start-growing .H3}</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary-of-key-concepts-summary-of-key-concepts-4-h3">Summary of key concepts {#summary-of-key-concepts-4 .H3}</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#why-do-aggregates-form">Why do aggregates form?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#chemical-potential-of-a-molecule">Chemical potential of a molecule</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#one-dimensional-aggregates-rods">One Dimensional aggregates (rods)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#two-dimensional-aggregates-discs">Two dimensional aggregates (discs)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#three-dimensional-aggregates-spheres">Three Dimensional aggregates (spheres)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-happens-as-the-aggregation-number-increases">What happens as the aggregation number increases?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#so-how-do-2d-and-3d-aggregates-start-growing">So how do 2D and 3D aggregates start growing?</a></li>
 </ul>
   </nav></div>
 
@@ -692,8 +728,8 @@ By Mike Smith
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
-<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <script defer src="../../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549"></script>
+<script defer src="../../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549"></script>
 
   <footer class="bd-footer">
   </footer>

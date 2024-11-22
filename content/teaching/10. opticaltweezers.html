@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>10. Nanoscale Force Measurement Techniques – Optical Tweezers {#nanoscale-force-measurement-techniques-optical-tweezers .H2} &#8212; Force and function at the nanoscale</title>
+    <title>10. Nanoscale Force Measurement Techniques – Optical Tweezers &#8212; Force and function at the nanoscale</title>
   
   
   
@@ -16,30 +16,33 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
+  <!-- 
+    this give us a css class that will be invisible only if js is disabled 
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-
-  
-  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+  <link href="../../_static/styles/theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=87e54e7c" />
   
+  <!-- So that users can add custom icons -->
+  <script src="../../_static/scripts/fontawesome.js?digest=26a4bc78f4c0ddb94549"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
-<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
-  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
 
     <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
     <script src="../../_static/doctools.js?v=9a2dae69"></script>
@@ -57,11 +60,16 @@
     <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'content/teaching/10. opticaltweezers';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="13 &amp; 14. Entropic Forces {#entropic-forces .H2}" href="12.%20entropy.html" />
+    <link rel="prev" title="9. Nanoscale Force Measurement Techniques – AFM" href="9.%20afm.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
   </head>
   
   
@@ -77,19 +85,8 @@
     <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-primary-sidebar-checkbox"/>
-  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
-  
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-secondary-sidebar-checkbox"/>
-  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
-  
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
+  <dialog id="pst-search-dialog">
+    
 <form class="bd-search d-flex align-items-center"
       action="../../search.html"
       method="get">
@@ -97,7 +94,6 @@
   <input type="search"
          class="form-control"
          name="q"
-         id="search-input"
          placeholder="Search this book..."
          aria-label="Search this book..."
          autocomplete="off"
@@ -105,8 +101,8 @@
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
-  </div>
+</form>
+  </dialog>
 
   <div class="pst-async-banner-revealer d-none">
   <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
@@ -122,9 +118,8 @@
       
       
       
-        
-      
-      <div class="bd-sidebar-primary bd-sidebar">
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -154,21 +149,17 @@
     
     
     <img src="../../_static/logo.jpg" class="logo__image only-light" alt="Force and function at the nanoscale - Home"/>
-    <script>document.write(`<img src="../../_static/logo.jpg" class="logo__image only-dark" alt="Force and function at the nanoscale - Home"/>`);</script>
+    <img src="../../_static/logo.jpg" class="logo__image only-dark pst-js-only" alt="Force and function at the nanoscale - Home"/>
   
   
 </a></div>
         <div class="sidebar-primary-item">
 
- <script>
- document.write(`
-   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script></div>
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
@@ -179,17 +170,51 @@
                 </a>
             </li>
         </ul>
-        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Teaching Resources</span></p>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">About the course</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="1.%20nanoscale_world.html">1. The Nanoscale World</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../info_course/how_to_study.html">How to study this course</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 20 (27th Jan)</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="1.%20nanoscale_world.html">Week 20 (27th Jan) - 1. Nanoscale World</a></li>
 <li class="toctree-l1"><a class="reference internal" href="2.%20forces_potentials.html">2. Forces and Potentials</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 21 (3rd Feb)</span></p>
+<ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="3.%20polar_interactions.html">3. Polar interactions and Dipoles</a></li>
 <li class="toctree-l1"><a class="reference internal" href="4.%20dispersion_interactions.html">Dispersion Interactions</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 22 (10th Feb)</span></p>
+<ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="5.%20dispersion_bigger.html">5. Dispersion Interactions – larger objects</a></li>
 <li class="toctree-l1"><a class="reference internal" href="6.%20water_hydrogenbonds.html">6. Water, Hydrogen Bonds &amp; the Hydrophobic Interaction</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 23 (17th Feb)</span></p>
+<ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="7.%20surfacevbulk.html">7. Surface vs Bulk</a></li>
 <li class="toctree-l1"><a class="reference internal" href="8.%20capillaryforces.html">8. Capillary Forces</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 24 (24th Feb)</span></p>
+<ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="9.%20afm.html">9. Nanoscale Force Measurement Techniques – AFM</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">10. Nanoscale Force Measurement Techniques – Optical Tweezers</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 26 (10th March)</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="12.%20entropy.html">13 &amp; 14. Entropic Forces {#entropic-forces .H2}</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 27 (17th March)</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="13.%20aggregation.html">15. Aggregation &amp; Self-assembly</a></li>
+<li class="toctree-l1"><a class="reference internal" href="14.%20micelles.html">16. Micelles / self-assembly</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 28 - 24th March</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="15.%20vesicles_membranes.html">17. Vesicle formation</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Revision</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../info_course/revision.html">How to study this course</a></li>
 </ul>
 
     </div>
@@ -344,24 +369,16 @@
 
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
-    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
-    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
-  </button>
-`);
-</script>
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-  </button>
-`);
-</script>
+</button>
 <button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
 </button>
@@ -375,7 +392,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>10. Nanoscale Force Measurement Techniques – Optical Tweezers {#nanoscale-force-measurement-techniques-optical-tweezers .H2}</h1>
+    <h1>10. Nanoscale Force Measurement Techniques – Optical Tweezers</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -385,15 +402,17 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#width-1-3791666666666667in-height-1-5673611111111112in-optical-tweezers-diagram-shape-description-automatically-generatedoptical-tweezers-h3">{width=”1.3791666666666667in” height=”1.5673611111111112in”}Optical Tweezers {#diagram-shape-description-automatically-generatedoptical-tweezers .H3}</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#width-2-3465277777777778in-height-2-276388888888889in-the-wave-nature-of-light-a-picture-containing-polygon-description-automatically-generatedthe-wave-nature-of-light-h3">{width=”2.3465277777777778in” height=”2.276388888888889in”}The wave nature of light {#a-picture-containing-polygon-description-automatically-generatedthe-wave-nature-of-light .H3}</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#intensity-intensity-h3">Intensity {#intensity .H3}</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#width-1-2833333333333334in-height-2-7645833333333334in-optical-trapping-of-particles-shape-description-automatically-generatedoptical-trapping-of-particles-h3">{width=”1.2833333333333334in” height=”2.7645833333333334in”}Optical trapping of particles {#shape-description-automatically-generatedoptical-trapping-of-particles .H3}</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#width-2-4902777777777776in-height-3-557638888888889in-making-a-simple-optical-trap-shape-description-automatically-generated-with-medium-confidencemaking-a-simple-optical-trap-h3">{width=”2.4902777777777776in” height=”3.557638888888889in”}Making a simple optical trap {#shape-description-automatically-generated-with-medium-confidencemaking-a-simple-optical-trap .H3}</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#detection-of-particle-movement-detection-of-particle-movement-h3">Detection of particle movement {#detection-of-particle-movement .H3}</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#calibration-of-optical-traps-calibration-of-optical-traps-h3">Calibration of optical traps {#calibration-of-optical-traps .H3}</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#width-2-8229166666666665in-height-3-4881944444444444in-force-measurements-opticaltrappingdnaforce-measurements-h3">{width=”2.8229166666666665in” height=”3.4881944444444444in”}Force Measurements {#opticaltrappingdnaforce-measurements .H3}</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary-of-key-concepts-summary-of-key-concepts-2-h3">Summary of key concepts {#summary-of-key-concepts-2 .H3}</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-wave-nature-of-light">The wave nature of light</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#intensity">Intensity</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#optical-trapping-of-particles">Optical trapping of particles</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#making-a-simple-optical-trap">Making a simple optical trap</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#detection-of-particle-movement">Detection of particle movement</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#calibration-of-optical-traps">Calibration of optical traps</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#force-measurements">Force Measurements</a></li>
+</ul>
+</li>
 </ul>
             </nav>
         </div>
@@ -405,86 +424,73 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="nanoscale-force-measurement-techniques-optical-tweezers-nanoscale-force-measurement-techniques-optical-tweezers-h2">
-<h1>10. Nanoscale Force Measurement Techniques – Optical Tweezers {#nanoscale-force-measurement-techniques-optical-tweezers .H2}<a class="headerlink" href="#nanoscale-force-measurement-techniques-optical-tweezers-nanoscale-force-measurement-techniques-optical-tweezers-h2" title="Link to this heading">#</a></h1>
-<section id="width-1-3791666666666667in-height-1-5673611111111112in-optical-tweezers-diagram-shape-description-automatically-generatedoptical-tweezers-h3">
-<h2><img alt="Diagram, shape Description automatically generated" src="content/teaching/media/image104.png" />{width=”1.3791666666666667in” height=”1.5673611111111112in”}Optical Tweezers {#diagram-shape-description-automatically-generatedoptical-tweezers .H3}<a class="headerlink" href="#width-1-3791666666666667in-height-1-5673611111111112in-optical-tweezers-diagram-shape-description-automatically-generatedoptical-tweezers-h3" title="Link to this heading">#</a></h2>
+  <section class="tex2jax_ignore mathjax_ignore" id="nanoscale-force-measurement-techniques-optical-tweezers">
+<h1>10. Nanoscale Force Measurement Techniques – Optical Tweezers<a class="headerlink" href="#nanoscale-force-measurement-techniques-optical-tweezers" title="Link to this heading">#</a></h1>
 <p>Optical tweezers provide a way of manipulating atoms and molecules, as
 well as nano or micron scale objects. They can also be used to measure
-very small forces.</p>
-<p>These instruments work by trapping small particles in a focussed laser
+very small forces. These instruments work by trapping small particles in a focussed laser
 beam. Once trapped, particles can be manipulated by simply steering the
 laser around.</p>
-</section>
-<section id="width-2-3465277777777778in-height-2-276388888888889in-the-wave-nature-of-light-a-picture-containing-polygon-description-automatically-generatedthe-wave-nature-of-light-h3">
-<h2><img alt="A picture containing polygon Description automatically generated" src="content/teaching/media/image105.png" />{width=”2.3465277777777778in” height=”2.276388888888889in”}The wave nature of light {#a-picture-containing-polygon-description-automatically-generatedthe-wave-nature-of-light .H3}<a class="headerlink" href="#width-2-3465277777777778in-height-2-276388888888889in-the-wave-nature-of-light-a-picture-containing-polygon-description-automatically-generatedthe-wave-nature-of-light-h3" title="Link to this heading">#</a></h2>
-<p>Light is an electromagnetic wave. As it propagates through vacuum or a
-medium it carries energy. The energy is stored in electric and magnetic
-fields that oscillate in a direction perpendicular to the direction of
-travel of the waves (more on this in your ‘Classical Fields’ module).</p>
-<p>As the light travels along, the Electric field at a given time, t, and
-point, x, in space will vary according to the equation</p>
-<p>$$E = E_{0}\sin(\omega t - kx)$$</p>
-<p>where <em>E~o~</em> is the amplitude of the wave, <em>ω</em> is its angular frequency
-and <em>k</em> is called the wavenumber (<em>=2π/λ</em>, where <em>λ</em>  is the wavelength
+<div style="text-align: center;">
+    <img src="imgs/10_1.png" alt="optical tweezers" width="250" height=auto>
+    <p><em>Figure 10.1 - Optical tweezers use focussed laser light to trap and manipulate small objects </em></p>
+</div>
+<section id="the-wave-nature-of-light">
+<h2>The wave nature of light<a class="headerlink" href="#the-wave-nature-of-light" title="Link to this heading">#</a></h2>
+<p>Light is an electromagnetic wave. As it propagates through vacuum or a medium it carries energy. The energy is stored in electric and magnetic fields that oscillate in a direction perpendicular to the direction of travel of the waves. As the light travels along, the Electric field at a given time, <span class="math notranslate nohighlight">\(t\)</span>, and point, <span class="math notranslate nohighlight">\(x\)</span>, in space will vary according to the equation</p>
+<div class="math notranslate nohighlight">
+\[
+E = E_{0}\sin(\omega t - kx)
+\]</div>
+<p>where <span class="math notranslate nohighlight">\(E_{0}\)</span> is the amplitude of the wave, <span class="math notranslate nohighlight">\(\omega\)</span> is its angular frequency
+and <span class="math notranslate nohighlight">\(k\)</span> is called the wavenumber (<span class="math notranslate nohighlight">\(=2{\pi}/{\lambda}\)</span>*, where <span class="math notranslate nohighlight">\(\lambda\)</span>  is the wavelength
 of the light).</p>
-</section>
-<section id="intensity-intensity-h3">
-<h2>Intensity {#intensity .H3}<a class="headerlink" href="#intensity-intensity-h3" title="Link to this heading">#</a></h2>
-<p>The time averaged intensity of light, <em>I</em>, can be related to the
-magnitude of the electric field, <em>E</em>, by the relationship</p>
-<p>$$\left\langle I \right\rangle = \frac{c\varepsilon\varepsilon_{0}n}{2}\left\langle E^{2} \right\rangle$$</p>
-<blockquote>
-<div><p>in Wm^-2^</p>
-</div></blockquote>
-<p>Where <em>c</em> is the speed of light (ms^-1^) and <em>n</em> is the refractive index
+<div style="text-align: center;">
+    <img src="imgs/10_2.png" alt="light wave" width="250" height=auto>
+    <p><em>Figure 10.2 - Light is an electromagnetic wave with oscillating E and B fields.</em></p>
+</div>
+<section id="intensity">
+<h3>Intensity<a class="headerlink" href="#intensity" title="Link to this heading">#</a></h3>
+<p>The time averaged intensity of light, <span class="math notranslate nohighlight">\(I\)</span> (<span class="math notranslate nohighlight">\(Wm^{-2}\)</span>), can be related to the
+magnitude of the electric field, <span class="math notranslate nohighlight">\(E\)</span>, by the relationship</p>
+<div class="math notranslate nohighlight">
+\[\left\langle I \right\rangle = \frac{c\varepsilon\varepsilon_{0}n}{2}\left\langle E^{2} \right\rangle\]</div>
+<p>Where <span class="math notranslate nohighlight">\(c\)</span> is the speed of light (<span class="math notranslate nohighlight">\(ms^-1\)</span>) and <span class="math notranslate nohighlight">\(n\)</span> is the refractive index
 of the medium in which it propagates. All other constants have their
 usual definitions.</p>
 <p>Note: For a sinusoidal oscillating field, the time average value of
-<em>&lt;E^2^&gt;</em> is not zero. So the intensity is not zero! In fact, it is
-equal to <em>½ E~0~^2^</em>. The proof of this is left as an exercise for the
-reader.</p>
+<span class="math notranslate nohighlight">\(\&lt;E^{2}\&gt;\)</span> is not zero. So the intensity is not zero! In fact, it is
+equal to <span class="math notranslate nohighlight">\(\frac{1}{2}E_{0}^{2}\)</span>.</p>
 <p><strong>The key point here is that intensity is proportional to the electric
 field squared</strong></p>
 </section>
-<section id="width-1-2833333333333334in-height-2-7645833333333334in-optical-trapping-of-particles-shape-description-automatically-generatedoptical-trapping-of-particles-h3">
-<h2><img alt="Shape Description automatically generated" src="content/teaching/media/image106.png" />{width=”1.2833333333333334in” height=”2.7645833333333334in”}Optical trapping of particles {#shape-description-automatically-generatedoptical-trapping-of-particles .H3}<a class="headerlink" href="#width-1-2833333333333334in-height-2-7645833333333334in-optical-trapping-of-particles-shape-description-automatically-generatedoptical-trapping-of-particles-h3" title="Link to this heading">#</a></h2>
-<p>Small dielectric (insulating) particles experience a force when
-illuminated with visible light. If a dielectric particle is placed in an
-intensity gradient a force is exerted on the particle such that it will
-move to a region of higher intensity.</p>
-<p>To understand the origin of this effect we must consider the interaction
-between the dielectric particles and the incident laser light radiation.</p>
-<p>When a particle is placed in a laser beam, the electric field associated
-with the incident light will cause a slight separation of charges in the
-particle material and thus induce a dipole moment on the particle. This
-dipole moment will then interact with the field which caused it to form.</p>
-<p>So in one dimension the force on a dielectric particle is</p>
-<p>$$\mathbf{F} = - \frac{dU}{dx}\mathbf{i =}\frac{2\alpha}{c\varepsilon\varepsilon_{0}n}\frac{dI}{dx}\mathbf{i}$$</p>
-<p>Generalising this to three dimensions we obtain</p>
-<p>$\mathbf{F} = - \frac{dU}{dx}\mathbf{i} - \frac{dU}{dy}\mathbf{j} - \frac{dU}{dz}\mathbf{k =}\frac{2\alpha}{c\varepsilon\varepsilon_{0}n}\left( \frac{dI}{dx}\mathbf{i +}\frac{dI}{dy}\mathbf{j +}\frac{dI}{dz}\mathbf{k} \right)$</p>
-<p>So the <strong>force always acts along the direction of increasing intensity
-gradient. Particles will therefore tend to move to regions of higher
-intensity.</strong></p>
 </section>
-<section id="width-2-4902777777777776in-height-3-557638888888889in-making-a-simple-optical-trap-shape-description-automatically-generated-with-medium-confidencemaking-a-simple-optical-trap-h3">
-<h2><img alt="Shape Description automatically generated with medium confidence" src="content/teaching/media/image107.png" />{width=”2.4902777777777776in” height=”3.557638888888889in”}Making a simple optical trap {#shape-description-automatically-generated-with-medium-confidencemaking-a-simple-optical-trap .H3}<a class="headerlink" href="#width-2-4902777777777776in-height-3-557638888888889in-making-a-simple-optical-trap-shape-description-automatically-generated-with-medium-confidencemaking-a-simple-optical-trap-h3" title="Link to this heading">#</a></h2>
+<section id="optical-trapping-of-particles">
+<h2>Optical trapping of particles<a class="headerlink" href="#optical-trapping-of-particles" title="Link to this heading">#</a></h2>
+<p>Small dielectric (insulating) particles experience a force when illuminated with visible light. If a dielectric particle is placed in an intensity gradient a force is exerted on the particle such that it will move to a region of higher intensity. To understand the origin of this effect we must consider the interaction between the dielectric particles and the incident laser light radiation.</p>
+<div style="text-align: center;">
+    <img src="imgs/10_3.png" alt="gradient intensity" width="250" height=auto>
+    <p><em>Figure 10.3 - Force acts along the gradient in intensity of the beam from the edge towards the centre. </em></p>
+</div>
+<p>When a particle is placed in a laser beam, the electric field associated with the incident light will cause a slight separation of charges in the particle material and thus induce a dipole moment on the particle. This dipole moment will then interact with the field which caused it to form. So in one dimension the force on a dielectric particle is:</p>
+<div class="math notranslate nohighlight">
+\[\mathbf{F} = - \frac{dU}{dx}\mathbf{i =}\frac{2\alpha}{c\varepsilon\varepsilon_{0}n}\frac{dI}{dx}\mathbf{i}\]</div>
+<p>Generalising this to three dimensions we obtain:</p>
+<p><span class="math notranslate nohighlight">\(\mathbf{F} = - \frac{dU}{dx}\mathbf{i} - \frac{dU}{dy}\mathbf{j} - \frac{dU}{dz}\mathbf{k =}\frac{2\alpha}{c\varepsilon\varepsilon_{0}n}\left( \frac{dI}{dx}\mathbf{i +}\frac{dI}{dy}\mathbf{j +}\frac{dI}{dz}\mathbf{k} \right)\)</span></p>
+<p>So the <strong>force always acts along the direction of increasing intensity gradient. Particles will therefore tend to move to regions of higher intensity.</strong></p>
+</section>
+<section id="making-a-simple-optical-trap">
+<h2>Making a simple optical trap<a class="headerlink" href="#making-a-simple-optical-trap" title="Link to this heading">#</a></h2>
 <p>We saw in the last section that dielectric particles will tend to move
 to regions of higher intensity in a laser beam. How can we use this to
-create a simple optical trap?</p>
-<p>The answer to this question is extremely simple. If we consider the
-<strong>intensity profile inside a laser beam, we find that it is not uniform
-across the beam, but instead it has a Gaussian shape</strong> as we move from
-the centre of the beam to the edges.</p>
-<p>$$I = I_{0}\exp\left( - \frac{\left( x^{2} + y^{2} \right)}{2w_{0}^{2}} \right) = I_{0}\exp\left( - \frac{r^{2}}{2w_{0}^{2}} \right)$$</p>
-<p>where <em>I~o~</em> is the intensity at the centre of the beam, *w~o\ ~*is a
-measure of the beam width and r is the distance from the centre of the
-beam.</p>
-<p><img alt="Chart, funnel chart Description automaticallygenerated" src="content/teaching/media/image108.png" />{width=”1.6222222222222222in”
-height=”2.2430555555555554in”}<strong>This Gaussian profile means that an
-intensity gradient already exists within the laser beam and small
-dielectric particles will tend to be attracted and trapped in the centre
-of the beam.</strong></p>
+create a simple optical trap? If we consider the intensity profile inside a laser beam, we find that it is not uniform across the beam, but instead it has a Gaussian shape** as we move from the centre of the beam to the edges.</p>
+<div class="math notranslate nohighlight">
+\[I = I_{0}\exp\left( - \frac{\left( x^{2} + y^{2} \right)}{2w_{0}^{2}} \right) = I_{0}\exp\left( - \frac{r^{2}}{2w_{0}^{2}} \right)\]</div>
+<p>where <span class="math notranslate nohighlight">\(I_{0}\)</span> is the intensity at the centre of the beam, <span class="math notranslate nohighlight">\(w_{0}\)</span> is a measure of the beam width and r is the distance from the centre of the beam. This Gaussian profile means that an intensity gradient already exists within the laser beam and small dielectric particles will tend to be attracted and trapped in the centre of the beam.</p>
+<div style="text-align: center;">
+    <img src="imgs/10_4.png" alt="gaussian laser beam" width="250" height=auto>
+    <p><em>Figure 10.4 - The gaussian field strength of a laser beam. </em></p>
+</div>
 <p>However, the problem of trapping along the axis of the laser beam (z
 direction) still needs to be considered as no intensity gradient exists
 for a coherent parallel beam. This difficulty can be overcome by
@@ -494,22 +500,30 @@ This is because the area of the beam decreases as it approaches the
 focal plane and then increaeses after passing through it. This causes
 the intensity to steadily increase and then decrease on passing through
 the focal point of the lens.</p>
+<div style="text-align: center;">
+    <img src="imgs/10_5.png" alt="trap in z" width="250" height=auto>
+    <p><em>Figure 10.5 - When light is strongly focussed it makes a gradient along the z direction which traps the particle at the focus. </em></p>
+</div>
 <p>The strength of the trap in the z direction can be varied by changing
 the angle, θ, (see diagram on left). The larger this angle, the steeper
 the intensity gradient will be along the axis of the laser beam. The
 maximum gradient in intensity can be obtained by using a lens with a
 high numerical aperture (NA), where NA is defined as</p>
-<p>$$NA = n\sin\theta$$</p>
+<div class="math notranslate nohighlight">
+\[NA = n\sin\theta\]</div>
 <p>where n is the refractive index of the ambient environment.</p>
 <p><strong>Trap stiffness (Quadratic approximation to beam profile)</strong></p>
-<p><img alt="quadraticapproxtogaussian" src="content/teaching/media/image109.jpeg" />{width=”3.7680555555555557in”
-height=”2.8229166666666665in”}For small displacements from the central
-position we can approximate the Gaussian intensity profile of the beam
-using a quadratic function</p>
-<p>Laser Intensity</p>
-<p>$$I = I_{0}\exp\left( - \frac{r^{2}}{2w_{0}^{2}} \right) \approx I_{0}\left( 1 - \frac{r^{2}}{2w_{0}^{2}} \right)$$</p>
-<p>Intensity gradient</p>
-<p>$$\frac{dI}{dr} = I_{0}\left( - \frac{r}{w_{0}^{2}} \right)$$</p>
+<p>For small displacements from the central position we can approximate the Gaussian intensity profile of the beam using a quadratic function</p>
+<div style="text-align: center;">
+    <img src="imgs/10_6.png" alt="quadratic approx" width="250" height=auto>
+    <p><em>Figure 10.6 - Quadratic approximation of the gaussian beam, which is valid for small displacements </em></p>
+</div>
+<p>Laser Intensity:</p>
+<div class="math notranslate nohighlight">
+\[I = I_{0}\exp\left( - \frac{r^{2}}{2w_{0}^{2}} \right) \approx I_{0}\left( 1 - \frac{r^{2}}{2w_{0}^{2}} \right)\]</div>
+<p>Intensity gradient:</p>
+<div class="math notranslate nohighlight">
+\[\frac{dI}{dr} = I_{0}\left( - \frac{r}{w_{0}^{2}} \right)\]</div>
 <p>As we will see in the following examples, this allows us to determine
 the effective spring constant (or stiffness) of the trap and to use
 optical tweezers to measure forces that are exerted on trapped
@@ -518,14 +532,14 @@ particles.</p>
 approximated by a quadratic form. This results in a force which is
 directly proportional to the displacement of the particle within the
 trap.</p>
-<p>$F = - kr$</p>
+<p><span class="math notranslate nohighlight">\(F = - kr\)</span></p>
 <p>Where</p>
-<p>$$k = \ \frac{2\alpha I_{0}}{c\varepsilon\varepsilon_{0}nw_{0}^{2}}$$</p>
+<div class="math notranslate nohighlight">
+\[k = \ \frac{2\alpha I_{0}}{c\varepsilon\varepsilon_{0}nw_{0}^{2}}\]</div>
 <p>Hence, if we know the displacement and the trap stiffness, we can
 calculate the force exerted on our trapped particle.</p>
-</section>
-<section id="detection-of-particle-movement-detection-of-particle-movement-h3">
-<h2>Detection of particle movement {#detection-of-particle-movement .H3}<a class="headerlink" href="#detection-of-particle-movement-detection-of-particle-movement-h3" title="Link to this heading">#</a></h2>
+<section id="detection-of-particle-movement">
+<h3>Detection of particle movement<a class="headerlink" href="#detection-of-particle-movement" title="Link to this heading">#</a></h3>
 <p>The split photodiode arrangement used in AFM can also be used to detect
 deflections in optical traps. However, a quadrant photodiode is used to
 detect deflections in both the x and y directions.</p>
@@ -536,55 +550,37 @@ moves in the x-y plane.</p>
 light in the main beam to produce a fringe pattern on the photodiodes.
 As the particle moves around, the fringe patterns move. This can also be
 used to detect motion of the particle.</p>
-<p>Quadrant photodiode</p>
-<p>(4 photodiodes)</p>
-<p>Shadowing (large particles)</p>
-<p>Fringe pattern (small particles)</p>
-<p>Laser beam</p>
+<div style="text-align: center;">
+    <img src="imgs/10_7.png" alt="photodiode" width="250" height=auto>
+    <p><em>Figure 10.7 - The motion of the particle in the case of large particles creates a shadow on a quadrant photodiode or for small particles interference rings. Comparing the measurements of the different quadrants the motion of the particle can be determined.</em></p>
+</div>
 </section>
-<section id="calibration-of-optical-traps-calibration-of-optical-traps-h3">
-<h2>Calibration of optical traps {#calibration-of-optical-traps .H3}<a class="headerlink" href="#calibration-of-optical-traps-calibration-of-optical-traps-h3" title="Link to this heading">#</a></h2>
-<p><img alt="" src="content/teaching/media/image114.png" />{width=”2.217361111111111in”
-height=”1.2798611111111111in”}There are 2 main techniques used to
-calibrate the spring constant or ‘stiffness’ of optical traps.</p>
-<p><strong>Method 1)</strong> We can measure the displacement of a particle under the
-influence of known forces</p>
-<p>$$k = \frac{F_{applied}}{x}$$</p>
-<p><strong>Method 2)</strong> We can measure the mean square displacement, &lt;x^2^&gt;, of
-a trapped particle under the influence of thermal motion</p>
-<p>$$k \approx \frac{k_{B}T}{\left\langle x^{2} \right\rangle}$$</p>
+<section id="calibration-of-optical-traps">
+<h3>Calibration of optical traps<a class="headerlink" href="#calibration-of-optical-traps" title="Link to this heading">#</a></h3>
+<p>There are 2 main techniques used to calibrate the spring constant or ‘stiffness’ of optical traps.</p>
+<ol class="arabic simple">
+<li><p>Measure the displacement of a particle under the influence of known forces.</p></li>
+</ol>
+<div class="math notranslate nohighlight">
+\[k = \frac{F_{applied}}{x}\]</div>
+<div style="text-align: center;">
+    <img src="imgs/10_8.png" alt="drag technique" width="250" height=auto>
+    <p><em>Figure 10.8 - Measure the displacement of particle due to known force to calibrate spring constant with Hooke's law</em></p>
+</div>
+<ol class="arabic simple" start="2">
+<li><p>Measure the mean square displacement, &lt;x^2^&gt;, of a trapped particle under the influence of thermal motion.</p></li>
+</ol>
+<div class="math notranslate nohighlight">
+\[k \approx \frac{k_{B}T}{\left\langle x^{2} \right\rangle}\]</div>
 </section>
-<section id="width-2-8229166666666665in-height-3-4881944444444444in-force-measurements-opticaltrappingdnaforce-measurements-h3">
-<h2><img alt="opticaltrappingDNA" src="content/teaching/media/image115.jpeg" />{width=”2.8229166666666665in” height=”3.4881944444444444in”}Force Measurements {#opticaltrappingdnaforce-measurements .H3}<a class="headerlink" href="#width-2-8229166666666665in-height-3-4881944444444444in-force-measurements-opticaltrappingdnaforce-measurements-h3" title="Link to this heading">#</a></h2>
-<p>It is possible to perform force measurements on e.g. single molecules.</p>
-<p>An optical trap and a fine micropipette can be used to measure the
-forces exerted by individual DNA molecules.</p>
-<p>Small polymer beads can be tethered to the ends of the molecule and used
-to manipulate it.</p>
-<p>C. Bustamante et al., <strong>Nature</strong>, 421(23), 423 (2003)</p>
+<section id="force-measurements">
+<h3>Force Measurements<a class="headerlink" href="#force-measurements" title="Link to this heading">#</a></h3>
+<p>It is possible to perform force measurements on e.g. single molecules. An optical trap and a fine micropipette can be used to measure the forces exerted by individual DNA molecules. Small polymer beads can be tethered to the ends of the molecule and used to manipulate it.</p>
+<div style="text-align: center;">
+    <img src="imgs/10_9.png" alt="gradient intensity" width="250" height=auto>
+    <p><em>Figure 10.9 - Measuring the force required to stretch a single strand of DNA (C. Bustamante et al., **Nature**, 421(23), 423 (2003)) </em></p>
+</div>
 </section>
-<section id="summary-of-key-concepts-summary-of-key-concepts-2-h3">
-<h2>Summary of key concepts {#summary-of-key-concepts-2 .H3}<a class="headerlink" href="#summary-of-key-concepts-summary-of-key-concepts-2-h3" title="Link to this heading">#</a></h2>
-<p>Atomic force microscopes can be used to measure forces,</p>
-<p>$$F = kz$$</p>
-<p>The spring constant of an AFM cantilever is determined by its material
-properties and its physical dimensions</p>
-<blockquote>
-<div><p>$$k = \frac{3EI}{l^{3}}$$</p>
-</div></blockquote>
-<p>A split photodiode arrangement is used to detect deflections and to
-measure forces with &gt;10pN precision</p>
-<p>Particles in a laser beam will experience a force that acts to pull them
-to regions of higher intensity</p>
-<p>$$\mathbf{F} = - \frac{dU}{dx}\mathbf{i =}\frac{2\alpha}{c\varepsilon\varepsilon_{0}n}\frac{dI}{dx}\mathbf{i}$$</p>
-<p><img alt="Shape Description automaticallygenerated" src="content/teaching/media/image124.png" />{width=”1.0041666666666667in”
-height=”1.9993055555555554in”}</p>
-<p>Lasers have a Gaussian beam profile, which naturally lends itself to
-trapping of particles.</p>
-<p>Trapping in three dimensions can be achieved by focussing the laser
-using a microscope objective.</p>
-<p>Trapping forces on nanoscale particles can be measured with pN
-precision.</p>
 </section>
 </section>
 
@@ -618,6 +614,24 @@ precision.</p>
                 <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
+    <a class="left-prev"
+       href="9.%20afm.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">9. Nanoscale Force Measurement Techniques – AFM</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="12.%20entropy.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">13 &amp; 14. Entropic Forces {#entropic-forces .H2}</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
 </div>
                 </footer>
               
@@ -625,7 +639,8 @@ precision.</p>
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
 
   <div class="sidebar-secondary-item">
@@ -634,15 +649,17 @@ precision.</p>
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#width-1-3791666666666667in-height-1-5673611111111112in-optical-tweezers-diagram-shape-description-automatically-generatedoptical-tweezers-h3">{width=”1.3791666666666667in” height=”1.5673611111111112in”}Optical Tweezers {#diagram-shape-description-automatically-generatedoptical-tweezers .H3}</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#width-2-3465277777777778in-height-2-276388888888889in-the-wave-nature-of-light-a-picture-containing-polygon-description-automatically-generatedthe-wave-nature-of-light-h3">{width=”2.3465277777777778in” height=”2.276388888888889in”}The wave nature of light {#a-picture-containing-polygon-description-automatically-generatedthe-wave-nature-of-light .H3}</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#intensity-intensity-h3">Intensity {#intensity .H3}</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#width-1-2833333333333334in-height-2-7645833333333334in-optical-trapping-of-particles-shape-description-automatically-generatedoptical-trapping-of-particles-h3">{width=”1.2833333333333334in” height=”2.7645833333333334in”}Optical trapping of particles {#shape-description-automatically-generatedoptical-trapping-of-particles .H3}</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#width-2-4902777777777776in-height-3-557638888888889in-making-a-simple-optical-trap-shape-description-automatically-generated-with-medium-confidencemaking-a-simple-optical-trap-h3">{width=”2.4902777777777776in” height=”3.557638888888889in”}Making a simple optical trap {#shape-description-automatically-generated-with-medium-confidencemaking-a-simple-optical-trap .H3}</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#detection-of-particle-movement-detection-of-particle-movement-h3">Detection of particle movement {#detection-of-particle-movement .H3}</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#calibration-of-optical-traps-calibration-of-optical-traps-h3">Calibration of optical traps {#calibration-of-optical-traps .H3}</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#width-2-8229166666666665in-height-3-4881944444444444in-force-measurements-opticaltrappingdnaforce-measurements-h3">{width=”2.8229166666666665in” height=”3.4881944444444444in”}Force Measurements {#opticaltrappingdnaforce-measurements .H3}</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary-of-key-concepts-summary-of-key-concepts-2-h3">Summary of key concepts {#summary-of-key-concepts-2 .H3}</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-wave-nature-of-light">The wave nature of light</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#intensity">Intensity</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#optical-trapping-of-particles">Optical trapping of particles</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#making-a-simple-optical-trap">Making a simple optical trap</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#detection-of-particle-movement">Detection of particle movement</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#calibration-of-optical-traps">Calibration of optical traps</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#force-measurements">Force Measurements</a></li>
+</ul>
+</li>
 </ul>
   </nav></div>
 
@@ -691,8 +708,8 @@ By Mike Smith
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
-<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <script defer src="../../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549"></script>
+<script defer src="../../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549"></script>
 
   <footer class="bd-footer">
   </footer>

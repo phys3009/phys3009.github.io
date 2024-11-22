@@ -16,30 +16,33 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
+  <!-- 
+    this give us a css class that will be invisible only if js is disabled 
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-
-  
-  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+  <link href="../../_static/styles/theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=87e54e7c" />
   
+  <!-- So that users can add custom icons -->
+  <script src="../../_static/scripts/fontawesome.js?digest=26a4bc78f4c0ddb94549"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
-<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
-  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
 
     <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
     <script src="../../_static/doctools.js?v=9a2dae69"></script>
@@ -57,6 +60,8 @@
     <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'content/teaching/7. surfacevbulk';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -64,6 +69,7 @@
     <link rel="prev" title="6. Water, Hydrogen Bonds &amp; the Hydrophobic Interaction" href="6.%20water_hydrogenbonds.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
   </head>
   
   
@@ -79,19 +85,8 @@
     <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-primary-sidebar-checkbox"/>
-  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
-  
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-secondary-sidebar-checkbox"/>
-  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
-  
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
+  <dialog id="pst-search-dialog">
+    
 <form class="bd-search d-flex align-items-center"
       action="../../search.html"
       method="get">
@@ -99,7 +94,6 @@
   <input type="search"
          class="form-control"
          name="q"
-         id="search-input"
          placeholder="Search this book..."
          aria-label="Search this book..."
          autocomplete="off"
@@ -107,8 +101,8 @@
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
-  </div>
+</form>
+  </dialog>
 
   <div class="pst-async-banner-revealer d-none">
   <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
@@ -124,7 +118,8 @@
       
       
       
-      <div class="bd-sidebar-primary bd-sidebar">
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -154,21 +149,17 @@
     
     
     <img src="../../_static/logo.jpg" class="logo__image only-light" alt="Force and function at the nanoscale - Home"/>
-    <script>document.write(`<img src="../../_static/logo.jpg" class="logo__image only-dark" alt="Force and function at the nanoscale - Home"/>`);</script>
+    <img src="../../_static/logo.jpg" class="logo__image only-dark pst-js-only" alt="Force and function at the nanoscale - Home"/>
   
   
 </a></div>
         <div class="sidebar-primary-item">
 
- <script>
- document.write(`
-   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script></div>
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
@@ -179,17 +170,51 @@
                 </a>
             </li>
         </ul>
-        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Teaching Resources</span></p>
-<ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="1.%20nanoscale_world.html">1. The Nanoscale World</a></li>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">About the course</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../info_course/how_to_study.html">How to study this course</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 20 (27th Jan)</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="1.%20nanoscale_world.html">Week 20 (27th Jan) - 1. Nanoscale World</a></li>
 <li class="toctree-l1"><a class="reference internal" href="2.%20forces_potentials.html">2. Forces and Potentials</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 21 (3rd Feb)</span></p>
+<ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="3.%20polar_interactions.html">3. Polar interactions and Dipoles</a></li>
 <li class="toctree-l1"><a class="reference internal" href="4.%20dispersion_interactions.html">Dispersion Interactions</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 22 (10th Feb)</span></p>
+<ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="5.%20dispersion_bigger.html">5. Dispersion Interactions – larger objects</a></li>
 <li class="toctree-l1"><a class="reference internal" href="6.%20water_hydrogenbonds.html">6. Water, Hydrogen Bonds &amp; the Hydrophobic Interaction</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 23 (17th Feb)</span></p>
+<ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">7. Surface vs Bulk</a></li>
 <li class="toctree-l1"><a class="reference internal" href="8.%20capillaryforces.html">8. Capillary Forces</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 24 (24th Feb)</span></p>
+<ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="9.%20afm.html">9. Nanoscale Force Measurement Techniques – AFM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="10.%20opticaltweezers.html">10. Nanoscale Force Measurement Techniques – Optical Tweezers</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 26 (10th March)</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="12.%20entropy.html">13 &amp; 14. Entropic Forces {#entropic-forces .H2}</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 27 (17th March)</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="13.%20aggregation.html">15. Aggregation &amp; Self-assembly</a></li>
+<li class="toctree-l1"><a class="reference internal" href="14.%20micelles.html">16. Micelles / self-assembly</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 28 - 24th March</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="15.%20vesicles_membranes.html">17. Vesicle formation</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Revision</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../info_course/revision.html">How to study this course</a></li>
 </ul>
 
     </div>
@@ -344,24 +369,16 @@
 
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
-    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
-    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
-  </button>
-`);
-</script>
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-  </button>
-`);
-</script>
+</button>
 <button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
 </button>
@@ -412,52 +429,56 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="surface-vs-bulk">
+  <section class="tex2jax_ignore mathjax_ignore" id="surface-vs-bulk">
 <h1>7. Surface vs Bulk<a class="headerlink" href="#surface-vs-bulk" title="Link to this heading">#</a></h1>
 <section id="cohesive-energy-of-bulk-atoms-and-surface-atoms">
 <h2>Cohesive energy of bulk atoms and surface atoms<a class="headerlink" href="#cohesive-energy-of-bulk-atoms-and-surface-atoms" title="Link to this heading">#</a></h2>
 <p>In the bulk of a material, atoms and molecules are surrounded by
 <em>N~Bulk~</em> nearest neighbours.</p>
 <div style="text-align: center;">
-    <img src="media/7_1.png" alt="H Bonds" width="400" height=auto>
+    <img src="imgs/7_1.png" alt="H Bonds" width="400" height=auto>
     <p><em>Figure 7.1 - Molecule in the bulk of some material.</em></p>
 </div>
 <p>If each interaction with the central atom/molecule has an energy, <em>-u,</em>
 the total interaction energy becomes</p>
-<p>$$U_{Bulk} = -N_{Bulk}u$$</p>
+<div class="math notranslate nohighlight">
+\[U_{Bulk} = -N_{Bulk}u\]</div>
 <p>When we create a surface in material and expose it to vacuum each
 surface atom/molecule has fewer nearest neighbours</p>
 <div style="text-align: center;">
-    <img src="media/7_2.png" alt="Surface" width="400" height=auto>
+    <img src="imgs/7_2.png" alt="Surface" width="400" height=auto>
     <p><em>Figure 7.2 - Molecule at the surface of some material.</em></p>
 </div>
 <p>The interaction energy per atom/molecule is then</p>
-<p>$$U_{surf} = -N_{surf}u$$</p>
+<div class="math notranslate nohighlight">
+\[U_{surf} = -N_{surf}u\]</div>
 <p>There is therefore an excess amount of energy associated with each surface atom / molecule.</p>
-<p>$$\Delta U = U_{surf} -U_{Bulk} = (N_{Bulk} - N_{surf})u$$</p>
+<div class="math notranslate nohighlight">
+\[\Delta U = U_{surf} -U_{Bulk} = (N_{Bulk} - N_{surf})u\]</div>
 <p>Since this is positive it is unfavourable.</p>
 <div style="text-align: center;">
-    <img src="media/7_3.png" alt="Surface energy" width="400" height=auto>
+    <img src="imgs/7_3.png" alt="Surface energy" width="400" height=auto>
     <p><em>Figure 7.3 - Surface energy.</em></p>
 </div>
-<p><strong>Surface energy</strong> is the excess energy required per unit area to create a surface in a vacuum. The energy required to create two new surfaces in a material, each having area $S$ is $W = 2\gamma S$ where $\gamma$ is the surface energy of the material in $Jm^{-2}$.</p>
+<p><strong>Surface energy</strong> is the excess energy required per unit area to create a surface in a vacuum. The energy required to create two new surfaces in a material, each having area <span class="math notranslate nohighlight">\(S\)</span> is <span class="math notranslate nohighlight">\(W = 2\gamma S\)</span> where <span class="math notranslate nohighlight">\(\gamma\)</span> is the surface energy of the material in <span class="math notranslate nohighlight">\(Jm^{-2}\)</span>.</p>
 <section id="calculating-the-surface-energy-of-simple-materials-from-inter-surface-potentials">
 <h3>Calculating the surface energy of simple materials from inter-surface potentials<a class="headerlink" href="#calculating-the-surface-energy-of-simple-materials-from-inter-surface-potentials" title="Link to this heading">#</a></h3>
 <p>The surface energy of a material can also be thought of as the energy
 required to separate two surfaces from their inter-atomic/molecular
-distance, $D_{0}$, and to remove them to infinity.</p>
+distance, <span class="math notranslate nohighlight">\(D_{0}\)</span>, and to remove them to infinity.</p>
 <div style="text-align: center;">
-    <img src="media/7_4.png" alt="Surface" width="400" height=auto>
+    <img src="imgs/7_4.png" alt="Surface" width="400" height=auto>
     <p><em>Figure 7.4 - Calculating surface energy.</em></p>
 </div>
-<p>In lectures we showed that the potential energy due to dispersion interactions between two surfaces, $U$, is given by $U = - \frac{AS}{12\pi D_{0}^{2}}$ where <em>A</em> is the Hamaker constant (J) and <em>S</em> is the area of the surfaces ($m^{2}$). This is also the energy required to separate the two surfaces from a separation $D_{o}$ to infinity. We would expect therefore that the surface energy should be equal to half this potential energy (as there are two surfaces) per unit area.</p>
+<p>In lectures we showed that the potential energy due to dispersion interactions between two surfaces, <span class="math notranslate nohighlight">\(U\)</span>, is given by <span class="math notranslate nohighlight">\(U = - \frac{AS}{12\pi D_{0}^{2}}\)</span> where <em>A</em> is the Hamaker constant (J) and <em>S</em> is the area of the surfaces (<span class="math notranslate nohighlight">\(m^{2}\)</span>). This is also the energy required to separate the two surfaces from a separation <span class="math notranslate nohighlight">\(D_{o}\)</span> to infinity. We would expect therefore that the surface energy should be equal to half this potential energy (as there are two surfaces) per unit area.</p>
 <p>This gives:</p>
-<p>$${\gamma = - \frac{U}{2S} = \frac{A}{24\pi D_{0}^{2}}}$$</p>
+<div class="math notranslate nohighlight">
+\[{\gamma = - \frac{U}{2S} = \frac{A}{24\pi D_{0}^{2}}}\]</div>
 </section>
 <section id="do-calculations-agree-with-experiments">
 <h3>Do calculations agree with experiments?<a class="headerlink" href="#do-calculations-agree-with-experiments" title="Link to this heading">#</a></h3>
 <div style="text-align: center;">
-    <img src="media/7_5.png" alt="Table" width="400" height=auto>
+    <img src="imgs/7_5.png" alt="Table" width="400" height=auto>
     <p><em>Figure 7.5 - Table of Hamaker constants</em></p>
 </div>
 </section>
@@ -467,14 +488,15 @@ distance, $D_{0}$, and to remove them to infinity.</p>
 1 and 2 in a third medium (medium 3) is called the <em>work of adhesion
 (W)</em>. It is the energy required to break the interface between two materials
 and form two new interfaces.</p>
-<p>$$W = \underset{creation\ of\ new\ surfaces}{\overset{\gamma_{13} + \gamma_{23}}{︸}} - \underset{breaking\ of\ initial\ bonds}{\overset{\gamma_{12}}{︸}}$$</p>
+<div class="math notranslate nohighlight">
+\[W = \underset{creation\ of\ new\ surfaces}{\overset{\gamma_{13} + \gamma_{23}}{︸}} - \underset{breaking\ of\ initial\ bonds}{\overset{\gamma_{12}}{︸}}\]</div>
 <div style="text-align: center;">
-    <img src="media/7_6.png" alt="Surface" width="400" height=auto>
+    <img src="imgs/7_6.png" alt="Surface" width="400" height=auto>
     <p><em>Figure 7.6 - Work of adhesion - energy required to break one interface and create two new interfaces.</em></p>
 </div>
 <p><strong>Interfacial energy</strong> is the excess energy per unit area required to
 create an interface between two different materials.</p>
-<p>This standard definition can sometimes confuse people. $\gamma_{12}$ is an interfacial energy and so is $\gamma_{23}$. Though we speak about “creating” an interface we mean the energy associated with the contact between two materials. Since those contacts change when we pull a material apart the work of adhesion measures the difference in those interfacial energies. The surface energy is very similar but concerns the specific case where a material surface is in contact with a vacuum. Often when the surface is in contact with air the difference is very small but strictly a material in air has an interfacial energy.</p>
+<p>This standard definition can sometimes confuse people. <span class="math notranslate nohighlight">\(\gamma_{12}\)</span> is an interfacial energy and so is <span class="math notranslate nohighlight">\(\gamma_{23}\)</span>. Though we speak about “creating” an interface we mean the energy associated with the contact between two materials. Since those contacts change when we pull a material apart the work of adhesion measures the difference in those interfacial energies. The surface energy is very similar but concerns the specific case where a material surface is in contact with a vacuum. Often when the surface is in contact with air the difference is very small but strictly a material in air has an interfacial energy.</p>
 </section>
 </section>
 <section id="surface-and-interfacial-tension">
@@ -483,20 +505,20 @@ create an interface between two different materials.</p>
 extend a surface/interface (measured in $Nm^{-1}). This is actually the
 same thing as the surface energy. Consider:</p>
 <div style="text-align: center;">
-    <img src="media/7_7.png" alt="Stretch interface" width="400" height=auto>
+    <img src="imgs/7_7.png" alt="Stretch interface" width="400" height=auto>
     <p><em>Figure 7.7 - Schematic of stretching an interface showing that interfacial energy and interfacial tension are equivalent.</em></p>
 </div>
-<p>The energy ($dU$) required to increase the area of the liquid surface in the diagram by a small amount $Ldx$ is $dU = \gamma Ldx$. The magnitude of the force exerted on the barrier is therefore $T = - F = \frac{dU}{dx} = \gamma L$. So $\gamma = T/l$.</p>
-<p>This means that surface energy $\gamma$ is also the force acting per unit length at a liquid interface (also called surface tension). Similarly, interfacial
+<p>The energy (<span class="math notranslate nohighlight">\(dU\)</span>) required to increase the area of the liquid surface in the diagram by a small amount <span class="math notranslate nohighlight">\(Ldx\)</span> is <span class="math notranslate nohighlight">\(dU = \gamma Ldx\)</span>. The magnitude of the force exerted on the barrier is therefore <span class="math notranslate nohighlight">\(T = - F = \frac{dU}{dx} = \gamma L\)</span>. So <span class="math notranslate nohighlight">\(\gamma = T/l\)</span>.</p>
+<p>This means that surface energy <span class="math notranslate nohighlight">\(\gamma\)</span> is also the force acting per unit length at a liquid interface (also called surface tension). Similarly, interfacial
 energy and interfacial tension are the same quantity.</p>
 <section id="why-is-a-suspended-droplet-spherical">
 <h3>Why is a suspended droplet spherical?<a class="headerlink" href="#why-is-a-suspended-droplet-spherical" title="Link to this heading">#</a></h3>
 <p>A sphere has the minimum surface area for any given volume of fluid. Any
 shape other than a sphere will therefore result in an increased surface
-area $dA$ and a consequent increase in the free energy $dG = \gamma_{12} \sim dA$.
+area <span class="math notranslate nohighlight">\(dA\)</span> and a consequent increase in the free energy <span class="math notranslate nohighlight">\(dG = \gamma_{12} \sim dA\)</span>.
 Alternatively one could think of this in terms of the surface tension which pulls inwards equally in all directions leading to a spherical shape.</p>
 <div style="text-align: center;">
-    <img src="media/7_8.png" alt="droplet" width="400" height=auto>
+    <img src="imgs/7_8.png" alt="droplet" width="400" height=auto>
     <p><em>Figure 7.8 - A sphere minimises the surface area for a given volume.</em></p>
 </div>
 </section>
@@ -507,12 +529,12 @@ Alternatively one could think of this in terms of the surface tension which pull
 shape is more complicated. Surface and interfacial energies determine
 how macroscopic liquid droplets deform when they adhere to a surface</p>
 <div style="text-align: center;">
-    <img src="media/7_9.png" alt="Contact angle" width="400" height=auto>
+    <img src="imgs/7_9.png" alt="Contact angle" width="400" height=auto>
     <p><em>Figure 7.9 - Contact angle of a droplet on a surface.</em></p>
 </div>
-<p>If we define $S = \gamma_{vs} - \gamma_{ls} - \gamma_{vl}$, a partially wetting film has $S &lt; 0$ whereas a wetting film (one that spreads out into a thin layer) will have $S &gt;= 0$. The contact angle made between a droplet and a surface is determined by a subtle balance of the interfacial energies/tensions.</p>
+<p>If we define <span class="math notranslate nohighlight">\(S = \gamma_{vs} - \gamma_{ls} - \gamma_{vl}\)</span>, a partially wetting film has <span class="math notranslate nohighlight">\(S &lt; 0\)</span> whereas a wetting film (one that spreads out into a thin layer) will have <span class="math notranslate nohighlight">\(S &gt;= 0\)</span>. The contact angle made between a droplet and a surface is determined by a subtle balance of the interfacial energies/tensions.</p>
 <div style="text-align: center;">
-    <img src="media/7_10.png" alt="Contact angle" width="400" height=auto>
+    <img src="imgs/7_10.png" alt="Contact angle" width="400" height=auto>
     <p><em>Figure 7.10 - Interfacial energies balance at the contact line to give a specific contact angle.</em></p>
 </div>
 </section>
@@ -528,7 +550,7 @@ or liquid</p></li>
 <p>If a surface has a small / large contact angle with water then it is
 known as <em>hydrophilic</em> / <em>hydrophobic</em>. Small and large are relative
 terms used to compare different surfaces but usually a hydrophobic
-surface would have a contact angle $\sim 90^{\circ}$.</p>
+surface would have a contact angle <span class="math notranslate nohighlight">\(\sim 90^{\circ}\)</span>.</p>
 </section>
 <section id="superhydrophobicity">
 <h2>Superhydrophobicity<a class="headerlink" href="#superhydrophobicity" title="Link to this heading">#</a></h2>
@@ -540,14 +562,15 @@ droplet to simply roll off the surface with even a small angle of
 inclination. These structures occur naturally (eg the Lotus Leaf) but
 are also especially manufactured for various applications.</p>
 <div style="text-align: center;">
-    <img src="media/7_11.png" alt="superhydrophobic" width="400" height=auto>
+    <img src="imgs/7_11.png" alt="superhydrophobic" width="400" height=auto>
     <p><em>Figure 7.11 - Superhydrophobic surface.</em></p>
 </div>
 <section id="summary-of-key-concepts">
 <h3>Summary of key concepts<a class="headerlink" href="#summary-of-key-concepts" title="Link to this heading">#</a></h3>
-<p>Surface/Interfacial Energy is the energy per unit area associated with the creation of a surface/interface ($Jm^{2}$)</p>
+<p>Surface/Interfacial Energy is the energy per unit area associated with the creation of a surface/interface (<span class="math notranslate nohighlight">\(Jm^{2}\)</span>)</p>
 <p>Surface energies can be calculated using the latent heat of vaporisation of a material or from the inter-atomic/molecular potentials</p>
-<p>$$\gamma = \frac{A}{24\pi D_{0}^{2}}$$</p>
+<div class="math notranslate nohighlight">
+\[\gamma = \frac{A}{24\pi D_{0}^{2}}\]</div>
 <p>A subtle balance of interfacial energies determines the adhesive properties of simple materials and the wetting properties of a liquid.</p>
 </section>
 </section>
@@ -608,7 +631,8 @@ are also especially manufactured for various applications.</p>
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
 
   <div class="sidebar-secondary-item">
@@ -681,8 +705,8 @@ By Mike Smith
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
-<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <script defer src="../../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549"></script>
+<script defer src="../../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549"></script>
 
   <footer class="bd-footer">
   </footer>

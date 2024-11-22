@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>1. The Nanoscale World &#8212; Force and function at the nanoscale</title>
+    <title>1. Nanoscale World &#8212; Force and function at the nanoscale</title>
   
   
   
@@ -16,30 +16,33 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
+  <!-- 
+    this give us a css class that will be invisible only if js is disabled 
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-
-  
-  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+  <link href="../../_static/styles/theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=87e54e7c" />
   
+  <!-- So that users can add custom icons -->
+  <script src="../../_static/scripts/fontawesome.js?digest=26a4bc78f4c0ddb94549"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
-<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
-  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
 
     <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
     <script src="../../_static/doctools.js?v=9a2dae69"></script>
@@ -57,13 +60,16 @@
     <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'content/teaching/1. nanoscale_world';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="2. Forces and Potentials" href="2.%20forces_potentials.html" />
-    <link rel="prev" title="PHYS3009: Force and function at the nanoscale" href="../../intro.html" />
+    <link rel="prev" title="How to study this course" href="../info_course/how_to_study.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
   </head>
   
   
@@ -79,19 +85,8 @@
     <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-primary-sidebar-checkbox"/>
-  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
-  
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-secondary-sidebar-checkbox"/>
-  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
-  
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
+  <dialog id="pst-search-dialog">
+    
 <form class="bd-search d-flex align-items-center"
       action="../../search.html"
       method="get">
@@ -99,7 +94,6 @@
   <input type="search"
          class="form-control"
          name="q"
-         id="search-input"
          placeholder="Search this book..."
          aria-label="Search this book..."
          autocomplete="off"
@@ -107,8 +101,8 @@
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
-  </div>
+</form>
+  </dialog>
 
   <div class="pst-async-banner-revealer d-none">
   <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
@@ -124,7 +118,8 @@
       
       
       
-      <div class="bd-sidebar-primary bd-sidebar">
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -154,21 +149,17 @@
     
     
     <img src="../../_static/logo.jpg" class="logo__image only-light" alt="Force and function at the nanoscale - Home"/>
-    <script>document.write(`<img src="../../_static/logo.jpg" class="logo__image only-dark" alt="Force and function at the nanoscale - Home"/>`);</script>
+    <img src="../../_static/logo.jpg" class="logo__image only-dark pst-js-only" alt="Force and function at the nanoscale - Home"/>
   
   
 </a></div>
         <div class="sidebar-primary-item">
 
- <script>
- document.write(`
-   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script></div>
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
@@ -179,17 +170,55 @@
                 </a>
             </li>
         </ul>
-        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Teaching Resources</span></p>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">About the course</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../info_course/how_to_study.html">How to study this course</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 20 (27th Jan)</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">1. The Nanoscale World</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">1. Nanoscale World</a></li>
 <li class="toctree-l1"><a class="reference internal" href="2.%20forces_potentials.html">2. Forces and Potentials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../activities/activity1.html">Activity 1: sedimentation and the thermal energy scale</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../activities/activity2.html">Activity 2: potentials and forces</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 21 (3rd Feb)</span></p>
+<ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="3.%20polar_interactions.html">3. Polar interactions and Dipoles</a></li>
-<li class="toctree-l1"><a class="reference internal" href="4.%20dispersion_interactions.html">Dispersion Interactions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="4.%20dispersion_interactions.html">4. Dispersion Interactions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../activities/activity3.html">Activity 3: Lennard Jones</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../activities/activity4.html">Activity 4: Dispersion interactions</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 22 (10th Feb)</span></p>
+<ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="5.%20dispersion_bigger.html">5. Dispersion Interactions – larger objects</a></li>
 <li class="toctree-l1"><a class="reference internal" href="6.%20water_hydrogenbonds.html">6. Water, Hydrogen Bonds &amp; the Hydrophobic Interaction</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 23 (17th Feb)</span></p>
+<ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="7.%20surfacevbulk.html">7. Surface vs Bulk</a></li>
 <li class="toctree-l1"><a class="reference internal" href="8.%20capillaryforces.html">8. Capillary Forces</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 24 (24th Feb)</span></p>
+<ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="9.%20afm.html">9. Nanoscale Force Measurement Techniques – AFM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="10.%20opticaltweezers.html">10. Nanoscale Force Measurement Techniques – Optical Tweezers</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 26 (10th March)</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="12.%20entropy.html">13 &amp; 14. Entropic Forces {#entropic-forces .H2}</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 27 (17th March)</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="13.%20aggregation.html">15. Aggregation &amp; Self-assembly</a></li>
+<li class="toctree-l1"><a class="reference internal" href="14.%20micelles.html">16. Micelles / self-assembly</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 28 - 24th March</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="15.%20vesicles_membranes.html">17. Vesicle formation</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Revision</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../info_course/revision.html">How to study this course</a></li>
 </ul>
 
     </div>
@@ -344,24 +373,16 @@
 
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
-    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
-    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
-  </button>
-`);
-</script>
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-  </button>
-`);
-</script>
+</button>
 <button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
 </button>
@@ -375,7 +396,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>1. The Nanoscale World</h1>
+    <h1>1. Nanoscale World</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -385,11 +406,16 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">The Nanoscale World</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#microscopic-and-nanoscale-forces">Microscopic and Nanoscale Forces</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-nanoscale-world">The Nanoscale World</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#microscopic-and-nanoscale-forces">Microscopic and Nanoscale Forces</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#brownian-motion-and-what-it-tells-us-about-the-micro-nanoscale-world">Brownian motion and what it tells us about the micro / nanoscale world</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-thermal-energy-scale">The thermal energy scale</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#how-big-is-k-bt">How big is <span class="math notranslate nohighlight">\(k_BT\)</span>?</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-boltzmann-equation">The Boltzmann Equation</a></li>
 </ul>
             </nav>
         </div>
@@ -401,19 +427,81 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="the-nanoscale-world">
-<h1>1. The Nanoscale World<a class="headerlink" href="#the-nanoscale-world" title="Link to this heading">#</a></h1>
-<section id="id1">
-<h2>The Nanoscale World<a class="headerlink" href="#id1" title="Link to this heading">#</a></h2>
+  <section class="tex2jax_ignore mathjax_ignore" id="nanoscale-world">
+<h1>1. Nanoscale World<a class="headerlink" href="#nanoscale-world" title="Link to this heading">#</a></h1>
+<section id="the-nanoscale-world">
+<h2>The Nanoscale World<a class="headerlink" href="#the-nanoscale-world" title="Link to this heading">#</a></h2>
 <p>The nanoscale world is very different from the macroscopic one that we inhabit. Thermal fluctuations constantly buffet and agitate molecules so that a good mental picture is one of ceaseless random motions. Bringing some order to this chaos, nanoscale forces attempt to resist these disruptive influences.</p>
-<section id="microscopic-and-nanoscale-forces">
-<h3>Microscopic and Nanoscale Forces<a class="headerlink" href="#microscopic-and-nanoscale-forces" title="Link to this heading">#</a></h3>
-<p>Interatomic, intermolecular and surface forces act between different objects and are responsible for holding (or not holding) materials such as solids, liquids and gases together. These forces often have a simple power law dependence, but they are all extremely short-range interactions that persist over distances of $0.2 nm$ to $100nm$.</p>
 </section>
+<section id="microscopic-and-nanoscale-forces">
+<h2>Microscopic and Nanoscale Forces<a class="headerlink" href="#microscopic-and-nanoscale-forces" title="Link to this heading">#</a></h2>
+<p>Interatomic, intermolecular and surface forces act between different objects and are responsible for holding (or not holding) materials such as solids, liquids and gases together. These forces often have a simple power law dependence, but they are all extremely short-range interactions that persist over distances of <span class="math notranslate nohighlight">\(0.2 nm\)</span> to <span class="math notranslate nohighlight">\(100nm\)</span>.</p>
 <section id="brownian-motion-and-what-it-tells-us-about-the-micro-nanoscale-world">
 <h3>Brownian motion and what it tells us about the micro / nanoscale world<a class="headerlink" href="#brownian-motion-and-what-it-tells-us-about-the-micro-nanoscale-world" title="Link to this heading">#</a></h3>
 <p>Unlike the macroscopic world, the motion of atoms, molecules and sub-micron particles is dominated by the thermal fluctuations of atoms and molecules that surround them. Each object is constantly being pummeled by atoms and molecules in their environment which are in turn being pummeled by their neighbours. This means that motion through a liquid on the nanoscale is more like trying to swim through a children’s ball pool (where the balls are constantly being fired at you from all sides using a tennis ball cannon) and less like trying to swim as one might in a swimming pool full of water. You may remember this video from the first lecture. The molecules are being constantly buffeted by the surrounding water molecules.</p>
+<div style="text-align: center;">
+<video width="500" controls>
+  <source src="media/vid1_1.mkv" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+</div>
+<p>The main idea is that the constant thermal motion that occurs on the sub-micron and nanoscale makes motion very different on these length scales (and subsequently has significant consequence for the design of swimming objects on these length scales – although this will not be covered in this module). Instead of smooth fluid like motion, like that obtained in bulk liquids (where inertial effects are important), we find that the atoms, molecules and small particles diffuse around, executing a random walk such that their mean square displacement <span class="math notranslate nohighlight">\(&lt;x^{2}&gt;\)</span> after a time, <span class="math notranslate nohighlight">\(t\)</span>, is given by</p>
+<div class="math notranslate nohighlight">
+\[
+&lt;x^{2}&gt; \approx 6Dt	\tag{1.1}
+\]</div>
+<p>i.e. their displacement varies as <span class="math notranslate nohighlight">\(t^{0.5}\)</span>.</p>
+<p>The constant <span class="math notranslate nohighlight">\(D\)</span> is referred to as the diffusion coefficient (<span class="math notranslate nohighlight">\(m^2s^{-1}\)</span>) and can be related to the size of the diffusing object and the viscosity,<span class="math notranslate nohighlight">\(\eta\)</span>, (<span class="math notranslate nohighlight">\(Pas\)</span>) of the surrounding medium. For a spherical object of radius a this is given using the Stokes-Einstein equation</p>
+<div class="math notranslate nohighlight">
+\[
+D=\frac{k_{B}T}{6\pi \eta a}	\tag{1.2}
+\]</div>
 </section>
+</section>
+<section id="the-thermal-energy-scale">
+<h2>The thermal energy scale<a class="headerlink" href="#the-thermal-energy-scale" title="Link to this heading">#</a></h2>
+<p>At temperatures above absolute zero the atoms can have a significant amount of thermal energy. This thermal energy causes the atoms and molecules in a substance to jiggle around constantly, bashing into one another with effect of disrupting any interactions between the atoms. <strong>When the thermal energy associated with atoms, molecules and particles becomes comparable to the energy of interactions, the interactions will cease to be significant.</strong> We therefore need to determine the magnitude of the thermal energy scale and to determine how this influences forces (e.g. Gravity and Van der Waals).</p>
+<p>Suppose we start by considering the atoms/molecules in an ideal gas whose behavior can be described using the ideal gas equation.</p>
+<div class="math notranslate nohighlight">
+\[
+PV=nRT	\tag{1.3}
+\]</div>
+<p>This equation relates the pressure <span class="math notranslate nohighlight">\(P\)</span> (<span class="math notranslate nohighlight">\(Nm^{-2}\)</span>) and volume <span class="math notranslate nohighlight">\(V\)</span> (<span class="math notranslate nohighlight">\(m^{3}\)</span>) of a gas, to the number of moles, n, and the temperature, <span class="math notranslate nohighlight">\(T\)</span> (K) using the molar gas constant <span class="math notranslate nohighlight">\(R\)</span> (<span class="math notranslate nohighlight">\(Jmol^{-1}K^{-1}\)</span>). The left-hand side of this equation has units of energy (<span class="math notranslate nohighlight">\(Nm^{-2} \times m^3 = Nm\)</span>). In fact, <span class="math notranslate nohighlight">\(PV\)</span> is the total internal energy of the gas, which is manifested as the kinetic energy of the molecules. As both sides of the equation must have identical units, the right-hand side must also have dimensions of energy. If we note that the number of <span class="math notranslate nohighlight">\(mols\)</span> of a substance, <span class="math notranslate nohighlight">\(n\)</span>, is simply the number of atoms/molecules in the gas, <span class="math notranslate nohighlight">\(N\)</span>, divided by Avogadro’s number, <span class="math notranslate nohighlight">\(N_A\)</span> (<span class="math notranslate nohighlight">\(=6 \times 10^{23}\)</span>) we can write:</p>
+<div class="math notranslate nohighlight">
+\[
+nRT = \frac{N}{N_{A}}RT = N\frac{R}{N_{A}}T = Nk_{B}T	\tag{1.4}
+\]</div>
+<p>So the total internal energy of the gas is <span class="math notranslate nohighlight">\(Nk_{B}T\)</span>, where <span class="math notranslate nohighlight">\(k_{B}\)</span> is Boltzmann’s constant (<span class="math notranslate nohighlight">\(k=1.38 \times 10^{-23} JK^{-1}\)</span>). This means that the average thermal energy associated with each of the N atoms in the gas is</p>
+<div class="math notranslate nohighlight">
+\[
+U_{thermal} = k_{B}T	\tag{1.5}
+\]</div>
+<p>In fact, things are not quite this simple as the internal energy of a gas depends upon the properties of the individual molecules (cf thermal physics module). However, this very simple result does provide the correct order of magnitude for the thermal energy scale at a given temperature T.</p>
+<section id="how-big-is-k-bt">
+<h3>How big is <span class="math notranslate nohighlight">\(k_BT\)</span>?<a class="headerlink" href="#how-big-is-k-bt" title="Link to this heading">#</a></h3>
+<p>At room temperature, T=300 K, so <span class="math notranslate nohighlight">\(k_{B}T\)</span> = <span class="math notranslate nohighlight">\((1.38 \times 10^{-23})(300)\)</span> = <span class="math notranslate nohighlight">\(4.14 \times 10^{-21} J\)</span> (or <span class="math notranslate nohighlight">\(25 meV\)</span>). For two Neon atoms at a separation of <span class="math notranslate nohighlight">\(0.2 nm\)</span>, their Van der Waals energy of interaction Udispersion is given by (or <span class="math notranslate nohighlight">\(38 meV\)</span>). These two energies are very similar therefore we expect that the Van der Waals interactions between individual atoms and molecules would be disrupted by their constant thermal jiggling on length scales larger than a fraction of a nanometre. This turns out to be the case, confirming that the thermal energy scale is important on the nanoscale.</p>
+</section>
+</section>
+<section id="the-boltzmann-equation">
+<h2>The Boltzmann Equation<a class="headerlink" href="#the-boltzmann-equation" title="Link to this heading">#</a></h2>
+<p>The Boltzmann equation enables us to compare the importance of the thermal fluctuations with energy (<span class="math notranslate nohighlight">\(k_{B}T\)</span>) to the strength of a particular interaction or potential. This gives probability that thermal energy disrupts an interaction of strength <span class="math notranslate nohighlight">\(U\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[
+P(x) \propto \exp^{-U/k_B T}	\tag{1.6}
+\]</div>
+<p><strong>N.B it is only proportional to, not equal to P(x) as we have not normalised the probability.</strong></p>
+<p>In the lectures we thought about some particles suspended in a liquid.Depending on their size they either sedimented or stayed suspended in the liquid. We can use the Boltzmann probability to understand this. That is that for small enough particles, gravity is of negligible importance. The gravitational potential of a particle is given by mgz where z is the height mg is the effective weight (ie weight of particle minus the upthrust of the liquid). We can therefore rewrite the Boltzmann probability in terms of the concentration of particles at different heights.</p>
+<div class="math notranslate nohighlight">
+\[
+φ(z)=φ_{0} e^{-mgz/k_{B}T}=φ_{0} e^{-4πR^{3}ρgz)/(3k_{B}T)}=φ_{0} e^{-z/l_{g}}	\tag{1.7}
+\]</div>
+<p>where <span class="math notranslate nohighlight">\(l_g\)</span> is the gravitational length scale defined as:</p>
+<div class="math notranslate nohighlight">
+\[
+l_{g}=3k_{B}T/4πR^{3}ρg	\tag{1.8}
+\]</div>
+<p><span class="math notranslate nohighlight">\(\phi\)</span> is the volume fraction of particles, that is the number of particles multiplied by the volume of a particle divided by the volume of the containing liquid. If gravity is insignificant then the concentration of particles should change on a lengthscale (<span class="math notranslate nohighlight">\(l_{g}\)</span>) much larger than the height of the container.</p>
+<p>At particle radii <span class="math notranslate nohighlight">\(\le 1{\mu}m\)</span>, particles are dominated by thermal motions and gravity becomes unimportant. This is fundamental to understanding the nanoscale world. Our macroscopic experience of gravity gives meaning to concepts like up and down. Inertia and momentum, so crucial to Newton’s laws, are likewise no longer important concepts at the nanoscale. We therefore have to do some rethinking.</p>
 </section>
 </section>
 
@@ -448,12 +536,12 @@ document.write(`
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="../../intro.html"
+       href="../info_course/how_to_study.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">PHYS3009: Force and function at the nanoscale</p>
+        <p class="prev-next-title">How to study this course</p>
       </div>
     </a>
     <a class="right-next"
@@ -472,7 +560,8 @@ document.write(`
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
 
   <div class="sidebar-secondary-item">
@@ -481,11 +570,16 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">The Nanoscale World</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#microscopic-and-nanoscale-forces">Microscopic and Nanoscale Forces</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-nanoscale-world">The Nanoscale World</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#microscopic-and-nanoscale-forces">Microscopic and Nanoscale Forces</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#brownian-motion-and-what-it-tells-us-about-the-micro-nanoscale-world">Brownian motion and what it tells us about the micro / nanoscale world</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-thermal-energy-scale">The thermal energy scale</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#how-big-is-k-bt">How big is <span class="math notranslate nohighlight">\(k_BT\)</span>?</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-boltzmann-equation">The Boltzmann Equation</a></li>
 </ul>
   </nav></div>
 
@@ -534,8 +628,8 @@ By Mike Smith
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
-<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <script defer src="../../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549"></script>
+<script defer src="../../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549"></script>
 
   <footer class="bd-footer">
   </footer>
