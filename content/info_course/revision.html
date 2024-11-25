@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>How to study this course &#8212; Force and function at the nanoscale</title>
+    <title>&lt;no title&gt; &#8212; Force and function at the nanoscale</title>
   
   
   
@@ -16,19 +16,17 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
-  <!-- 
-    this give us a css class that will be invisible only if js is disabled 
-  -->
-  <noscript>
-    <style>
-      .pst-js-only { display: none !important; }
-
-    </style>
-  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../_static/styles/theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
-<link href="../../_static/styles/pydata-sphinx-theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=a3416100" />
@@ -38,11 +36,10 @@
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=87e54e7c" />
   
-  <!-- So that users can add custom icons -->
-  <script src="../../_static/scripts/fontawesome.js?digest=26a4bc78f4c0ddb94549"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
-<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
     <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
     <script src="../../_static/doctools.js?v=9a2dae69"></script>
@@ -63,10 +60,9 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'content/info_course/revision';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="prev" title="Vesicle formation {#vesicle-formation .H3}" href="../teaching/15.%20vesicles_membranes.html" />
+    <link rel="prev" title="Activity 2: potentials and forces" href="../activities/activity17.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="" />
   </head>
   
   
@@ -82,8 +78,19 @@
     <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
-  <dialog id="pst-search-dialog">
-    
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
 <form class="bd-search d-flex align-items-center"
       action="../../search.html"
       method="get">
@@ -91,6 +98,7 @@
   <input type="search"
          class="form-control"
          name="q"
+         id="search-input"
          placeholder="Search this book..."
          aria-label="Search this book..."
          autocomplete="off"
@@ -98,8 +106,8 @@
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form>
-  </dialog>
+</form></div>
+  </div>
 
   <div class="pst-async-banner-revealer d-none">
   <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
@@ -115,8 +123,7 @@
       
       
       
-      <dialog id="pst-primary-sidebar-modal"></dialog>
-      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+      <div class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -146,17 +153,21 @@
     
     
     <img src="../../_static/logo.jpg" class="logo__image only-light" alt="Force and function at the nanoscale - Home"/>
-    <img src="../../_static/logo.jpg" class="logo__image only-dark pst-js-only" alt="Force and function at the nanoscale - Home"/>
+    <script>document.write(`<img src="../../_static/logo.jpg" class="logo__image only-dark" alt="Force and function at the nanoscale - Home"/>`);</script>
   
   
 </a></div>
         <div class="sidebar-primary-item">
 
-<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
- <i class="fa-solid fa-magnifying-glass"></i>
- <span class="search-button__default-text">Search</span>
- <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-</button></div>
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
@@ -173,46 +184,62 @@
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 20 (27th Jan)</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../teaching/1.%20nanoscale_world.html">Week 20 (27th Jan) - 1. Nanoscale World</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../teaching/1.%20nanoscale_world.html">1. Nanoscale World</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../teaching/2.%20forces_potentials.html">2. Forces and Potentials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../activities/activity1.html">Activity 1: sedimentation and the thermal energy scale</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../activities/activity2.html">Activity 2: potentials and forces</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 21 (3rd Feb)</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../teaching/3.%20polar_interactions.html">3. Polar interactions and Dipoles</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../teaching/4.%20dispersion_interactions.html">Dispersion Interactions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../teaching/4.%20dispersion_interactions.html">4. Dispersion Interactions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../activities/activity3.html">Activity 3: Lennard Jones</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../activities/activity4.html">Activity 4: Dispersion interactions</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 22 (10th Feb)</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../teaching/5.%20dispersion_bigger.html">5. Dispersion Interactions – larger objects</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../teaching/6.%20water_hydrogenbonds.html">6. Water, Hydrogen Bonds &amp; the Hydrophobic Interaction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../activities/activity5.html">Activity 5: Adding up dispersion interactions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../activities/activity6.html">Activity 6: Hydrogen bonding</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 23 (17th Feb)</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../teaching/7.%20surfacevbulk.html">7. Surface vs Bulk</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../teaching/8.%20capillaryforces.html">8. Capillary Forces</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../activities/activity7.html">Activity 7: contact angle</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../activities/activity8.html">Activity 8: blowing bubbles</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 24 (24th Feb)</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../teaching/9.%20afm.html">9. Nanoscale Force Measurement Techniques – AFM</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../teaching/10.%20opticaltweezers.html">10. Nanoscale Force Measurement Techniques – Optical Tweezers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../activities/activity9.html">Activity 9: Afm cantilever</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../activities/activity10.html">Activity 10: Particle escaping from an optical trap</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 25 (3rd March)</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../teaching/11.%20colloidstability.html">11 &amp; 12. Colloidal Stability &amp; Osmotic Pressure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../activities/activity11.html">Activity 11: Understanding Colloidal Stability with DLVO</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../activities/activity12.html">Activity 2: potentials and forces</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 26 (10th March)</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../teaching/12.%20entropy.html">11. Entropic Forces {#entropic-forces .H2}</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../teaching/12.%20entropy.html">13 &amp; 14. Entropic Forces</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../activities/activity13.html">Activity 2: potentials and forces</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../activities/activity14.html">Activity 2: potentials and forces</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 27 (17th March)</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../teaching/13.%20aggregation.html">12. Aggregation &amp; Self-assembly {#aggregation-self-assembly .H2}</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../teaching/14.%20micelles.html">13. Micelles &amp; Membranes {#micelles-membranes .H2}</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../teaching/13.%20aggregation.html">15. Aggregation &amp; Self-assembly</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../teaching/14.%20micelles.html">16. Micelles / self-assembly</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../activities/activity15.html">Activity 2: potentials and forces</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../activities/activity16.html">Activity 2: potentials and forces</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 28 - 24th March</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../teaching/15.%20vesicles_membranes.html">Vesicle formation  {#vesicle-formation .H3}</a></li>
-
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Revision</span></p>
-<ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">How to study this course</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../teaching/15.%20vesicles_membranes.html">17. Vesicle formation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../activities/activity17.html">Activity 2: potentials and forces</a></li>
 </ul>
 
     </div>
@@ -367,16 +394,24 @@
 
 
 
-<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
-  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
-  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
-  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
-</button>
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
 
 
-<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-</button>
+  </button>
+`);
+</script>
 <button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
 </button>
@@ -390,7 +425,7 @@
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>How to study this course</h1>
+    <h1><no title></h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -399,10 +434,9 @@
                 <h2> Contents </h2>
             </div>
             <nav aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#making-a-plan">Making a Plan</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#resources-for-learning-each-week">Resources for learning each week</a></li>
+                <ul class="simple visible nav section-nav flex-column">
 </ul>
+
             </nav>
         </div>
     </div>
@@ -413,28 +447,17 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="how-to-study-this-course">
-<h1>How to study this course<a class="headerlink" href="#how-to-study-this-course" title="Link to this heading">#</a></h1>
-<section id="making-a-plan">
-<h2>Making a Plan<a class="headerlink" href="#making-a-plan" title="Link to this heading">#</a></h2>
-<p>Getting organised about your studies is by far the biggest thing you can do to improve your outcome from this and any module. A few people find this comes naturally to them, the rest of us have to be more deliberate about it. We all have different strengths and weaknesses, so if this is something you find tricky click on the link below to a resource helping you to think through your learning differences:</p>
-<p><a href="https://xerte.nottingham.ac.uk/play_23883#page1">Learning differences resource</a>.</p>
-<p>It takes less than 20 minutes and is a good investment. Spend a bit of time thinking about what you can implement to help yourself. Be specific. e.g. I’m going to get some exercise every Thursday evening as it helps my mental health. I’m going to review my notes and do the activities on a Monday at 3pm.</p>
-</section>
-<section id="resources-for-learning-each-week">
-<h2>Resources for learning each week<a class="headerlink" href="#resources-for-learning-each-week" title="Link to this heading">#</a></h2>
-<ul class="simple">
-<li><p><em>Core Content</em> - Each week you have 2 lectures. These cover all the material I expect you to know. The powerpoint slides are available as a pdf for each lecture.</p></li>
-<li><p><em>Activities</em> -  Each week has problems or activities that test your understanding and I believe will be helpful to you in studying the course. I would suggest you do these towards the end of the week as some will rely on the second lecture in the week to complete.</p></li>
-<li><p><em>OneNote</em> - The Class Onenote book. Everything I write in lectures goes into this, so you have a record of solutions and derivations performed in the lecture, so don’t worry if you fail to copy everything. To get access to this. You need to:</p></li>
-</ul>
-<p><a href=""><strong>join the team</strong></a></p>
-<ul class="simple">
-<li><p><em>Taking it further (optional)</em> - In this final section I want to show you something of how this Physics helps you understand the world around you or give you insight into some current research that you might find interesting. Lets be frank I know that you are busy so this might not be top of your priority list. That’s fine nothing in here is important to help you pass the exam but there is more to Physics than passing exams so in my wild optimism I’ve added these sections anyway!</p></li>
-<li><p><em>Math’s resources (optional)</em> - Some people find involved maths a bit hard to follow in a lecture. The difficulty is that if you miss a bit, then there is no easy way to catch up. I have included some videos of these more involved bits within the course. This just repeats what’s in the lecture so no need to go through this unless you missed something. The main aim is to give you the flexibility to learn in a way that is best suited to your own style and needs.</p></li>
-</ul>
-</section>
-</section>
+  <p>Revision &amp; Exams
+Hopefully, if you’ve been working through the activities as we’ve gone along you should have a reasonable grasp of the course by the time you get to this point. If you haven’t done them that would be a good place to start.</p>
+<p>Try and make a condensed set of notes, the process of sifting will help you understand and remember things better.</p>
+<p>In exams you’ll be asked to demonstrate several different abilities:</p>
+<p>Conceptual knowledge - I expect you to have a good qualitative understanding of key features we’ve covered. e.g mechanisms behind dispersion interactions, hydrophobic effect, entropy; explaining phenomena that are new to you in terms of ideas we’ve covered e.g Ice cream left out of the freezer having bigger crystals, Mercury going down rather than up with capillary rise; sketching the form of a potential.
+Mathematical ability - When deriving results focus on understanding the key assumptions that go into a particular derivation. You won’t be asked for the exact same problem in an exam but some variation. e.g adding up dispersion interactions for a different geometry. This might also involve recognising the similarity between a problem and one you have already studied, changing the boundary conditions.
+Numerical - This is usually easy marks where you will be asked to numerically evaluate an expression by putting in numbers. However, students often make simple mistakes by not knowing how to convert between different units etc. Connected with this is understanding and expressing what the number means for a problem. Often this is as simple as recognising that a negative number is an attractive force or that the value is less than kBT and so insignificant.
+Once you feel like you are reasonably confident have a go at one of the sample exam papers. Do it as if it was the real thing. Do three questions in 90 minutes and then after a break use the mark scheme to evaluate what you’ve done well, gaps in your knowledge etc. Pay attention to exam technique. Were there things you could have written down that would have given you more marks? e.g converting numbers into the correct units, stating F=-dU/dD often get you a mark in a question even if you are clueless about the rest of it! Do some more focussed revision before continuing to the next one.</p>
+<p>Finally and importantly, living a balanced well adjusted life is more important than an extra few marks. It’s normal to feel a bit anxious and stressed as you approach an exam. If you are struggling with your emotions and feeling stressed, this is a great initial resource to hopefully help you keep things in perspective:</p>
+<p><br><br>
+<strong>&lt;a href=”https://www.nottingham.ac.uk/currentstudents/documents/healthyu/2021-documents/web-640597-scom-a5-20pp-examtoolkit-update-njt-feb22.pdf”, style=”font-size: x-large”&gt;Exam Toolkit</a></strong></p>
 
     <script type="text/x-thebe-config">
     {
@@ -467,12 +490,12 @@
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="../teaching/15.%20vesicles_membranes.html"
+       href="../activities/activity17.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Vesicle formation  {#vesicle-formation .H3}</p>
+        <p class="prev-next-title">Activity 2: potentials and forces</p>
       </div>
     </a>
 </div>
@@ -482,8 +505,7 @@
             
             
               
-                <dialog id="pst-secondary-sidebar-modal"></dialog>
-                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
 
   <div class="sidebar-secondary-item">
@@ -491,10 +513,9 @@
     <i class="fa-solid fa-list"></i> Contents
   </div>
   <nav class="bd-toc-nav page-toc">
-    <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#making-a-plan">Making a Plan</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#resources-for-learning-each-week">Resources for learning each week</a></li>
+    <ul class="simple visible nav section-nav flex-column">
 </ul>
+
   </nav></div>
 
 </div></div>
@@ -542,8 +563,8 @@ By Mike Smith
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script defer src="../../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549"></script>
-<script defer src="../../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549"></script>
+  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
 
   <footer class="bd-footer">
   </footer>

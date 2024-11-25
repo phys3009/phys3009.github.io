@@ -1,18 +1,16 @@
-# Activity 2: potentials and forces
+# Activity 9: Afm cantilever
 
-Two molecules interact with an attractive potential given by:
+In the lecture we derived the spring constant of an AFM cantilever:
 
-$$
-U\left(x\right) = -\frac{a}{x^{6}}
-$$
+$$k = \frac{3EI}{L^{3}}$$
 
-where a is a positive constant. 
+We discussed the geometric moment of inertia, $I$, which is given by:
 
-1. Sketch a curve of the potential energy as a function of x.
+$$I = \int y^{2}dA$$
 
-2. Sketch the curve $U\left(x\right) = -\frac{a}{x^{3}}$ on the same axes.
+If you wanted to make the cantilever stiffer, which dimension (length, width, thickness) has the most effect for the smallest fractional change?
 
-3. Given that the force $F = -\frac{dU}{dx}$, derive an expression for the force between the two molecules.
+Think about the derivation again and instead of substituting $I$ perform the integral above and substitute the result instead.
 
 ---------------------
 
@@ -22,20 +20,33 @@ To see the solution you can click the button below or watch the video.
 Show Solution
 </button>
 <div id="solution" style="display:none;">
+
+The first thing to be clear about is the orientation of the geometric moment of inertia, $I$. It is the cross-section fo the beam. Although it looks a bit like the elemental area we drew in the lecture it is orthogonal (ie through the thickness not along the length of the cantilever).
+
     <div style="text-align: center;">
-        <img src="imgs/2.png" alt="activity2" width="300" height=auto>
-        <p><em>Graph showing x^6 and x^3 potential energy curves</em></p>
+        <img src="imgs/9.png" alt="activity2" width="300" height=auto>
+        <p><em>Geometric moment of inertia</em></p>
     </em></p>
     </div>
 
-3. Using $F=-\frac{dU}{dx}$ we can find the force between the two molecules by differentiating the potential energy with respect to x:
+$$I = \int y^{2}dA$$
 
-$$F = \frac{-6a}{x^{7}}$$
+$$dA = dy dz$$
+
+$$\int_{\frac{-H}{2}}^{\frac{H}{2}}dz\int_{\frac{-b}{2}}^{\frac{b}{2}}y^{2}dy$$
+
+$$I = \left[\frac{b}{2}-\frac{-b}{2}\right]\left[\frac{y^{3}}{3}\right]_{\frac{-H}{2}}^{\frac{H}{2}}$$
+
+$$I = \frac{bH^3}{12}$$
+
+So k = \frac{EbH^{3}}{4L^{3}}
+
+A small change in H or L makes a much bigger difference than a change in b. Doubling the thickness makes it $8\times$ stiffer.
 </div>
 
 <br><br>
 
 <video width="600" controls>
-  <source src="media/vid1_1.mkv" type="video/mp4">
+  <source src="https://www.nottingham.ac.uk/~ppzmis/phys3009/A9.m4v" type="video/mp4">
   Your browser does not support the video tag.
 </video>

@@ -1,18 +1,10 @@
-# Activity 2: potentials and forces
+# Activity 2: Osmotic pressure
 
-Two molecules interact with an attractive potential given by:
+Some colloidal particles are added to a beaker of water. A capillary with a fine mesh across the end is inserted into a beaker as shown (the particles cannot pass through the mesh but the water can). Assume that the contact angle of the water with the capillary is $0^{\circ}$.
 
-$$
-U\left(x\right) = -\frac{a}{x^{6}}
-$$
+1. What happens to the level of the liquid in the capillary and why?
 
-where a is a positive constant. 
-
-1. Sketch a curve of the potential energy as a function of x.
-
-2. Sketch the curve $U\left(x\right) = -\frac{a}{x^{3}}$ on the same axes.
-
-3. Given that the force $F = -\frac{dU}{dx}$, derive an expression for the force between the two molecules.
+2. Derive an expression for the height of the liquid in the capillary if the number of particles per unit volume is $n$
 
 ---------------------
 
@@ -22,15 +14,17 @@ To see the solution you can click the button below or watch the video.
 Show Solution
 </button>
 <div id="solution" style="display:none;">
-    <div style="text-align: center;">
-        <img src="imgs/2.png" alt="activity2" width="300" height=auto>
-        <p><em>Graph showing x^6 and x^3 potential energy curves</em></p>
-    </em></p>
-    </div>
 
-3. Using $F=-\frac{dU}{dx}$ we can find the force between the two molecules by differentiating the potential energy with respect to x:
+1. The addition of particles to the beaker creates a concentration difference between the beaker and the capillary. As a result there will be an osmotic pressure that seeks to minimise the concentration difference. Since the mesh prevents particles from moving into the capillary liquid is drawn down from the capillary into the beaker. This dilutes the particles in the beaker to minimise the concentration difference. As a result the height of the liquid in the capillary will be lower than without the particles. 
 
-$$F = \frac{-6a}{x^{7}}$$
+2. We can write down a pressure balance. This is similar to the original derivation but we now have an additional pressure term (the osmotic pressure).
+
+$$P_{capillary} = P_{weight} + P_{osmotic}$$
+
+$$\frac{2\gamma}{R} = {\rho}gh + nk_{B}T$$
+
+$$h = \frac{1}{{\rho}g}\left(\frac{2\gamma}{R} - nk_{B}T\right)$$
+
 </div>
 
 <br><br>

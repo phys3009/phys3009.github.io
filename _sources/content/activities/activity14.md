@@ -1,18 +1,19 @@
-# Activity 2: potentials and forces
+# Activity 14: Depletion forces
 
-Two molecules interact with an attractive potential given by:
+1. A sphere of radius $R$ surrounded by small spheres of radius $r$ is a distance $D$ from a vertical wall. Draw two sketches showing the excluded volume for the small spheres in two cases:
 
-$$
-U\left(x\right) = -\frac{a}{x^{6}}
-$$
+- $D >  (R + 2r)$
 
-where a is a positive constant. 
+- $D < (R + 2r)$
 
-1. Sketch a curve of the potential energy as a function of x.
 
-2. Sketch the curve $U\left(x\right) = -\frac{a}{x^{3}}$ on the same axes.
+2. Calculate an expression for the change in excluded volume when a sphere of radius R surrounded by small spheres of radius r comes close to a vertical wall. You can use the fact that a spherical cap (see figure) has a volume $V_{cap}=\frac{\pi}{3}h^{2}\left(3R'-h\right)$ where R' = R + r and h = R' - \frac{D}{2}
 
-3. Given that the force $F = -\frac{dU}{dx}$, derive an expression for the force between the two molecules.
+<div style="text-align: center;">
+  <img src="imgs/14.png" alt="activity14b" width="200" height=auto>
+  <p><em>Spherical cap</em></p>
+    </em></p>
+</div>
 
 ---------------------
 
@@ -22,20 +23,30 @@ To see the solution you can click the button below or watch the video.
 Show Solution
 </button>
 <div id="solution" style="display:none;">
-    <div style="text-align: center;">
-        <img src="imgs/2.png" alt="activity2" width="300" height=auto>
-        <p><em>Graph showing x^6 and x^3 potential energy curves</em></p>
+
+1. 
+<div style="text-align: center;">
+  <img src="imgs/14b.png" alt="activity14b" width="200" height=auto>
+  <p><em>Spherical cap</em></p>
     </em></p>
-    </div>
-
-3. Using $F=-\frac{dU}{dx}$ we can find the force between the two molecules by differentiating the potential energy with respect to x:
-
-$$F = \frac{-6a}{x^{7}}$$
 </div>
 
-<br><br>
+2. 
 
-<video width="600" controls>
-  <source src="media/vid1_1.mkv" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
+$$V_{cap}=\frac{\pi}{3}h^{2}\left(3R'-h\right)$$
+
+$$h=R + 2r -D$$
+
+$$V_{cap} = \frac{\pi}{3}\left[R + 2r - D\right]^{2}\left[2R + r + D\right]$$
+
+$${\Delta}V_{excl} = -V_{cap} = -\frac{\pi}{3}\left[R + 2r - D\right]^{2}\left[2R + r + D\right]$$
+
+If the change in excluded volume is negative this is favourable. Remember this will increase the volume available to the small particles. This increases the number of microstates which in turn increases the entropy.
+
+<div style="text-align: center;">
+  <img src="imgs/14b.png" alt="activity14c" width="200" height=auto>
+</div>
+
+
+</div>
+

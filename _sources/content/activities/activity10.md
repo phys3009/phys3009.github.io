@@ -1,41 +1,34 @@
-# Activity 2: potentials and forces
+# Activity 10: Particle escaping from an optical trap
 
-Two molecules interact with an attractive potential given by:
+Derive an expression for the approximate distance $r$ from the centre of the trap at which thermal fluctuations ($k_{B}T$) will enable a particle trapped in a set of optical tweezers to escape. <strong>N.B</strong> under these conditions it will no longer be true that $r << w_{0}$ as a result you can't use the quadratic approximation but must use the full expression. As your starting point use the equations:
 
-$$
-U\left(x\right) = -\frac{a}{x^{6}}
-$$
+$$U = -\frac{2\alpha}{c{\epsilon}{\epsilon}_{0}n}I$$
 
-where a is a positive constant. 
+and
 
-1. Sketch a curve of the potential energy as a function of x.
+$$I=I_{0}\exp\left(-\frac{r^{2}}{2w_{0}^{2}}\right)$$
 
-2. Sketch the curve $U\left(x\right) = -\frac{a}{x^{3}}$ on the same axes.
-
-3. Given that the force $F = -\frac{dU}{dx}$, derive an expression for the force between the two molecules.
 
 ---------------------
 
-To see the solution you can click the button below or watch the video.
+To see the solution you can click the button below.
 
 <button onclick="document.getElementById('solution').style.display='block'" style="border-radius: 5px; text-align: center; padding: 10px 20px; font-size: 16px;">
 Show Solution
 </button>
 <div id="solution" style="display:none;">
-    <div style="text-align: center;">
-        <img src="imgs/2.png" alt="activity2" width="300" height=auto>
-        <p><em>Graph showing x^6 and x^3 potential energy curves</em></p>
-    </em></p>
-    </div>
+<br>
+The condition for escape is $|U| \approx k_{B}T$. This is basically the range of the interaction so can use this to find expression for $r$.
 
-3. Using $F=-\frac{dU}{dx}$ we can find the force between the two molecules by differentiating the potential energy with respect to x:
+Combining equations:
 
-$$F = \frac{-6a}{x^{7}}$$
+$$U = -\frac{2{\alpha}I_{0}}{c{\epsilon}{\epsilon}_{0}n}\exp\left(-\frac{r^{2}}{2w_{0}^{2}}\right) \approx k_{B}T$$
+
+$$\exp(-\frac{r^{2}}{2w_{0}^2}) \approx \frac{k_{B}Tc{\epsilon}{\epsilon}_{0}n}{2{{\alpha}I_{0}}}$$
+
+$$r = \left(-2w_{0}^2 ln\left(\frac{k_{B}Tc{\epsilon}{\epsilon}_{0}n}{2{\alpha}I_{0}}\right)\right)^{\frac{1}{2}}$$
+
 </div>
 
-<br><br>
 
-<video width="600" controls>
-  <source src="media/vid1_1.mkv" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
+

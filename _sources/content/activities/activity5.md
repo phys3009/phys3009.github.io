@@ -14,7 +14,7 @@ An atomic force microscope tip and holder which has cylindrical symmetry and a p
     </em></p>
     </div>
 
-a) Use the above result to show that the dispersion energy of interaction between the curved portion of the tip and the surface is
+-  Use the above result to show that the dispersion energy of interaction between the curved portion of the tip and the surface is
 
 $$U_{tip}=-\frac{{\pi}^{2}n_{1}n_{2}C}{6}\frac{a^{2}l^{2}}{2D(D+l)^{2}}$$
 

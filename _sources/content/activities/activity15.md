@@ -1,18 +1,22 @@
-# Activity 2: potentials and forces
+# Activity 15: the chemical potential
 
-Two molecules interact with an attractive potential given by:
+In the lectures we calculated the chemical potential for a 2D aggegate. In this exercise try and work through the same calculation for a 3D spherical aggregate. 
 
-$$
-U\left(x\right) = -\frac{a}{x^{6}}
-$$
+<div style="text-align: center;">
+  <img src="imgs/15.png" alt="activity2" width="300" height=auto>
+</div>
 
-where a is a positive constant. 
+Show that the chemical potential is:
 
-1. Sketch a curve of the potential energy as a function of x.
+$${\mu = \frac{dU}{dN}}=-{\mu}_bulk + \left(\frac{3\nu}{4{\pi}}\right)^{\frac{2}{3}}\frac{8{\pi}\gamma}{3N^{\frac{1}{3}}}$$
 
-2. Sketch the curve $U\left(x\right) = -\frac{a}{x^{3}}$ on the same axes.
+Here are a few steps to help you with the calculation:
 
-3. Given that the force $F = -\frac{dU}{dx}$, derive an expression for the force between the two molecules.
+1. Work out how the radius, $R$, of the aggregate relates to $N$ the number of molecules
+2. Write down $U_{bulk}$, $U_{surface}$ using ${\mu}_{bulk}$ and $\gamma$
+3. Combine to get $U_{total}$ and substitute in your expression for $R$ in terms of $N$
+4. Differentiate with respect to $N$ to get the chemical potential above.
+
 
 ---------------------
 
@@ -22,20 +26,23 @@ To see the solution you can click the button below or watch the video.
 Show Solution
 </button>
 <div id="solution" style="display:none;">
-    <div style="text-align: center;">
-        <img src="imgs/2.png" alt="activity2" width="300" height=auto>
-        <p><em>Graph showing x^6 and x^3 potential energy curves</em></p>
-    </em></p>
-    </div>
 
-3. Using $F=-\frac{dU}{dx}$ we can find the force between the two molecules by differentiating the potential energy with respect to x:
+1. $N=V/{\nu}=\frac{4}{3}\frac{{\pi}R^{3}}{\nu}
 
-$$F = \frac{-6a}{x^{7}}$$
+Rearranging gives: $R=\left(\frac{3{\nu}N}{4{\pi}}\right)^{\frac{1}{3}}$
+
+2. $U_{bulk} = -N{\mu}_{bulk}$, $U_{surf} = 4{\pi}R^{2}{\gamma}$
+
+3. 
+
+$$U_{tot} = U_{bulk} + $U_{surf}$$
+
+$$U_{tot}=-N{\mu}_{bulk} + 4{\pi}R^{2}{\gamma}$$
+
+$$U_{tot}=-N{\mu}_{bulk} + 4{\pi}\left(\frac{3{\nu}N}{4{\pi}}\right)^{\frac{2}{3}}{\gamma}$$
+
+4. Differentiate
+
+$$\frac{dU_{tot}}{dN}=-{\mu}_{bulk} + 4{\pi}{\gamma}\left(\frac{3{\nu}}{4{\pi}}\right)^{\frac{2}{3}}\frac{1}{N^{\frac{1}{3}}}$$
+
 </div>
-
-<br><br>
-
-<video width="600" controls>
-  <source src="media/vid1_1.mkv" type="video/mp4">
-  Your browser does not support the video tag.
-</video>

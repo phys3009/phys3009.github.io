@@ -1,18 +1,6 @@
 # Activity 6: Hydrogen bonding
 
-Two molecules interact with an attractive potential given by:
-
-$$
-U\left(x\right) = -\frac{a}{x^{6}}
-$$
-
-where a is a positive constant. 
-
-1. Sketch a curve of the potential energy as a function of x.
-
-2. Sketch the curve $U\left(x\right) = -\frac{a}{x^{3}}$ on the same axes.
-
-3. Given that the force $F = -\frac{dU}{dx}$, derive an expression for the force between the two molecules.
+Explain why water has an unusually boiling point compared to other similar molecules, such as Ammonia?
 
 ---------------------
 
@@ -22,20 +10,6 @@ To see the solution you can click the button below or watch the video.
 Show Solution
 </button>
 <div id="solution" style="display:none;">
-    <div style="text-align: center;">
-        <img src="imgs/2.png" alt="activity2" width="300" height=auto>
-        <p><em>Graph showing x^6 and x^3 potential energy curves</em></p>
-    </em></p>
-    </div>
-
-3. Using $F=-\frac{dU}{dx}$ we can find the force between the two molecules by differentiating the potential energy with respect to x:
-
-$$F = \frac{-6a}{x^{7}}$$
+Water molecules form hydrogen bonds, which are much stronger than dispersion forces (Ammonia just has dispersion forces). A hydrogen bond is about $12k_{B}T$ whereas a dispersion force might be $\sim 1-2k_{B}T$. Hydrogen bonds occur when a hydrogen atom bonded to a highly electronegative atom (like oxygen in water) is attracted to another electronegative atom in a different molecule.  Inorder for a liquid to boil it needs to overcome the hydrogen bonds holding it together as a liquid. For a given temperature the probability of breaking a bond is determined by the Boltzmann probability $Prob \propto \exp\left(\frac{-U}{k_{B}T}\right)$. This is going to be a much smaller probability for H-bonds than dispersion forces. As a result you'll need a much higher temperature to get water to boil than Ammonia.
 </div>
 
-<br><br>
-
-<video width="600" controls>
-  <source src="media/vid1_1.mkv" type="video/mp4">
-  Your browser does not support the video tag.
-</video>

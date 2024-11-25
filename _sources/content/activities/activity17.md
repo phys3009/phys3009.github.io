@@ -1,41 +1,33 @@
-# Activity 2: potentials and forces
+# Activity 17: When do membranes stick?
 
-Two molecules interact with an attractive potential given by:
+Membranes are sufficiently flexible that they fluctuate due to thermal energy. As 2 membranes come closer together the fluctuations are suppressed resulting in a repulsive entropic force. However, as always this force cannot be considered independently of at a minimum dispersion forces. We must therefore consider the balance between
 
-$$
-U\left(x\right) = -\frac{a}{x^{6}}
-$$
+1. A pressure due to dispersion interactions 
 
-where a is a positive constant. 
+2. A pressure that arises from suppressing these fluctuations
 
-1. Sketch a curve of the potential energy as a function of x.
+The graph below shows the pressure due to both these curves and the sum of the two. If you need to you can pan and zoom to see the features of the graph more clearly.
 
-2. Sketch the curve $U\left(x\right) = -\frac{a}{x^{3}}$ on the same axes.
+Using the sliders you can adjust the strength of 3 key parameters: The Hamaker constant, the membrane stiffness and the Temperature.
 
-3. Given that the force $F = -\frac{dU}{dx}$, derive an expression for the force between the two molecules.
+- Identify which curve is due to dispersion interactions and which is due to the entropic repulsion.
+
+- Why do you not get a secondary minimum as you did with the DLVO potential for charged plates and colloids?
+
+- What is the effect of increasing the membrane stiffness and why?
+
+- What effect does increasing the temperature have and why?
+
+<div style="display: flex; justify-content: center; margin: 20px 0;">
+  <iframe src="animations/17_membranes.html" style="border:none; width:800px; height:500px;"></iframe>
+</div>
 
 ---------------------
 
-To see the solution you can click the button below or watch the video.
-
-<button onclick="document.getElementById('solution').style.display='block'" style="border-radius: 5px; text-align: center; padding: 10px 20px; font-size: 16px;">
-Show Solution
-</button>
-<div id="solution" style="display:none;">
-    <div style="text-align: center;">
-        <img src="imgs/2.png" alt="activity2" width="300" height=auto>
-        <p><em>Graph showing x^6 and x^3 potential energy curves</em></p>
-    </em></p>
-    </div>
-
-3. Using $F=-\frac{dU}{dx}$ we can find the force between the two molecules by differentiating the potential energy with respect to x:
-
-$$F = \frac{-6a}{x^{7}}$$
-</div>
-
+To see the solution you can watch the video.
 <br><br>
 
 <video width="600" controls>
-  <source src="media/vid1_1.mkv" type="video/mp4">
+  <source src="https://www.nottingham.ac.uk/~ppzmis/phys3009/A17.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>

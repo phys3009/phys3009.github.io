@@ -36,6 +36,6 @@ $$F = \frac{-6a}{x^{7}}$$
 <br><br>
 
 <video width="600" controls>
-  <source src="media/vid1_1.mkv" type="video/mp4">
+  <source src="https://www.nottingham.ac.uk/~ppzmis/phys3009/A2.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>

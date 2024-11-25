@@ -1,18 +1,20 @@
-# Activity 2: potentials and forces
+# Activity 13: Entropy and equilibrium separation
 
-Two molecules interact with an attractive potential given by:
+Two flat surfaces are brought into close proximity such that
+dispersion forces attract them towards one another. One of the
+surfaces is coated with a layer of rod-like molecules of length 3nm
+arranged in a square grid, with the highest possible surface grafting
+density that allows the free end of the molecules to rotate freely
 
-$$
-U\left(x\right) = -\frac{a}{x^{6}}
-$$
+1. Derive an expression for the magnitude of the
+pressure exerted on the surfaces due to
+repulsive steric (entropic) forces, assuming the rods are arranged in a square grid.
 
-where a is a positive constant. 
+2. Calculate the equilibrium separation of the
+surfaces at room temperature if the Hamaker
+constant is 1x10-20 J at T=20°C 
 
-1. Sketch a curve of the potential energy as a function of x.
-
-2. Sketch the curve $U\left(x\right) = -\frac{a}{x^{3}}$ on the same axes.
-
-3. Given that the force $F = -\frac{dU}{dx}$, derive an expression for the force between the two molecules.
+$$P_{dispersion} = \frac{A_{12}}{6{\pi}D^{3}}$$
 
 ---------------------
 
@@ -22,20 +24,17 @@ To see the solution you can click the button below or watch the video.
 Show Solution
 </button>
 <div id="solution" style="display:none;">
-    <div style="text-align: center;">
-        <img src="imgs/2.png" alt="activity2" width="300" height=auto>
-        <p><em>Graph showing x^6 and x^3 potential energy curves</em></p>
-    </em></p>
-    </div>
 
-3. Using $F=-\frac{dU}{dx}$ we can find the force between the two molecules by differentiating the potential energy with respect to x:
+If arranged in a square grid then a plan view will look like this:
 
-$$F = \frac{-6a}{x^{7}}$$
+<div style="text-align: center;">
+  <img src="imgs/13.png" alt="activity2" width="300" height=auto>
 </div>
 
-<br><br>
+From the lecture the force for a single rod is given by $F_{steric} = \frac{k_{B}T}{D}$ where $D$ is the distance between the surfaces, assuming that it is less than the length of the rods $l$.
 
-<video width="600" controls>
-  <source src="media/vid1_1.mkv" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
+$$P_{steric} = \frac{F}{d^{2}} = \frac{k_{B}T}{4l^{2}D}$$
+
+</div>
+
+
