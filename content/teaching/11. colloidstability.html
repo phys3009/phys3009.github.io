@@ -63,7 +63,7 @@
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Activity 11: Understanding Colloidal Stability with DLVO" href="../activities/activity11.html" />
-    <link rel="prev" title="Activity 10: Particle escaping from an optical trap" href="../activities/activity10.html" />
+    <link rel="prev" title="Math: Force due to optical trap" href="../math/math10.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -177,14 +177,18 @@
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="../../intro.html">
-                    PHYS3009: Force and function at the nanoscale
+                    Aims of the Module
                 </a>
             </li>
         </ul>
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">About the course</span></p>
 <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../info_course/about.html">About the course</a></li>
+
+
 <li class="toctree-l1"><a class="reference internal" href="../info_course/how_to_study.html">How to study this course</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../info_course/stress.html">Things getting on top of you?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../info_course/revision.html">Revision &amp; Exams</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 20 (27th Jan)</span></p>
 <ul class="nav bd-sidenav">
@@ -199,6 +203,7 @@
 <li class="toctree-l1"><a class="reference internal" href="4.%20dispersion_interactions.html">4. Dispersion Interactions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../activities/activity3.html">Activity 3: Lennard Jones</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../activities/activity4.html">Activity 4: Dispersion interactions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../math/math4.html">Math: Dipoles</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 22 (10th Feb)</span></p>
 <ul class="nav bd-sidenav">
@@ -206,6 +211,7 @@
 <li class="toctree-l1"><a class="reference internal" href="6.%20water_hydrogenbonds.html">6. Water, Hydrogen Bonds &amp; the Hydrophobic Interaction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../activities/activity5.html">Activity 5: Adding up dispersion interactions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../activities/activity6.html">Activity 6: Hydrogen bonding</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../math/math5.html">Math: Adding up dispersion forces</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 23 (17th Feb)</span></p>
 <ul class="nav bd-sidenav">
@@ -213,6 +219,7 @@
 <li class="toctree-l1"><a class="reference internal" href="8.%20capillaryforces.html">8. Capillary Forces</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../activities/activity7.html">Activity 7: contact angle</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../activities/activity8.html">Activity 8: blowing bubbles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../math/math8.html">Math: Capillary Pressure</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 24 (24th Feb)</span></p>
 <ul class="nav bd-sidenav">
@@ -220,12 +227,15 @@
 <li class="toctree-l1"><a class="reference internal" href="10.%20opticaltweezers.html">10. Nanoscale Force Measurement Techniques – Optical Tweezers</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../activities/activity9.html">Activity 9: Afm cantilever</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../activities/activity10.html">Activity 10: Particle escaping from an optical trap</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../math/math9.html">Math: Cantilever Spring Constant</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../math/math10.html">Math: Force due to optical trap</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 25 (3rd March)</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">11 &amp; 12. Colloidal Stability &amp; Osmotic Pressure</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../activities/activity11.html">Activity 11: Understanding Colloidal Stability with DLVO</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../activities/activity12.html">Activity 2: Osmotic pressure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../math/math11.html">Math: Osmotic Pressure &amp; DLVO</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 26 (10th March)</span></p>
 <ul class="nav bd-sidenav">
@@ -466,11 +476,9 @@ document.write(`
 <section id="colloids-and-nanoparticles">
 <h2>Colloids and nanoparticles<a class="headerlink" href="#colloids-and-nanoparticles" title="Link to this heading">#</a></h2>
 <p>Colloids are mixtures where small particles (&lt;1 μm in diameter) of one
-substance are <strong>suspended</strong> in a second medium or <strong>continuous phase.</strong>
+substance are suspended in a second medium or continuous phase.
 They can be made of solid particles suspended in a liquid or liquid
-droplets suspended in another liquid (also called emulsions).</p>
-<p><strong>They are not solutions!</strong> The material is not completely dispersed,
-but exists as discrete particles.</p>
+droplets suspended in another liquid (also called emulsions). <strong>They are not solutions!</strong> The material is not completely dispersed, but exists as discrete particles.</p>
 <p>Colloidal interactions govern the properties of nanoscale particles and
 interactions between surfaces in liquid environments. Understanding and
 controlling these interactions is therefore essential in the manufacture
@@ -500,27 +508,26 @@ small amount of salt.</p>
     <img src="imgs/11_1.png" alt="charged colloid" width="250" height=auto>
     <p><em>Figure 11.1 - A charged colloid in water. Chemical groups chemically grafted onto the surface dissociate leaving permanent charges exposed.</em></p>
 </div>
-<p>When the particles are added to salt water (or electrolyte) the dissociated salt ions cluster around the charged particles to form a <strong>counterion cloud.</strong> The counterion cloud can be thought of as having two regions. The first is the <strong>Stern (also sometimes referred to as the Helmholtz) layer</strong>. This layer consists of ions that carry the opposite charge to the surface groups on the particle surfaces and is usually tightly bound to the surface. The
-second layer is called the <strong>diffuse double layer.</strong> This layer consists of a mixture of positive and negative counterions which are relatively mobile and are distributed in such a way that the system becomes charge neutral.</p>
+<p>When the particles are added to salt water (or electrolyte) the dissociated salt ions cluster around the charged particles to form a counterion cloud. The counterion cloud can be thought of as having two regions. The first is the Stern (also sometimes referred to as the Helmholtz) layer. This layer consists of ions that carry the opposite charge to the surface groups on the particle surfaces and is usually tightly bound to the surface. The
+second layer is called the diffuse double layer. This layer consists of a mixture of positive and negative counterions which are relatively mobile and are distributed in such a way that the system becomes charge neutral.</p>
 <div style="text-align: center;">
-    <img src="imgs/11_2.png" alt="double layer" width="250" height=auto>
+    <img src="imgs/11_2.png" alt="double layer" width="200" height=auto>
     <p><em>Figure 11.2 - Schematic showing how charged ions in the water form next to a charged surface.</em></p>
 </div>
-<p>If the particles are charge neutral then there can be no net electrostatic interaction between them. So how does decorating the surface of particles with charged groups introduce a repulsive force between them? The answer to this question is that the presence of the counterions around the particles creates an <strong>osmotic pressure between the particle
-surfaces.</strong></p>
+<p>If the particles are charge neutral then there can be no net electrostatic interaction between them. So how does decorating the surface of particles with charged groups introduce a repulsive force between them? The answer to this question is that the presence of the counterions around the particles creates an osmotic pressure between the particle surfaces.</p>
 <p><strong>Osmotic Pressure –</strong> the pressure arising from spatial gradients in
 the concentration of a solute. This pressure acts to restore a uniform
 concentration and will cause a flow of water.</p>
 <div style="text-align: center;">
-    <img src="imgs/11_3.png" alt="double layer" width="250" height=auto>
+    <img src="imgs/11_3.png" alt="double layer" width="300" height=auto>
     <p><em>Figure 11.3 - Osmotic pressure arises due to a difference in concentration of molecules or charges. The pressure acts to minimise the difference. In the diagram since the membrane prevents the particles spreading out, the water flows in to reduce the concentration differences.</em></p>
 </div>
 <p>You can see this effect very nicely in this video which I showed in the lecture. Concentrated sugar solution in a permeable membrane bag (water can pass through but the sugar cannot). The osmotic pressure causes water to flow into the bag to reduce the concentration difference</p>
 <video width="600" controls>
   <source src="https://www.nottingham.ac.uk/~ppzmis/phys3009/osmotic.mp4" type="video/mp4">
   Your browser does not support the video tag.
-  <p><em>This video is by North Carolina School of Mathematical Science and Mathematics [https://www.youtube.com/watch?v=Ji1wetFngLo]</em></p>
 </video>
+<p><em>This video is by North Carolina School of Mathematical Science and Mathematics [https://www.youtube.com/watch?v=Ji1wetFngLo]</em></p>
 <p>When the particles/surfaces approach <strong>the local concentration of
 counterions between them increases relative to the bulk concentration of
 counterions (i.e. far away from the particles)</strong>.</p>
@@ -595,7 +602,7 @@ relates the electrostatic potential <span class="math notranslate nohighlight">\
 the counterions are dissolved (usually water) and permittivity of free
 space (<span class="math notranslate nohighlight">\(Fm^{-1}\)</span>) respectively.</p>
 <div style="text-align: center;">
-    <img src="imgs/11_4.png" alt="double layer" width="250" height=auto>
+    <img src="imgs/11_4.png" alt="double layer" width="200" height=auto>
     <p><em>Figure 11.4 - Potential near a charged plate.</em></p>
 </div>
 </section>
@@ -625,7 +632,7 @@ the Poisson equation we obtain:</p>
 <div class="math notranslate nohighlight">
 \[\frac{1}{\kappa} = \left( \frac{\varepsilon\varepsilon_{0}k_{B}T}{2{n_{0}z}^{2}e^{2}} \right)^{1/2}\]</div>
 <p><span class="math notranslate nohighlight">\(1/{\kappa}\)</span> is the Debye screening length. <strong>(N.B the Debye length is <span class="math notranslate nohighlight">\(1/{\kappa}\)</span> not
-{\kappa})</strong></p>
+<span class="math notranslate nohighlight">\({\kappa}\)</span>)</strong></p>
 <p>It is the distance over which electrostatic interactions are screened in
 an electrolyte and <span class="math notranslate nohighlight">\(V_{0}\)</span> is the potential at the surface.</p>
 </section>
@@ -667,10 +674,10 @@ stability.</p>
 layer/counterion) pressure and total pressure vary with the separation
 of the surfaces.</p>
 <div style="text-align: center;">
-    <img src="imgs/11_6.png" alt="DLVO potential" width="250" height=auto>
+    <img src="imgs/11_6.png" alt="DLVO potential" width="350" height=auto>
     <p><em>Figure 11.6 - The DLVO potential with contributions from the osmotic pressure (repulsive) and the dispersion force (attractive)</em></p>
 </div>
-<p>At short range (<span class="math notranslate nohighlight">\(\&lt;10 nm\)</span>) the repulsive pressures are high until below a
+<p>At short range (<span class="math notranslate nohighlight">\( &lt; 10 nm\)</span>) the repulsive pressures are high until below a
 critical separation of <span class="math notranslate nohighlight">\(\sim 4nm\)</span> the pressure becomes attractive as
 dispersion forces dominate. It is the large positive pressures in the
 range <span class="math notranslate nohighlight">\(4-10nm\)</span> which stop the surfaces from sticking together when they
@@ -689,7 +696,7 @@ stick together. This is manifested as a reduction in the height of the
 repulsive pressure barrier until finally, the pressure becomes
 negative for all values of the inter-surface separation, <span class="math notranslate nohighlight">\(D\)</span>.</p>
 <div style="text-align: center;">
-    <img src="imgs/11_7.png" alt="double layer" width="250" height=auto>
+    <img src="imgs/11_7.png" alt="double layer" width="350" height=auto>
     <p><em>Figure 11.7 - Graphs showing the effect of increasing salt on the repulsive barrier.</em></p>
 </div>
 </section>
@@ -727,12 +734,12 @@ negative for all values of the inter-surface separation, <span class="math notra
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="../activities/activity10.html"
+       href="../math/math10.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Activity 10: Particle escaping from an optical trap</p>
+        <p class="prev-next-title">Math: Force due to optical trap</p>
       </div>
     </a>
     <a class="right-next"

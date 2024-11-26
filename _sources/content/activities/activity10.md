@@ -18,7 +18,8 @@ Show Solution
 </button>
 <div id="solution" style="display:none;">
 <br>
-The condition for escape is $|U| \approx k_{B}T$. This is basically the range of the interaction so can use this to find expression for $r$.
+
+The condition for escape is $|U| {\approx} k_{B}T$. This is basically the range of the interaction so can use this to find expression for $r$.
 
 Combining equations:
 

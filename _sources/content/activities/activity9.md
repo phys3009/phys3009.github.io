@@ -21,13 +21,14 @@ Show Solution
 </button>
 <div id="solution" style="display:none;">
 
+<br>
 The first thing to be clear about is the orientation of the geometric moment of inertia, $I$. It is the cross-section fo the beam. Although it looks a bit like the elemental area we drew in the lecture it is orthogonal (ie through the thickness not along the length of the cantilever).
 
-    <div style="text-align: center;">
-        <img src="imgs/9.png" alt="activity2" width="300" height=auto>
-        <p><em>Geometric moment of inertia</em></p>
-    </em></p>
-    </div>
+<div style="text-align: center;">
+  <img src="imgs/9.png" alt="activity2" width="300" height=auto>
+  <p><em>Geometric moment of inertia</em></p>
+  </em></p>
+</div>
 
 $$I = \int y^{2}dA$$
 
@@ -39,9 +40,10 @@ $$I = \left[\frac{b}{2}-\frac{-b}{2}\right]\left[\frac{y^{3}}{3}\right]_{\frac{-
 
 $$I = \frac{bH^3}{12}$$
 
-So k = \frac{EbH^{3}}{4L^{3}}
+$$k = \frac{EbH^{3}}{4L^{3}}$$
 
 A small change in H or L makes a much bigger difference than a change in b. Doubling the thickness makes it $8\times$ stiffer.
+
 </div>
 
 <br><br>

@@ -1,4 +1,5 @@
-Revision & Exams
+# Revision & Exams
+
 Hopefully, if you've been working through the activities as we've gone along you should have a reasonable grasp of the course by the time you get to this point. If you haven't done them that would be a good place to start.
 
 Try and make a condensed set of notes, the process of sifting will help you understand and remember things better. 

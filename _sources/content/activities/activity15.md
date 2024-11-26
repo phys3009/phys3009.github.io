@@ -27,7 +27,8 @@ Show Solution
 </button>
 <div id="solution" style="display:none;">
 
-1. $N=V/{\nu}=\frac{4}{3}\frac{{\pi}R^{3}}{\nu}
+
+1. $N=\frac{V}{\nu}=\frac{4}{3}\frac{{\pi}R^{3}}{\nu}$
 
 Rearranging gives: $R=\left(\frac{3{\nu}N}{4{\pi}}\right)^{\frac{1}{3}}$
 

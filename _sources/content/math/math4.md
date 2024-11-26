@@ -5,14 +5,13 @@
 ## Calculating the electric field from a dipole
 
 <video width="600" controls>
-  <source src="https://www.nottingham.ac.uk/~ppzmis/PHYS3009/M4.mp4" type="video/mp4">
+  <source src="https://www.nottingham.ac.uk/~ppzmis/phys3009/M4.mp4" type="video/mp4">
   Your browser does not support the video tag.
-  <p><em>The field due to a dipole</em></p>
 </video>
 
+<br><br>
 
 <video width="600" controls>
-  <source src="https://www.nottingham.ac.uk/~ppzmis/PHYS3009/M4b.mp4" type="video/mp4">
+  <source src="https://www.nottingham.ac.uk/~ppzmis/phys3009/M4b.mp4" type="video/mp4">
   Your browser does not support the video tag.
-  <p><em>Potential energy due to rotating a dipole and the origin of dispersion forces</em></p>
 </video>

@@ -8,15 +8,15 @@ Some colloidal particles are added to a beaker of water. A capillary with a fine
 
 ---------------------
 
-To see the solution you can click the button below or watch the video.
+To see the solution you can click the button below.
 
 <button onclick="document.getElementById('solution').style.display='block'" style="border-radius: 5px; text-align: center; padding: 10px 20px; font-size: 16px;">
 Show Solution
 </button>
 <div id="solution" style="display:none;">
-
+<br>
 1. The addition of particles to the beaker creates a concentration difference between the beaker and the capillary. As a result there will be an osmotic pressure that seeks to minimise the concentration difference. Since the mesh prevents particles from moving into the capillary liquid is drawn down from the capillary into the beaker. This dilutes the particles in the beaker to minimise the concentration difference. As a result the height of the liquid in the capillary will be lower than without the particles. 
-
+<br>
 2. We can write down a pressure balance. This is similar to the original derivation but we now have an additional pressure term (the osmotic pressure).
 
 $$P_{capillary} = P_{weight} + P_{osmotic}$$
@@ -29,7 +29,3 @@ $$h = \frac{1}{{\rho}g}\left(\frac{2\gamma}{R} - nk_{B}T\right)$$
 
 <br><br>
 
-<video width="600" controls>
-  <source src="media/vid1_1.mkv" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
