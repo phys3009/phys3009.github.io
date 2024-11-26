@@ -60,6 +60,8 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'content/math/math5';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="7. Surface vs Bulk" href="../teaching/7.%20surfacevbulk.html" />
+    <link rel="prev" title="Activity 6: Hydrogen bonding" href="../activities/activity6.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -121,8 +123,6 @@
     <div class="bd-container__inner bd-page-width">
       
       
-      
-        
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -197,13 +197,15 @@
 <li class="toctree-l1"><a class="reference internal" href="../teaching/4.%20dispersion_interactions.html">4. Dispersion Interactions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../activities/activity3.html">Activity 3: Lennard Jones</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../activities/activity4.html">Activity 4: Dispersion interactions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="math4.html">Math: Dipoles</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 22 (10th Feb)</span></p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../teaching/5.%20dispersion_bigger.html">5. Dispersion Interactions – larger objects</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../teaching/6.%20water_hydrogenbonds.html">6. Water, Hydrogen Bonds &amp; the Hydrophobic Interaction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../activities/activity5.html">Activity 5: Adding up dispersion interactions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../activities/activity6.html">Activity 6: Hydrogen bonding</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Math: Adding up dispersion forces</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 23 (17th Feb)</span></p>
 <ul class="nav bd-sidenav">
@@ -211,6 +213,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../teaching/8.%20capillaryforces.html">8. Capillary Forces</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../activities/activity7.html">Activity 7: contact angle</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../activities/activity8.html">Activity 8: blowing bubbles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="math8.html">Math: Capillary Pressure</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 24 (24th Feb)</span></p>
 <ul class="nav bd-sidenav">
@@ -218,12 +221,15 @@
 <li class="toctree-l1"><a class="reference internal" href="../teaching/10.%20opticaltweezers.html">10. Nanoscale Force Measurement Techniques – Optical Tweezers</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../activities/activity9.html">Activity 9: Afm cantilever</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../activities/activity10.html">Activity 10: Particle escaping from an optical trap</a></li>
+<li class="toctree-l1"><a class="reference internal" href="math9.html">Math: Cantilever Spring Constant</a></li>
+<li class="toctree-l1"><a class="reference internal" href="math10.html">Math: Force due to optical trap</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 25 (3rd March)</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../teaching/11.%20colloidstability.html">11 &amp; 12. Colloidal Stability &amp; Osmotic Pressure</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../activities/activity11.html">Activity 11: Understanding Colloidal Stability with DLVO</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../activities/activity12.html">Activity 2: Osmotic pressure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="math11.html">Math: Osmotic Pressure &amp; DLVO</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 26 (10th March)</span></p>
 <ul class="nav bd-sidenav">
@@ -438,6 +444,8 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#an-atom-with-a-semi-infinite-plate">An atom with a semi-infinite plate</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-slab-with-a-semi-infinite-plate">A slab with a semi-infinite plate</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-sphere-with-a-semi-infinite-plate">A sphere with a semi-infinite plate</a></li>
 </ul>
             </nav>
         </div>
@@ -454,16 +462,27 @@ document.write(`
 <p><strong>These resources duplicate what is taught in the lectures. However, I recognise that it can be hard to follow extended maths in a lecture. Videos are great in helping you to go back and find some point which you are unclear upon.</strong></p>
 <section id="an-atom-with-a-semi-infinite-plate">
 <h2>An atom with a semi-infinite plate<a class="headerlink" href="#an-atom-with-a-semi-infinite-plate" title="Link to this heading">#</a></h2>
+<br>
 <video width="600" controls>
   <source src="https://www.nottingham.ac.uk/~ppzmis/PHYS3009/M5a.mp4" type="video/mp4">
   Your browser does not support the video tag.
   <p><em>An atom with a semi-infinite plate</em></p>
 </video>
+<br><br>
+</section>
+<section id="a-slab-with-a-semi-infinite-plate">
+<h2>A slab with a semi-infinite plate<a class="headerlink" href="#a-slab-with-a-semi-infinite-plate" title="Link to this heading">#</a></h2>
+<br> 
 <video width="600" controls>
   <source src="https://www.nottingham.ac.uk/~ppzmis/PHYS3009/M5b.mp4" type="video/mp4">
   Your browser does not support the video tag.
   <p><em>A flat plane with a plate</em></p>
 </video>
+<br><br>
+</section>
+<section id="a-sphere-with-a-semi-infinite-plate">
+<h2>A sphere with a semi-infinite plate<a class="headerlink" href="#a-sphere-with-a-semi-infinite-plate" title="Link to this heading">#</a></h2>
+<br>
 <video width="600" controls>
   <source src="https://www.nottingham.ac.uk/~ppzmis/PHYS3009/M5c.mp4" type="video/mp4">
   Your browser does not support the video tag.
@@ -502,6 +521,24 @@ document.write(`
                 <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
+    <a class="left-prev"
+       href="../activities/activity6.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Activity 6: Hydrogen bonding</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../teaching/7.%20surfacevbulk.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">7. Surface vs Bulk</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
 </div>
                 </footer>
               
@@ -519,6 +556,8 @@ document.write(`
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#an-atom-with-a-semi-infinite-plate">An atom with a semi-infinite plate</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-slab-with-a-semi-infinite-plate">A slab with a semi-infinite plate</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-sphere-with-a-semi-infinite-plate">A sphere with a semi-infinite plate</a></li>
 </ul>
   </nav></div>
 

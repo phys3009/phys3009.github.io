@@ -4,7 +4,7 @@ Explain why water has an unusually boiling point compared to other similar molec
 
 ---------------------
 
-To see the solution you can click the button below or watch the video.
+To see the solution you can click the button below.
 
 <button onclick="document.getElementById('solution').style.display='block'" style="border-radius: 5px; text-align: center; padding: 10px 20px; font-size: 16px;">
 Show Solution

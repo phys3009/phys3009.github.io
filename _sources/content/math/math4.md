@@ -5,7 +5,7 @@
 ## Calculating the electric field from a dipole
 
 <video width="600" controls>
-  <source src="https://www.nottingham.ac.uk/~ppzmis/PHYS3009/M4a.mp4" type="video/mp4">
+  <source src="https://www.nottingham.ac.uk/~ppzmis/PHYS3009/M4.mp4" type="video/mp4">
   Your browser does not support the video tag.
   <p><em>The field due to a dipole</em></p>
 </video>
