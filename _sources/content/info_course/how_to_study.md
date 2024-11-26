@@ -18,7 +18,7 @@ It takes less than 20 minutes and is a good investment. Spend a bit of time thin
 
 <a href="">**join the team**</a> 
 
-- *Taking it further (optional)* - In this final section I want to show you something of how this Physics helps you understand the world around you or give you insight into some current research that you might find interesting. Lets be frank I know that you are busy so this might not be top of your priority list. That's fine nothing in here is important to help you pass the exam but there is more to Physics than passing exams so in my wild optimism I've added these sections anyway! 
 
 - *Math's resources (optional)* - Some people find involved maths a bit hard to follow in a lecture. The difficulty is that if you miss a bit, then there is no easy way to catch up. I have included some videos of these more involved bits within the course. This just repeats what's in the lecture so no need to go through this unless you missed something. The main aim is to give you the flexibility to learn in a way that is best suited to your own style and needs.
 
+- *Taking it further (optional)* - In this final section I want to show you something of how this Physics helps you understand the world around you or give you insight into some current research that you might find interesting. Lets be frank I know that you are busy so this might not be top of your priority list. That's fine nothing in here is important to help you pass the exam but there is more to Physics than passing exams so in my wild optimism I've added these sections anyway! 
