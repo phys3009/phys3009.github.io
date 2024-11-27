@@ -6,7 +6,7 @@ Try varying the sliders in the animation to change the temperature and the size 
 
 
 <div style="display: flex; justify-content: center; margin: 20px 0;">
-    <iframe src="animations/1_sedimentation.html" style="border:none; width:500px; height:500px;"></iframe>
+    <iframe src="animations/1_sediment.html" style="border:none; width:700px; height:500px;"></iframe>
 </div>
 
 1. What happens to the particles as you increase the temperature? 

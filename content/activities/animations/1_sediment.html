@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Particle Diffusion Simulation</title>
+    <style>
+        #box {
+            width: 300px;
+            height: 300px;
+            border: 3px solid black;
+            background-color: lightblue;
+            position: relative;
+            margin: 20px auto;
+        }
+        .particle {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: red;
+            border: 2px solid black;
+            position: absolute;
+        }
+        #controls {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px;
+        }
+        .slider-container {
+            margin: 10px;
+        }
+        .arrow {
+            position: absolute;
+            left: -30px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 20px;
+            height: 400px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .arrow::before, .arrow::after {
+            content: '';
+            width: 0;
+            height: 0;
+            border-style: solid;
+        }
+        .arrow::before {
+            border-width: 0 10px 10px 10px;
+            border-color: transparent transparent black transparent;
+        }
+        .arrow::after {
+            border-width: 10px 10px 0 10px;
+            border-color: black transparent transparent transparent;
+            margin-top: auto;
+        }
+        .arrow-line {
+            flex-grow: 1;
+            width: 2px;
+            background-color: black;
+        }
+        .arrow-label {
+            position: absolute;
+            left: -20px;
+            top: 50%;
+            transform: translate(-100%, -50%);
+            font-size: 30px;
+            font-weight: bold;
+        }
+        .dynamic-label {
+            position: absolute;
+            right: -200px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 30px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div id="box">
+        <div class="arrow">
+            <div class="arrow-line"></div>
+            <div class="arrow-label">H</div>
+        </div>
+        <div class="dynamic-label" id="dynamicLabel"><sup>L<sub>g</sub></sup>&frasl;<sub>H</sub>  = 0</div>
+    </div>
+    
+    <div id="controls">
+        <div class="slider-container">
+            <label for="temperature">Temperature (T): </label>
+            <input type="range" id="temperature" min="1" max="100" value="50">
+        </div>
+        <div class="slider-container">
+            <label for="radius">Radius (R): </label>
+            <input type="range" id="radius" min="2" max="15" value="10">
+        </div>
+    </div>
+
+    <script>
+        const box = document.getElementById('box');
+        const radiusSlider = document.getElementById('radius');
+        const tempSlider = document.getElementById('temperature');
+        const numParticles = 50;
+        const T_factor = 1;//scales influence of temp
+        const wt_factor = 0.0002;//scales influence of gravity
+        const particles = [];
+        let R = 10;
+        let T = 1;
+        const boxWidth=300;
+        const boxHeight=300;
+        const g=9.81;
+
+        function createParticles() {
+            for (let i = 0; i < numParticles; i++) {
+                const particle = document.createElement('div');
+                particle.classList.add('particle');
+                particle.style.left = `${Math.random() * (boxWidth-R)}px`;
+                particle.style.top = `${Math.random() * (boxWidth-R)}px`;
+                box.appendChild(particle);
+                particles.push(particle);
+            }
+        }
+
+        function updateSliders() {
+            T = tempSlider.value;
+            R = radiusSlider.value;
+
+            particles.forEach(particle => {
+                let x = parseFloat(particle.style.left);
+                let y = parseFloat(particle.style.top);
+
+                particle.style.width = `${R * 2}px`;
+                particle.style.height = `${R * 2}px`;
+                particle.style.left = `${x}px`;
+                particle.style.top = `${y}px`;
+            });
+
+            updateDynamicLabel();
+        }
+
+        function updateDynamicLabel(){
+            const T = tempSlider.value;
+            const R = radiusSlider.value;
+            const scale = 13;
+            const value = T_factor*T/(wt_factor*g*Math.pow(R, 3)*scale);
+            
+            dynamicLabel.innerHTML = `<sup>L<sub>g</sub></sup>&frasl;<sub>H</sub>  = ${value.toFixed(6)}`;
+        }
+
+        function updateParticles() {
+            particles.forEach(particle => {
+                
+                
+                const x = parseFloat(particle.style.left);
+                const y = parseFloat(particle.style.top);
+
+                const weight = g*Math.pow(R, 3); // Simplified mass calculation based on radius
+
+                const newX = x + T_factor*T*(Math.random() - 0.5);
+                const newY = y + T_factor*T*(Math.random() - 0.5) + wt_factor*weight;
+                
+                particle.style.left = `${Math.min(Math.max(newX, 0), boxWidth-2*R)}px`;
+                particle.style.top = `${Math.min(Math.max(newY, 0), boxHeight-2*R)}px`;
+
+            });
+            
+        }
+
+        createParticles();
+        updateSliders();
+        updateDynamicLabel();
+        setInterval(updateParticles, 200);
+        // Connect the callback function to the radius slider
+        radiusSlider.addEventListener('input', updateSliders);
+        tempSlider.addEventListener('input', updateSliders);
+
+
+        
+    </script>
+</body>
+</html>
