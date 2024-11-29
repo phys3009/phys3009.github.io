@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /path/to/your/page1.html
+Disallow: /path/to/your/page2.html
+Disallow: /path/to/your/page3.html
