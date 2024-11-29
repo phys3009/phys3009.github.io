@@ -456,9 +456,7 @@ document.write(`
 <h1>Activity 1: sedimentation and the thermal energy scale<a class="headerlink" href="#activity-1-sedimentation-and-the-thermal-energy-scale" title="Link to this heading">#</a></h1>
 <p>In the lecture we looked at how the thermal energy of the water molecules can be enough to prevent small particles sedimenting. In this activity I want you to play with the small animation below and visualise how the sedimentation of particles is affected by the temperature of the water and the size of the particles.</p>
 <p>Try varying the sliders in the animation to change the temperature and the size of the particles.</p>
-<div style="display: flex; justify-content: center; margin: 20px 0;">
-    <iframe src="animations/1_sediment.html" style="border:none; width:700px; height:500px;"></iframe>
-</div>
+<embed src="animations/1_sediment.html" type="text/html" style="width: 90%; height: 500px; transform: scale(0.75);">
 <ol class="arabic simple">
 <li><p>What happens to the particles as you increase the temperature?</p></li>
 <li><p>What happens to the particles as you increase the size of the particles?</p></li>
@@ -466,7 +464,7 @@ document.write(`
 </ol>
 <div class="math notranslate nohighlight">
 \[
-φ(z)=φ_{0} e^{-mgz/k_{B}T}=φ_{0} e^{-4πR^{3}ρgz)/(3k_{B}T)}=φ_{0} e^{-z/l_{g}}	\tag{1.7}
+φ(z)=φ_{0} e^{-mgz/k_{B}T}=φ_{0} e^{\frac{-4πR^{3}ρgz}{3k_{B}T}}=φ_{0} e^{\frac{-z}{l_{g}}}	\tag{1.7}
 \]</div>
 <p>where <span class="math notranslate nohighlight">\(l_g\)</span> is the gravitational length scale defined as:</p>
 <div class="math notranslate nohighlight">
@@ -480,8 +478,8 @@ Show Solution
 </button>
 <div id="solution" style="display:none;">
 <br>
-1. As you increase the temperature the particles are more likely to be disrupted by the thermal energy of the water molecules. This means that the particles are less likely to sediment.
-<ol class="arabic simple" start="2">
+<ol class="arabic simple">
+<li><p>As you increase the temperature the particles are more likely to be disrupted by the thermal energy of the water molecules. This means that the particles are less likely to sediment.</p></li>
 <li><p>As you increase the size of the particles the gravitational potential energy of the particles increases. This means that the particles are more likely to sediment.</p></li>
 <li><p>If you want the particles to not sediment then <span class="math notranslate nohighlight">\(l_g\)</span> needs to be much larger than the height of the container. This means that the thermal energy of the water molecules is enough to disrupt the gravitational potential energy of the particles.</p></li>
 </ol>

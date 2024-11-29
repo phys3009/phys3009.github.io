@@ -4,10 +4,9 @@ In the lecture we looked at how the thermal energy of the water molecules can be
 
 Try varying the sliders in the animation to change the temperature and the size of the particles.
 
+<embed src="animations/1_sediment.html" type="text/html" style="width: 90%; height: 500px; transform: scale(0.75);">
 
-<div style="display: flex; justify-content: center; margin: 20px 0;">
-    <iframe src="animations/1_sediment.html" style="border:none; width:700px; height:500px;"></iframe>
-</div>
+
 
 1. What happens to the particles as you increase the temperature? 
 
@@ -16,7 +15,7 @@ Try varying the sliders in the animation to change the temperature and the size 
 3. Try and explain this to yourself in terms of equation 1.7 and 1.8. In particular if you want particles to not sediment what needs to be true about $l_g$
 
 $$
-φ(z)=φ_{0} e^{-mgz/k_{B}T}=φ_{0} e^{-4πR^{3}ρgz)/(3k_{B}T)}=φ_{0} e^{-z/l_{g}}	\tag{1.7}
+φ(z)=φ_{0} e^{-mgz/k_{B}T}=φ_{0} e^{\frac{-4πR^{3}ρgz}{3k_{B}T}}=φ_{0} e^{\frac{-z}{l_{g}}}	\tag{1.7}
 $$
 
 where $l_g$ is the gravitational length scale defined as:
@@ -33,8 +32,8 @@ To see the solution you can click the button below:
 Show Solution
 </button>
 <div id="solution" style="display:none;">
-
 <br>
+
 1. As you increase the temperature the particles are more likely to be disrupted by the thermal energy of the water molecules. This means that the particles are less likely to sediment.
 
 2. As you increase the size of the particles the gravitational potential energy of the particles increases. This means that the particles are more likely to sediment.

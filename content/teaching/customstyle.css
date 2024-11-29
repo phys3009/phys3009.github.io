@@ -1,0 +1,40 @@
+/*These styles are related to the buttons at the top of the pages for the onenote etc*/
+.styled-button {
+    flex-grow: 1;
+    flex-basis: 0;
+    max-width: 200px;
+    border-radius: 5px;
+    text-align: center;
+    padding: 10px 10px;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.1s, background-color 0.3s, box-shadow 0.3s;
+    background: linear-gradient(45deg, #007BFF, #00BFFF);;
+    color: white;
+    border: 1px solid black;;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .styled-button:hover {
+    background-color: #0056b3;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+  }
+
+  .styled-button:active {
+    transform: scale(0.95);
+    background-color: #004080;
+  }
+
+  .flex-center {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 0px -10px 0px 0px;
+  }
+
+  em {
+    font-size: 16px; /* Adjust the size as needed */
+  }
