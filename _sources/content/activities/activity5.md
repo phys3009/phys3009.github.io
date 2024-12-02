@@ -1,5 +1,7 @@
 # Activity 5: Adding up dispersion interactions
 
+<link rel="stylesheet" type="text/css" href="../customstyle.css">
+
 The dispersion energy of interaction between an atom and a semi-infinte substrate is given by
 
 $$U_{dispersion} = -\frac{{\pi}n_{1}C}{6x^{3}}$$

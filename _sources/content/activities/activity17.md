@@ -1,5 +1,7 @@
 # Activity 17: When do membranes stick?
 
+<link rel="stylesheet" type="text/css" href="../customstyle.css">
+
 Membranes are sufficiently flexible that they fluctuate due to thermal energy. As 2 membranes come closer together the fluctuations are suppressed resulting in a repulsive entropic force. However, as always this force cannot be considered independently of at a minimum dispersion forces. We must therefore consider the balance between
 
 1. A pressure due to dispersion interactions 
@@ -27,7 +29,7 @@ Using the sliders you can adjust the strength of 3 key parameters: The Hamaker c
 To see the solution you can watch the video.
 <br><br>
 
-<video width="600" controls>
-  <source src="https://www.nottingham.ac.uk/~ppzmis/phys3009/A17.mp4" type="video/mp4">
+<video width="flex-center video-container" controls>
+  <source src="https://www.nottingham.ac.uk/~ppzmis/phys3009/videos/A17.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>

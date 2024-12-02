@@ -1,5 +1,7 @@
 # Activity 13: Entropy and equilibrium separation
 
+<link rel="stylesheet" type="text/css" href="../customstyle.css">
+
 Two flat surfaces are brought into close proximity such that
 dispersion forces attract them towards one another. One of the
 surfaces is coated with a layer of rod-like molecules of length 3nm

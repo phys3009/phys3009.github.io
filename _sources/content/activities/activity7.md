@@ -1,5 +1,7 @@
 # Activity 7: contact angle
 
+<link rel="stylesheet" type="text/css" href="../customstyle.css">
+
 The contact angle between a droplet and surface is determined by a subtle balance of the interfacial energies / tensions. We will see in later weeks that adding molecules known as amphiphiles to a liquid can decrease its liquid vapour interfacial tension ${\gamma}_{23}$. Assuming no other interfacial tensions are altered what will happen to the contact angle?
 
 <div style="text-align: center;">

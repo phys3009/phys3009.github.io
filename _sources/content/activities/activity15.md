@@ -1,5 +1,7 @@
 # Activity 15: the chemical potential
 
+<link rel="stylesheet" type="text/css" href="../customstyle.css">
+
 In the lectures we calculated the chemical potential for a 2D aggegate. In this exercise try and work through the same calculation for a 3D spherical aggregate. 
 
 <div style="text-align: center;">

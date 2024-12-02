@@ -1,5 +1,7 @@
 # Activity 14: Depletion forces
 
+<link rel="stylesheet" type="text/css" href="../customstyle.css">
+
 1. A sphere of radius $R$ surrounded by small spheres of radius $r$ is a distance $D$ from a vertical wall. Draw two sketches showing the excluded volume for the small spheres in two cases:
 
 - $D >  (R + 2r)$

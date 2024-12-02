@@ -1,5 +1,8 @@
 # Activity 1: sedimentation and the thermal energy scale
 
+<link rel="stylesheet" type="text/css" href="../customstyle.css">
+
+
 In the lecture we looked at how the thermal energy of the water molecules can be enough to prevent small particles sedimenting. In this activity I want you to play with the small animation below and visualise how the sedimentation of particles is affected by the temperature of the water and the size of the particles. 
 
 Try varying the sliders in the animation to change the temperature and the size of the particles.

@@ -1,5 +1,7 @@
 # Activity 2: Osmotic pressure
 
+<link rel="stylesheet" type="text/css" href="../customstyle.css">
+
 Some colloidal particles are added to a beaker of water. A capillary with a fine mesh across the end is inserted into a beaker as shown (the particles cannot pass through the mesh but the water can). Assume that the contact angle of the water with the capillary is $0^{\circ}$.
 
 1. What happens to the level of the liquid in the capillary and why?

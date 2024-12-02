@@ -1,5 +1,7 @@
 # Activity 11: Understanding Colloidal Stability with DLVO
 
+<link rel="stylesheet" type="text/css" href="../customstyle.css">
+
 In the lectures we showed that charged plates in water have (as a minimum) two forces acting on them:
 
 1. A pressure due to dispersion interactions 
@@ -32,7 +34,7 @@ You may find it easier to zoom in on the y axis with magnifying glass.
 
 To see the solution you can watch the video.
 
-<video width="600" controls>
-  <source src="https://www.nottingham.ac.uk/~ppzmis/phys3009/A11.mp4" type="video/mp4">
+<video width="flex-center video-container" controls>
+  <source src="https://www.nottingham.ac.uk/~ppzmis/phys3009/videos/A11.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>

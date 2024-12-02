@@ -1,5 +1,7 @@
 # Activity 8: blowing bubbles
 
+<link rel="stylesheet" type="text/css" href="../customstyle.css">
+
 You are blowing a bubble through a straw into water. 
 
 1. Sketch qualitatively what happens to the magnitude of the Laplace pressure as the bubble increases in size.

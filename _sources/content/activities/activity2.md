@@ -1,5 +1,7 @@
 # Activity 2: potentials and forces
 
+<link rel="stylesheet" type="text/css" href="../customstyle.css">
+
 Two molecules interact with an attractive potential given by:
 
 $$
@@ -35,7 +37,10 @@ $$F = \frac{-6a}{x^{7}}$$
 
 <br><br>
 
-<video width="600" controls>
-  <source src="https://www.nottingham.ac.uk/~ppzmis/phys3009/A2.mp4" type="video/mp4">
+<div style="text-align: center;">
+<video class=video-container controls>
+  <source src="https://www.nottingham.ac.uk/~ppzmis/phys3009/videos/A2.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
+</div>
+

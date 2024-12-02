@@ -1,4 +1,13 @@
 /*These styles are related to the buttons at the top of the pages for the onenote etc*/
+
+:root {
+  --video-width: 80%; /* Define the variable for video width */
+}
+
+.video-container {
+  width: var(--video-width); /* Use the variable for the width */
+}
+
 .styled-button {
     flex-grow: 1;
     flex-basis: 0;

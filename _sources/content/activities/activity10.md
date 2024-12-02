@@ -1,5 +1,7 @@
 # Activity 10: Particle escaping from an optical trap
 
+<link rel="stylesheet" type="text/css" href="../customstyle.css">
+
 Derive an expression for the approximate distance $r$ from the centre of the trap at which thermal fluctuations ($k_{B}T$) will enable a particle trapped in a set of optical tweezers to escape. <strong>N.B</strong> under these conditions it will no longer be true that $r << w_{0}$ as a result you can't use the quadratic approximation but must use the full expression. As your starting point use the equations:
 
 $$U = -\frac{2\alpha}{c{\epsilon}{\epsilon}_{0}n}I$$

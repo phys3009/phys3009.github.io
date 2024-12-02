@@ -1,5 +1,7 @@
 # Activity 16: Freezing ice cream
 
+<link rel="stylesheet" type="text/css" href="../customstyle.css">
+
 If you allow ice cream to partially defrost and then stick it back in the freezer you’ll find that it tastes icy and less creamy. This is because the taste buds in your mouth tell your brain that smaller crystals are more creamy and tasty.
 
 <div style="text-align: center;">
@@ -35,7 +37,7 @@ Show Solution
 
 <br><br>
 
-<video width="600" controls>
-  <source src="https://www.nottingham.ac.uk/~ppzmis/phys3009/A16.mp4" type="video/mp4">
+<video width="flex-center video-container" controls>
+  <source src="https://www.nottingham.ac.uk/~ppzmis/phys3009/videos/A16.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>

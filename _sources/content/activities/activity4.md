@@ -1,5 +1,7 @@
 # Activity 4: Dispersion interactions
 
+<link rel="stylesheet" type="text/css" href="../customstyle.css">
+
 Understanding the origin of dispersion interactions is a foundational subject. Write a summary in bullet points of all the key bits of physics discussed in lecture 4 and importantly use your own words.
 
 ---------------------

@@ -1,5 +1,7 @@
 # Activity 3: Lennard Jones
 
+<link rel="stylesheet" type="text/css" href="../customstyle.css">
+
 The interaction energy between two atoms in a simple liquid can be described by the Lennard-Jones potential:
 
 $$

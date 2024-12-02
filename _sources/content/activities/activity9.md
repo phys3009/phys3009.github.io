@@ -1,5 +1,7 @@
 # Activity 9: Afm cantilever
 
+<link rel="stylesheet" type="text/css" href="../customstyle.css">
+
 In the lecture we derived the spring constant of an AFM cantilever:
 
 $$k = \frac{3EI}{L^{3}}$$
@@ -48,7 +50,7 @@ A small change in H or L makes a much bigger difference than a change in b. Doub
 
 <br><br>
 
-<video width="600" controls>
-  <source src="https://www.nottingham.ac.uk/~ppzmis/phys3009/A9.m4v" type="video/mp4">
+<video width="flex-center video-container" controls>
+  <source src="https://www.nottingham.ac.uk/~ppzmis/phys3009/videos/A9.m4v" type="video/mp4">
   Your browser does not support the video tag.
 </video>
