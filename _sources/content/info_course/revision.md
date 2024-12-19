@@ -1,4 +1,15 @@
-# Revision & Exams
+# Assessment, Revision & Exams
+
+## Assessment
+
+This course is assessed via a single exam (100%):
+
+-	In the summer assessment period.
+-	In person, closed book
+-	2 hrs to complete paper
+-	Access to an equation sheet containing some key equations. This will be available in advance
+
+## How to prepare and what to expect
 
 Hopefully, if you've been working through the activities as we've gone along you should have a reasonable grasp of the course by the time you get to this point. If you haven't done them that would be a good place to start.
 
@@ -17,3 +28,5 @@ Finally and importantly, living a balanced well adjusted life is more important 
 
 <br><br>
 <strong><a href="https://www.nottingham.ac.uk/currentstudents/documents/healthyu/2021-documents/web-640597-scom-a5-20pp-examtoolkit-update-njt-feb22.pdf", style="font-size: x-large">Exam Toolkit</a></strong>
+
+You can find practise questions and sample exam papers on the next page or on the Moodle page.
