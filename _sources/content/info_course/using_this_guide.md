@@ -38,17 +38,5 @@ This content replicates exactly what is in the lectures and so if you understood
 
 This section is aimed at helping you to satisfy your curiosity. It tries to expand and explore connections to novel research papers or phenomena. This is a purely optional section of the course but I hope you find it stimulates your interest.
 
-## Questions?
 
-If you are stuck on any part of this course, try reading through the appropriate sections of this guide but if you are still struggling to understand, here are the options:
-
-1.	I’m always happy to answer questions during or immediately after lectures.
-2.	Every written question I answer from students will be posted to the Q&A forum of the Moodle page, so it is worth having a look there in case your question has already been addressed. If you want to see all questions and answers you may subscribe to this feature.
-3.	If your question is not already listed then please <a href="mailto:mike.i.smith@nottingham.ac.uk">email me your question</a>. I’m always happy to answer your questions and will usually get back to you in 1-2 working days. I will reply directly to your question and post in an anonymized way with the corresponding answer. I prefer to do this since then your question can then benefit others.
-4. I also run a weekly office hour (C126 in the main physics building). This is also available on Teams (If you have not been correctly added to the team <a href="mailto:mike.i.smith@nottingham.ac.uk">please email me</a>)
-
-
-## Which textbook should I use?
-
-The material in this module is drawn from a range of different sources making it difficult to recommend a single textbook that is written at the appropriate level that covers the material. As such I have put together the notes here which function like a textbook for the course (and save you some cash!). 
 
