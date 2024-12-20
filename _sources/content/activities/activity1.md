@@ -7,8 +7,9 @@ In the lecture we looked at how the thermal energy of the water molecules can be
 
 Try varying the sliders in the animation to change the temperature and the size of the particles.
 
-<embed src="animations/1_sediment.html" type="text/html" style="width: 90%; height: 500px; transform: scale(0.75);">
-
+<div style="display: flex; justify-content: center; align-items: center; margin:10px; width:480px;height:590px;">
+<embed src="animations/1_sediment.html" type="text/html" style="margin:10px;height:540px; width:420px; transform: scale(1);transform-origin: 0 0;" >
+</div>
 
 
 1. What happens to the particles as you increase the temperature? 

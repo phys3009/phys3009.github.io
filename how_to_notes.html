@@ -182,6 +182,7 @@
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">About the course</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="content/info_course/about_course.html">About the course</a></li>
+<li class="toctree-l1"><a class="reference internal" href="content/info_course/using_this_guide.html">How to study this course</a></li>
 <li class="toctree-l1"><a class="reference internal" href="content/info_course/revision.html">Assessment, Revision &amp; Exams</a></li>
 <li class="toctree-l1"><a class="reference internal" href="content/info_course/samplepapers.html">Sample Papers</a></li>
 <li class="toctree-l1"><a class="reference internal" href="content/info_course/stress.html">Things getting on top of you?</a></li>
@@ -447,6 +448,7 @@ document.write(`
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-book">The book</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#building-the-book">Building the book</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#troubleshooting">Troubleshooting</a></li>
 </ul>
 </li>
 </ul>
@@ -472,6 +474,12 @@ Animations I build a separate html page and embed them.</p>
 <p>cd to the directory with the book in it and run the following command:</p>
 <p><code class="docutils literal notranslate"><span class="pre">jupyter-book</span> <span class="pre">build</span> <span class="pre">phys3009book</span></code></p>
 <p>then push the html pages to github.</p>
+</section>
+<section id="troubleshooting">
+<h3>Troubleshooting<a class="headerlink" href="#troubleshooting" title="Link to this heading">#</a></h3>
+<p>The list of items in the contents page seems to depend on which page you are on. I found that if you open up _config.yml and add:</p>
+<p><code class="docutils literal notranslate"><span class="pre">toc:</span>&#160;&#160;&#160;&#160; <span class="pre">maxdepth:</span> <span class="pre">4</span></code></p>
+<p>to the file, where 4 is a big enough number, then the contents page will show all the pages in the book.</p>
 </section>
 </section>
 </section>
@@ -524,6 +532,7 @@ Animations I build a separate html page and embed them.</p>
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-book">The book</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#building-the-book">Building the book</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#troubleshooting">Troubleshooting</a></li>
 </ul>
 </li>
 </ul>

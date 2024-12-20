@@ -5,8 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Particle Diffusion Simulation</title>
     <style>
+        #page {
+            width: 400px;
+            height: 520px;
+        }
+
         #container {
-            padding-top: 20px; /* Adjust the padding as needed */
+            display: flex;
+            flex-direction: column; /* Arrange items in a column */
+            justify-content: flex-start; /* Align items to the left */
+            align-items: flex-start; /* Align items to the top */
+            width: 400px;
+            height: 320px;
+            padding-top: 0px; /* Adjust the padding as needed */
         }
         #box {
             width: 300px;
@@ -14,7 +25,8 @@
             border: 3px solid black;
             background-color: lightblue;
             position: relative;
-            margin: 20px auto;
+            margin: 0px auto;
+            align-items: center;
         }
         .particle {
             width: 10px;
@@ -27,6 +39,7 @@
         #controls {
             display: flex;
             flex-direction: column;
+            width: 400px;
             align-items: center;
             margin-top: 20px;
 
@@ -34,50 +47,7 @@
         .slider-container {
             margin: 10px;
         }
-        .arrow {
-            position: absolute;
-            left: -30px;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 20px;
-            height: 300px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        .arrow::before, .arrow::after {
-            content: '';
-            width: 0;
-            height: 0;
-            border-style: solid;
-        }
-        .arrow::before {
-            border-width: 0 10px 10px 10px;
-            border-color: transparent transparent black transparent;
-        }
-        .arrow::after {
-            border-width: 10px 10px 0 10px;
-            border-color: black transparent transparent transparent;
-            margin-top: auto;
-        }
-        .arrow-line {
-            flex-grow: 1;
-            width: 2px;
-            background-color: black;
-        }
-        .arrow-label {
-            position: absolute;
-            left: -20px;
-            top: 50%;
-            transform: translate(-100%, -50%);
-            font-size: 30px;
-            font-weight: bold;
-        }
         .dynamic-label {
-            position: absolute;
-            right: -200px;
-            top: 50%;
-            transform: translateY(-50%);
             font-size: 30px;
             font-weight: bold;
         }
@@ -87,17 +57,16 @@
 
     </style>
 </head>
-<body>
+<body id="page">
     <div id="container">
-    <div id="box">
-        <div class="arrow">
-            <div class="arrow-line"></div>
-            <div class="arrow-label">H</div>
+        <div id="box">
+            </div>
         </div>
-        <div class="dynamic-label" id="dynamicLabel"><sup>L<sub>g</sub></sup>&frasl;<sub>H</sub>  = 0</div>
-    </div>
     
     <div id="controls">
+        <div class="slider-container">
+            <div class="dynamic-label" id="dynamicLabel"><sup>L<sub>g</sub></sup>&frasl;<sub>H</sub>  = 0</div>
+        </div>
         <div class="slider-container">
             <label for="temperature" class="slider-label">Temperature (T): </label>
             <input type="range" id="temperature" min="1" max="100" value="50">
@@ -107,7 +76,8 @@
             <input type="range" id="radius" min="2" max="15" value="10">
         </div>
     </div>
-</div>
+
+
     <script>
         const box = document.getElementById('box');
         const radiusSlider = document.getElementById('radius');

@@ -1,16 +1,16 @@
 # How to study this course
-
+<script src="../constants.js" defer></script>
 ## Making a Plan
 
 Getting organised about your studies is by far the biggest thing you can do to improve your outcome from this and any module. A few people find this comes naturally to them, the rest of us have to be more deliberate about it. We all have different strengths and weaknesses, so if this is something you find tricky click on the link below to a resource helping you to think through your learning differences:
 
-<a href="https://xerte.nottingham.ac.uk/play_23883#page1">Learning differences resource</a>. 
+<a href=LEARNINGDIFFERENCE>Learning differences resource</a>. 
 
 It takes less than 20 minutes and is a good investment. Spend a bit of time thinking about what you can implement to help yourself. Be specific. e.g. I'm going to get some exercise every Thursday evening as it helps my mental health. I'm going to review my notes and do the activities on a Monday at 3pm.
 
 The guide begins with the *About this course* section where you should find answers to general questions about the course, information about the assessment and also some important resources to support your well-being.
 
-Following this the guide is arranged week by week to mirror the course as it is delivered in lectures. Each week contains notes that cover the content of the lectures; activities to boost your understanding of the covered material and also additional resources such as videos of the more maths heavy content.
+Following this the guide has a section for each week of teaching, mirroring the course. Each week contains notes that cover the content of the lectures; activities to boost your understanding of the covered material and also additional resources such as videos of the more maths heavy content.
 
 ## Lecture notes
 
@@ -18,7 +18,7 @@ Each week, there is a chapter to accompany each lecture. At the top of each of t
 
 1. **Re-watch lecture** - all my lectures are recorded and can be re-watched at the echo360 site
 
-2. **Open Notebook** - in lectures I write everything in a onenote book which you have access to. This means you don't have to worry if you miss something. There is also a print out of all the ppt slides in your own section of the notebook so you can annotate these in the lectures if you have access to a digital device.
+2. **Open Notebook** - in lectures I write everything in a onenote book which you have access to. This means you don't have to worry if you miss something. There is also a print out of all the ppt slides in your own section of the notebook so you can annotate these in the lectures if you have access to a digital device. If you have trouble accessing this please <a href=MYEMAIL>email me</a>.
 
 3. **Download Slides** - this is a pdf copy of the Powerpoint slides which you can download.
 
