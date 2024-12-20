@@ -6,14 +6,14 @@
 
 ## Calculating the electric field from a dipole
 
-<video width="flex-center video-container" controls>
+<video class="video-container" controls>
   <source src="https://www.nottingham.ac.uk/~ppzmis/phys3009/videos/M4.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
 <br><br>
 
-<video width="flex-center video-container" controls>
+<video class="video-container" controls>
   <source src="https://www.nottingham.ac.uk/~ppzmis/phys3009/videos/M4b.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>

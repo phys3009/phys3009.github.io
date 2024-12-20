@@ -6,8 +6,8 @@
 
 ## An atom with a semi-infinite plate
 <br>
-<video width="flex-center video-container" controls>
-  <source src="https://www.nottingham.ac.uk/~ppzmis/phys3009/M5a.mp4" type="video/mp4">
+<video class="video-container" controls>
+  <source src="https://www.nottingham.ac.uk/~ppzmis/phys3009/videos/M5a.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
@@ -15,7 +15,8 @@
 
 ## A slab with a semi-infinite plate
 <br> 
-<video width="flex-center video-container" controls>
+
+<video class="video-container" controls>
   <source src="https://www.nottingham.ac.uk/~ppzmis/phys3009/videos/M5b.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
@@ -23,7 +24,7 @@
 
 ## A sphere with a semi-infinite plate
 <br>
-<video width="flex-center video-container" controls>
+<video class="video-container" controls>
   <source src="https://www.nottingham.ac.uk/~ppzmis/phys3009/videos/M5c.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>

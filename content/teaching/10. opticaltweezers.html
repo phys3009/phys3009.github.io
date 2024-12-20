@@ -479,7 +479,7 @@ document.write(`
       <div class=flex-center>
         <button class="styled-button" onclick="window.open('https://echo360.org.uk/section/63794c5e-d933-46e0-a8e1-8f4bfcc8c054/public', '_blank')">Rewatch<br>lecture</button>
         <button class="styled-button" onclick="window.open('https://uniofnottm.sharepoint.com/sites/ForceFunction2025/SiteAssets/Force&Function2025%20Notebook', '_blank')">Open<br>Notebook</button>
-        <button class="styled-button" onclick="window.open('https://www.nottingham.ac.uk/~ppzmis/phys3009/ppt/Lecture10.pdf', '_blank')">Download<br>Slides</button>
+        <button class="styled-button" onclick="window.open('ppt_pdfs/Lecture10.pdf', '_blank')">Download<br>Slides</button>
         <button class="styled-button" onclick="window.open('https://moodle.nottingham.ac.uk/mod/forum/view.php?id=8000677', '_blank')">Q&A<br>Forum</button>
       </div>
       <div class=flex-center>
@@ -494,11 +494,11 @@ very small forces. These instruments work by trapping small particles in a focus
 beam. Once trapped, particles can be manipulated by simply steering the
 laser around.</p>
 <div style="text-align: center;">
-<video width="flex-center video-container" controls>
-  <source src="https://www.nottingham.ac.uk/~ppzmis/phys3009/opticaltweezerdemo.mp4" type="video/mp4">
+<video class="video-container" controls>
+  <source src="https://www.nottingham.ac.uk/~ppzmis/phys3009/videos/opticaltweezerdemo.mp4" type="video/mp4">
   Your browser does not support the video tag.
-  <p><em>This video showing manipulation of 5 micron beads using optical tweezers is from Elliot Scientific Ltd [<a href="https://www.youtube.com/watch?v=ju6wENPtXu8">YouTube</a>]</em></p>
 </video>
+<p><em>This video showing manipulation of 5 micron beads using optical tweezers is from Elliot Scientific Ltd [<a href="https://www.youtube.com/watch?v=ju6wENPtXu8">YouTube</a>]</em></p>
 </div>
 <section id="the-wave-nature-of-light">
 <h2>The wave nature of light<a class="headerlink" href="#the-wave-nature-of-light" title="Link to this heading">#</a></h2>
@@ -508,8 +508,7 @@ laser around.</p>
 E = E_{0}\sin(\omega t - kx)
 \]</div>
 <p>where <span class="math notranslate nohighlight">\(E_{0}\)</span> is the amplitude of the wave, <span class="math notranslate nohighlight">\(\omega\)</span> is its angular frequency
-and <span class="math notranslate nohighlight">\(k\)</span> is called the wavenumber (<span class="math notranslate nohighlight">\(=2{\pi}/{\lambda}\)</span>, where <span class="math notranslate nohighlight">\(\lambda\)</span>  is the wavelength
-of the light).</p>
+and <span class="math notranslate nohighlight">\(k\)</span> is called the wavenumber (<span class="math notranslate nohighlight">\(k=2{\pi}/{\lambda}\)</span>, where <span class="math notranslate nohighlight">\(\lambda\)</span>  is the wavelength of the light).</p>
 <div style="text-align: center;">
     <img src="imgs/10_2.png" alt="light wave" width="250" height=auto>
     <p><em>Figure 10.2 - Light is an electromagnetic wave with oscillating E and B fields.</em></p>
@@ -570,7 +569,7 @@ the focal point of the lens.</p>
     <p><em>Figure 10.5 - When light is strongly focussed it makes a gradient along the z direction which traps the particle at the focus. </em></p>
 </div>
 <p>The strength of the trap in the z direction can be varied by changing
-the angle, θ, (see diagram on left). The larger this angle, the steeper
+the angle, <span class="math notranslate nohighlight">\(\theta\)</span>, (see diagram on left). The larger this angle, the steeper
 the intensity gradient will be along the axis of the laser beam. The
 maximum gradient in intensity can be obtained by using a lens with a
 high numerical aperture (NA), where NA is defined as</p>
@@ -593,14 +592,14 @@ high numerical aperture (NA), where NA is defined as</p>
 the effective spring constant (or stiffness) of the trap and to use
 optical tweezers to measure forces that are exerted on trapped
 particles.</p>
-<p>For small displacements (<em>r&lt;&lt;w~o~</em>) the intensity profile can be
+<p>For small displacements (<span class="math notranslate nohighlight">\(r &lt;&lt; w_{o}\)</span>) the intensity profile can be
 approximated by a quadratic form. This results in a force which is
 directly proportional to the displacement of the particle within the
 trap.</p>
 <p><span class="math notranslate nohighlight">\(F = - kr\)</span></p>
 <p>Where</p>
 <div class="math notranslate nohighlight">
-\[k = \ \frac{2\alpha I_{0}}{c\varepsilon\varepsilon_{0}nw_{0}^{2}}\]</div>
+\[k = \ \frac{2\alpha I_{0}}{c \epsilon \epsilon_{0} nw_{0}^{2}}\]</div>
 <p>Hence, if we know the displacement and the trap stiffness, we can
 calculate the force exerted on our trapped particle.</p>
 <section id="detection-of-particle-movement">
@@ -616,7 +615,7 @@ light in the main beam to produce a fringe pattern on the photodiodes.
 As the particle moves around, the fringe patterns move. This can also be
 used to detect motion of the particle.</p>
 <div style="text-align: center;">
-    <img src="imgs/10_7.png" alt="photodiode" width="400" height=auto>
+    <img src="imgs/10_7.png" alt="photodiode" width="500" height=auto>
     <p><em>Figure 10.7 - The motion of the particle in the case of large particles creates a shadow on a quadrant photodiode or for small particles interference rings. Comparing the measurements of the different quadrants the motion of the particle can be determined.</em></p>
 </div>
 </section>

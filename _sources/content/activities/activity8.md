@@ -20,7 +20,7 @@ Show Solution
 1. Consider what happens to the radius of curvature of the bubble as it is being blown. It  starts off very large, goes through a minimum and then increases again:
 
   <div style="text-align: center;">
-    <img src="imgs/8a.png" alt="activity2" width="300" height=auto>
+    <img src="imgs/8a.png" alt="activity2" width="400" height=auto>
   </div>
 
 We know the pressure in the bubble is set by the Laplace pressure which is given by:

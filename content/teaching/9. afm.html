@@ -489,7 +489,7 @@ document.write(`
       <div class=flex-center>
         <button class="styled-button" onclick="window.open('https://echo360.org.uk/section/63794c5e-d933-46e0-a8e1-8f4bfcc8c054/public', '_blank')">Rewatch<br>lecture</button>
         <button class="styled-button" onclick="window.open('https://uniofnottm.sharepoint.com/sites/ForceFunction2025/SiteAssets/Force&Function2025%20Notebook', '_blank')">Open<br>Notebook</button>
-        <button class="styled-button" onclick="window.open('https://www.nottingham.ac.uk/~ppzmis/phys3009/ppt/Lecture9.pdf', '_blank')">Download<br>Slides</button>
+        <button class="styled-button" onclick="window.open('ppt_pdfs/Lecture9.pdf', '_blank')">Download<br>Slides</button>
         <button class="styled-button" onclick="window.open('https://moodle.nottingham.ac.uk/mod/forum/view.php?id=8000677', '_blank')">Q&A<br>Forum</button>
       </div>
       <div class=flex-center>
@@ -500,7 +500,7 @@ document.write(`
 </div>
 <section id="forces-at-the-nanoscale">
 <h2>Forces at the Nanoscale<a class="headerlink" href="#forces-at-the-nanoscale" title="Link to this heading">#</a></h2>
-<p>Forces between nanoscale objects typically occur in the range 1pN-1nN
+<p>Forces between nanoscale objects typically occur in the range <span class="math notranslate nohighlight">\(1pN-1nN\)</span>
 and can be difficult to measure. To measure these forces we ideally require a measurement system where the change in applied force gives a linear response in the measurement device (although this is not necessary).</p>
 <p>In this chapter we will study experimental techniques that can be used
 to measure nanoscale forces directly. The first of these techniques is
@@ -526,8 +526,7 @@ usually reserved for hard samples.</p>
 </section>
 <section id="tapping-mode">
 <h3>Tapping mode<a class="headerlink" href="#tapping-mode" title="Link to this heading">#</a></h3>
-<p>A tip mounted on a cantilever is oscillated at its resonant frequency and brought close to a surface. The tip-sample interaction causes the resonant frequency of the cantilever to shift by an amount which depends upon the tip-sample separation and the local gradient of the force. If we move the tip across the surface
-and vary the tip-sample separation in such a way that the resonant frequency remains constant, we can build up images of constant force gradient. For a uniform, chemically homogeneous sample this corresponds to an image of the topography (or height variations). We can thus build up images of the surface structure in a similar way to that used in contact mode. However, the advantage of this technique is that the tip spends very little time in contact with the surface and is less destructive. This technique is therefore more suitable for imaging soft samples.</p>
+<p>A tip mounted on a cantilever is oscillated at its resonant frequency and brought close to a surface. The tip-sample interaction causes the resonant frequency of the cantilever to shift by an amount which depends upon the tip-sample separation and the local gradient of the force. If we move the tip across the surface and vary the tip-sample separation in such a way that the resonant frequency remains constant, we can build up images of constant force gradient. For a uniform, chemically homogeneous sample this corresponds to an image of the topography (or height variations). We can thus build up images of the surface structure in a similar way to that used in contact mode. However, the advantage of this technique is that the tip spends very little time in contact with the surface and is less destructive. This technique is therefore more suitable for imaging soft samples.</p>
 <div style="text-align: center;">
     <img src="imgs/9_2.png" alt="contact mode" width="200" height=auto>
     <p><em>Figure 9.2 - Polymeric crystal imaged using tapping mode</em></p>
@@ -541,14 +540,13 @@ and vary the tip-sample separation in such a way that the resonant frequency rem
 of elastic beams and is given by <span class="math notranslate nohighlight">\(k = \frac{3EI}{l^{3}}\)</span> where <span class="math notranslate nohighlight">\(E\)</span> is the Youngs Modulus of the cantilever (<span class="math notranslate nohighlight">\(Pa\)</span>), <span class="math notranslate nohighlight">\(l\)</span> is its length and <span class="math notranslate nohighlight">\(I\)</span> is its geometric  moment of inertia (<span class="math notranslate nohighlight">\(m^{4}\)</span>).</p>
 <section id="detecting-the-deflection-of-the-cantilever">
 <h3>Detecting the deflection of the cantilever<a class="headerlink" href="#detecting-the-deflection-of-the-cantilever" title="Link to this heading">#</a></h3>
-<p>If small (pN - nN) forces are exerted on the cantilever, then the displacements of the cantilever are likely to be small (pm - nm). Our ability to detect small forces is controlled partly by the design of the cantilever and partly by the instrumentation used to detect the deflections of the cantilever.</p>
+<p>If small (<span class="math notranslate nohighlight">\(pN - nN\)</span>) forces are exerted on the cantilever, then the displacements of the cantilever are likely to be small (<span class="math notranslate nohighlight">\(pm - nm\)</span>). Our ability to detect small forces is controlled partly by the design of the cantilever and partly by the instrumentation used to detect the deflections of the cantilever.</p>
 <div style="text-align: center;">
     <img src="imgs/9_3.png" alt="tapping mode" width="250" height=auto>
     <p><em>Figure 9.3 - The deflection of the cantilever is detected by reflecting a laser off the back of the cantilever</em></p>
 </div>
 <p>The most common method of detecting cantilever deflections is to reflect
-a laser beam off the back of the cantilever. The laser light is collected using a position sensitive photodetector, called a split photodiode, which produces an output current that varies with the position of the laser beam on the detector. These detectors are simple two photodiodes (PD) that are connected to a differential amplifier in such a way that the output signal is proportional to the
-difference in intensity detected by the two photodiodes. The diagram
+a laser beam off the back of the cantilever. The laser light is collected using a position sensitive photodetector, called a split photodiode, which produces an output current that varies with the position of the laser beam on the detector. These detectors are simple two photodiodes (PD) that are connected to a differential amplifier in such a way that the output signal is proportional to the difference in intensity detected by the two photodiodes. The diagram
 below shows a laser spot falling on a split photodiode detector and a
 bar graph showing the measured intensities at the two photodiodes.</p>
 </section>
@@ -594,7 +592,7 @@ this equation gives:</p>
 <h2>Force vs. distance curves<a class="headerlink" href="#force-vs-distance-curves" title="Link to this heading">#</a></h2>
 <p>AFM can be used to map out the strength of dispersion (and other) forces as a function of the distance between sample and tip.</p>
 <div style="text-align: center;">
-    <img src="imgs/9_6.png" alt="force curve" width="300" height=auto>
+    <img src="imgs/9_6.png" alt="force curve" width="400" height=auto>
     <p><em>Figure 9.6 - Force distance curve as an AFM cantilever is moved towards a surface</em></p>
 </div>
 <section id="protein-un-folding">

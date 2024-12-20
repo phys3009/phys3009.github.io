@@ -479,7 +479,7 @@ document.write(`
       <div class=flex-center>
         <button class="styled-button" onclick="window.open('https://echo360.org.uk/section/63794c5e-d933-46e0-a8e1-8f4bfcc8c054/public', '_blank')">Rewatch<br>lecture</button>
         <button class="styled-button" onclick="window.open('https://uniofnottm.sharepoint.com/sites/ForceFunction2025/SiteAssets/Force&Function2025%20Notebook', '_blank')">Open<br>Notebook</button>
-        <button class="styled-button" onclick="window.open('https://www.nottingham.ac.uk/~ppzmis/phys3009/ppt/Lecture5.pdf', '_blank')">Download<br>Slides</button>
+        <button class="styled-button" onclick="window.open('ppt_pdfs/Lecture5.pdf', '_blank')">Download<br>Slides</button>
         <button class="styled-button" onclick="window.open('https://moodle.nottingham.ac.uk/mod/forum/view.php?id=8000677', '_blank')">Q&A<br>Forum</button>
       </div>
       <div class=flex-center>
@@ -495,7 +495,7 @@ of the dispersion interaction between macroscopic bodies.</p>
 <p>Geckos live in hot dusty climates. These creatures have the extraordinary ability that they can climb sheer
 surfaces and walk upside down across smooth glass plates. The mechanism by which they do this depends on small soft structures on their feet which allow them to stick to almost any surface. These small structures deform when the gecko puts its foot on a surface. This increases the amount of contact between the foot and the surface and thus increases the effective strength of the dispersion interactions between the gecko and the thing it is standing on. As a result they can walk up walls and across ceilings.</p>
 <div style="text-align: center;">
-<video width="flex-center video-container" controls>
+<video class="video-container" controls>
   <source src="media/vid5_1.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
@@ -511,7 +511,7 @@ surfaces and walk upside down across smooth glass plates. The mechanism by which
 <p>Consider a small annulus or ring in the solid surface which has a radius, <span class="math notranslate nohighlight">\(y\)</span>, and which is a distance, <span class="math notranslate nohighlight">\(x\)</span>, from the atom/molecule:</p>
 <div style="text-align: center;">
     <img src="imgs/5_2.png" alt="semi-infinite plane" width="400" height=auto>
-    <p><em>Figure 5.2 - Splitting the plane up into elemental volumes. All the points a distance r from the atom form a circle with radius $y$.</em></p>
+    <p><em>Figure 5.2 - Splitting the plane up into elemental volumes. All the points a distance r from the atom form a circle with radius y.</em></p>
 </div>
 <p>All the elemental volumes in this ring are at the same distance <span class="math notranslate nohighlight">\(r\)</span> from the isolated atom, they therefore have the same interaction. Integrating over <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span> we can add up all the contributions in the slab</p>
 <p><strong>Interactions between a slab of material and another semi-infinite slab.</strong></p>
@@ -527,14 +527,14 @@ surfaces and walk upside down across smooth glass plates. The mechanism by which
 </section>
 <section id="interactions-between-a-sphere-and-a-semi-infinite-slab">
 <h2>Interactions between a sphere and a semi-infinite slab<a class="headerlink" href="#interactions-between-a-sphere-and-a-semi-infinite-slab" title="Link to this heading">#</a></h2>
-<p>Derive an expression for the dispersion forces which act between a sphere of radius <span class="math notranslate nohighlight">\(R\)</span> (for separations <span class="math notranslate nohighlight">\(D &gt;&gt; R\)</span>) and a semi-infinite solid if the number density of atoms in the slab and sphere are <span class="math notranslate nohighlight">\(n_{1} and \)</span>n_{2}$ respectively.</p>
+<p>Derive an expression for the dispersion forces which act between a sphere of radius <span class="math notranslate nohighlight">\(R\)</span> (for separations <span class="math notranslate nohighlight">\(D &gt;&gt; R\)</span>) and a semi-infinite solid if the number density of atoms in the slab and sphere are <span class="math notranslate nohighlight">\(n_{1}\)</span> and <span class="math notranslate nohighlight">\(n_{2}\)</span> respectively.</p>
 <p>As in the last example, we start with the expression for the potential energy due to dispersion interactions between an individual atom/molecule and a flat surface and add up the contributions due to all the atoms/molecules in the sphere.</p>
 </section>
 <section id="a-general-strategy">
 <h2>A general strategy<a class="headerlink" href="#a-general-strategy" title="Link to this heading">#</a></h2>
 <p>In all the examples above we follow a similar pattern</p>
 <ol class="arabic simple">
-<li><p>Look for the symmetries in the system. Eg. With the sphere it is
+<li><p>Look for the symmetries in the system. e.g. with the sphere it is
 symmetric about the middle.</p></li>
 <li><p>Split the problem up into elemental volumes (that is those atoms
 that are all the same distance from the semi-infinite sheet).</p></li>
@@ -577,7 +577,7 @@ semi-infinite solid:</p></li>
 </ul>
 <div class="math notranslate nohighlight">
 \[F(D) = \mathbf{-}\frac{dU}{dD}\mathbf{= -}\frac{A_{12}R}{3D^{2}}\]</div>
-<p>Hence we can determine the strength of the dispersion interaction <span class="math notranslate nohighlight">\(A_{12}\)</span> between two materials by measuring forces acting between two macroscopic bodies. The importance of a Hamaker constant is that we combine a bunch of constants into a single one which represents how two materials interact.</p>
+<p>Hence we can determine the strength of the dispersion interaction <span class="math notranslate nohighlight">\(A_{12}\)</span> between two materials by measuring forces acting between two macroscopic bodies. The importance of a Hamaker constant is that we combine all constants that do not depend on sample geometry into one number. This number defines the strength of interaction between two types of material.</p>
 </section>
 <section id="some-other-important-geometries">
 <h2>Some other important geometries<a class="headerlink" href="#some-other-important-geometries" title="Link to this heading">#</a></h2>
@@ -607,15 +607,14 @@ semi-infinite solid:</p></li>
 <p>Values of <span class="math notranslate nohighlight">\(A\)</span> typically lie in the range <span class="math notranslate nohighlight">\(10^{-21}\)</span> to <span class="math notranslate nohighlight">\(10^{-19}\)</span> Joules
 (<span class="math notranslate nohighlight">\(k_{B}T\)</span> at room temperature <span class="math notranslate nohighlight">\(\sim 4.41 \times 10^{-21}J\)</span>)</p>
 <div style="text-align: center;">
-    <img src="imgs/5_6.png" alt="Hamaker Constants" width="400" height=auto>
-    <p><em>Figure 5.6 - Table of Hamaker constants for common materials (Taken from Surface and Intermolecular forces by J. Israelachvili $3^{rd}$ edition.)</em></p>
+    <img src="imgs/5_6.png" alt="Hamaker Constants" width="500" height=auto>
+    <p><em>Figure 5.6 - Table of Hamaker constants for common materials (Taken from Surface and Intermolecular forces by J. Israelachvili 3rd edition.)</em></p>
 </div>
 </section>
 </section>
 <section id="the-range-of-dispersion-interactions-between-macroscopic-bodies">
 <h2>The range of dispersion interactions between macroscopic bodies<a class="headerlink" href="#the-range-of-dispersion-interactions-between-macroscopic-bodies" title="Link to this heading">#</a></h2>
-<p>We can calculate the range of the interaction by comparing dispersion and thermal energies i.e. <span class="math notranslate nohighlight">\(|U(D_{range})| \sim k_{B}T\)</span>. In reality, this description does not work for truly macroscopic objects, but is valid on the submicron and nanometre length scales where thermal effects are still important in influencing the behaviour of particles and inter-surface forces.</p>
-<p>For the interaction between a sphere of radius R and a solid surface we have:</p>
+<p>We can calculate the range of the interaction by comparing dispersion and thermal energies i.e. <span class="math notranslate nohighlight">\(|U(D_{range})| \sim k_{B}T\)</span>. In reality, this description does not work for truly macroscopic objects, but is valid on the submicron and nanometre length scales where thermal effects are still important in influencing the behaviour of particles and inter-surface forces. For the interaction between a sphere of radius <span class="math notranslate nohighlight">\(R\)</span> and a solid surface we have:</p>
 <div class="math notranslate nohighlight">
 \[\left| U(D) \right| = \frac{A_{12}R}{3D_{range}}\mathbf{\approx}kT\]</div>
 <p>Hence</p>

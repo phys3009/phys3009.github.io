@@ -14,7 +14,7 @@ repulsive steric (entropic) forces, assuming the rods are arranged in a square g
 
 2. Calculate the equilibrium separation of the
 surfaces at room temperature if the Hamaker
-constant is 1x10-20 J at T=20°C 
+constant is $1{\times}10^{-20}J$ at $T=20^{\circ}C$ 
 
 $$P_{dispersion} = \frac{A_{12}}{6{\pi}D^{3}}$$
 

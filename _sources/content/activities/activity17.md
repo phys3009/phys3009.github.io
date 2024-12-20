@@ -29,7 +29,7 @@ Using the sliders you can adjust the strength of 3 key parameters: The Hamaker c
 To see the solution you can watch the video.
 <br><br>
 
-<video width="flex-center video-container" controls>
+<video class="video-container" controls>
   <source src="https://www.nottingham.ac.uk/~ppzmis/phys3009/videos/A17.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>

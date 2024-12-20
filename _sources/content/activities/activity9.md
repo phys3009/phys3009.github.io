@@ -27,7 +27,7 @@ Show Solution
 The first thing to be clear about is the orientation of the geometric moment of inertia, $I$. It is the cross-section fo the beam. Although it looks a bit like the elemental area we drew in the lecture it is orthogonal (ie through the thickness not along the length of the cantilever).
 
 <div style="text-align: center;">
-  <img src="imgs/9.png" alt="activity2" width="300" height=auto>
+  <img src="imgs/9.png" alt="activity2" width="500" height=auto>
   <p><em>Geometric moment of inertia</em></p>
   </em></p>
 </div>
@@ -50,7 +50,7 @@ A small change in H or L makes a much bigger difference than a change in b. Doub
 
 <br><br>
 
-<video width="flex-center video-container" controls>
+<video class="video-container" controls>
   <source src="https://www.nottingham.ac.uk/~ppzmis/phys3009/videos/A9.m4v" type="video/mp4">
   Your browser does not support the video tag.
 </video>

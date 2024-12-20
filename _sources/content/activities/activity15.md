@@ -29,6 +29,7 @@ Show Solution
 </button>
 <div id="solution" style="display:none;">
 
+<br>
 
 1. $N=\frac{V}{\nu}=\frac{4}{3}\frac{{\pi}R^{3}}{\nu}$
 

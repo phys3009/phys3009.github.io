@@ -5,7 +5,7 @@
 The contact angle between a droplet and surface is determined by a subtle balance of the interfacial energies / tensions. We will see in later weeks that adding molecules known as amphiphiles to a liquid can decrease its liquid vapour interfacial tension ${\gamma}_{23}$. Assuming no other interfacial tensions are altered what will happen to the contact angle?
 
 <div style="text-align: center;">
-        <img src="imgs/7a.png" alt="activity7" width="300" height=auto>
+        <img src="imgs/7a.png" alt="activity7" width="400" height=auto>
     </div>
 
 
@@ -24,7 +24,7 @@ $$\cos{\theta} = \frac{{\gamma}_13 - {\gamma}_12}{{\gamma}_23}$$
 If ${\gamma}_23$ decreases $\cos{\theta}$ will increase 
 
 <div style="text-align: center;">
-        <img src="imgs/7b.png" alt="activity7" width="300" height=auto>
+        <img src="imgs/7b.png" alt="activity7" width="400" height=auto>
     </div>
 
 If we consider what happens to $\theta$ it will decrease when the amphiphiles are added.
