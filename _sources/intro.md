@@ -2,7 +2,8 @@
 
 <script src="content/constants.js" defer></script>
 
-Welcome to *Force and Function at the Nanoscale*. This course is delivered by <a href=MYWEBPAGE>Dr Mike Smith</a>. 
+<div class=replace>
+Welcome to *Force and Function at the Nanoscale*. This course is delivered by <a href=MYWEBPAGE>Dr Mike Smith</a>.
 
 <a href=MYEMAIL>Send me an email</a> or come and see me in person (MYOFFICE), I hold an office hour every week on OFFICEHOUR.
 
@@ -15,6 +16,4 @@ Here you'll find everything you need to study this course. You can skip to the s
 </video>
 </div>
 
-
-
-
+</div>
