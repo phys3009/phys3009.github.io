@@ -1,6 +1,7 @@
 const replacements = {
   OFFICEHOUR: "Thursday from 9-10am",
-  TEAMS:"https://teams.microsoft.com/l/meetup-join/19%3a49d81d9220124e868233427d0113e21f%40thread.tacv2/1736253155345?context=%7b%22Tid%22%3a%2267bda7ee-fd80-41ef-ac91-358418290a1e%22%2c%22Oid%22%3a%22f18d392e-fb22-44ba-8546-47ae21668590%22%7d",
+  TEAMS:
+    "https://teams.microsoft.com/l/meetup-join/19%3a49d81d9220124e868233427d0113e21f%40thread.tacv2/1736253155345?context=%7b%22Tid%22%3a%2267bda7ee-fd80-41ef-ac91-358418290a1e%22%2c%22Oid%22%3a%22f18d392e-fb22-44ba-8546-47ae21668590%22%7d",
   MYWEBPAGE: "https://www.nottingham.ac.uk/~ppzmis",
   MYOFFICE: "Room C126, main physics building",
   MYEMAIL:
@@ -12,6 +13,8 @@ const replacements = {
     "https://www.nottingham.ac.uk/currentstudents/documents/healthyu/2021-documents/web-640597-scom-a5-20pp-examtoolkit-update-njt-feb22.pdf",
   YELLOWBOOK:
     "https://www.rethinkyourmind.co.uk/The-UoN-Physics-and-Astronomy-Yellow-Book-Online/?page=1",
+  QAFORUM:
+    "window.open('https://moodle.nottingham.ac.uk/mod/forum/view.php?id=8037448','_blank')"
 };
 
 function replaceValues() {
