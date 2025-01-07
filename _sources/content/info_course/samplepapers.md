@@ -1,4 +1,4 @@
-# Sample Papers
+# Sample Exam Papers
 
 ## The equation sheet
 
