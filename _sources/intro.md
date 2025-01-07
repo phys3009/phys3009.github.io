@@ -14,7 +14,6 @@ I hold an office hour every week on OFFICEHOUR in MYOFFICE. This is also availab
       <div class="flex-center replace">
         <button class="styled-button" onclick="window.open('https://echo360.org.uk/section/63794c5e-d933-46e0-a8e1-8f4bfcc8c054/public', '_blank')">Rewatch<br>lecture</button>
         <button class="styled-button" onclick="window.open('https://uniofnottm.sharepoint.com/sites/ForceFunction2025/SiteAssets/Force&Function2025%20Notebook', '_blank')">Open<br>Notebook</button>
-        <button class="styled-button" onclick="window.open('ppt_pdfs/Lecture1.pdf', '_blank')">Download<br>Slides</button>
         <button class="styled-button" onclick=QAFORUM>Q&A<br>Forum</button>
       </div>
       <div class="flex-center replace">
