@@ -1,7 +1,7 @@
 # How to study this course
 <script src="../constants.js" defer></script>
 ## Making a Plan
-
+<div class=replace>
 Getting organised about your studies is by far the biggest thing you can do to improve your outcome from this and any module. A few people find this comes naturally to them, the rest of us have to be more deliberate about it. We all have different strengths and weaknesses, so if this is something you find tricky click on the link below to a resource helping you to think through your learning differences:
 
 <a href=LEARNINGDIFFERENCE>Learning differences resource</a>. 
@@ -11,9 +11,11 @@ It takes less than 20 minutes and is a good investment. Spend a bit of time thin
 The guide begins with the *About this course* section where you should find answers to general questions about the course, information about the assessment and also some important resources to support your well-being.
 
 Following this the guide has a section for each week of teaching, mirroring the course. Each week contains notes that cover the content of the lectures; activities to boost your understanding of the covered material and also additional resources such as videos of the more maths heavy content.
+</div>
 
 ## Lecture notes
 
+<div class=replace>
 Each week, there is a chapter to accompany each lecture. At the top of each of these lecture note pages you'll see a special section which links you to all the other important resources in the course:
 
 1. **Re-watch lecture** - all my lectures are recorded and can be re-watched at the echo360 site
@@ -23,6 +25,7 @@ Each week, there is a chapter to accompany each lecture. At the top of each of t
 3. **Download Slides** - this is a pdf copy of the Powerpoint slides which you can download.
 
 The material that follows covers the same material as the lectures in the same order as the course. Some students prefer written rather than oral explanations, and sometimes it is quicker and easier to look up / remind yourself about something specific in a sequential written text. You shouldn’t therefore feel you need to read this guide cover to cover, rather use it to complement the rest of your studies, looking up bits that perhaps you are unclear on or need to go over more slowly.
+<\div>
 
 ## Activities
 

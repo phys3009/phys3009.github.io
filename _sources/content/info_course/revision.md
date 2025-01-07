@@ -26,8 +26,8 @@ In exams you'll be asked to demonstrate several different abilities:
 Once you are reasonably confident, have a go at one of the sample exam papers. Do it as if it was the real thing. Do three questions in 120 minutes and then after a break use the mark scheme to evaluate what you've done well, gaps in your knowledge etc. Pay attention to exam technique. Were there things you could have written down that would have given you more marks? e.g converting numbers into the correct units, stating $F=-\frac{dU}{dD}$ often gets you a mark in a question even if you are clueless about the rest of it! Do some more focussed revision before continuing to the next one.
 
 Finally and importantly, living a balanced well adjusted life is more important than an extra few marks. It's normal to feel a bit anxious and stressed as you approach an exam. If you are struggling with your emotions and feeling stressed, this is a great initial resource to hopefully help you keep things in perspective:
-
+<div class=replace>
 <br>
 <strong><a href=EXAMKIT>Exam Toolkit</a></strong>
-
+</div>
 You can find practise questions and sample exam papers on the next page or on the Moodle page.
