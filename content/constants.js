@@ -1,5 +1,6 @@
 const replacements = {
   OFFICEHOUR: "Thursday from 9-10am",
+  TEAMS:"https://teams.microsoft.com/l/meetup-join/19%3a49d81d9220124e868233427d0113e21f%40thread.tacv2/1736253155345?context=%7b%22Tid%22%3a%2267bda7ee-fd80-41ef-ac91-358418290a1e%22%2c%22Oid%22%3a%22f18d392e-fb22-44ba-8546-47ae21668590%22%7d",
   MYWEBPAGE: "https://www.nottingham.ac.uk/~ppzmis",
   MYOFFICE: "Room C126, main physics building",
   MYEMAIL:

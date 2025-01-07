@@ -1,16 +1,20 @@
 # How to study this course
+
 <script src="../constants.js" defer></script>
+
 ## Making a Plan
+
 <div class=replace>
 Getting organised about your studies is by far the biggest thing you can do to improve your outcome from this and any module. A few people find this comes naturally to them, the rest of us have to be more deliberate about it. We all have different strengths and weaknesses, so if this is something you find tricky click on the link below to a resource helping you to think through your learning differences:
 
-<a href=LEARNINGDIFFERENCE>Learning differences resource</a>. 
+<a href=LEARNINGDIFFERENCE>Learning differences resource</a>.
 
 It takes less than 20 minutes and is a good investment. Spend a bit of time thinking about what you can implement to help yourself. Be specific. e.g. I'm going to get some exercise every Thursday evening as it helps my mental health. I'm going to review my notes and do the activities on a Monday at 3pm.
 
-The guide begins with the *About this course* section where you should find answers to general questions about the course, information about the assessment and also some important resources to support your well-being.
+The guide begins with the _About this course_ section where you should find answers to general questions about the course, information about the assessment and also some important resources to support your well-being.
 
 Following this the guide has a section for each week of teaching, mirroring the course. Each week contains notes that cover the content of the lectures; activities to boost your understanding of the covered material and also additional resources such as videos of the more maths heavy content.
+
 </div>
 
 ## Lecture notes
@@ -36,10 +40,3 @@ Each week has activities, which are designed to stimulate your thinking and help
 Some weeks the lectures have some pretty involved calculations or derivations. I believe it's important for you to see these but I recognise it can be hard to follow in a lecture. If you don't understand something it can then be hard to folow the rest. These pages contain videos of the same calculations with me explaining things again. The aim is that after the lecture you can pause / replay the video to help you understand.
 
 This content replicates exactly what is in the lectures and so if you understood during the lecture you can skip this section.
-
-## Taking it further
-
-This section is aimed at helping you to satisfy your curiosity. It tries to expand and explore connections to novel research papers or phenomena. This is a purely optional section of the course but I hope you find it stimulates your interest.
-
-
-

@@ -15,7 +15,7 @@ The course has two timetabled sessions each week:
 - SESSION1
 - SESSION2
 
-In addition I run a weekly office hour (MYOFFICE) on OFFICEHOUR. This is also available on Teams (If you have not been correctly added to the team <a href=MYEMAIL>send me an email</a>).
+In addition I run a weekly office hour (MYOFFICE) on OFFICEHOUR. This is also <a href="https://teams.microsoft.com/l/meetup-join/19%3a49d81d9220124e868233427d0113e21f%40thread.tacv2/1736253155345?context=%7b%22Tid%22%3a%2267bda7ee-fd80-41ef-ac91-358418290a1e%22%2c%22Oid%22%3a%22f18d392e-fb22-44ba-8546-47ae21668590%22%7d">available on Teams</a> (If you have not been correctly added to the team <a href=MYEMAIL>send me an email</a>).
 </div>
 
 ## Assessment
