@@ -10,7 +10,7 @@ In the lectures we showed that charged plates in water have (as a minimum) two f
 
 The graph below shows the pressure due to both these curves and the sum of the two. If you need to you can pan and zoom to see the features of the graph more clearly.
 
-Using the sliders you can adjust the strength of 2 key parameters: The Hamaker constant and the Debye length ($1/Kappa$).
+Using the sliders you can adjust the strength of 2 key parameters: The Hamaker constant and the Debye length (${1}{\kappa}$).
 
 1. Identify which curve is due to the VdW interaction, which is the osmotic pressure and which is the combination
 
