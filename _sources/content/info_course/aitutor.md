@@ -23,5 +23,5 @@ You can also listen to the slightly comical but also relatively accurate ai gene
 
 <br>
 <div style="text-align: center;">
-<iframe src="https://www.nottingham.ac.uk/~ppzmis/phys3009/videos/PHYS3009_aipodcast.wav" width="640" height="480" allow="autoplay"></iframe>
+<iframe src="https://www.nottingham.ac.uk/~ppzmis/phys3009/videos/PHYS3009_aipodcast.wav" width="640" height="480" style="display: block; margin: 0 auto;></iframe>
 </div>
