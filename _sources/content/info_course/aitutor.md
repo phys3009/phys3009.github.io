@@ -16,8 +16,12 @@ Please watch this video, introducing you to the AI tutor.
 </div>
 
 </div>
-
+<br>
+<hr>
+<br>
 You can also listen to the slightly comical but also relatively accurate ai generated audio podcast.
 
+<br>
+<div>
 <iframe src="https://www.nottingham.ac.uk/~ppzmis/phys3009/videos/PHYS3009_aipodcast.wav" width="640" height="480" allow="autoplay"></iframe>
-
+</div>
