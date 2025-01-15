@@ -5,7 +5,8 @@
 <div class=replace>
 Welcome to <strong>Force and Function at the Nanoscale</strong>. This course is delivered by <a href=MYWEBPAGE>Dr Mike Smith</a>.
 <br>
-My office hour is  OFFICEHOUR in MYOFFICE. You can come in person or <a href="TEAMS">join via Teams</a>.
+My <strong>office hour</strong> is  OFFICEHOUR in MYOFFICE. 
+You can come in person or <a href="TEAMS">join via Teams</a>.
 
 <link rel="stylesheet" type="text/css" href="content/customstyle.css">
 <div class="highlight-{Lecture notranslate">
