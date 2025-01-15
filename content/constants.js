@@ -14,7 +14,7 @@ const replacements = {
   YELLOWBOOK:
     "https://www.rethinkyourmind.co.uk/The-UoN-Physics-and-Astronomy-Yellow-Book-Online/?page=1",
   AITUTOR:
-    "window.open('https://phys3009.github.io','_blank')"
+    "window.open('https://phys3009.github.io/content/info_course/aitutor.html/','_blank')"
 };
 
 function replaceValues() {
