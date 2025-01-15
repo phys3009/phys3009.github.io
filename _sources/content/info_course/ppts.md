@@ -1,6 +1,6 @@
 # Download Powerpoints
 
-Pdfs of the lecture slides, click on the appropriate link
+Pdfs of the lecture slides, click on the appropriate link to download.
 
 1. <a href="../teaching/ppt_pdfs/Lecture1.pdf" download>Lecture 1</a>
 2. <a href="../teaching/ppt_pdfs/Lecture2.pdf" download>Lecture 2</a>

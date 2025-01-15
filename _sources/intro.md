@@ -15,7 +15,7 @@ My office hour is  OFFICEHOUR in MYOFFICE. You can come in person or <a href="TE
         <button class="styled-button" onclick="window.open('https://echo360.org.uk/section/63794c5e-d933-46e0-a8e1-8f4bfcc8c054/public', '_blank')">Rewatch<br>lecture</button>
         <button class="styled-button" onclick="window.open('https://uniofnottm.sharepoint.com/sites/ForceFunction2025/SiteAssets/Force&Function2025%20Notebook', '_blank')">Open<br>Notebook</button>
         <button class="styled-button" onclick="window.open('https://phys3009.github.io//content/info_course/ppts.html', '_blank')">Download<br>Slides</button>
-        <button class="styled-button" onclick=QAFORUM>Q&A<br>Forum</button>
+        <button class="styled-button" onclick=AITUTOR>AI<br>Tutor</button>
       </div>
       <div class="flex-center replace">
         <em>Any issues, <a href="MYEMAIL">send me an email</a></em> 

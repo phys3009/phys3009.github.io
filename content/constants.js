@@ -13,8 +13,8 @@ const replacements = {
     "https://www.nottingham.ac.uk/currentstudents/documents/healthyu/2021-documents/web-640597-scom-a5-20pp-examtoolkit-update-njt-feb22.pdf",
   YELLOWBOOK:
     "https://www.rethinkyourmind.co.uk/The-UoN-Physics-and-Astronomy-Yellow-Book-Online/?page=1",
-  QAFORUM:
-    "window.open('https://moodle.nottingham.ac.uk/mod/forum/view.php?id=8037448','_blank')"
+  AITUTOR:
+    "window.open('https://phys3009.github.io','_blank')"
 };
 
 function replaceValues() {
