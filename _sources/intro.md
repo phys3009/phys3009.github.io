@@ -3,10 +3,16 @@
 <script src="content/constants.js" defer></script>
 
 <div class=replace>
-Welcome to <strong>Force and Function at the Nanoscale</strong>. This course is delivered by <a href=MYWEBPAGE>Dr Mike Smith</a>.
+<div>
+<img src="mike.png" alt="Mike mugshot" style="float: right; margin: 0 0 10px 10px; width: 140px; height: 170px; border: 1px solid black;">
+Welcome to <strong>Force and Function at the Nanoscale</strong>. 
+<br>This course is delivered by <a href=MYWEBPAGE>Dr Mike Smith</a>.
+<br>My <strong>office hour</strong> is  OFFICEHOUR in MYOFFICE. 
+<br>You can come in person or <a href="TEAMS">join via Teams</a>.
 <br>
-My <strong>office hour</strong> is  OFFICEHOUR in MYOFFICE. 
-You can come in person or <a href="TEAMS">join via Teams</a>.
+<hr>
+<br>Here you'll find everything you need to study this course. You can skip to the section you need in the contents on the left hand side.
+</div>
 
 <link rel="stylesheet" type="text/css" href="content/customstyle.css">
 <div class="highlight-{Lecture notranslate">
@@ -26,13 +32,5 @@ You can come in person or <a href="TEAMS">join via Teams</a>.
   </div>
 </div>
 
-Here you'll find everything you need to study this course. You can skip to the section you need in the contents on the left hand side or watch my introduction video:
-
-<div style="text-align: center;">
-<video width="80%" controls>
-  <source src="media/vid1_1.mkv" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
-</div>
 
 </div>
