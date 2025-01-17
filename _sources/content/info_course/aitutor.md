@@ -26,10 +26,7 @@ Before watching the video <a href="https://www.nottingham.ac.uk/~ppzmis/phys3009
 
 The AI tutor creates a podcast. You might just want to listen to it without the setup above. You can do that from the player below:
 
-
-<hr>
-<br>
-You can also listen to the slightly comical but also relatively accurate ai generated audio podcast.
+The podcast is a bit cheesy and slightly comical but having listened to it I feel its quite accurate and helpful.
 
 <br>
 <div style="text-align: center;">
