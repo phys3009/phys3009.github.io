@@ -1,12 +1,18 @@
 # AI tutor
 
+This page gives the resources and info to setup a kind of AI tutor that will help you with this course. 
+
 ```{warning}
-The AI tutor is experimental. I have vetted it as best I can and I think it is a resource that can help you, but it should be used in addition to the mainstream resources not as a substitute. Please watch my video which explains how to use it and gives you some ideas about how to get the most out of it.
+Like all AI tools it is extremely experimental. I have spent considerable time evaluating it and I think it could be extremely helpful to you but it is not always going to get everything right. Please watch my tutorial on how to set it up and use it. 
 ```
 
-The AI tutor needs you to register with me a google account email. You should have received an invitation via Teams / Outlook if you are registered on the course but you can also <a href="https://forms.office.com/e/uCvhPxYcfg">register through this link</a>
+I am really excited by tech and I think this is potentially a really valuable resource for you. This is far better than using a standard AI tool like ChatGPT because it is focussed on my course and notes. I would really appreciate your feedback as I pilot this. 
 
-Please watch this video, introducing you to the AI tutor.
+## Setting up the AI tutor and using it
+
+This video covers setting up and some tips for using the AI tutor. This is not difficult and doesn't require any specialist skills. If you have a google account and a web browser you are good to go.
+
+Before watching the video <a href="https://www.nottingham.ac.uk/~ppzmis/phys3009/Phys3009_ForceAndFunction.pdf">Download the content</a> of the course to your computer.
 
 <div style="text-align: center;">
 <video width="80%" controls>
@@ -14,6 +20,12 @@ Please watch this video, introducing you to the AI tutor.
   Your browser does not support the video tag.
 </video>
 </div>
+
+
+## Listen to the podcast here
+
+The AI tutor creates a podcast. You might just want to listen to it without the setup above. You can do that from the player below:
+
 
 <hr>
 <br>
