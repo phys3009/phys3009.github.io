@@ -14,7 +14,11 @@ const replacements = {
   YELLOWBOOK:
     "https://www.rethinkyourmind.co.uk/The-UoN-Physics-and-Astronomy-Yellow-Book-Online/?page=1",
   AITUTOR:
-    "window.open('https://phys3009.github.io/content/info_course/aitutor.html','_blank')"
+    "window.open('https://phys3009.github.io/content/info_course/aitutor.html','_blank')",
+  NOTEBOOK:
+    "https://uniofnottm.sharepoint.com/sites/ForceFunction2025/SiteAssets/Force&amp;Function2025%20Notebook",
+  ECHO:
+    "https://echo360.org.uk/section/de546788-fd71-45cf-955b-d57c480538d8/public"
 };
 
 function replaceValues() {
