@@ -2,13 +2,13 @@
 
 <link rel="stylesheet" type="text/css" href="../customstyle.css">
 
-You are blowing a bubble through a straw into water. 
+You are blowing a bubble through a straw into water.
 
 1. Sketch qualitatively what happens to the magnitude of the Laplace pressure as the bubble increases in size.
 
-2. If the straw has a diameter of $1mm$ and the surface tension of water is $72mNmm^{-1}$ estimate the maximum magnitude of the Laplace pressure.
+2. If the straw has a diameter of $1mm$ and the surface tension of water is $72mNm^{-1}$ estimate the maximum magnitude of the Laplace pressure.
 
----------------------
+---
 
 To see the solution you can click the button below.
 
@@ -37,7 +37,7 @@ We expect the pressure to look something like this:
   <img src="imgs/8b.png" alt="activity2" width="300" height=auto>
 </div>
 
-2. Maximum pressure occurs when $r$ is the same as the radius of the straw. 
+2. Maximum pressure occurs when $r$ is the same as the radius of the straw.
 
 $${\Delta}P = \frac{2 \times 72\times10^{-3}}{0.5\times10^{-3}} = 288Pa$$
 
