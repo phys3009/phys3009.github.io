@@ -20,14 +20,14 @@ $$P_{dispersion} = \frac{A_{12}}{6{\pi}D^{3}}$$
 
 ---------------------
 
-To see the solution you can click the button below or watch the video.
+To see the solution you can click the button below.
 
 <button onclick="document.getElementById('solution').style.display='block'" style="border-radius: 5px; text-align: center; padding: 10px 20px; font-size: 16px;">
 Show Solution
 </button>
 <div id="solution" style="display:none;">
 
-If arranged in a square grid then a plan view will look like this:
+1. If arranged in a square grid then a plan view will look like this:
 
 <div style="text-align: center;">
   <img src="imgs/13.png" alt="activity2" width="300" height=auto>
@@ -37,6 +37,17 @@ From the lecture the force for a single rod is given by $F_{steric} = \frac{k_{B
 
 $$P_{steric} = \frac{F}{d^{2}} = \frac{k_{B}T}{4l^{2}D}$$
 
+2. Equilibrium means that there is no net force between the surfaces. That means the magnitude of the pressure due to the dispersion forces must balance that due to steric pressure calculated in part 1.
+
+$$|P_{dispersion}| = |P_{steric}|$$
+
+Subtituting the expressions and rearranging gives:
+
+$$D= \left(\frac{2A_{12}l^{2}}{3\pik_{B}T}\right)^{\frac{1}{2}}$$
+
+Making sure to convert our units. T in Kelvin and nm to m, substitute in the numbers
+
+$$D \sim 2.2nm$$
 </div>
 
 

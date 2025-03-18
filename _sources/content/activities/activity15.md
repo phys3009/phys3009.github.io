@@ -22,7 +22,7 @@ Here are a few steps to help you with the calculation:
 
 ---------------------
 
-To see the solution you can click the button below or watch the video.
+To see the solution you can click the button below.
 
 <button onclick="document.getElementById('solution').style.display='block'" style="border-radius: 5px; text-align: center; padding: 10px 20px; font-size: 16px;">
 Show Solution

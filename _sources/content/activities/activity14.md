@@ -8,7 +8,7 @@
 
 - $D < (R + 2r)$
 
-2. Calculate an expression for the change in excluded volume when a sphere of radius R surrounded by small spheres of radius r comes close to a vertical wall. You can use the fact that a spherical cap (see figure) has a volume $V_{cap}=\frac{\pi}{3}h^{2}\left(3R'-h\right)$ where $R' = R + r$ and $h = R' - \frac{D}{2}$
+2. Calculate an expression for the change in excluded volume when a sphere of radius R surrounded by small spheres of radius r comes close to a vertical wall. You can use the fact that a spherical cap (see figure) has a volume $V_{cap}=\frac{\pi}{3}h^{2}\left(3R'-h\right)$ where $R' = R + r$ and $h = R' + r - D$
 
 <div style="text-align: center;">
   <img src="imgs/14.png" alt="activity14b" width="200" height=auto>
@@ -18,7 +18,7 @@
 
 ---
 
-To see the solution you can click the button below or watch the video.
+To see the solution you can click the button below.
 
 <button onclick="document.getElementById('solution').style.display='block'" style="border-radius: 5px; text-align: center; padding: 10px 20px; font-size: 16px;">
 Show Solution
