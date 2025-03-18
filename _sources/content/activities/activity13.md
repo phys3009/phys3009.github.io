@@ -43,7 +43,7 @@ $$|P_{dispersion}| = |P_{steric}|$$
 
 Subtituting the expressions and rearranging gives:
 
-$$D= \left(\frac{2A_{12}l^{2}}{3\pik_{B}T}\right)^{\frac{1}{2}}$$
+$$D= \left(\frac{2A_{12}l^{2}}{3{\pi}k_{B}T}\right)^{\frac{1}{2}}$$
 
 Making sure to convert our units. T in Kelvin and nm to m, substitute in the numbers
 
