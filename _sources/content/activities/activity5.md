@@ -12,7 +12,7 @@ An atomic force microscope tip and holder which has cylindrical symmetry and a p
 
 <div style="text-align: center;">
         <img src="imgs/5a.png" alt="activity2" width="300" height=auto>
-        <p><em>Graph showing $x^6$ and $x^3$ potential energy curves</em></p>
+        <p><em>Graph showing $x^{6}$ and $x^{3}$ potential energy curves</em></p>
     </em></p>
     </div>
 

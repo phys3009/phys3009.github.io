@@ -15,10 +15,13 @@ This video covers setting up and some tips for using the AI tutor. This is not d
 Before watching the video <a href="https://www.nottingham.ac.uk/~ppzmis/phys3009/Phys3009_ForceAndFunction.pdf">Download the content</a> of the course to your computer.
 
 <div style="text-align: center;">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/37m3Eg-b_Xs?si=CEaKMdF1mg-bAEkm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<!--
 <video width="80%" controls>
   <source src="https://www.nottingham.ac.uk/~ppzmis/phys3009/videos/ai.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
+-->
 </div>
 
 
@@ -30,5 +33,5 @@ The podcast is a bit cheesy and slightly comical but having listened to it I fee
 
 <br>
 <div style="text-align: center;">
-<iframe src="https://www.nottingham.ac.uk/~ppzmis/phys3009/videos/PHYS3009_aipodcast.wav" style="display: block; margin: 0 auto;"></iframe>
+<iframe src="PHYS3009_aipodcast.wav" style="display: block; margin: 0 auto;"></iframe>
 </div>

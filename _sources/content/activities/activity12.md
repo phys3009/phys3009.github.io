@@ -1,4 +1,4 @@
-# Activity 2: Osmotic pressure
+# Activity 12: Osmotic pressure
 
 <link rel="stylesheet" type="text/css" href="../customstyle.css">
 

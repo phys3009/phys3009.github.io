@@ -28,8 +28,10 @@ Using the sliders you can adjust the strength of 3 key parameters: The Hamaker c
 
 To see the solution you can watch the video.
 <br><br>
-
+<iframe width="560" height="315" src="https://www.youtube.com/embed/HLyGda92sY4?si=8m5MjXPkP1iaY83C" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<!--
 <video class="video-container" controls>
   <source src="https://www.nottingham.ac.uk/~ppzmis/phys3009/videos/A17.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
+-->
