@@ -33,5 +33,5 @@ The podcast is a bit cheesy and slightly comical but having listened to it I fee
 
 <br>
 <div style="text-align: center;">
-<iframe src="PHYS3009_aipodcast.wav" style="display: block; margin: 0 auto;"></iframe>
+<iframe src="https://unixweb.nottingham.ac.uk/~ppzmis/phys3009/videos/PHYS3009_aipodcast.wav" style="display: block; margin: 0 auto;"></iframe>
 </div>
