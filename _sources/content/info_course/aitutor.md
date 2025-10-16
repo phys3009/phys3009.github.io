@@ -15,23 +15,14 @@ This first video covers setting up the AI tutor. This is not difficult and doesn
 Before watching this video <a href="https://phys3009.github.io/content/info_course/resources/notebooklm.txt">Download this text file</a> to your computer. Open <a href="https://notebooklm.google/">Notebooklm</a> in a browser.
 
 <div style="text-align: center;">
-<iframe width="560" height="315" src="https://youtu.be/Jg6lP2fTDwU?si=-aJ804Wt06mNjBmv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://youtube.com/embed/akJHddhKDrM?si=TnT8Ty-JJPZmSOIe" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
-Once you have setup the video watch this video for a few tips on how to use it for the course:
+Once you have setup the tutor watch this video for a few tips on how to use it for the course:
 
 <div style="text-align: center;">
-<iframe width="560" height="315" src="https://youtu.be/Jg6lP2fTDwU?si=dsQhEzL06X7A01YF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://youtube.com/embed/Jg6lP2fTDwU?si=dsQhEzL06X7A01YF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
-
-
-<!--
-<video width="80%" controls>
-  <source src="https://www.nottingham.ac.uk/~ppzmis/phys3009/videos/ai.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
--->
-
 
 
 ## Listen to the podcast here
@@ -50,7 +41,7 @@ The podcast is a bit cheesy and slightly comical but having listened to it I fee
 ### Lectures 1-5:
 
 <div style="text-align: center;">
-<iframe width="560" height="315" src="https://youtu.be/Jg6lP2fTDwU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://youtu.be/HIohy_j1UBQ?si=0e6HOq2dN1At1DqJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
 ### Lectures 6-10:
