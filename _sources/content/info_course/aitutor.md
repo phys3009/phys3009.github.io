@@ -38,10 +38,12 @@ The podcast is a bit cheesy and slightly comical but having listened to it I fee
 
 ## Ai generated summary videos of different course sections
 
+These are not perfect but as a quick overview of the key concepts I think they are helpful and memorable.
+
 ### Lectures 1-5:
 
 <div style="text-align: center;">
-<iframe width="560" height="315" src="https://youtu.be/HIohy_j1UBQ?si=0e6HOq2dN1At1DqJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://youtube.com/embed/HIohy_j1UBQ?si=JlT0LyF2M6zH2Njx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
 ### Lectures 6-10:
