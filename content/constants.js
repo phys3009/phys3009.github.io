@@ -12,7 +12,7 @@ const replacements = {
   EXAMKIT:
     "https://www.nottingham.ac.uk/currentstudents/documents/healthyu/2021-documents/web-640597-scom-a5-20pp-examtoolkit-update-njt-feb22.pdf",
   YELLOWBOOK:
-    "https://www.rethinkyourmind.co.uk/The-UoN-Physics-and-Astronomy-Yellow-Book-Online/?page=1",
+    "https://www.rethinkyourmind.co.uk/the-yellow-book/",
   AITUTOR:
     "window.open('https://phys3009.github.io/content/info_course/aitutor.html','_blank')",
   NOTEBOOK:

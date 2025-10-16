@@ -12,7 +12,7 @@ I am really excited by tech and I think this is potentially a really valuable re
 
 This video covers setting up and some tips for using the AI tutor. This is not difficult and doesn't require any specialist skills. If you have a google account and a web browser you are good to go.
 
-Before watching the video <a href="https://www.nottingham.ac.uk/~ppzmis/phys3009/Phys3009_ForceAndFunction.pdf">Download the content</a> of the course to your computer.
+Before watching this video <a href="https://phys3009.github.io/content/info_course/resources/notebooklm.txt">Download this text file</a> to your computer. Open <a href="https://notebooklm.google/">Notebooklm</a> in a browser.
 
 <div style="text-align: center;">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/37m3Eg-b_Xs?si=CEaKMdF1mg-bAEkm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
