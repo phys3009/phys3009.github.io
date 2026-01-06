@@ -1,12 +1,12 @@
 # AI tutor
 
-This page gives the resources and info to setup a kind of AI tutor that will help you with this course. 
+This page gives the resources and info to setup a kind of AI tutor that will help you with this course. It is not necessary to use and it only helps you to explore the other resources I have produced, but you may find it helpful.
 
 ```{warning}
-Like all AI tools it is extremely experimental. I have spent considerable time evaluating it and I think it could be extremely helpful to you but it is not always going to get everything right. Please watch my tutorial on how to set it up and use it. 
+I have spent considerable time evaluating it and I think it could be extremely helpful to you but it is always possible it will make mistakes. However, in my experience because of the way this tool works you will get much better answers than a conventional ai. Please watch my tutorial on how to set it up and use it. 
 ```
 
-I am really excited by tech and I think this is potentially a really valuable resource for you. This is far better than using a standard AI tool like ChatGPT because it is focussed on my course and notes. I would really appreciate your feedback as I pilot this. 
+I am really excited by tech and I think this is potentially a really valuable resource for you. This is far better than using a standard AI tool like ChatGPT because it is focussed on my course and notes. It also enables you to check where in my course notes it is finding the answers that it gives you enabling you to check.
 
 ## Setting up the AI tutor and using it
 
