@@ -10,7 +10,7 @@ In the lectures we calculated the chemical potential for a 2D aggegate. In this 
 
 Show that the chemical potential is:
 
-$${\mu = \frac{dU}{dN}}=-{\mu}_bulk + \left(\frac{3\nu}{4{\pi}}\right)^{\frac{2}{3}}\frac{8{\pi}\gamma}{3N^{\frac{1}{3}}}$$
+$${\mu = \frac{dU}{dN}}=-{\mu}_{bulk} + \left(\frac{3\nu}{4{\pi}}\right)^{\frac{2}{3}}\frac{8{\pi}\gamma}{3N^{\frac{1}{3}}}$$
 
 Here are a few steps to help you with the calculation:
 
@@ -47,6 +47,5 @@ $$U_{tot}=-N{\mu}_{bulk} + 4{\pi}\left(\frac{3{\nu}N}{4{\pi}}\right)^{\frac{2}{3
 
 4. Differentiate
 
-$$\frac{dU_{tot}}{dN}=-{\mu}_{bulk} + 4{\pi}{\gamma}\left(\frac{3{\nu}}{4{\pi}}\right)^{\frac{2}{3}}\frac{1}{N^{\frac{1}{3}}}$$
-
+$${\frac{dU}{dN}}=-{\mu}_{bulk} + \left(\frac{3\nu}{4{\pi}}\right)^{\frac{2}{3}}\frac{8{\pi}\gamma}{3N^{\frac{1}{3}}}$$
 </div>
