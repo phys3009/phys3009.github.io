@@ -1,0 +1,647 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>AI tutor &#8212; Force and function at the nanoscale</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!-- 
+    this give us a css class that will be invisible only if js is disabled 
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=87e54e7c" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../../_static/scripts/fontawesome.js?digest=26a4bc78f4c0ddb94549"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
+
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'content/info_course/aitutor';</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Assessment, Revision &amp; Exams" href="revision.html" />
+    <link rel="prev" title="Download Powerpoints" href="ppts.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/logo.png" class="logo__image only-light" alt="Force and function at the nanoscale - Home"/>
+    <img src="../../_static/logo.png" class="logo__image only-dark pst-js-only" alt="Force and function at the nanoscale - Home"/>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../intro.html">
+                    PHYS3009: Force and function at the nanoscale
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">About the course</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="about_course.html">About the course</a></li>
+<li class="toctree-l1"><a class="reference internal" href="using_this_guide.html">How to study this course</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ppts.html">Download Powerpoints</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">AI tutor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="revision.html">Assessment, Revision &amp; Exams</a></li>
+<li class="toctree-l1"><a class="reference internal" href="samplepapers.html">Sample Exam Papers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="stress.html">Things getting on top of you?</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 20 (27th Jan)</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../teaching/1.%20nanoscale_world.html">1. Nanoscale World</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../teaching/2.%20forces_potentials.html">2. Forces and Potentials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../activities/activity1.html">Activity 1: sedimentation and the thermal energy scale</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../activities/activity2.html">Activity 2: potentials and forces</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 21 (3rd Feb)</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../teaching/3.%20polar_interactions.html">3. Polar interactions and Dipoles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../teaching/4.%20dispersion_interactions.html">4. Dispersion Interactions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../activities/activity3.html">Activity 3: Lennard Jones</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../activities/activity4.html">Activity 4: Dispersion interactions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../math/math4.html">Math: Dipoles</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 22 (10th Feb)</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../teaching/5.%20dispersion_bigger.html">5. Dispersion Interactions – larger objects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../teaching/6.%20water_hydrogenbonds.html">6. Water, Hydrogen Bonds &amp; the Hydrophobic Interaction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../activities/activity5.html">Activity 5: Adding up dispersion interactions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../activities/activity6.html">Activity 6: Hydrogen bonding</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../math/math5.html">Math: Adding up dispersion forces</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 23 (17th Feb)</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../teaching/7.%20surfacevbulk.html">7. Surface vs Bulk</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../teaching/8.%20capillaryforces.html">8. Capillary Forces</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../activities/activity7.html">Activity 7: contact angle</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../activities/activity8.html">Activity 8: blowing bubbles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../math/math8.html">Math: Capillary Pressure</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 24 (24th Feb)</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../teaching/9.%20afm.html">9. Nanoscale Force Measurement Techniques – AFM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../teaching/10.%20opticaltweezers.html">10. Nanoscale Force Measurement Techniques – Optical Tweezers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../activities/activity9.html">Activity 9: Afm cantilever</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../activities/activity10.html">Activity 10: Particle escaping from an optical trap</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../math/math9.html">Math: Cantilever Spring Constant</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../math/math10.html">Math: Force due to optical trap</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 25 (3rd March)</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../teaching/11.%20colloidstability.html">11 &amp; 12. Colloidal Stability &amp; Osmotic Pressure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../activities/activity11.html">Activity 11: Understanding Colloidal Stability with DLVO</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../activities/activity12.html">Activity 12: Osmotic pressure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../math/math11.html">Math: Osmotic Pressure &amp; DLVO</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 26 (10th March)</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../teaching/12.%20entropy.html">13 &amp; 14. Entropic Forces</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../activities/activity13.html">Activity 13: Entropy and equilibrium separation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../activities/activity14.html">Activity 14: Depletion forces</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 27 (17th March)</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../teaching/13.%20aggregation.html">15. Aggregation &amp; Self-assembly</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../teaching/14.%20micelles.html">16. Micelles / self-assembly</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../activities/activity15.html">Activity 15: the chemical potential</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../activities/activity16.html">Activity 16: Freezing ice cream</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 28 - 24th March</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../teaching/15.%20vesicles_membranes.html">17. Vesicle formation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../activities/activity17.html">Activity 17: When do membranes stick?</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/phys3009/phys3009.github.io" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/phys3009/phys3009.github.io/issues/new?title=Issue%20on%20page%20%2Fcontent/info_course/aitutor.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/content/info_course/aitutor.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>AI tutor</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#setting-up-the-ai-tutor-and-using-it">Setting up the AI tutor and using it</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#listen-to-the-podcast-here">Listen to the podcast here</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ai-generated-summary-videos-of-different-course-sections">Ai generated summary videos of different course sections</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lectures-1-5">Lectures 1-5:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lectures-6-8">Lectures 6-8:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lectures-9-10">Lectures 9-10:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lectures-11-14">Lectures 11-14:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lectures-15-17">Lectures 15-17:</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="ai-tutor">
+<h1>AI tutor<a class="headerlink" href="#ai-tutor" title="Link to this heading">#</a></h1>
+<p>Test of copilot tutor link</p>
+<a href="https://m365.cloud.microsoft/chat/?titleId=T_14d70423-953e-7ff5-bdac-c4bbd4d1d594&source=copilot-studio">Copilot tutor link</a>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>I have spent considerable time evaluating it and I think it could be extremely helpful to you but it is always possible it will make mistakes. However, in my experience because of the way this tool works you will get much better answers than a conventional ai. Please watch my tutorial on how to set it up and use it.</p>
+</div>
+<p>I am really excited by tech and I think this is potentially a really valuable resource for you. This is far better than using a standard AI tool like ChatGPT because it is focussed on my course and notes. It also enables you to check where in my course notes it is finding the answers that it gives you enabling you to check.</p>
+<section id="setting-up-the-ai-tutor-and-using-it">
+<h2>Setting up the AI tutor and using it<a class="headerlink" href="#setting-up-the-ai-tutor-and-using-it" title="Link to this heading">#</a></h2>
+<p>This first video covers setting up the AI tutor. This is not difficult and doesn’t require any specialist skills. If you have a google account and a web browser you are good to go.</p>
+<p>Before watching this video it will be helpful to open <a href="https://notebooklm.google/">Notebooklm</a> in a browser and <a href="https://phys3009.github.io/content/info_course/resources/notebooklm.txt">copy these links</a> to your clipboard as you will need them in the video.</p>
+<div style="text-align: center;">
+<iframe width="560" height="315" src="https://youtube.com/embed/akJHddhKDrM?si=TnT8Ty-JJPZmSOIe" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+<p>Once you have setup the tutor watch this video for a few tips on how to use it for the course:</p>
+<div style="text-align: center;">
+<iframe width="560" height="315" src="https://youtube.com/embed/Jg6lP2fTDwU?si=dsQhEzL06X7A01YF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+</section>
+<section id="listen-to-the-podcast-here">
+<h2>Listen to the podcast here<a class="headerlink" href="#listen-to-the-podcast-here" title="Link to this heading">#</a></h2>
+<p>The AI tutor creates a podcast. You might just want to listen to it without the setup above. You can do that from the player below. The podcast is cheesy and slightly comical but having listened to it I feel its quite accurate and helpful.</p>
+<br>
+<div style="text-align: center;">
+<iframe src="https://unixweb.nottingham.ac.uk/~ppzmis/phys3009/videos/PHYS3009_aipodcast.wav" style="display: block; margin: 0 auto;"></iframe>
+</div>
+</section>
+<section id="ai-generated-summary-videos-of-different-course-sections">
+<h2>Ai generated summary videos of different course sections<a class="headerlink" href="#ai-generated-summary-videos-of-different-course-sections" title="Link to this heading">#</a></h2>
+<p>These are not perfect but as a quick overview of the key concepts I think they are helpful and memorable. I’ve watched all of them to check they are accurate enough to be useful.</p>
+<section id="lectures-1-5">
+<h3>Lectures 1-5:<a class="headerlink" href="#lectures-1-5" title="Link to this heading">#</a></h3>
+<div style="text-align: center;">
+<iframe width="560" height="315" src="https://youtube.com/embed/m1mj1ARFfMc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+</section>
+<section id="lectures-6-8">
+<h3>Lectures 6-8:<a class="headerlink" href="#lectures-6-8" title="Link to this heading">#</a></h3>
+<div style="text-align: center;">
+<iframe width="560" height="315" src="https://youtube.com/embed/h-piMTMCboQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+</section>
+<section id="lectures-9-10">
+<h3>Lectures 9-10:<a class="headerlink" href="#lectures-9-10" title="Link to this heading">#</a></h3>
+<div style="text-align: center;">
+<iframe width="560" height="315" src="https://youtube.com/embed/a4bBh6FsteI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+</section>
+<section id="lectures-11-14">
+<h3>Lectures 11-14:<a class="headerlink" href="#lectures-11-14" title="Link to this heading">#</a></h3>
+<div style="text-align: center;">
+<iframe width="560" height="315" src="https://youtube.com/embed/66oHHTxAR0w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+</section>
+<section id="lectures-15-17">
+<h3>Lectures 15-17:<a class="headerlink" href="#lectures-15-17" title="Link to this heading">#</a></h3>
+<div style="text-align: center;">
+<iframe width="560" height="315" src="https://youtube.com/embed/3YmQscRDhAE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./content\info_course"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="ppts.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Download Powerpoints</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="revision.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Assessment, Revision &amp; Exams</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#setting-up-the-ai-tutor-and-using-it">Setting up the AI tutor and using it</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#listen-to-the-podcast-here">Listen to the podcast here</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ai-generated-summary-videos-of-different-course-sections">Ai generated summary videos of different course sections</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lectures-1-5">Lectures 1-5:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lectures-6-8">Lectures 6-8:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lectures-9-10">Lectures 9-10:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lectures-11-14">Lectures 11-14:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lectures-15-17">Lectures 15-17:</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Mike Smith
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549"></script>
+<script defer src="../../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
